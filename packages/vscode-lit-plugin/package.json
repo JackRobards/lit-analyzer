@@ -168,7 +168,7 @@
 	},
 	"devDependencies": {
 		"@types/mocha": "^9.1.0",
-		"@types/node": "^14.0.13",
+		"@types/node": "^22.10.2",
 		"@types/vscode": "^1.30.0",
 		"esbuild": "^0.14.36",
 		"lit-analyzer": "^2.0.3",
