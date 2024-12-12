@@ -45,6 +45,8 @@
 		"test": "wireit",
 		"test:headless": "wireit",
 		"test:headful": "wireit",
+		"test:normal": "wireit",
+		"test:packaged": "wireit",
 		"prettier:check": "wireit",
 		"package": "wireit"
 	},
@@ -77,6 +79,16 @@
 		"test:headful": {
 			"dependencies": [
 				"./packages/vscode-lit-plugin:test"
+			]
+		},
+		"test:normal": {
+			"dependencies": [
+				"./packages/vscode-lit-plugin:test:normal"
+			]
+		},
+		"test:packaged": {
+			"dependencies": [
+				"./packages/vscode-lit-plugin:test:packaged"
 			]
 		},
 		"eslint": {
