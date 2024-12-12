@@ -60,7 +60,7 @@
 	"devDependencies": {
 		"@types/node": "^22.10.2",
 		"esbuild": "^0.14.34",
-		"rimraf": "^3.0.2",
+		"rimraf": "^6.0.1",
 		"typescript": "~5.2.2",
 		"wireit": "^0.1.1"
 	},
