@@ -9,3 +9,5 @@ dev
 /packages/*/test
 /packages/*/index.*
 /packages/vscode-lit-plugin/built
+
+/.nx/workspace-data
