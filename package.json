@@ -120,7 +120,7 @@
 		"lerna": "^8.1.9",
 		"lint-staged": "^10.2.10",
 		"nodemon": "^2.0.4",
-		"prettier": "^2.4.1",
+		"prettier": "^3.4.2",
 		"typescript": "~5.2.2",
 		"wireit": "^0.9.5"
 	},
