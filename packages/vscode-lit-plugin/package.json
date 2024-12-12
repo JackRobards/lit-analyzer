@@ -164,7 +164,7 @@
 		}
 	},
 	"dependencies": {
-		"typescript": "~5.2.2"
+		"typescript": "~5.7.2"
 	},
 	"devDependencies": {
 		"@types/mocha": "^9.1.0",
