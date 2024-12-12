@@ -4,7 +4,7 @@
 	"description": "",
 	"dependencies": {
 		"lit-element": "^2.3.1",
-		"lit-html": "^1.2.1",
+		"lit-html": "^3.2.1",
 		"ts-lit-plugin": "file:../packages/ts-lit-plugin"
 	},
 	"devDependencies": {
