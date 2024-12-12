@@ -22,3 +22,5 @@ out
 /packages/*/scripts
 /packages/*/test
 /packages/*/index.*
+
+/.nx/workspace-data

@@ -9,6 +9,11 @@
 		"type": "git",
 		"url": "https://github.com/runem/lit-analyzer.git"
 	},
+	"workspaces": [
+		"packages/lit-analyzer",
+		"packages/ts-lit-plugin",
+		"packages/vscode-lit-plugin"
+	],
 	"bugs": {
 		"url": "https://github.com/runem/lit-analyzer/issues"
 	},
@@ -26,13 +31,11 @@
 		"template"
 	],
 	"scripts": {
-		"postinstall": "npm run bootstrap",
 		"prettier:write": "prettier --write \"packages/*/src/**/*.ts\"",
 		"postpublish": "echo \"🎉 Published successfully! You can now publish the vscode extension seperately by running 'cd packages/vscode-lit-plugin && npm run publish'\"",
 		"publish": "lerna run prepare && lerna publish --exact && npm run postpublish",
 		"publish:next": "lerna run prepare && echo \"When asked, please choose 'Custom Prerelease' and use default value\" && lerna publish --dist-tag next --preid next --exact && npm run postpublish",
-		"bootstrap": "lerna clean --yes && lerna bootstrap",
-		"test:watch": "lerna run test:watch --parallel --stream",
+		"test:watch": "lerna run test:watch --stream",
 		"readme": "lerna run readme && readme generate -i readme.blueprint.md -c readme.config.json",
 		"dev": "cd dev && TSS_DEBUG=5999 code . --disable-extension runem.lit-plugin",
 		"dev:logs": "touch dev/lit-plugin.log && tail -f dev/lit-plugin.log",
@@ -42,6 +45,8 @@
 		"test": "wireit",
 		"test:headless": "wireit",
 		"test:headful": "wireit",
+		"test:normal": "wireit",
+		"test:packaged": "wireit",
 		"prettier:check": "wireit",
 		"package": "wireit"
 	},
@@ -76,6 +81,16 @@
 				"./packages/vscode-lit-plugin:test"
 			]
 		},
+		"test:normal": {
+			"dependencies": [
+				"./packages/vscode-lit-plugin:test:normal"
+			]
+		},
+		"test:packaged": {
+			"dependencies": [
+				"./packages/vscode-lit-plugin:test:packaged"
+			]
+		},
 		"eslint": {
 			"command": "eslint ."
 		},
@@ -94,19 +109,19 @@
 	},
 	"devDependencies": {
 		"@appnest/readme": "^1.2.7",
-		"@typescript-eslint/eslint-plugin": "^5.0.0",
-		"@typescript-eslint/parser": "^5.0.0",
+		"@typescript-eslint/eslint-plugin": "^6.0.0",
+		"@typescript-eslint/parser": "^6.0.0",
 		"@vscode/test-electron": "^2.3.8",
 		"eslint": "^8.0.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-import": "^2.25.2",
 		"fs-extra": "^9.0.1",
 		"husky": "^4.2.5",
-		"lerna": "^4.0.0",
+		"lerna": "^8.1.9",
 		"lint-staged": "^10.2.10",
 		"nodemon": "^2.0.4",
 		"prettier": "^2.4.1",
-		"typescript": "~4.8.4",
+		"typescript": "~5.2.2",
 		"wireit": "^0.9.5"
 	},
 	"husky": {
