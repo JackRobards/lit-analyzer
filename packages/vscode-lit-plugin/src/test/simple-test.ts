@@ -34,8 +34,8 @@ suite("Extension Test Suite", () => {
 
 	test("We produce a diagnostic", async () => {
 		const config = vscode.workspace.getConfiguration();
-		config.update("lit-plugin.logging", "verbose", true);
-		config.update("lit-plugin.rules.no-missing-element-type-definition", "error", true);
+		await config.update("lit-plugin.logging", "verbose", true);
+		await config.update("lit-plugin.rules.no-missing-element-type-definition", "error", true);
 		const doc = await vscode.workspace.openTextDocument(vscode.Uri.file(path.join(__dirname, "../../src/test/fixtures/missing-elem-type.ts")));
 		await vscode.window.showTextDocument(doc);
 
@@ -48,8 +48,8 @@ suite("Extension Test Suite", () => {
 
 	test("We detect no-missing-import properly", async () => {
 		const config = vscode.workspace.getConfiguration();
-		config.update("lit-plugin.logging", "verbose", true);
-		config.update("lit-plugin.rules.no-missing-import", "error", true);
+		await config.update("lit-plugin.logging", "verbose", true);
+		await config.update("lit-plugin.rules.no-missing-import", "error", true);
 		const doc = await vscode.workspace.openTextDocument(vscode.Uri.file(path.join(__dirname, "../../src/test/fixtures/missing-import.ts")));
 		const editor = await vscode.window.showTextDocument(doc);
 
@@ -71,7 +71,7 @@ suite("Extension Test Suite", () => {
 		// give it some time to settle
 		await new Promise(resolve => setTimeout(resolve, 1000));
 
-		assert.rejects(getDiagnostics(doc.uri, 3), "Expected rejection as no diagnostics will be found.");
+		await assert.rejects(getDiagnostics(doc.uri, 3), "Expected rejection as no diagnostics will be found.");
 	});
 
 	test("We generate completions", async () => {
