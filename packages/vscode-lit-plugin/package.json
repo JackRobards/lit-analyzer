@@ -174,7 +174,7 @@
 		"lit-analyzer": "^2.0.3",
 		"mocha": "^11.0.1",
 		"vsce": "^2.7.0",
-		"wireit": "^0.1.1"
+		"wireit": "^0.14.9"
 	},
 	"activationEvents": [
 		"onCommand:lit-plugin.analyze",
