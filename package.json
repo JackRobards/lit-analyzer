@@ -116,7 +116,7 @@
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-import": "^2.25.2",
 		"fs-extra": "^11.2.0",
-		"husky": "^4.2.5",
+		"husky": "^9.1.7",
 		"lerna": "^8.1.9",
 		"lint-staged": "^10.2.10",
 		"nodemon": "^2.0.4",
