@@ -8,11 +8,11 @@
 		{
 			"alt": "Published at vscode marketplace",
 			"url": "https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin",
-			"img": "https://vsmarketplacebadge.apphb.com/version/runem.lit-plugin.svg"
+			"img": "https://vsmarketplacebadges.dev/version/runem.lit-plugin.svg"
 		},
 		{
 			"alt": "Downloads per Month",
-			"img": "https://vsmarketplacebadge.apphb.com/downloads-short/runem.lit-plugin.svg?label=vscode-lit-plugin",
+			"img": "https://vsmarketplacebadges.dev/downloads-short/runem.lit-plugin.svg?label=vscode-lit-plugin",
 			"url": "https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin"
 		}
 	]
