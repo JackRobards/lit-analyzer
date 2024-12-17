@@ -82,7 +82,7 @@ const assertIdentifiesClass = ({
 }: {
 	t: ExecutionContext;
 	identifier: Node;
-	sourceFile?: SourceFile;
+	sourceFile: SourceFile;
 	className: string;
 }) => {
 	const { isClassDeclaration, isIdentifier } = getCurrentTsModule();
@@ -116,7 +116,7 @@ const assertEntryTargetsClass = ({
 }: {
 	t: ExecutionContext;
 	entry: LitIndexEntry;
-	sourceFile?: SourceFile;
+	sourceFile: SourceFile;
 	tagName: string;
 	className: string;
 }) => {
@@ -261,10 +261,14 @@ tsTest("Element references can reference elements defined in a different file.",
 	const entries = Array.from(indexEntries);
 	t.is(entries.length, 1);
 
+	const sourceFile = program.getSourceFile("some-element.ts");
+
+	t.assert(sourceFile, "some-element.ts source file does not exist.");
+
 	assertEntryTargetsClass({
 		t,
 		entry: entries[0],
-		sourceFile: program.getSourceFile("some-element.ts"),
+		sourceFile: sourceFile!,
 		tagName: "some-element",
 		className: "SomeElement"
 	});
