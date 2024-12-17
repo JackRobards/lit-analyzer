@@ -99,7 +99,6 @@
 		"web-component-analyzer": "^2.0.0"
 	},
 	"devDependencies": {
-		"@appnest/readme": "^1.2.7",
 		"@types/node": "^22.10.2",
 		"ava": "^3.8.2",
 		"rimraf": "^3.0.2",
