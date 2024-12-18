@@ -89,7 +89,7 @@
 	],
 	"dependencies": {
 		"@vscode/web-custom-data": "^0.4.2",
-		"chalk": "^2.4.2",
+		"chalk": "^5.4.0",
 		"didyoumean2": "7.0.4",
 		"fast-glob": "^3.2.11",
 		"parse5": "7.2.1",
