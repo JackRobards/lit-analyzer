@@ -1,0 +1,22 @@
+{
+	"extends": "../../tsconfig.json",
+	"include": ["./src/**/*"],
+	"compilerOptions": {
+		"target": "es2019",
+		"importHelpers": false,
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"lib": ["esnext", "dom"],
+		"outDir": "./lib/esm",
+		"downlevelIteration": true,
+		"strict": true,
+		"noImplicitAny": true,
+		"allowUnusedLabels": false,
+		"allowUnreachableCode": false,
+		"noUnusedLocals": true,
+		"pretty": true,
+		"declaration": true,
+		"declarationMap": true,
+		"esModuleInterop": true
+	}
+}
