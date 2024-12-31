@@ -36,6 +36,8 @@ export const discoverGlobalFeatures: AnalyzerFlavor["discoverGlobalFeatures"] = 
 
 			return events;
 		}
+
+		return;
 	},
 	member: (node: Node, context: AnalyzerVisitContext): ComponentMember[] | undefined => {
 		const { ts } = context;
@@ -64,5 +66,7 @@ export const discoverGlobalFeatures: AnalyzerFlavor["discoverGlobalFeatures"] = 
 
 			return members;
 		}
+
+		return;
 	}
 };

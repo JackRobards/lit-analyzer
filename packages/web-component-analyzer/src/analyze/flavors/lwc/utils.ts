@@ -83,6 +83,8 @@ function _isLwcComponent(node: Node, context: AnalyzerVisitContext): ComponentRe
 	if (v && v.length === 1) {
 		return v[0] as ComponentRef;
 	}
+
+	return;
 }
 
 // Check if the Class inherits from lighning

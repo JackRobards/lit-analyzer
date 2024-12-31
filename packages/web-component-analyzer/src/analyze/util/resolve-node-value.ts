@@ -1,6 +1,6 @@
 import * as tsModule from "typescript";
 import { Node, SyntaxKind, TypeChecker } from "typescript";
-import { resolveDeclarations } from "./ast-util";
+import { resolveDeclarations } from "./resolve-declarations";
 
 export interface Context {
 	ts: typeof tsModule;

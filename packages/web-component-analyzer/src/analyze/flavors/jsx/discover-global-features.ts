@@ -37,5 +37,7 @@ export const discoverGlobalFeatures: AnalyzerFlavor["discoverGlobalFeatures"] = 
 
 			return members;
 		}
+
+		return;
 	}
 };

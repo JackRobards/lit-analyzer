@@ -1,7 +1,8 @@
 import { ConstructSignatureDeclaration, HeritageClause, Node } from "typescript";
 import { AnalyzerVisitContext } from "../../analyzer-visit-context";
 import { ComponentDeclarationKind, ComponentHeritageClause, ComponentHeritageClauseKind } from "../../types/component-declaration";
-import { findChild, findChildren, resolveDeclarationsDeep } from "../../util/ast-util";
+import { findChild, findChildren } from "../../util/ast-util";
+import { resolveDeclarationsDeep } from "../../util/resolve-declarations";
 import { InheritanceResult } from "../analyzer-flavor";
 
 /**

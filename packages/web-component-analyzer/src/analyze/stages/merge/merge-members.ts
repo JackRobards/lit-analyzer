@@ -134,6 +134,7 @@ function findMemberToMerge(similar: ComponentMember, mergeMap: MergeMap): Compon
 			}
 		}
 	}
+	return;
 }
 
 /**
@@ -158,6 +159,8 @@ function mergeMemberIntoMember<T extends ComponentMemberProperty | ComponentMemb
 				return leftMember.type ?? rightMember.type;
 			} else if (rightMember.kind === "property") {
 				return rightMember.type ?? leftMember.type;
+			} else {
+				return;
 			}
 		})(),
 		typeHint: leftMember.typeHint ?? rightMember.typeHint,

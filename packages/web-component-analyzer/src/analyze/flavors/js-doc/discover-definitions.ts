@@ -1,6 +1,6 @@
 import { Node } from "typescript";
 import { AnalyzerVisitContext } from "../../analyzer-visit-context";
-import { getNodeIdentifier } from "../../util/ast-util";
+import { getNodeIdentifier } from "../../util/resolve-declarations";
 import { DefinitionNodeResult } from "../analyzer-flavor";
 import { parseJsDocForNode } from "./parse-js-doc-for-node";
 
@@ -28,4 +28,6 @@ export function discoverDefinitions(node: Node, context: AnalyzerVisitContext): 
 			context
 		);
 	}
+
+	return;
 }

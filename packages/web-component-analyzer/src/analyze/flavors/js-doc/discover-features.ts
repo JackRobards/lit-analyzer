@@ -25,10 +25,14 @@ export const discoverFeatures: Partial<FeatureDiscoverVisitMap<AnalyzerVisitCont
 							jsDoc: description != null ? { description } : undefined
 						};
 					}
+
+					return;
 				},
 				context
 			);
 		}
+
+		return;
 	},
 	cssproperty: (node: Node, context: AnalyzerVisitContext): ComponentCssProperty[] | undefined => {
 		if (context.ts.isInterfaceDeclaration(node) || context.ts.isClassDeclaration(node)) {
@@ -44,10 +48,12 @@ export const discoverFeatures: Partial<FeatureDiscoverVisitMap<AnalyzerVisitCont
 							default: def
 						};
 					}
+					return;
 				},
 				context
 			);
 		}
+		return;
 	},
 	event: (node: Node, context: AnalyzerVisitContext): ComponentEvent[] | undefined => {
 		if (context.ts.isInterfaceDeclaration(node) || context.ts.isClassDeclaration(node)) {
@@ -64,10 +70,12 @@ export const discoverFeatures: Partial<FeatureDiscoverVisitMap<AnalyzerVisitCont
 							node: tagNode
 						};
 					}
+					return;
 				},
 				context
 			);
 		}
+		return;
 	},
 	slot: (node: Node, context: AnalyzerVisitContext): ComponentSlot[] | undefined => {
 		if (context.ts.isInterfaceDeclaration(node) || context.ts.isClassDeclaration(node)) {
@@ -109,6 +117,7 @@ export const discoverFeatures: Partial<FeatureDiscoverVisitMap<AnalyzerVisitCont
 				context
 			);
 		}
+		return;
 	},
 	member: (node: Node, context: AnalyzerVisitContext): ComponentMember[] | undefined => {
 		if (context.ts.isInterfaceDeclaration(node) || context.ts.isClassDeclaration(node)) {
@@ -134,6 +143,8 @@ export const discoverFeatures: Partial<FeatureDiscoverVisitMap<AnalyzerVisitCont
 							deprecated: undefined
 						} as ComponentMemberProperty;
 					}
+
+					return;
 				},
 				context
 			);
@@ -158,6 +169,8 @@ export const discoverFeatures: Partial<FeatureDiscoverVisitMap<AnalyzerVisitCont
 							deprecated: undefined
 						} as ComponentMemberAttribute;
 					}
+
+					return;
 				},
 				context
 			);
@@ -168,5 +181,7 @@ export const discoverFeatures: Partial<FeatureDiscoverVisitMap<AnalyzerVisitCont
 
 			return undefined;
 		}
+
+		return;
 	}
 };

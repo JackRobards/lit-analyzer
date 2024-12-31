@@ -1,6 +1,7 @@
 import { Node } from "typescript";
 import { AnalyzerVisitContext } from "../../analyzer-visit-context";
-import { getDecorators, getNodeIdentifier } from "../../util/ast-util";
+import { getDecorators } from "../../util/ast-util";
+import { getNodeIdentifier } from "../../util/resolve-declarations";
 import { resolveNodeValue } from "../../util/resolve-node-value";
 import { DefinitionNodeResult } from "../analyzer-flavor";
 
@@ -49,4 +50,6 @@ export function discoverDefinitions(node: Node, context: AnalyzerVisitContext): 
 	node.forEachChild(child => {
 		discoverDefinitions(child, context);
 	});
+
+	return;
 }

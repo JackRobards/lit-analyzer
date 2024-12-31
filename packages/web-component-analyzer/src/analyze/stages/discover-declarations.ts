@@ -1,7 +1,7 @@
 import { SourceFile } from "typescript";
 import { AnalyzerVisitContext } from "../analyzer-visit-context";
 import { ComponentDeclaration } from "../types/component-declaration";
-import { resolveSymbolDeclarations } from "../util/ast-util";
+import { resolveSymbolDeclarations } from "../util/resolve-declarations";
 import { analyzeComponentDeclaration } from "./analyze-declaration";
 
 /**

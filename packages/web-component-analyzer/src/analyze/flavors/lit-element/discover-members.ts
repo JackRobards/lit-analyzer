@@ -38,6 +38,8 @@ export function discoverMembers(node: Node, context: AnalyzerDeclarationVisitCon
 	else if (ts.isSetAccessor(node) || ts.isGetAccessor(node) || ts.isPropertyDeclaration(node) || ts.isPropertySignature(node)) {
 		return parsePropertyDecorator(node, context);
 	}
+
+	return;
 }
 
 /**
