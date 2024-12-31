@@ -24,6 +24,8 @@
 		"@typescript-eslint/prefer-interface": "off",
 		"@typescript-eslint/no-empty-interface": "off",
 		"no-dupe-class-members": "off",
-		"import/extensions": ["error", "always"]
+		"import/extensions": "off"
+		// TODO: Re-enable and fix the errors in the web-component-analyzer package
+		//"import/extensions": ["error", "always"]
 	}
 }

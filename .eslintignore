@@ -9,5 +9,6 @@ dev
 /packages/*/test
 /packages/*/index.*
 /packages/vscode-lit-plugin/built
+/packages/web-component-analyzer/.rollup.cache
 
 /.nx/workspace-data
