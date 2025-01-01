@@ -4,11 +4,11 @@ import * as tsModule from "typescript";
 
 type TestFunction = (title: string, implementation: ImplementationFn<unknown[]>) => void;
 
-const TS_MODULES_ALL = ["current", "4.8", "4.9", "5.0", "5.1"] as const;
+const TS_MODULES_ALL = ["current", "5.4", "5.5", "5.6"] as const;
 
-type TsModuleKind = (typeof TS_MODULES_ALL)[number];
+type TsModuleKind = typeof TS_MODULES_ALL[number];
 
-const TS_MODULES_DEFAULT: readonly TsModuleKind[] = TS_MODULES_ALL;
+const TS_MODULES_DEFAULT: TsModuleKind[] = ["current", "5.4", "5.5", "5.6"];
 
 /**
  * Returns the name of the module to require for a specific ts module kind
@@ -17,20 +17,19 @@ const TS_MODULES_DEFAULT: readonly TsModuleKind[] = TS_MODULES_ALL;
 function getTsModuleNameWithKind(kind: TsModuleKind | undefined): string {
 	// Return the corresponding ts module
 	switch (kind) {
-		default: {
-			const never: never = kind;
-			throw new Error(`Unknown ts module "${never}"`);
-		}
-		case "4.8":
-		case "4.9":
-		case "5.0":
-		case "5.1":
+		case "5.4":
+		case "5.5":
+		case "5.6":
 			return `typescript-${kind}`;
 		case "current":
 		case undefined:
 		case null:
 			// Fall back to "default"
 			return "typescript";
+		default: {
+			const never: never = kind;
+			throw new Error(`Unknown ts module "${never}"`);
+		}
 	}
 }
 
