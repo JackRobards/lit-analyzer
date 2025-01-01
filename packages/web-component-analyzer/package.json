@@ -104,7 +104,7 @@
 		"@types/yargs": "^17.0.28",
 		"@typescript-eslint/eslint-plugin": "^6.7.5",
 		"@typescript-eslint/parser": "^6.7.5",
-		"ava": "^3.15.0",
+		"ava": "^6.2.0",
 		"cross-env": "^7.0.2",
 		"rollup": "^4.0.2",
 		"rollup-plugin-copy": "^3.5.0",
