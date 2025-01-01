@@ -12,7 +12,8 @@
 	"workspaces": [
 		"packages/lit-analyzer",
 		"packages/ts-lit-plugin",
-		"packages/vscode-lit-plugin"
+		"packages/vscode-lit-plugin",
+		"packages/web-component-analyzer"
 	],
 	"bugs": {
 		"url": "https://github.com/runem/lit-analyzer/issues"
@@ -55,7 +56,8 @@
 			"dependencies": [
 				"./packages/lit-analyzer:build",
 				"./packages/ts-lit-plugin:build",
-				"./packages/vscode-lit-plugin:build"
+				"./packages/vscode-lit-plugin:build",
+				"./packages/web-component-analyzer:build"
 			]
 		},
 		"test": {
@@ -73,7 +75,8 @@
 		},
 		"test:headless": {
 			"dependencies": [
-				"./packages/lit-analyzer:test"
+				"./packages/lit-analyzer:test",
+				"./packages/web-component-analyzer:test:all"
 			]
 		},
 		"test:headful": {

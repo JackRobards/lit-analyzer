@@ -20,3 +20,7 @@ out
 /packages/*/index.*
 
 /packages/vscode-lit-plugin/built
+
+/packages/web-component-analyzer/.rollup.cache
+!/packages/web-component-analyzer/test
+
