@@ -9,7 +9,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"@appnest/masonry-layout": "^2.0.4",
+		"@appnest/masonry-layout": "^2.2.3",
 		"@aybolit/material": "^0.1.0",
 		"@ionic/core": "^4.11.5",
 		"@lion/button": "^0.3.43",
