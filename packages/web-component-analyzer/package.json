@@ -99,7 +99,7 @@
 	"devDependencies": {
 		"@rollup/plugin-node-resolve": "^15.2.3",
 		"@rollup/plugin-replace": "^5.0.3",
-		"@rollup/plugin-typescript": "^11.1.5",
+		"@rollup/plugin-typescript": "^12.1.2",
 		"@types/node": "^22.10.3",
 		"@types/yargs": "^17.0.28",
 		"@typescript-eslint/eslint-plugin": "^6.7.5",
