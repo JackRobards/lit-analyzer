@@ -32,10 +32,12 @@
 			"command": "rollup -c",
 			"files": [
 				"src/**/*",
-				"tsconfig.json"
+				"tsconfig.json",
+				"../../tsconfig.json"
 			],
 			"output": [
 				"lib",
+				".rollup.cache",
 				"./tsbuildinfo"
 			],
 			"clean": "if-file-deleted"
