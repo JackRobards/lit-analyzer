@@ -161,7 +161,7 @@ function emitDirectModuleImportWithName(moduleSpecifier: string, node: Node, con
 		let mode: tsModule.ModuleKind.CommonJS | tsModule.ModuleKind.ESNext | undefined = undefined;
 		if (context.ts.isImportDeclaration(node) || context.ts.isExportDeclaration(node)) {
 			if (node.moduleSpecifier != null && context.ts.isStringLiteral(node.moduleSpecifier) && context.ts.isSourceFile(node.parent)) {
-				mode = tsModule.getModeForUsageLocation(fromSourceFile, node.moduleSpecifier);
+				mode = context.program.getModeForUsageLocation(fromSourceFile, node.moduleSpecifier);
 			}
 		}
 

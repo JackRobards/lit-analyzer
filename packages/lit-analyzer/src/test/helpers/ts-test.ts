@@ -6,11 +6,11 @@ import { setTypescriptModule } from "../../lib/analyze/ts-module.js";
 // Based on the `ava` types for test.only and test.skip. This matches the format of the tests in this repo
 type TestFunction = (title: string, implementation: ImplementationFn<unknown[]>) => void;
 
-const TS_MODULES_ALL = ["current", "4.8", "5.0", "5.1"] as const;
+const TS_MODULES_ALL = ["current", "5.4", "5.5", "5.6"] as const;
 
 type TsModuleKind = typeof TS_MODULES_ALL[number];
 
-const TS_MODULES_DEFAULT: TsModuleKind[] = ["current", "4.8", "5.0", "5.1"];
+const TS_MODULES_DEFAULT: TsModuleKind[] = ["current", "5.4", "5.5", "5.6"];
 
 /**
  * Returns the name of the module to require for a specific ts module kind
@@ -19,9 +19,9 @@ const TS_MODULES_DEFAULT: TsModuleKind[] = ["current", "4.8", "5.0", "5.1"];
 function getTsModuleNameWithKind(kind: TsModuleKind | undefined): string {
 	// Return the corresponding ts module
 	switch (kind) {
-		case "4.8":
-		case "5.0":
-		case "5.1":
+		case "5.4":
+		case "5.5":
+		case "5.6":
 			return `typescript-${kind}`;
 		case "current":
 		case undefined:

@@ -169,7 +169,7 @@ export function makeConfig(userOptions: Partial<LitAnalyzerConfig> = {}): LitAna
 		logging: userOptions.logging || "off",
 		cwd: userOptions.cwd || process.cwd(),
 		format: {
-			disable: userOptions.format != null ? userOptions.format.disable : undefined || false // always disable formating for now
+			disable: userOptions.format != null ? userOptions.format.disable : false // always disable formatting for now
 		},
 		dontSuggestConfigChanges: userOptions.dontSuggestConfigChanges || false,
 		dontShowSuggestions: userOptions.dontShowSuggestions || getDeprecatedOption(userOptions, "skipSuggestions") || false,
