@@ -12,7 +12,7 @@
 		"@appnest/masonry-layout": "^2.0.4",
 		"@aybolit/material": "^0.1.0",
 		"@ionic/core": "^4.11.5",
-		"@lion/button": "^0.3.43",
+		"@lion/button": "^0.18.1",
 		"@lion/input": "^0.3.5",
 		"@lion/textarea": "^0.3.5",
 		"@material/mwc-button": "^0.11.1",
