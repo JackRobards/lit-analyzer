@@ -27,6 +27,6 @@
 		"lit-html": "^1.1.2",
 		"progress-ring-component": "^1.0.2",
 		"weightless": "^0.0.37",
-		"wired-elements": "^2.0.0"
+		"wired-elements": "^2.1.2"
 	}
 }
