@@ -11,7 +11,7 @@
 	"dependencies": {
 		"@appnest/masonry-layout": "^2.2.3",
 		"@aybolit/material": "^0.1.0",
-		"@ionic/core": "^4.11.5",
+		"@ionic/core": "^8.4.1",
 		"@lion/button": "^0.18.1",
 		"@lion/input": "^0.3.5",
 		"@lion/textarea": "^0.16.1",
