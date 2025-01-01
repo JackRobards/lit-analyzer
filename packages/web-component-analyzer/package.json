@@ -102,7 +102,7 @@
 		"@rollup/plugin-typescript": "^12.1.2",
 		"@types/node": "^22.10.3",
 		"@types/yargs": "^17.0.28",
-		"@typescript-eslint/eslint-plugin": "^6.7.5",
+		"@typescript-eslint/eslint-plugin": "^8.19.0",
 		"@typescript-eslint/parser": "^6.7.5",
 		"ava": "^3.15.0",
 		"cross-env": "^7.0.2",
