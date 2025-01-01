@@ -4,7 +4,7 @@
 	"description": "CLI that analyzes web components",
 	"main": "lib/cjs/api.js",
 	"module": "lib/esm/api.js",
-	"typings": "lib/cjs/api.d.ts",
+	"typings": "lib/cjs/src/api.d.ts",
 	"files": [
 		"/lib/",
 		"cli.js"
@@ -21,7 +21,7 @@
 		"test": "wireit",
 		"test:all": "wireit",
 		"test:current": "wireit",
-		"lint": "eslint . --ext ts --ext js",
+		"lint": "eslint src test --ext ts --ext js",
 		"test:update": "ava --update-snapshots",
 		"test:watch": "ava --watch",
 		"prettier:check": "prettier --check \"src/**/*.{ts,tsx}\"",
@@ -32,6 +32,7 @@
 			"command": "rollup -c",
 			"files": [
 				"src/**/*",
+				"test/**/*",
 				"tsconfig.json",
 				"../../tsconfig.json"
 			],
