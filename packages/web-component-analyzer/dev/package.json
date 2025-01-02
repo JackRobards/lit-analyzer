@@ -13,7 +13,7 @@
 		"@aybolit/material": "^0.1.0",
 		"@ionic/core": "^8.4.1",
 		"@lion/button": "^0.18.1",
-		"@lion/input": "^0.3.5",
+		"@lion/input": "^0.18.0",
 		"@lion/textarea": "^0.16.1",
 		"@material/mwc-button": "^0.27.0",
 		"@material/mwc-checkbox": "^0.27.0",
