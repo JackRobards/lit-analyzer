@@ -35,7 +35,7 @@ const defaultCompilerOptions: CompilerOptions = {
 	allowSyntheticDefaultImports: true,
 	allowUnreachableCode: true,
 	allowUnusedLabels: true,
-	lib: ["lib.esnext.d.ts", "lib.dom.d.ts"]
+	lib: ["lib.es2023.d.ts", "lib.dom.d.ts"]
 };
 
 export interface CompileResult {
@@ -76,7 +76,7 @@ export function getCompilerOptions(): CompilerOptions {
 		// set module resolution to nodejs if it is classic
 		// but if the user has set it to something else, don't override it
 		if (!options.moduleResolution || options.moduleResolution === ModuleResolutionKind.Classic) {
-			options.moduleResolution = ModuleResolutionKind.NodeJs;
+			options.moduleResolution = ModuleResolutionKind.NodeNext;
 		}
 		return options;
 	}

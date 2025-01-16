@@ -80,6 +80,7 @@
 		}
 	},
 	"main": "index.js",
+	"typings": "index.d.ts",
 	"files": [
 		"/lib/",
 		"index.js",

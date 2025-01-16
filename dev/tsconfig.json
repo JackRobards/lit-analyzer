@@ -45,10 +45,10 @@
 			}
 		],
 		"experimentalDecorators": true,
-		"target": "es5",
-		"module": "commonjs",
+		"target": "es2023",
+		"module": "NodeNext",
 		"allowJs": true,
-		"lib": ["esnext", "dom"],
+		"lib": ["es2023", "dom"],
 		"strict": true,
 		"esModuleInterop": true,
 		"noEmit": true

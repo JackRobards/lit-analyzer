@@ -1,9 +1,9 @@
 {
 	"compilerOptions": {
 		"experimentalDecorators": true,
-		"target": "es5",
-		"module": "commonjs",
-		"lib": ["ESnext", "DOM"],
+		"target": "es2023",
+		"module": "NodeNext",
+		"lib": ["es2023", "DOM"],
 		"strict": true,
 		"esModuleInterop": true
 	}

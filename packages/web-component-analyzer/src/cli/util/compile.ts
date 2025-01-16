@@ -15,7 +15,7 @@ const defaultOptions: CompilerOptions = {
 	//module: ModuleKind.CommonJS,
 	//lib: ["ESNext", "DOM", "DOM.Iterable"],
 	strictNullChecks: true,
-	moduleResolution: ModuleResolutionKind.NodeJs,
+	moduleResolution: ModuleResolutionKind.NodeNext,
 	esModuleInterop: true,
 	noEmit: true,
 	allowSyntheticDefaultImports: true,

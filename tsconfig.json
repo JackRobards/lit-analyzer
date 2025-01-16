@@ -1,22 +1,44 @@
 {
-	"include": ["./src"],
 	"compilerOptions": {
-		"target": "es5",
-		"module": "commonjs",
-		"lib": ["esnext"],
-		"outDir": "./lib",
-		"downlevelIteration": true,
-		"strict": true,
+		/* Base Options: */
 		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"target": "es2023",
+		"allowJs": true,
+		"resolveJsonModule": true,
+		"moduleDetection": "force",
+		"isolatedModules": true,
+
+		/* Strictness */
+		"strict": true,
+		"noImplicitOverride": true,
+
+		/* Unfortunately, it would require a lot of change to enable this setting */
+		"noUncheckedIndexedAccess": false,
+
+		/* If transpiling with TypeScript: */
+		"module": "NodeNext",
+		"sourceMap": true,
+
+		/* AND if you're building for a library: */
+		"declaration": true,
+
+		/* AND if you're building for a library in a monorepo: */
+		"composite": true,
+		"declarationMap": true,
+
+		/* Other */
+		"downlevelIteration": true,
+		"incremental": true,
 		"experimentalDecorators": true,
-		"noUnusedLocals": true,
 		"noFallthroughCasesInSwitch": true,
+		"noUnusedLocals": true,
 		"noImplicitThis": true,
 		"noImplicitAny": true,
 		"noImplicitReturns": true,
-		"skipLibCheck": true,
-		"declaration": true,
-		"declarationMap": true,
-		"incremental": true
-	}
+		"outDir": "./lib",
+
+		"lib": ["es2023"]
+	},
+	"exclude": ["node_modules", "**/*.spec.ts"]
 }
