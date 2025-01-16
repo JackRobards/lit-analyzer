@@ -1,6 +1,6 @@
 import * as yargs from "yargs";
 import { analyzeCliCommand } from "./analyze/analyze-cli-command";
-import { AnalyzerCliConfig } from "./analyzer-cli-config";
+import type { AnalyzerCliConfig } from "./analyzer-cli-config";
 import { isCliError } from "./util/cli-error";
 import { log } from "./util/log";
 

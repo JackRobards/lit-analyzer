@@ -1,4 +1,4 @@
-import { SourceFileRange } from "./range.js";
+import type { SourceFileRange } from "./range.js";
 
 export interface LitRenameLocation {
 	fileName: string;

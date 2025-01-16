@@ -1,10 +1,11 @@
-import { LitAnalyzerConfig } from "../analyze/lit-analyzer-config.js";
-import { HtmlTag, litAttributeModifierForTarget } from "../analyze/parse/parse-html-data/html-tag.js";
-import { AnalyzerDefinitionStore } from "../analyze/store/analyzer-definition-store.js";
+import type { LitAnalyzerConfig } from "../analyze/lit-analyzer-config.js";
+import type { HtmlTag } from "../analyze/parse/parse-html-data/html-tag.js";
+import { litAttributeModifierForTarget } from "../analyze/parse/parse-html-data/html-tag.js";
+import type { AnalyzerDefinitionStore } from "../analyze/store/analyzer-definition-store.js";
 import { HtmlNodeAttrKind } from "../analyze/types/html-node/html-node-attr-types.js";
 import { HtmlNodeKind } from "../analyze/types/html-node/html-node-types.js";
-import { RuleFix } from "../analyze/types/rule/rule-fix.js";
-import { RuleModule } from "../analyze/types/rule/rule-module.js";
+import type { RuleFix } from "../analyze/types/rule/rule-fix.js";
+import type { RuleModule } from "../analyze/types/rule/rule-module.js";
 import { suggestTargetForHtmlAttr } from "../analyze/util/attribute-util.js";
 import { iterableFirst } from "../analyze/util/iterable-util.js";
 import { rangeFromHtmlNodeAttr } from "../analyze/util/range-util.js";

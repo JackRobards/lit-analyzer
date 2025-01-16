@@ -1,9 +1,9 @@
-import { InterfaceDeclaration, ModuleDeclaration, SourceFile } from "typescript";
+import type { InterfaceDeclaration, ModuleDeclaration, SourceFile } from "typescript";
 import { tsModule } from "../ts-module.js";
-import { LitCodeFix } from "../types/lit-code-fix.js";
-import { LitCodeFixAction } from "../types/lit-code-fix-action.js";
-import { RuleFix } from "../types/rule/rule-fix.js";
-import { RuleFixAction } from "../types/rule/rule-fix-action.js";
+import type { LitCodeFix } from "../types/lit-code-fix.js";
+import type { LitCodeFixAction } from "../types/lit-code-fix-action.js";
+import type { RuleFix } from "../types/rule/rule-fix.js";
+import type { RuleFixAction } from "../types/rule/rule-fix-action.js";
 import { arrayFlat } from "./array-util.js";
 import { documentRangeToSFRange, makeSourceFileRange, rangeFromHtmlNodeAttr, rangeFromNode } from "./range-util.js";
 

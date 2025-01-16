@@ -1,11 +1,11 @@
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
-import { ComponentFeatureBase } from "../../types/features/component-feature";
-import { ComponentMember } from "../../types/features/component-member";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { ComponentFeatureBase } from "../../types/features/component-feature";
+import type { ComponentMember } from "../../types/features/component-member";
 import { getDecorators } from "../../util/ast-util";
-import { Node, ClassDeclaration } from "typescript";
+import type { Node, ClassDeclaration } from "typescript";
 
-import { ComponentMethod } from "../../types/features/component-method";
-import { AnalyzerFlavor } from "../analyzer-flavor";
+import type { ComponentMethod } from "../../types/features/component-method";
+import type { AnalyzerFlavor } from "../analyzer-flavor";
 import { getLwcComponent } from "./utils";
 
 // In LWC, the public properties & methods must be tagged with @api

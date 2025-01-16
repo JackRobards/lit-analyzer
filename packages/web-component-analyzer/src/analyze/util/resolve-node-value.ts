@@ -1,5 +1,5 @@
-import * as tsModule from "typescript";
-import { Node, SyntaxKind, TypeChecker } from "typescript";
+import type * as tsModule from "typescript";
+import type { Node, SyntaxKind, TypeChecker } from "typescript";
 import { resolveDeclarations } from "./resolve-declarations";
 
 export interface Context {

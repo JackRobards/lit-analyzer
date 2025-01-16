@@ -1,9 +1,11 @@
-import { Expression } from "typescript";
-import { HtmlNodeAttrAssignment, HtmlNodeAttrAssignmentKind } from "../../../../../types/html-node/html-node-attr-assignment-types.js";
-import { HtmlNodeAttr } from "../../../../../types/html-node/html-node-attr-types.js";
-import { Range } from "../../../../../types/range.js";
-import { getSourceLocation, IP5NodeAttr, IP5TagNode } from "../parse-html-p5/parse-html-types.js";
-import { ParseHtmlContext } from "./parse-html-context.js";
+import type { Expression } from "typescript";
+import type { HtmlNodeAttrAssignment } from "../../../../../types/html-node/html-node-attr-assignment-types.js";
+import { HtmlNodeAttrAssignmentKind } from "../../../../../types/html-node/html-node-attr-assignment-types.js";
+import type { HtmlNodeAttr } from "../../../../../types/html-node/html-node-attr-types.js";
+import type { Range } from "../../../../../types/range.js";
+import type { IP5NodeAttr, IP5TagNode } from "../parse-html-p5/parse-html-types.js";
+import { getSourceLocation } from "../parse-html-p5/parse-html-types.js";
+import type { ParseHtmlContext } from "./parse-html-context.js";
 
 /**
  * Parses a html attribute assignment.

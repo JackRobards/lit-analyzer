@@ -1,5 +1,5 @@
-import { SimpleType, SimpleTypeUnion } from "ts-simple-type";
-import {
+import type { SimpleType, SimpleTypeUnion } from "ts-simple-type";
+import type {
 	HtmlAttr,
 	HtmlCssPart,
 	HtmlDataCollection,
@@ -8,14 +8,16 @@ import {
 	HtmlProp,
 	HtmlSlot,
 	HtmlTag,
+	NamedHtmlDataCollection,
+	HtmlCssProperty
+} from "../../parse/parse-html-data/html-tag.js";
+import {
 	mergeCssParts,
 	mergeHtmlAttrs,
 	mergeHtmlEvents,
 	mergeHtmlProps,
 	mergeHtmlSlots,
 	mergeHtmlTags,
-	NamedHtmlDataCollection,
-	HtmlCssProperty,
 	mergeCssProperties
 } from "../../parse/parse-html-data/html-tag.js";
 import { lazy } from "../../util/general-util.js";

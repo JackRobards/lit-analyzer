@@ -1,4 +1,5 @@
-import { isAssignableToSimpleTypeKind, SimpleType } from "ts-simple-type";
+import type { SimpleType } from "ts-simple-type";
+import { isAssignableToSimpleTypeKind } from "ts-simple-type";
 
 export function removeUndefinedFromType(type: SimpleType): SimpleType {
 	switch (type.kind) {

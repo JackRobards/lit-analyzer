@@ -1,7 +1,7 @@
-import * as tsModule from "typescript";
-import { ComponentFeature } from "../analyze/types/features/component-feature";
-import { VisibilityKind } from "../analyze/types/visibility-kind";
-import { TransformerKind } from "../transformers/transformer-kind";
+import type * as tsModule from "typescript";
+import type { ComponentFeature } from "../analyze/types/features/component-feature";
+import type { VisibilityKind } from "../analyze/types/visibility-kind";
+import type { TransformerKind } from "../transformers/transformer-kind";
 
 export interface AnalyzerCliConfig {
 	glob?: string[];

@@ -1,7 +1,7 @@
-import * as tsModule from "typescript";
-import { Program } from "typescript";
-import { AnalyzerFlavor } from "../flavors/analyzer-flavor";
-import { AnalyzerConfig } from "./analyzer-config";
+import type * as tsModule from "typescript";
+import type { Program } from "typescript";
+import type { AnalyzerFlavor } from "../flavors/analyzer-flavor";
+import type { AnalyzerConfig } from "./analyzer-config";
 
 /**
  * Options to give when analyzing components

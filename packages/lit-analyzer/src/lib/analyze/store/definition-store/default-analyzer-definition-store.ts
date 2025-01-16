@@ -1,7 +1,8 @@
-import { SourceFile } from "typescript";
-import { AnalyzerResult, ComponentDeclaration, ComponentDefinition, visitAllHeritageClauses } from "web-component-analyzer-fork";
+import type { SourceFile } from "typescript";
+import type { AnalyzerResult, ComponentDeclaration, ComponentDefinition } from "web-component-analyzer-fork";
+import { visitAllHeritageClauses } from "web-component-analyzer-fork";
 import { getDeclarationsInFile } from "../../util/component-util.js";
-import { AnalyzerDefinitionStore } from "../analyzer-definition-store.js";
+import type { AnalyzerDefinitionStore } from "../analyzer-definition-store.js";
 
 export class DefaultAnalyzerDefinitionStore implements AnalyzerDefinitionStore {
 	private analysisResultForFile = new Map<string, AnalyzerResult>();

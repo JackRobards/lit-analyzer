@@ -1,13 +1,13 @@
-import { Node, SourceFile } from "typescript";
-import { AnalyzerVisitContext } from "../analyzer-visit-context";
-import { ComponentDeclaration, ComponentDeclarationKind, ComponentHeritageClause } from "../types/component-declaration";
-import { ComponentCssPart } from "../types/features/component-css-part";
-import { ComponentCssProperty } from "../types/features/component-css-property";
-import { ComponentEvent } from "../types/features/component-event";
-import { ComponentFeature } from "../types/features/component-feature";
-import { ComponentMember } from "../types/features/component-member";
-import { ComponentMethod } from "../types/features/component-method";
-import { ComponentSlot } from "../types/features/component-slot";
+import type { Node, SourceFile } from "typescript";
+import type { AnalyzerVisitContext } from "../analyzer-visit-context";
+import type { ComponentDeclaration, ComponentDeclarationKind, ComponentHeritageClause } from "../types/component-declaration";
+import type { ComponentCssPart } from "../types/features/component-css-part";
+import type { ComponentCssProperty } from "../types/features/component-css-property";
+import type { ComponentEvent } from "../types/features/component-event";
+import type { ComponentFeature } from "../types/features/component-feature";
+import type { ComponentMember } from "../types/features/component-member";
+import type { ComponentMethod } from "../types/features/component-method";
+import type { ComponentSlot } from "../types/features/component-slot";
 
 export type PriorityKind = "low" | "medium" | "high";
 

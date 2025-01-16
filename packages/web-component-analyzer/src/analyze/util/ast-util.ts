@@ -10,8 +10,8 @@ import type {
 	SyntaxKind,
 	TypeChecker
 } from "typescript";
-import { ModifierKind } from "../types/modifier-kind";
-import { VisibilityKind } from "../types/visibility-kind";
+import type { ModifierKind } from "../types/modifier-kind";
+import type { VisibilityKind } from "../types/visibility-kind";
 import { resolveNodeValue } from "./resolve-node-value";
 import { isNamePrivate } from "./text-util";
 

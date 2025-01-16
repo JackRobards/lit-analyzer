@@ -1,8 +1,8 @@
-import { JSDocUnknownTag } from "typescript";
-import { LitAnalyzerContext } from "../../../lit-analyzer-context.js";
+import type { JSDocUnknownTag } from "typescript";
+import type { LitAnalyzerContext } from "../../../lit-analyzer-context.js";
 import { HtmlDocument } from "../../../parse/document/text-document/html-document/html-document.js";
-import { HtmlNode } from "../../../types/html-node/html-node-types.js";
-import { LitRenameLocation } from "../../../types/lit-rename-location.js";
+import type { HtmlNode } from "../../../types/html-node/html-node-types.js";
+import type { LitRenameLocation } from "../../../types/lit-rename-location.js";
 import { findChild } from "../../../util/ast-util.js";
 import { iterableFirst } from "../../../util/iterable-util.js";
 import { documentRangeToSFRange, makeSourceFileRange } from "../../../util/range-util.js";

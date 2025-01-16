@@ -1,8 +1,8 @@
-import { Identifier, ObjectLiteralExpression } from "typescript";
-import { ComponentMember } from "web-component-analyzer-fork";
-import { RuleFixAction, RuleFixActionChangeRange } from "../analyze/types/rule/rule-fix-action.js";
-import { RuleModule } from "../analyze/types/rule/rule-module.js";
-import { RuleModuleContext } from "../analyze/types/rule/rule-module-context.js";
+import type { Identifier, ObjectLiteralExpression } from "typescript";
+import type { ComponentMember } from "web-component-analyzer-fork";
+import type { RuleFixAction, RuleFixActionChangeRange } from "../analyze/types/rule/rule-fix-action.js";
+import type { RuleModule } from "../analyze/types/rule/rule-module.js";
+import type { RuleModuleContext } from "../analyze/types/rule/rule-module-context.js";
 import { findChild, getNodeIdentifier } from "../analyze/util/ast-util.js";
 import { makeSourceFileRange, rangeFromNode } from "../analyze/util/range-util.js";
 

@@ -1,8 +1,8 @@
-import * as tsModule from "typescript";
-import { Node, Program, TypeChecker } from "typescript";
-import { AnalyzerFlavor, ComponentFeatureCollection } from "./flavors/analyzer-flavor";
-import { AnalyzerConfig } from "./types/analyzer-config";
-import { ComponentDeclaration } from "./types/component-declaration";
+import type * as tsModule from "typescript";
+import type { Node, Program, TypeChecker } from "typescript";
+import type { AnalyzerFlavor, ComponentFeatureCollection } from "./flavors/analyzer-flavor";
+import type { AnalyzerConfig } from "./types/analyzer-config";
+import type { ComponentDeclaration } from "./types/component-declaration";
 
 /**
  * This context is used in the entire analyzer.

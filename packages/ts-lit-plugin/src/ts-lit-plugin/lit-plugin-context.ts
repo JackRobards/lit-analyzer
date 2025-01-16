@@ -1,4 +1,5 @@
-import { DefaultLitAnalyzerContext, LitAnalyzerConfig } from "lit-analyzer-fork";
+import type { LitAnalyzerConfig } from "lit-analyzer-fork";
+import { DefaultLitAnalyzerContext } from "lit-analyzer-fork";
 import { logger } from "../logger.js";
 
 export class LitPluginContext extends DefaultLitAnalyzerContext {

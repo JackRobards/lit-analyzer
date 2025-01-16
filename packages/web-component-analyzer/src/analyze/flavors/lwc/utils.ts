@@ -1,5 +1,5 @@
-import { Node, ClassDeclaration } from "typescript";
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { Node, ClassDeclaration } from "typescript";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
 import { getDecorators } from "../../util/ast-util";
 import { camelToDashCase } from "../../util/text-util";
 import { existsSync, readFileSync } from "fs";

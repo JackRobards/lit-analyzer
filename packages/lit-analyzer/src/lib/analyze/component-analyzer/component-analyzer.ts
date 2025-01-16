@@ -1,9 +1,9 @@
-import { ComponentDeclaration, ComponentDefinition } from "web-component-analyzer-fork";
-import { LitAnalyzerContext } from "../lit-analyzer-context.js";
-import { ReportedRuleDiagnostic } from "../rule-collection.js";
-import { LitCodeFix } from "../types/lit-code-fix.js";
-import { LitDiagnostic } from "../types/lit-diagnostic.js";
-import { SourceFileRange } from "../types/range.js";
+import type { ComponentDeclaration, ComponentDefinition } from "web-component-analyzer-fork";
+import type { LitAnalyzerContext } from "../lit-analyzer-context.js";
+import type { ReportedRuleDiagnostic } from "../rule-collection.js";
+import type { LitCodeFix } from "../types/lit-code-fix.js";
+import type { LitDiagnostic } from "../types/lit-diagnostic.js";
+import type { SourceFileRange } from "../types/range.js";
 import { arrayDefined, arrayFlat } from "../util/array-util.js";
 import { intersects } from "../util/range-util.js";
 import { convertRuleDiagnosticToLitDiagnostic } from "../util/rule-diagnostic-util.js";

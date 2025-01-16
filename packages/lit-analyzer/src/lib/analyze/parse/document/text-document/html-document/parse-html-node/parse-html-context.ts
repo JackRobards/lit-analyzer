@@ -1,6 +1,6 @@
-import { Expression } from "typescript";
-import { Range } from "../../../../../types/range.js";
-import { HtmlDocument } from "../html-document.js";
+import type { Expression } from "typescript";
+import type { Range } from "../../../../../types/range.js";
+import type { HtmlDocument } from "../html-document.js";
 
 export interface ParseHtmlContext {
 	html: string;

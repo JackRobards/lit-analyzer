@@ -1,9 +1,9 @@
-import { Node } from "typescript";
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { Node } from "typescript";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
 import { getDecorators } from "../../util/ast-util";
 import { getNodeIdentifier } from "../../util/resolve-declarations";
 import { resolveNodeValue } from "../../util/resolve-node-value";
-import { DefinitionNodeResult } from "../analyzer-flavor";
+import type { DefinitionNodeResult } from "../analyzer-flavor";
 
 /**
  * Visits lit-element related definitions.

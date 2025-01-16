@@ -1,5 +1,5 @@
 import { LitAnalyzer } from "lit-analyzer-fork";
-import {
+import type {
 	CodeFixAction,
 	CompletionEntryDetails,
 	CompletionInfo,
@@ -16,7 +16,7 @@ import {
 	TextChange,
 	UserPreferences
 } from "typescript";
-import { LitPluginContext } from "./lit-plugin-context.js";
+import type { LitPluginContext } from "./lit-plugin-context.js";
 import { translateCodeFixes } from "./translate/translate-code-fixes.js";
 import { translateCompletionDetails } from "./translate/translate-completion-details.js";
 import { translateCompletions } from "./translate/translate-completions.js";

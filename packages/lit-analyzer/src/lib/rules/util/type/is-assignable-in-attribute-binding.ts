@@ -1,7 +1,9 @@
-import { isAssignableToType as _isAssignableToType, SimpleType, SimpleTypeComparisonOptions, typeToString } from "ts-simple-type";
-import { HtmlNodeAttrAssignment, HtmlNodeAttrAssignmentKind } from "../../../analyze/types/html-node/html-node-attr-assignment-types.js";
-import { HtmlNodeAttr } from "../../../analyze/types/html-node/html-node-attr-types.js";
-import { RuleModuleContext } from "../../../analyze/types/rule/rule-module-context.js";
+import type { SimpleType, SimpleTypeComparisonOptions } from "ts-simple-type";
+import { isAssignableToType as _isAssignableToType, typeToString } from "ts-simple-type";
+import type { HtmlNodeAttrAssignment } from "../../../analyze/types/html-node/html-node-attr-assignment-types.js";
+import { HtmlNodeAttrAssignmentKind } from "../../../analyze/types/html-node/html-node-attr-assignment-types.js";
+import type { HtmlNodeAttr } from "../../../analyze/types/html-node/html-node-attr-types.js";
+import type { RuleModuleContext } from "../../../analyze/types/rule/rule-module-context.js";
 import { documentRangeToSFRange, rangeFromHtmlNodeAttr } from "../../../analyze/util/range-util.js";
 import { isPrimitiveArrayType } from "../../../analyze/util/type-util.js";
 import { isLitDirective } from "../directive/is-lit-directive.js";

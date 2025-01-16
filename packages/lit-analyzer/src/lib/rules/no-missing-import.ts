@@ -1,5 +1,5 @@
 import { basename, dirname, posix } from "path";
-import { RuleModule } from "../analyze/types/rule/rule-module.js";
+import type { RuleModule } from "../analyze/types/rule/rule-module.js";
 import { isCustomElementTagName } from "../analyze/util/is-valid-name.js";
 import { rangeFromHtmlNode } from "../analyze/util/range-util.js";
 

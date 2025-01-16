@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { LitAnalyzerConfig, LitAnalyzerLoggerLevel, makeConfig, VERSION } from "lit-analyzer-fork";
-import * as ts from "typescript";
-import { CompilerOptions } from "typescript";
-import * as tsServer from "typescript/lib/tsserverlibrary.js";
+import type { LitAnalyzerConfig } from "lit-analyzer-fork";
+import { LitAnalyzerLoggerLevel, makeConfig, VERSION } from "lit-analyzer-fork";
+import type * as ts from "typescript";
+import type { CompilerOptions } from "typescript";
+import type * as tsServer from "typescript/lib/tsserverlibrary.js";
 import { VERSION as WCA_VERSION } from "web-component-analyzer-fork";
 import { decorateLanguageService } from "./decorate-language-service.js";
 import { logger } from "./logger.js";

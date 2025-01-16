@@ -1,7 +1,7 @@
-import { Node } from "typescript";
-import { AnalyzerVisitContext } from "../analyzer-visit-context";
-import { AnalyzerDeclarationVisitContext, ComponentFeatureCollection } from "../flavors/analyzer-flavor";
-import { ComponentDeclaration } from "../types/component-declaration";
+import type { Node } from "typescript";
+import type { AnalyzerVisitContext } from "../analyzer-visit-context";
+import type { AnalyzerDeclarationVisitContext, ComponentFeatureCollection } from "../flavors/analyzer-flavor";
+import type { ComponentDeclaration } from "../types/component-declaration";
 import { getJsDoc } from "../util/js-doc-util";
 import { getSymbol, resolveDeclarations, getNodeName } from "../util/resolve-declarations";
 import { discoverFeatures } from "./discover-features";

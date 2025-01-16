@@ -1,6 +1,6 @@
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
-import { AnalyzerDeclarationVisitContext, FeatureVisitReturnTypeMap } from "../../flavors/analyzer-flavor";
-import { ComponentFeature, ComponentFeatureBase } from "../../types/features/component-feature";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { AnalyzerDeclarationVisitContext, FeatureVisitReturnTypeMap } from "../../flavors/analyzer-flavor";
+import type { ComponentFeature, ComponentFeatureBase } from "../../types/features/component-feature";
 
 export type RefineFeatureEmitMap = { [K in ComponentFeature]: (result: FeatureVisitReturnTypeMap[K]) => void };
 

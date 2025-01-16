@@ -1,11 +1,11 @@
-import { Node } from "typescript";
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
-import { ComponentCssPart } from "../../types/features/component-css-part";
-import { ComponentCssProperty } from "../../types/features/component-css-property";
-import { ComponentEvent } from "../../types/features/component-event";
-import { ComponentMember } from "../../types/features/component-member";
-import { ComponentSlot } from "../../types/features/component-slot";
-import { AnalyzerFlavor } from "../analyzer-flavor";
+import type { Node } from "typescript";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { ComponentCssPart } from "../../types/features/component-css-part";
+import type { ComponentCssProperty } from "../../types/features/component-css-property";
+import type { ComponentEvent } from "../../types/features/component-event";
+import type { ComponentMember } from "../../types/features/component-member";
+import type { ComponentSlot } from "../../types/features/component-slot";
+import type { AnalyzerFlavor } from "../analyzer-flavor";
 import { discoverFeatures } from "./discover-features";
 
 export const discoverGlobalFeatures: AnalyzerFlavor["discoverGlobalFeatures"] = {

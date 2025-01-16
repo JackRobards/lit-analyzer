@@ -1,5 +1,5 @@
-import { Node, SourceFile } from "typescript";
-import { ComponentDeclaration } from "./component-declaration";
+import type { Node, SourceFile } from "typescript";
+import type { ComponentDeclaration } from "./component-declaration";
 
 export interface ComponentDefinition {
 	sourceFile: SourceFile;

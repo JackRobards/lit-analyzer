@@ -1,5 +1,5 @@
-import { Node } from "typescript";
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { Node } from "typescript";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
 import { getNodeName } from "../../util/resolve-declarations";
 
 export function excludeNode(node: Node, context: AnalyzerVisitContext): boolean | undefined {

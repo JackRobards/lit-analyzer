@@ -1,11 +1,11 @@
 import type { GetAccessorDeclaration, Node, PropertyDeclaration, PropertySignature, SetAccessorDeclaration } from "typescript";
-import { ComponentMember } from "../../types/features/component-member";
+import type { ComponentMember } from "../../types/features/component-member";
 import { getMemberVisibilityFromNode, getModifiersFromNode } from "../../util/ast-util";
 import { getJsDoc } from "../../util/js-doc-util";
 import { lazy } from "../../util/lazy";
 import { resolveNodeValue } from "../../util/resolve-node-value";
 import { camelToDashCase } from "../../util/text-util";
-import { AnalyzerDeclarationVisitContext } from "../analyzer-flavor";
+import type { AnalyzerDeclarationVisitContext } from "../analyzer-flavor";
 import { hasLwcApiPropertyDecorator } from "./utils";
 
 /**

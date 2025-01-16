@@ -1,13 +1,14 @@
-import { SourceFile, TaggedTemplateExpression } from "typescript";
-import { HtmlNodeKind, IHtmlNodeStyleTag } from "../../types/html-node/html-node-types.js";
-import { SourceFilePosition } from "../../types/range.js";
+import type { SourceFile, TaggedTemplateExpression } from "typescript";
+import type { IHtmlNodeStyleTag } from "../../types/html-node/html-node-types.js";
+import { HtmlNodeKind } from "../../types/html-node/html-node-types.js";
+import type { SourceFilePosition } from "../../types/range.js";
 import { arrayFlat } from "../../util/array-util.js";
 import { documentRangeToSFRange, intersects, makeDocumentRange } from "../../util/range-util.js";
 import { findTaggedTemplates } from "../tagged-template/find-tagged-templates.js";
 import { CssDocument } from "./text-document/css-document/css-document.js";
 import { HtmlDocument } from "./text-document/html-document/html-document.js";
 import { parseHtmlDocument } from "./text-document/html-document/parse-html-document.js";
-import { TextDocument } from "./text-document/text-document.js";
+import type { TextDocument } from "./text-document/text-document.js";
 import { VirtualAstCssDocument } from "./virtual-document/virtual-css-document.js";
 
 export interface ParseDocumentOptions {

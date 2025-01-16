@@ -1,5 +1,5 @@
 import { HtmlNodeKind } from "../analyze/types/html-node/html-node-types.js";
-import { RuleModule } from "../analyze/types/rule/rule-module.js";
+import type { RuleModule } from "../analyze/types/rule/rule-module.js";
 import { findBestStringMatch } from "../analyze/util/find-best-match.js";
 import { rangeFromHtmlNode } from "../analyze/util/range-util.js";
 

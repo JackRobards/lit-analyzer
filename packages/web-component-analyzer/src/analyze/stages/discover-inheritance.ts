@@ -1,7 +1,7 @@
-import { Node } from "typescript";
-import { AnalyzerVisitContext } from "../analyzer-visit-context";
-import { InheritanceResult } from "../flavors/analyzer-flavor";
-import { ComponentDeclarationKind, ComponentHeritageClause } from "../types/component-declaration";
+import type { Node } from "typescript";
+import type { AnalyzerVisitContext } from "../analyzer-visit-context";
+import type { InheritanceResult } from "../flavors/analyzer-flavor";
+import type { ComponentDeclarationKind, ComponentHeritageClause } from "../types/component-declaration";
 import { visitInheritance } from "./flavor/visit-inheritance";
 
 /**

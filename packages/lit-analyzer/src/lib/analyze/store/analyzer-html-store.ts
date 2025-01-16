@@ -1,4 +1,4 @@
-import {
+import type {
 	HtmlAttr,
 	HtmlAttrTarget,
 	HtmlCssPart,
@@ -9,14 +9,14 @@ import {
 	HtmlSlot,
 	HtmlTag
 } from "../parse/parse-html-data/html-tag.js";
-import {
+import type {
 	HtmlNodeAttr,
 	IHtmlNodeAttr,
 	IHtmlNodeAttrEventListener,
 	IHtmlNodeAttrProp,
 	IHtmlNodeBooleanAttribute
 } from "../types/html-node/html-node-attr-types.js";
-import { HtmlNode } from "../types/html-node/html-node-types.js";
+import type { HtmlNode } from "../types/html-node/html-node-types.js";
 
 export interface AnalyzerHtmlStore {
 	/*absorbAnalysisResult(sourceFile: SourceFile, result: AnalyzeComponentsResult): void;

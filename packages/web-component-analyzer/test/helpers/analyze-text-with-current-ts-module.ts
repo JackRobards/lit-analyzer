@@ -1,5 +1,6 @@
-import { analyzeText, AnalyzeTextResult, VirtualSourceFile } from "../../src/analyze/analyze-text";
-import { AnalyzerOptions } from "../../src/analyze/types/analyzer-options";
+import type { AnalyzeTextResult, VirtualSourceFile } from "../../src/analyze/analyze-text";
+import { analyzeText } from "../../src/analyze/analyze-text";
+import type { AnalyzerOptions } from "../../src/analyze/types/analyzer-options";
 import { getCurrentTsModule } from "./ts-test";
 
 /**

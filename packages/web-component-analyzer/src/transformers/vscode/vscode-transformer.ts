@@ -1,15 +1,16 @@
-import { isAssignableToSimpleTypeKind, isSimpleType, SimpleType, toSimpleType, typeToString } from "ts-simple-type";
-import { Program, Type, TypeChecker } from "typescript";
-import { AnalyzerResult } from "../../analyze/types/analyzer-result";
-import { ComponentDefinition } from "../../analyze/types/component-definition";
-import { ComponentEvent } from "../../analyze/types/features/component-event";
-import { ComponentMember } from "../../analyze/types/features/component-member";
-import { JsDoc } from "../../analyze/types/js-doc";
+import type { SimpleType } from "ts-simple-type";
+import { isAssignableToSimpleTypeKind, isSimpleType, toSimpleType, typeToString } from "ts-simple-type";
+import type { Program, Type, TypeChecker } from "typescript";
+import type { AnalyzerResult } from "../../analyze/types/analyzer-result";
+import type { ComponentDefinition } from "../../analyze/types/component-definition";
+import type { ComponentEvent } from "../../analyze/types/features/component-event";
+import type { ComponentMember } from "../../analyze/types/features/component-member";
+import type { JsDoc } from "../../analyze/types/js-doc";
 import { arrayDefined } from "../../util/array-util";
 import { markdownHighlight } from "../markdown/markdown-util";
-import { TransformerConfig } from "../transformer-config";
-import { TransformerFunction } from "../transformer-function";
-import { HtmlDataAttr, HtmlDataAttrValue, HtmlDataTag, VscodeHtmlData } from "./vscode-html-data";
+import type { TransformerConfig } from "../transformer-config";
+import type { TransformerFunction } from "../transformer-function";
+import type { HtmlDataAttr, HtmlDataAttrValue, HtmlDataTag, VscodeHtmlData } from "./vscode-html-data";
 
 /**
  * Vscode json output format transformer.

@@ -1,6 +1,6 @@
-import { Node } from "typescript";
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
-import { DefinitionNodeResult } from "../analyzer-flavor";
+import type { Node } from "typescript";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { DefinitionNodeResult } from "../analyzer-flavor";
 import { getLwcComponent } from "./utils";
 
 export function discoverDefinitions(node: Node, context: AnalyzerVisitContext): DefinitionNodeResult[] | undefined {

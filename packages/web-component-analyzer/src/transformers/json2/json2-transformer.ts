@@ -1,11 +1,11 @@
 import { basename, relative } from "path";
 import { isSimpleType, toSimpleType } from "ts-simple-type";
 import * as tsModule from "typescript";
-import { Node, Program, SourceFile, Type, TypeChecker } from "typescript";
-import { AnalyzerResult } from "../../analyze/types/analyzer-result";
-import { ComponentDeclaration, ComponentHeritageClause } from "../../analyze/types/component-declaration";
-import { ComponentFeatureBase } from "../../analyze/types/features/component-feature";
-import { JsDoc } from "../../analyze/types/js-doc";
+import type { Node, Program, SourceFile, Type, TypeChecker } from "typescript";
+import type { AnalyzerResult } from "../../analyze/types/analyzer-result";
+import type { ComponentDeclaration, ComponentHeritageClause } from "../../analyze/types/component-declaration";
+import type { ComponentFeatureBase } from "../../analyze/types/features/component-feature";
+import type { JsDoc } from "../../analyze/types/js-doc";
 import { findParent } from "../../analyze/util/ast-util";
 import { getMixinHeritageClauses, getSuperclassHeritageClause, visitAllHeritageClauses } from "../../analyze/util/component-declaration-util";
 import { getJsDoc } from "../../analyze/util/js-doc-util";
@@ -14,9 +14,9 @@ import { arrayDefined } from "../../util/array-util";
 import { getTypeHintFromMethod } from "../../util/get-type-hint-from-method";
 import { getTypeHintFromType } from "../../util/get-type-hint-from-type";
 import { filterVisibility } from "../../util/model-util";
-import { TransformerConfig } from "../transformer-config";
-import { TransformerFunction } from "../transformer-function";
-import {
+import type { TransformerConfig } from "../transformer-config";
+import type { TransformerFunction } from "../transformer-function";
+import type {
 	AttributeDoc,
 	ClassDoc,
 	ClassMember,

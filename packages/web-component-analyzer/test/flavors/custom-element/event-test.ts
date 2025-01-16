@@ -1,4 +1,5 @@
-import { SimpleType, typeToString } from "ts-simple-type";
+import type { SimpleType} from "ts-simple-type";
+import { typeToString } from "ts-simple-type";
 import { analyzeTextWithCurrentTsModule } from "../../helpers/analyze-text-with-current-ts-module";
 import { tsTest } from "../../helpers/ts-test";
 

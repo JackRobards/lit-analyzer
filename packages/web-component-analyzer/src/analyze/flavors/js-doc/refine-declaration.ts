@@ -1,5 +1,5 @@
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
-import { ComponentDeclaration } from "../../types/component-declaration";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { ComponentDeclaration } from "../../types/component-declaration";
 
 /**
  * Refines a component declaration by using jsdoc tags

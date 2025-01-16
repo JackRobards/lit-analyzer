@@ -1,11 +1,11 @@
 import * as tsModule from "typescript";
-import { Node, Program } from "typescript";
-import { AnalyzerVisitContext } from "./analyzer-visit-context";
+import type { Node, Program } from "typescript";
+import type { AnalyzerVisitContext } from "./analyzer-visit-context";
 import { DEFAULT_COMPONENT_DECLARATION_CACHE, DEFAULT_FEATURE_COLLECTION_CACHE } from "./constants";
 import { CustomElementFlavor } from "./flavors/custom-element/custom-element-flavor";
 import { makeContextFromConfig } from "./make-context-from-config";
 import { analyzeComponentDeclaration } from "./stages/analyze-declaration";
-import { ComponentDeclaration } from "./types/component-declaration";
+import type { ComponentDeclaration } from "./types/component-declaration";
 import { ALL_COMPONENT_FEATURES } from "./types/features/component-feature";
 
 /**

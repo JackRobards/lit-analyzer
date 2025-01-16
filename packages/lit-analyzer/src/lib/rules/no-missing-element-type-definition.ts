@@ -1,4 +1,4 @@
-import { RuleModule } from "../analyze/types/rule/rule-module.js";
+import type { RuleModule } from "../analyze/types/rule/rule-module.js";
 import { findParent, getNodeIdentifier } from "../analyze/util/ast-util.js";
 import { iterableFind } from "../analyze/util/iterable-util.js";
 import { rangeFromNode } from "../analyze/util/range-util.js";

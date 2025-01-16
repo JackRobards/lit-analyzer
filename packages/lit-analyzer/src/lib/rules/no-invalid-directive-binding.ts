@@ -1,7 +1,7 @@
 import { isAssignableToType } from "ts-simple-type";
 import { HtmlNodeAttrAssignmentKind } from "../analyze/types/html-node/html-node-attr-assignment-types.js";
 import { HtmlNodeAttrKind } from "../analyze/types/html-node/html-node-attr-types.js";
-import { RuleModule } from "../analyze/types/rule/rule-module.js";
+import type { RuleModule } from "../analyze/types/rule/rule-module.js";
 import { rangeFromHtmlNodeAttr } from "../analyze/util/range-util.js";
 import { getDirective } from "./util/directive/get-directive.js";
 

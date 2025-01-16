@@ -1,6 +1,6 @@
-import { HtmlDocument } from "../../parse/document/text-document/html-document/html-document.js";
-import { Range } from "../range.js";
-import { HtmlNodeAttr } from "./html-node-attr-types.js";
+import type { HtmlDocument } from "../../parse/document/text-document/html-document/html-document.js";
+import type { Range } from "../range.js";
+import type { HtmlNodeAttr } from "./html-node-attr-types.js";
 
 export interface IHtmlNodeSourceCodeLocation extends Range {
 	name: Range;

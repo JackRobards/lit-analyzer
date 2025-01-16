@@ -1,6 +1,6 @@
-import * as tsModule from "typescript";
-import tsServerModule from "typescript/lib/tsserverlibrary.js";
-import { Node, Program, SourceFile } from "typescript";
+import type * as tsModule from "typescript";
+import type tsServerModule from "typescript/lib/tsserverlibrary.js";
+import type { Node, Program, SourceFile } from "typescript";
 
 interface IVisitDependenciesContext {
 	program: Program;

@@ -1,6 +1,6 @@
 import { join } from "path";
 import { analyzeHTMLElement } from "../../../src/analyze/analyze-html-element";
-import { ComponentHeritageClause } from "../../../src/analyze/types/component-declaration";
+import type { ComponentHeritageClause } from "../../../src/analyze/types/component-declaration";
 import { getCurrentTsModule, getCurrentTsModuleDirectory, tsTest } from "../../helpers/ts-test";
 import { getComponentProp } from "../../helpers/util";
 

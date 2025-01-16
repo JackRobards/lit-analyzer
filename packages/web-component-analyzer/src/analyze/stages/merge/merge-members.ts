@@ -1,7 +1,7 @@
-import { TypeChecker } from "typescript";
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
-import { PriorityKind } from "../../flavors/analyzer-flavor";
-import { ComponentMember, ComponentMemberAttribute, ComponentMemberProperty } from "../../types/features/component-member";
+import type { TypeChecker } from "typescript";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { PriorityKind } from "../../flavors/analyzer-flavor";
+import type { ComponentMember, ComponentMemberAttribute, ComponentMemberProperty } from "../../types/features/component-member";
 import { mergeJsDoc, mergeModifiers } from "./merge-util";
 
 const priorityValueMap: Record<PriorityKind, number> = {

@@ -1,12 +1,13 @@
 import { existsSync, readFileSync } from "fs";
 import { dirname, join } from "path";
 import * as tsModule from "typescript";
-import { CompilerOptions, Program, ScriptKind, ScriptTarget, SourceFile, System, TypeChecker } from "typescript";
+import type { CompilerOptions, Program, ScriptTarget, SourceFile, System, TypeChecker } from "typescript";
+import { ScriptKind } from "typescript";
 //import * as ts from "typescript";
 import { arrayDefined } from "../util/array-util";
 import { analyzeSourceFile } from "./analyze-source-file";
-import { AnalyzerOptions } from "./types/analyzer-options";
-import { AnalyzerResult } from "./types/analyzer-result";
+import type { AnalyzerOptions } from "./types/analyzer-options";
+import type { AnalyzerResult } from "./types/analyzer-result";
 
 export interface IVirtualSourceFile {
 	fileName: string;

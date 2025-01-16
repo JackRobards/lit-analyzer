@@ -1,4 +1,4 @@
-import { RuleFixAction } from "./rule-fix-action.js";
+import type { RuleFixAction } from "./rule-fix-action.js";
 
 export interface RuleFix {
 	message: string;

@@ -1,6 +1,6 @@
-import { Identifier, Node } from "typescript";
+import type { Identifier, Node } from "typescript";
 import { tsModule } from "../ts-module.js";
-import { Range } from "../types/range.js";
+import type { Range } from "../types/range.js";
 import { intersects } from "./range-util.js";
 
 /**

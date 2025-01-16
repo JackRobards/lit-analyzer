@@ -1,7 +1,7 @@
 import { litDiagnosticRuleSeverity, ruleIdCode } from "../lit-analyzer-config.js";
-import { LitAnalyzerContext } from "../lit-analyzer-context.js";
-import { ReportedRuleDiagnostic } from "../rule-collection.js";
-import { LitDiagnostic } from "../types/lit-diagnostic.js";
+import type { LitAnalyzerContext } from "../lit-analyzer-context.js";
+import type { ReportedRuleDiagnostic } from "../rule-collection.js";
+import type { LitDiagnostic } from "../types/lit-diagnostic.js";
 
 export function convertRuleDiagnosticToLitDiagnostic(reported: ReportedRuleDiagnostic, context: LitAnalyzerContext): LitDiagnostic {
 	const source = reported.source;

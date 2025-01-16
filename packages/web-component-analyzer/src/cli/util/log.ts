@@ -1,4 +1,4 @@
-import { AnalyzerCliConfig } from "../analyzer-cli-config";
+import type { AnalyzerCliConfig } from "../analyzer-cli-config";
 
 /**
  * Logs to the console with a specific level.

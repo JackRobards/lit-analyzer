@@ -1,4 +1,5 @@
-import { CompilerOptions, createProgram, ModuleKind, ModuleResolutionKind, Program, ScriptTarget, SourceFile } from "typescript";
+import type { CompilerOptions, Program, SourceFile } from "typescript";
+import { createProgram, ModuleKind, ModuleResolutionKind, ScriptTarget } from "typescript";
 
 /**
  * The most general version of compiler options.

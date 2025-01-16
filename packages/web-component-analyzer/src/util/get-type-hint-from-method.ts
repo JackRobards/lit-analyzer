@@ -1,5 +1,5 @@
-import { TypeChecker } from "typescript";
-import { ComponentMethod } from "../analyze/types/features/component-method";
+import type { TypeChecker } from "typescript";
+import type { ComponentMethod } from "../analyze/types/features/component-method";
 import { getTypeHintFromType } from "./get-type-hint-from-type";
 
 /**

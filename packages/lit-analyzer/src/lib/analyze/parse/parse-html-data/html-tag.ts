@@ -1,5 +1,6 @@
-import { isAssignableToSimpleTypeKind, SimpleType, typeToString } from "ts-simple-type";
-import {
+import type { SimpleType } from "ts-simple-type";
+import { isAssignableToSimpleTypeKind, typeToString } from "ts-simple-type";
+import type {
 	ComponentCssPart,
 	ComponentCssProperty,
 	ComponentDeclaration,

@@ -1,16 +1,18 @@
-import { isAssignableToSimpleTypeKind, SimpleType } from "ts-simple-type";
+import type { SimpleType } from "ts-simple-type";
+import { isAssignableToSimpleTypeKind } from "ts-simple-type";
 import {
 	LIT_HTML_BOOLEAN_ATTRIBUTE_MODIFIER,
 	LIT_HTML_EVENT_LISTENER_ATTRIBUTE_MODIFIER,
 	LIT_HTML_PROP_ATTRIBUTE_MODIFIER
 } from "../../../constants.js";
-import { documentationForTarget, HtmlAttrTarget, isHtmlAttr, isHtmlEvent, isHtmlProp } from "../../../parse/parse-html-data/html-tag.js";
-import { HtmlNode } from "../../../types/html-node/html-node-types.js";
-import { DocumentPositionContext } from "../../../util/get-position-context-in-document.js";
+import type { HtmlAttrTarget } from "../../../parse/parse-html-data/html-tag.js";
+import { documentationForTarget, isHtmlAttr, isHtmlEvent, isHtmlProp } from "../../../parse/parse-html-data/html-tag.js";
+import type { HtmlNode } from "../../../types/html-node/html-node-types.js";
+import type { DocumentPositionContext } from "../../../util/get-position-context-in-document.js";
 import { iterableFilter, iterableMap } from "../../../util/iterable-util.js";
 import { lazy } from "../../../util/general-util.js";
-import { LitAnalyzerContext } from "../../../lit-analyzer-context.js";
-import { LitCompletion } from "../../../types/lit-completion.js";
+import type { LitAnalyzerContext } from "../../../lit-analyzer-context.js";
+import type { LitCompletion } from "../../../types/lit-completion.js";
 
 export function completionsForHtmlAttrs(htmlNode: HtmlNode, location: DocumentPositionContext, { htmlStore }: LitAnalyzerContext): LitCompletion[] {
 	const onTagName = htmlNode.tagName;

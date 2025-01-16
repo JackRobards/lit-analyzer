@@ -1,10 +1,11 @@
 import fastGlob from "fast-glob";
 import { existsSync, lstatSync } from "fs";
 import { join } from "path";
-import { Diagnostic, Program, SourceFile } from "typescript";
+import type { Diagnostic, Program, SourceFile } from "typescript";
 import { arrayFlat } from "../analyze/util/array-util.js";
-import { CompileResult, compileTypescript } from "./compile.js";
-import { LitAnalyzerCliConfig } from "./lit-analyzer-cli-config.js";
+import type { CompileResult } from "./compile.js";
+import { compileTypescript } from "./compile.js";
+import type { LitAnalyzerCliConfig } from "./lit-analyzer-cli-config.js";
 
 //const IGNORE_GLOBS = ["!**/node_modules/**", "!**/web_modules/**"];
 const IGNORE_GLOBS: string[] = [];

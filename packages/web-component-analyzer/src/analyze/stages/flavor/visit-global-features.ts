@@ -1,7 +1,8 @@
-import { Node } from "typescript";
+import type { Node } from "typescript";
 import { arrayDefined } from "../../../util/array-util";
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
-import { VisitFeatureEmitMap, visitFeaturesWithVisitMaps } from "./visit-features";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { VisitFeatureEmitMap } from "./visit-features";
+import { visitFeaturesWithVisitMaps } from "./visit-features";
 
 /**
  * Uses flavors to find global features

@@ -1,4 +1,4 @@
-import { Node, SourceFile, TaggedTemplateExpression } from "typescript";
+import type { Node, SourceFile, TaggedTemplateExpression } from "typescript";
 import { tsModule } from "../../ts-module.js";
 import { findParent, getNodeAtPosition } from "../../util/ast-util.js";
 

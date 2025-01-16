@@ -1,4 +1,4 @@
-import { ExecutionContext } from "ava";
+import type { ExecutionContext } from "ava";
 import { CssDocument } from "../../../lib/analyze/parse/document/text-document/css-document/css-document.js";
 import { VirtualAstCssDocument } from "../../../lib/analyze/parse/document/virtual-document/virtual-css-document.js";
 import { findTaggedTemplates } from "../../../lib/analyze/parse/tagged-template/find-tagged-templates.js";

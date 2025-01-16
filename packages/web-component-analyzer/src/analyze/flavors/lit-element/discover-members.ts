@@ -1,12 +1,12 @@
-import { GetAccessorDeclaration, Node, PropertyDeclaration, PropertySignature, ReturnStatement, SetAccessorDeclaration } from "typescript";
-import { ComponentMember } from "../../types/features/component-member";
-import { LitElementPropertyConfig } from "../../types/features/lit-element-property-config";
+import type { GetAccessorDeclaration, Node, PropertyDeclaration, PropertySignature, ReturnStatement, SetAccessorDeclaration } from "typescript";
+import type { ComponentMember } from "../../types/features/component-member";
+import type { LitElementPropertyConfig } from "../../types/features/lit-element-property-config";
 import { getMemberVisibilityFromNode, getModifiersFromNode, getNodeSourceFileLang, hasModifier } from "../../util/ast-util";
 import { getJsDoc, getJsDocType } from "../../util/js-doc-util";
 import { lazy } from "../../util/lazy";
 import { resolveNodeValue } from "../../util/resolve-node-value";
 import { camelToDashCase, isNamePrivate } from "../../util/text-util";
-import { AnalyzerDeclarationVisitContext } from "../analyzer-flavor";
+import type { AnalyzerDeclarationVisitContext } from "../analyzer-flavor";
 import { getLitElementPropertyDecoratorConfig, getLitPropertyOptions, getLitPropertyType } from "./parse-lit-property-configuration";
 
 /**

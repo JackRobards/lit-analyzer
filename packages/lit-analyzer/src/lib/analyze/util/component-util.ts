@@ -1,5 +1,6 @@
-import { SourceFile } from "typescript";
-import { ComponentDeclaration, ComponentDefinition, visitAllHeritageClauses } from "web-component-analyzer-fork";
+import type { SourceFile } from "typescript";
+import type { ComponentDeclaration, ComponentDefinition } from "web-component-analyzer-fork";
+import { visitAllHeritageClauses } from "web-component-analyzer-fork";
 
 export function getDeclarationsInFile(definition: ComponentDefinition, sourceFile: SourceFile): ComponentDeclaration[] {
 	const declarations = new Set<ComponentDeclaration>();

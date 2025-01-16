@@ -1,5 +1,5 @@
 import test from "ava";
-import { SimpleType } from "ts-simple-type";
+import type { SimpleType } from "ts-simple-type";
 import { parseSimpleJsDocTypeExpression } from "../../../src/analyze/util/js-doc-util";
 import { getCurrentTsModule } from "../../helpers/ts-test";
 

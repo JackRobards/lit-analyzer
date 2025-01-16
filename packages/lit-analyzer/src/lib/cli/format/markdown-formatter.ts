@@ -1,6 +1,6 @@
-import { SourceFile } from "typescript";
-import { LitDiagnostic } from "../../analyze/types/lit-diagnostic.js";
-import { AnalysisStats, DiagnosticFormatter } from "./diagnostic-formatter.js";
+import type { SourceFile } from "typescript";
+import type { LitDiagnostic } from "../../analyze/types/lit-diagnostic.js";
+import type { AnalysisStats, DiagnosticFormatter } from "./diagnostic-formatter.js";
 import { markdownHeader, markdownHighlight, markdownTable } from "./markdown-util.js";
 import { relativeFileName } from "./util.js";
 

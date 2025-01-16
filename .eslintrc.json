@@ -23,6 +23,7 @@
 		"@typescript-eslint/no-non-null-assertion": "off",
 		"@typescript-eslint/prefer-interface": "off",
 		"@typescript-eslint/no-empty-interface": "off",
+		"@typescript-eslint/consistent-type-imports": 2,
 		"no-dupe-class-members": "off",
 		"import/extensions": "off"
 		// TODO: Re-enable and fix the errors in the web-component-analyzer package

@@ -1,7 +1,7 @@
-import { Node, SourceFile } from "typescript";
-import { AnalyzerVisitContext } from "../analyzer-visit-context";
-import { ComponentDeclaration } from "../types/component-declaration";
-import { ComponentDefinition } from "../types/component-definition";
+import type { Node, SourceFile } from "typescript";
+import type { AnalyzerVisitContext } from "../analyzer-visit-context";
+import type { ComponentDeclaration } from "../types/component-declaration";
+import type { ComponentDefinition } from "../types/component-definition";
 import { getSymbol, resolveSymbolDeclarations } from "../util/resolve-declarations";
 import { visitDefinitions } from "./flavor/visit-definitions";
 

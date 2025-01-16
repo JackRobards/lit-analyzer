@@ -1,5 +1,5 @@
-import { SourceFileRange } from "../range.js";
-import { RuleFix } from "./rule-fix.js";
+import type { SourceFileRange } from "../range.js";
+import type { RuleFix } from "./rule-fix.js";
 
 export interface RuleDiagnostic {
 	location: SourceFileRange;

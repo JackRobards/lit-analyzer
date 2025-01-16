@@ -1,5 +1,5 @@
-import { Node, SourceFile } from "typescript";
-import { SourceFileRange } from "./range.js";
+import type { Node, SourceFile } from "typescript";
+import type { SourceFileRange } from "./range.js";
 
 export type LitDefinitionTargetKind = "node" | "range";
 

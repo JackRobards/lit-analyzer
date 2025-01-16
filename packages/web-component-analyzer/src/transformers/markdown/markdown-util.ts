@@ -1,4 +1,4 @@
-import { TransformerConfig } from "../transformer-config";
+import type { TransformerConfig } from "../transformer-config";
 
 /**
  * Returns a markdown header with a specific level taking global start title level into account.

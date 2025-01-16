@@ -1,18 +1,16 @@
 import { existsSync, readFileSync } from "fs";
+import type { CompilerOptions, Program, SourceFile } from "typescript";
 import {
-	CompilerOptions,
 	parseJsonConfigFileContent,
 	sys,
 	createProgram,
 	findConfigFile,
 	ModuleKind,
 	ModuleResolutionKind,
-	Program,
 	readConfigFile,
-	ScriptTarget,
-	SourceFile
+	ScriptTarget
 } from "typescript";
-import { LitAnalyzerConfig } from "../analyze/lit-analyzer-config.js";
+import type { LitAnalyzerConfig } from "../analyze/lit-analyzer-config.js";
 
 const requiredCompilerOptions: CompilerOptions = {
 	noEmitOnError: false,

@@ -1,10 +1,10 @@
-import { ExecutionContext } from "ava";
-import { Node, SourceFile } from "typescript";
+import type { ExecutionContext } from "ava";
+import type { Node, SourceFile } from "typescript";
 
 import { getCurrentTsModule, tsTest } from "../helpers/ts-test.js";
 import { getIndexEntries } from "../helpers/analyze.js";
 
-import { LitIndexEntry } from "../../lib/analyze/document-analyzer/html/lit-html-document-analyzer.js";
+import type { LitIndexEntry } from "../../lib/analyze/document-analyzer/html/lit-html-document-analyzer.js";
 import { HtmlNodeKind } from "../../lib/analyze/types/html-node/html-node-types.js";
 import { HtmlNodeAttrKind } from "../../lib/analyze/types/html-node/html-node-attr-types.js";
 

@@ -3,16 +3,13 @@ import {
 	LIT_HTML_EVENT_LISTENER_ATTRIBUTE_MODIFIER,
 	LIT_HTML_PROP_ATTRIBUTE_MODIFIER
 } from "../../../../../constants.js";
-import {
-	HtmlNodeAttr,
-	HtmlNodeAttrKind,
-	IHtmlNodeAttrBase,
-	IHtmlNodeAttrSourceCodeLocation
-} from "../../../../../types/html-node/html-node-attr-types.js";
+import type { HtmlNodeAttr, IHtmlNodeAttrBase, IHtmlNodeAttrSourceCodeLocation } from "../../../../../types/html-node/html-node-attr-types.js";
+import { HtmlNodeAttrKind } from "../../../../../types/html-node/html-node-attr-types.js";
 import { parseLitAttrName } from "../../../../../util/general-util.js";
-import { getSourceLocation, IP5NodeAttr, IP5TagNode } from "../parse-html-p5/parse-html-types.js";
+import type { IP5NodeAttr, IP5TagNode } from "../parse-html-p5/parse-html-types.js";
+import { getSourceLocation } from "../parse-html-p5/parse-html-types.js";
 import { parseHtmlAttrAssignment } from "./parse-html-attr-assignment.js";
-import { ParseHtmlAttrContext } from "./parse-html-attr-context.js";
+import type { ParseHtmlAttrContext } from "./parse-html-attr-context.js";
 
 /**
  * Creates multiple html attributes based on multiple p5Attributes.

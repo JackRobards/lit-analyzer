@@ -1,5 +1,5 @@
-import { Expression } from "typescript";
-import { DocumentOffset, DocumentRange, Range, SourceFilePosition, SourceFileRange } from "../../../types/range.js";
+import type { Expression } from "typescript";
+import type { DocumentOffset, DocumentRange, Range, SourceFilePosition, SourceFileRange } from "../../../types/range.js";
 
 export interface VirtualDocument {
 	fileName: string;

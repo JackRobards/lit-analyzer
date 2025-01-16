@@ -1,6 +1,6 @@
-import { LitCompletionDetails } from "lit-analyzer-fork";
-import { CompletionEntryDetails } from "typescript";
-import { LitPluginContext } from "../lit-plugin-context.js";
+import type { LitCompletionDetails } from "lit-analyzer-fork";
+import type { CompletionEntryDetails } from "typescript";
+import type { LitPluginContext } from "../lit-plugin-context.js";
 
 export function translateCompletionDetails(completionDetails: LitCompletionDetails, context: LitPluginContext): CompletionEntryDetails {
 	return {

@@ -1,8 +1,8 @@
-import { SimpleType } from "ts-simple-type";
-import * as tsModule from "typescript";
-import { CallExpression, Node, PropertyAssignment } from "typescript";
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
-import { LitElementPropertyConfig } from "../../types/features/lit-element-property-config";
+import type { SimpleType } from "ts-simple-type";
+import type * as tsModule from "typescript";
+import type { CallExpression, Node, PropertyAssignment } from "typescript";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { LitElementPropertyConfig } from "../../types/features/lit-element-property-config";
 import { getDecorators } from "../../util/ast-util";
 import { resolveNodeValue } from "../../util/resolve-node-value";
 

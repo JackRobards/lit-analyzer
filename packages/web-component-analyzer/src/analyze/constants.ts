@@ -1,4 +1,4 @@
-import { AnalyzerFlavor } from "./flavors/analyzer-flavor";
+import type { AnalyzerFlavor } from "./flavors/analyzer-flavor";
 import { CustomElementFlavor } from "./flavors/custom-element/custom-element-flavor";
 import { JsDocFlavor } from "./flavors/js-doc/js-doc-flavor";
 import { JSXFlavor } from "./flavors/jsx/jsx-flavor";
