@@ -55,7 +55,7 @@
 	],
 	"dependencies": {
 		"lit-analyzer-fork": "^2.0.1",
-		"web-component-analyzer": "^2.0.0"
+		"web-component-analyzer-fork": "^2.0.0"
 	},
 	"devDependencies": {
 		"@types/node": "^22.10.2",

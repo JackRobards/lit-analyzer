@@ -1,4 +1,4 @@
-import { ComponentDefinition } from "web-component-analyzer";
+import { ComponentDefinition } from "web-component-analyzer-fork";
 import { HtmlDocument } from "../parse/document/text-document/html-document/html-document.js";
 import { HtmlNode } from "./html-node/html-node-types.js";
 import { LitTargetKind } from "./lit-target-kind.js";

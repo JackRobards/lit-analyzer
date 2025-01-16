@@ -3,7 +3,7 @@ import { LitAnalyzerConfig, LitAnalyzerLoggerLevel, makeConfig, VERSION } from "
 import * as ts from "typescript";
 import { CompilerOptions } from "typescript";
 import * as tsServer from "typescript/lib/tsserverlibrary.js";
-import { VERSION as WCA_VERSION } from "web-component-analyzer";
+import { VERSION as WCA_VERSION } from "web-component-analyzer-fork";
 import { decorateLanguageService } from "./decorate-language-service.js";
 import { logger } from "./logger.js";
 import { LitPluginContext } from "./ts-lit-plugin/lit-plugin-context.js";

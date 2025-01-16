@@ -1,5 +1,5 @@
 import { SourceFile } from "typescript";
-import { AnalyzerResult, ComponentDeclaration, ComponentDefinition, visitAllHeritageClauses } from "web-component-analyzer";
+import { AnalyzerResult, ComponentDeclaration, ComponentDefinition, visitAllHeritageClauses } from "web-component-analyzer-fork";
 import { getDeclarationsInFile } from "../../util/component-util.js";
 import { AnalyzerDefinitionStore } from "../analyzer-definition-store.js";
 

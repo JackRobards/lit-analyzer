@@ -1,5 +1,12 @@
 import { isAssignableToSimpleTypeKind, SimpleType, typeToString } from "ts-simple-type";
-import { ComponentCssPart, ComponentCssProperty, ComponentDeclaration, ComponentEvent, ComponentMember, ComponentSlot } from "web-component-analyzer";
+import {
+	ComponentCssPart,
+	ComponentCssProperty,
+	ComponentDeclaration,
+	ComponentEvent,
+	ComponentMember,
+	ComponentSlot
+} from "web-component-analyzer-fork";
 import {
 	LIT_HTML_BOOLEAN_ATTRIBUTE_MODIFIER,
 	LIT_HTML_EVENT_LISTENER_ATTRIBUTE_MODIFIER,
