@@ -1,7 +1,7 @@
-import { LitAnalyzerContext } from "../../../lit-analyzer-context.js";
-import { HtmlDocument } from "../../../parse/document/text-document/html-document/html-document.js";
-import { LitCompletion } from "../../../types/lit-completion.js";
-import { DocumentOffset } from "../../../types/range.js";
+import type { LitAnalyzerContext } from "../../../lit-analyzer-context.js";
+import type { HtmlDocument } from "../../../parse/document/text-document/html-document/html-document.js";
+import type { LitCompletion } from "../../../types/lit-completion.js";
+import type { DocumentOffset } from "../../../types/range.js";
 import { getPositionContextInDocument } from "../../../util/get-position-context-in-document.js";
 import { rangeFromHtmlNodeAttr } from "../../../util/range-util.js";
 import { completionsForHtmlAttrValues } from "./completions-for-html-attr-values.js";

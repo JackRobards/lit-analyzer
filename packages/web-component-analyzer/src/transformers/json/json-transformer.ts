@@ -1,20 +1,20 @@
 import { relative } from "path";
-import { Program, TypeChecker } from "typescript";
-import { AnalyzerResult } from "../../analyze/types/analyzer-result";
-import { ComponentDefinition } from "../../analyze/types/component-definition";
-import { ComponentCssPart } from "../../analyze/types/features/component-css-part";
-import { ComponentCssProperty } from "../../analyze/types/features/component-css-property";
-import { ComponentEvent } from "../../analyze/types/features/component-event";
-import { ComponentMember } from "../../analyze/types/features/component-member";
-import { ComponentSlot } from "../../analyze/types/features/component-slot";
-import { JsDoc } from "../../analyze/types/js-doc";
+import type { Program, TypeChecker } from "typescript";
+import type { AnalyzerResult } from "../../analyze/types/analyzer-result";
+import type { ComponentDefinition } from "../../analyze/types/component-definition";
+import type { ComponentCssPart } from "../../analyze/types/features/component-css-part";
+import type { ComponentCssProperty } from "../../analyze/types/features/component-css-property";
+import type { ComponentEvent } from "../../analyze/types/features/component-event";
+import type { ComponentMember } from "../../analyze/types/features/component-member";
+import type { ComponentSlot } from "../../analyze/types/features/component-slot";
+import type { JsDoc } from "../../analyze/types/js-doc";
 import { arrayDefined, arrayFlat } from "../../util/array-util";
 import { getTypeHintFromType } from "../../util/get-type-hint-from-type";
 import { filterVisibility } from "../../util/model-util";
 import { getFirst } from "../../util/set-util";
-import { TransformerConfig } from "../transformer-config";
-import { TransformerFunction } from "../transformer-function";
-import {
+import type { TransformerConfig } from "../transformer-config";
+import type { TransformerFunction } from "../transformer-function";
+import type {
 	HtmlData,
 	HtmlDataAttribute,
 	HtmlDataCssPart,

@@ -1,8 +1,8 @@
-import { ComponentCssPart } from "../../types/features/component-css-part";
-import { ComponentCssProperty } from "../../types/features/component-css-property";
-import { ComponentEvent } from "../../types/features/component-event";
-import { ComponentMethod } from "../../types/features/component-method";
-import { ComponentSlot } from "../../types/features/component-slot";
+import type { ComponentCssPart } from "../../types/features/component-css-part";
+import type { ComponentCssProperty } from "../../types/features/component-css-property";
+import type { ComponentEvent } from "../../types/features/component-event";
+import type { ComponentMethod } from "../../types/features/component-method";
+import type { ComponentSlot } from "../../types/features/component-slot";
 import { mergeJsDoc, mergeNamedEntries } from "./merge-util";
 
 /**

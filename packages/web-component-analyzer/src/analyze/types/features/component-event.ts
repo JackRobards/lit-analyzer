@@ -1,7 +1,7 @@
-import { SimpleType } from "ts-simple-type";
-import { Node, Type } from "typescript";
-import { VisibilityKind } from "../visibility-kind";
-import { ComponentFeatureBase } from "./component-feature";
+import type { SimpleType } from "ts-simple-type";
+import type { Node, Type } from "typescript";
+import type { VisibilityKind } from "../visibility-kind";
+import type { ComponentFeatureBase } from "./component-feature";
 
 export interface ComponentEvent extends ComponentFeatureBase {
 	name: string;

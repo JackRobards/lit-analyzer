@@ -1,4 +1,4 @@
-import { JSDoc, JSDocTag } from "typescript";
+import type { JSDoc, JSDocTag } from "typescript";
 
 export interface JsDocTagParsed {
 	tag: string;

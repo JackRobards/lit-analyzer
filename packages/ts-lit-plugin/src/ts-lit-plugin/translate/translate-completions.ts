@@ -1,5 +1,5 @@
-import { LitCompletion } from "lit-analyzer-fork";
-import { CompletionEntry, CompletionInfo } from "typescript";
+import type { LitCompletion } from "lit-analyzer-fork";
+import type { CompletionEntry, CompletionInfo } from "typescript";
 import { translateRange } from "./translate-range.js";
 import { translateTargetKind } from "./translate-target-kind.js";
 

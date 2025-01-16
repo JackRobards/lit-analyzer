@@ -1,12 +1,13 @@
 import fastGlob from "fast-glob";
 import { existsSync, lstatSync } from "fs";
-import { Program, SourceFile } from "typescript";
+import type { Program, SourceFile } from "typescript";
 import { analyzeSourceFile } from "../../analyze/analyze-source-file";
-import { AnalyzerResult } from "../../analyze/types/analyzer-result";
+import type { AnalyzerResult } from "../../analyze/types/analyzer-result";
 import { arrayFlat } from "../../util/array-util";
 import { stripTypescriptValues } from "../../util/strip-typescript-values";
-import { AnalyzerCliConfig } from "../analyzer-cli-config";
-import { CompileResult, compileTypescript } from "./compile";
+import type { AnalyzerCliConfig } from "../analyzer-cli-config";
+import type { CompileResult } from "./compile";
+import { compileTypescript } from "./compile";
 import { logVerbose } from "./log";
 
 const IGNORE_GLOBS = ["**/node_modules/**", "**/web_modules/**"];

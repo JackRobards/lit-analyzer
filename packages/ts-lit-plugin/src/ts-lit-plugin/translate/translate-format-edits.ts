@@ -1,5 +1,5 @@
-import { LitFormatEdit } from "lit-analyzer-fork";
-import * as ts from "typescript";
+import type { LitFormatEdit } from "lit-analyzer-fork";
+import type * as ts from "typescript";
 import { translateRange } from "./translate-range.js";
 
 export function translateFormatEdits(formatEdits: LitFormatEdit[]): ts.TextChange[] {

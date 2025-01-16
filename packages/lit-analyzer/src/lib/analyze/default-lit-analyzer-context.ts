@@ -1,13 +1,14 @@
 import * as tsMod from "typescript";
-import { HostCancellationToken, Program, SourceFile, TypeChecker } from "typescript";
-import * as tsServer from "typescript/lib/tsserverlibrary.js";
+import type { HostCancellationToken, Program, SourceFile, TypeChecker } from "typescript";
+import type * as tsServer from "typescript/lib/tsserverlibrary.js";
 import { analyzeHTMLElement, analyzeSourceFile } from "web-component-analyzer-fork";
 import { ALL_RULES } from "../rules/all-rules.js";
 import { MAX_RUNNING_TIME_PER_OPERATION } from "./constants.js";
 import { getBuiltInHtmlCollection } from "./data/get-built-in-html-collection.js";
 import { getUserConfigHtmlCollection } from "./data/get-user-config-html-collection.js";
-import { isRuleDisabled, LitAnalyzerConfig, makeConfig } from "./lit-analyzer-config.js";
-import { LitAnalyzerContext, LitAnalyzerContextBaseOptions, LitPluginContextHandler } from "./lit-analyzer-context.js";
+import type { LitAnalyzerConfig } from "./lit-analyzer-config.js";
+import { isRuleDisabled, makeConfig } from "./lit-analyzer-config.js";
+import type { LitAnalyzerContext, LitAnalyzerContextBaseOptions, LitPluginContextHandler } from "./lit-analyzer-context.js";
 import { DefaultLitAnalyzerLogger, LitAnalyzerLoggerLevel } from "./lit-analyzer-logger.js";
 import {
 	convertAnalyzeResultToHtmlCollection,

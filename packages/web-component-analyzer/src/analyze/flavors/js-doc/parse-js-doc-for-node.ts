@@ -1,8 +1,8 @@
-import { JSDocTag, Node } from "typescript";
+import type { JSDocTag, Node } from "typescript";
 import { arrayDefined } from "../../../util/array-util";
-import { JsDocTagParsed } from "../../types/js-doc";
+import type { JsDocTagParsed } from "../../types/js-doc";
 import { getJsDoc } from "../../util/js-doc-util";
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
 
 /**
  * Transforms jsdoc tags to a T array using a "transform"

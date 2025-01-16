@@ -6,7 +6,7 @@ await esbuild.build({
 	outfile: "built/bundle.js",
 	platform: "node",
 	minify: true,
-	target: "es2017",
+	target: "es2023",
 	format: "cjs",
 	color: true,
 	external: ["vscode", "typescript"],
@@ -20,7 +20,7 @@ await esbuild.build({
 	platform: "node",
 	external: ["typescript"],
 	minify: true,
-	target: "es2017",
+	target: "es2023",
 	format: "cjs",
 	color: true,
 	mainFields: ["module", "main"]

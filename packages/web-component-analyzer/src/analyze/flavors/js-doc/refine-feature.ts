@@ -1,10 +1,10 @@
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
-import { ComponentMember, ComponentMemberReflectKind } from "../../types/features/component-member";
-import { JsDoc } from "../../types/js-doc";
-import { VisibilityKind } from "../../types/visibility-kind";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { ComponentMember, ComponentMemberReflectKind } from "../../types/features/component-member";
+import type { JsDoc } from "../../types/js-doc";
+import type { VisibilityKind } from "../../types/visibility-kind";
 import { parseSimpleJsDocTypeExpression } from "../../util/js-doc-util";
 import { lazy } from "../../util/lazy";
-import { AnalyzerFlavor } from "../analyzer-flavor";
+import type { AnalyzerFlavor } from "../analyzer-flavor";
 
 /**
  * Refines features by looking at the jsdoc tags on the feature

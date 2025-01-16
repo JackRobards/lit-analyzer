@@ -1,4 +1,5 @@
-import { ALL_RULE_IDS, LitAnalyzerConfig } from "lit-analyzer-fork";
+import type { LitAnalyzerConfig } from "lit-analyzer-fork";
+import { ALL_RULE_IDS } from "lit-analyzer-fork";
 import { join } from "path";
 import { ColorProvider } from "./color-provider.js";
 import * as vscode from "vscode";

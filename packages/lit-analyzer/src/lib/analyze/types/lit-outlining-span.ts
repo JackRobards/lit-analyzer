@@ -1,4 +1,4 @@
-import { SourceFileRange } from "./range.js";
+import type { SourceFileRange } from "./range.js";
 
 export enum LitOutliningSpanKind {
 	Comment = "comment",

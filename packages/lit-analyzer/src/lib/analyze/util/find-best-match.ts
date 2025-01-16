@@ -1,5 +1,6 @@
+// @ts-expect-error - need to upgrade to type module in package.json
 import didYouMean, * as dym from "didyoumean2";
-import { Omit } from "./general-util.js";
+import type { Omit } from "./general-util.js";
 
 export interface FindBestMatchOptions<T> {
 	threshold?: number;

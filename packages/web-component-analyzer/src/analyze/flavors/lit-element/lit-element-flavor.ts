@@ -1,4 +1,4 @@
-import { AnalyzerFlavor } from "../analyzer-flavor";
+import type { AnalyzerFlavor } from "../analyzer-flavor";
 import { discoverDefinitions } from "./discover-definitions";
 import { discoverMembers } from "./discover-members";
 import { excludeNode } from "./exclude-node";

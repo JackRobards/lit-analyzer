@@ -1,5 +1,5 @@
-import { Node } from "typescript";
-import { AnalyzerDeclarationVisitContext, ComponentFeatureCollection } from "../flavors/analyzer-flavor";
+import type { Node } from "typescript";
+import type { AnalyzerDeclarationVisitContext, ComponentFeatureCollection } from "../flavors/analyzer-flavor";
 import { prepareRefineEmitMap } from "../util/get-refine-emit-map";
 import { refineFeature } from "./flavor/refine-feature";
 import { visitFeatures } from "./flavor/visit-features";

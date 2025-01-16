@@ -1,9 +1,11 @@
 import { TS_IGNORE_FLAG } from "../../../../../constants.js";
-import { HtmlNode, HtmlNodeKind, IHtmlNodeBase, IHtmlNodeSourceCodeLocation } from "../../../../../types/html-node/html-node-types.js";
+import type { HtmlNode, IHtmlNodeBase, IHtmlNodeSourceCodeLocation } from "../../../../../types/html-node/html-node-types.js";
+import { HtmlNodeKind } from "../../../../../types/html-node/html-node-types.js";
 import { isCommentNode, isTagNode } from "../parse-html-p5/parse-html.js";
-import { getSourceLocation, IP5TagNode, P5Node } from "../parse-html-p5/parse-html-types.js";
+import type { IP5TagNode, P5Node } from "../parse-html-p5/parse-html-types.js";
+import { getSourceLocation } from "../parse-html-p5/parse-html-types.js";
 import { parseHtmlNodeAttrs } from "./parse-html-attribute.js";
-import { ParseHtmlContext } from "./parse-html-context.js";
+import type { ParseHtmlContext } from "./parse-html-context.js";
 
 /**
  * Parses multiple p5Nodes into multiple html nodes.

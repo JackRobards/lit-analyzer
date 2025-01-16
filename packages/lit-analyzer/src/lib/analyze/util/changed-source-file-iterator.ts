@@ -1,4 +1,4 @@
-import { SourceFile } from "typescript";
+import type { SourceFile } from "typescript";
 
 export type ChangedSourceFileIterator = ((sourceFiles: readonly SourceFile[]) => Iterable<SourceFile>) & {
 	invalidate(sourceFile: SourceFile): void;

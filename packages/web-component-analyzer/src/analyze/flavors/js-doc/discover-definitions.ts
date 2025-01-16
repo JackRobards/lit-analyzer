@@ -1,7 +1,7 @@
-import { Node } from "typescript";
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { Node } from "typescript";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
 import { getNodeIdentifier } from "../../util/resolve-declarations";
-import { DefinitionNodeResult } from "../analyzer-flavor";
+import type { DefinitionNodeResult } from "../analyzer-flavor";
 import { parseJsDocForNode } from "./parse-js-doc-for-node";
 
 /**

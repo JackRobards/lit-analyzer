@@ -1,11 +1,11 @@
-import { Node, SourceFile, Symbol } from "typescript";
-import { ComponentCssPart } from "./features/component-css-part";
-import { ComponentCssProperty } from "./features/component-css-property";
-import { ComponentEvent } from "./features/component-event";
-import { ComponentMember } from "./features/component-member";
-import { ComponentMethod } from "./features/component-method";
-import { ComponentSlot } from "./features/component-slot";
-import { JsDoc } from "./js-doc";
+import type { Node, SourceFile, Symbol } from "typescript";
+import type { ComponentCssPart } from "./features/component-css-part";
+import type { ComponentCssProperty } from "./features/component-css-property";
+import type { ComponentEvent } from "./features/component-event";
+import type { ComponentMember } from "./features/component-member";
+import type { ComponentMethod } from "./features/component-method";
+import type { ComponentSlot } from "./features/component-slot";
+import type { JsDoc } from "./js-doc";
 
 export interface ComponentFeatures {
 	members: ComponentMember[];

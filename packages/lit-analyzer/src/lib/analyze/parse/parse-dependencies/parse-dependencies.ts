@@ -1,6 +1,6 @@
-import { SourceFile } from "typescript";
-import { ComponentDefinition } from "web-component-analyzer-fork";
-import { LitAnalyzerContext } from "../../lit-analyzer-context.js";
+import type { SourceFile } from "typescript";
+import type { ComponentDefinition } from "web-component-analyzer-fork";
+import type { LitAnalyzerContext } from "../../lit-analyzer-context.js";
 import { visitIndirectImportsFromSourceFile } from "./visit-dependencies.js";
 
 // A cache used to prevent traversing through entire source files multiple times to find direct imports

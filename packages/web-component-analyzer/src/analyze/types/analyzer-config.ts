@@ -1,4 +1,4 @@
-import { ComponentFeature } from "./features/component-feature";
+import type { ComponentFeature } from "./features/component-feature";
 
 /**
  * Configuration to give when analyzing components.

@@ -1,6 +1,6 @@
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
-import { ComponentMethod } from "../../types/features/component-method";
-import { AnalyzerFlavor } from "../analyzer-flavor";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { ComponentMethod } from "../../types/features/component-method";
+import type { AnalyzerFlavor } from "../analyzer-flavor";
 
 export const refineFeature: AnalyzerFlavor["refineFeature"] = {
 	method: (method: ComponentMethod, context: AnalyzerVisitContext): ComponentMethod | undefined => {

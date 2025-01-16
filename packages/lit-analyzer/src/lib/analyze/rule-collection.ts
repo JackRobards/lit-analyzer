@@ -1,12 +1,14 @@
-import { ComponentDeclaration, ComponentDefinition } from "web-component-analyzer-fork";
-import { isRuleEnabled, LitAnalyzerRuleId } from "./lit-analyzer-config.js";
-import { LitAnalyzerContext } from "./lit-analyzer-context.js";
-import { HtmlDocument } from "./parse/document/text-document/html-document/html-document.js";
-import { HtmlNodeAttr } from "./types/html-node/html-node-attr-types.js";
-import { HtmlNode, HtmlNodeKind } from "./types/html-node/html-node-types.js";
-import { RuleDiagnostic } from "./types/rule/rule-diagnostic.js";
-import { RuleModule, RuleModuleImplementation } from "./types/rule/rule-module.js";
-import { RuleModuleContext } from "./types/rule/rule-module-context.js";
+import type { ComponentDeclaration, ComponentDefinition } from "web-component-analyzer-fork";
+import type { LitAnalyzerRuleId } from "./lit-analyzer-config.js";
+import { isRuleEnabled } from "./lit-analyzer-config.js";
+import type { LitAnalyzerContext } from "./lit-analyzer-context.js";
+import type { HtmlDocument } from "./parse/document/text-document/html-document/html-document.js";
+import type { HtmlNodeAttr } from "./types/html-node/html-node-attr-types.js";
+import type { HtmlNode } from "./types/html-node/html-node-types.js";
+import { HtmlNodeKind } from "./types/html-node/html-node-types.js";
+import type { RuleDiagnostic } from "./types/rule/rule-diagnostic.js";
+import type { RuleModule, RuleModuleImplementation } from "./types/rule/rule-module.js";
+import type { RuleModuleContext } from "./types/rule/rule-module-context.js";
 
 export interface ReportedRuleDiagnostic {
 	source: LitAnalyzerRuleId;

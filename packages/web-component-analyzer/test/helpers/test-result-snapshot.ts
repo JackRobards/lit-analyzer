@@ -1,6 +1,7 @@
-import test, { ExecutionContext } from "ava";
-import { Program } from "typescript";
-import { AnalyzerResult } from "../../src/analyze/types/analyzer-result";
+import type { ExecutionContext } from "ava";
+import test from "ava";
+import type { Program } from "typescript";
+import type { AnalyzerResult } from "../../src/analyze/types/analyzer-result";
 import { getExtendsHeritageClausesInChain, getMixinHeritageClausesInChain } from "../../src/analyze/util/component-declaration-util";
 import { analyzeGlobs } from "../../src/cli/util/analyze-globs";
 import { arrayFlat } from "../../src/util/array-util";

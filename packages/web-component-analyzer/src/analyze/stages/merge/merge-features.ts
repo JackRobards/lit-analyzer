@@ -1,6 +1,6 @@
 import { arrayFlat } from "../../../util/array-util";
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
-import { ComponentFeatureCollection } from "../../flavors/analyzer-flavor";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { ComponentFeatureCollection } from "../../flavors/analyzer-flavor";
 import { mergeCssParts, mergeCssProperties, mergeEvents, mergeMethods, mergeSlots } from "./merge-feature";
 import { mergeMembers } from "./merge-members";
 

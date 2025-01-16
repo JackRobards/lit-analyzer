@@ -1,7 +1,7 @@
-import { LitAnalyzerContext } from "../../../lit-analyzer-context.js";
+import type { LitAnalyzerContext } from "../../../lit-analyzer-context.js";
 import { isHtmlEvent, isHtmlMember } from "../../../parse/parse-html-data/html-tag.js";
-import { HtmlNodeAttr } from "../../../types/html-node/html-node-attr-types.js";
-import { LitDefinition } from "../../../types/lit-definition.js";
+import type { HtmlNodeAttr } from "../../../types/html-node/html-node-attr-types.js";
+import type { LitDefinition } from "../../../types/lit-definition.js";
 import { getNodeIdentifier } from "../../../util/ast-util.js";
 import { rangeFromHtmlNodeAttr } from "../../../util/range-util.js";
 

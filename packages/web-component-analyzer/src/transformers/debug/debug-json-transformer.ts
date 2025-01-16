@@ -1,9 +1,9 @@
-import { Program } from "typescript";
-import { AnalyzerResult } from "../../analyze/types/analyzer-result";
+import type { Program } from "typescript";
+import type { AnalyzerResult } from "../../analyze/types/analyzer-result";
 import { arrayFlat } from "../../util/array-util";
 import { stripTypescriptValues } from "../../util/strip-typescript-values";
-import { TransformerConfig } from "../transformer-config";
-import { TransformerFunction } from "../transformer-function";
+import type { TransformerConfig } from "../transformer-config";
+import type { TransformerFunction } from "../transformer-function";
 
 /**
  * Transforms results to json.

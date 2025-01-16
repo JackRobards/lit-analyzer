@@ -10,6 +10,7 @@
 		"cli.js"
 	],
 	"exports": {
+		"types": "./lib/cjs/src/api.d.ts",
 		"import": "./lib/esm/api.js",
 		"require": "./lib/cjs/api.js"
 	},

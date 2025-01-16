@@ -1,5 +1,5 @@
-import { Node } from "typescript";
-import { RuleModule } from "../analyze/types/rule/rule-module.js";
+import type { Node } from "typescript";
+import type { RuleModule } from "../analyze/types/rule/rule-module.js";
 import { isValidAttributeName } from "../analyze/util/is-valid-name.js";
 import { rangeFromNode } from "../analyze/util/range-util.js";
 

@@ -1,5 +1,5 @@
-import { LitTargetKind } from "lit-analyzer-fork";
-import { ScriptElementKind } from "typescript";
+import type { LitTargetKind } from "lit-analyzer-fork";
+import type { ScriptElementKind } from "typescript";
 import { tsModule } from "../../ts-module.js";
 
 export function translateTargetKind(kind: LitTargetKind): ScriptElementKind {

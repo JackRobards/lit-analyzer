@@ -1,5 +1,5 @@
-import { AnalyzerDeclarationVisitContext } from "../../flavors/analyzer-flavor";
-import { ComponentDeclaration } from "../../types/component-declaration";
+import type { AnalyzerDeclarationVisitContext } from "../../flavors/analyzer-flavor";
+import type { ComponentDeclaration } from "../../types/component-declaration";
 
 /**
  * Uses flavors to refine a declaration

@@ -1,5 +1,5 @@
-import { LitAnalyzerContext, LitDiagnostic } from "lit-analyzer-fork";
-import { DiagnosticMessageChain, DiagnosticWithLocation, SourceFile } from "typescript";
+import type { LitAnalyzerContext, LitDiagnostic } from "lit-analyzer-fork";
+import type { DiagnosticMessageChain, DiagnosticWithLocation, SourceFile } from "typescript";
 import { translateRange } from "./translate-range.js";
 
 export function translateDiagnostics(reports: LitDiagnostic[], file: SourceFile, context: LitAnalyzerContext): DiagnosticWithLocation[] {

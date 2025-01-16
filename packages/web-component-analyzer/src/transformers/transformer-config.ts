@@ -1,4 +1,4 @@
-import { VisibilityKind } from "../analyze/types/visibility-kind";
+import type { VisibilityKind } from "../analyze/types/visibility-kind";
 
 export interface TransformerConfig {
 	cwd?: string;

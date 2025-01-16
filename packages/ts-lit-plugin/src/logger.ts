@@ -12,7 +12,7 @@ const LOG_FILE_NAME = "lit-plugin.log";
  * It logs to a file called "log.txt" in the root of this project.
  */
 export class Logger extends DefaultLitAnalyzerLogger {
-	level = LitAnalyzerLoggerLevel.OFF;
+	override level = LitAnalyzerLoggerLevel.OFF;
 
 	private tsLogger: tsServer.server.Logger | undefined = undefined;
 
@@ -29,7 +29,7 @@ export class Logger extends DefaultLitAnalyzerLogger {
 	 * Logs if this.level >= DEBUG
 	 * @param args
 	 */
-	debug(...args: any[]): void {
+	override debug(...args: any[]): void {
 		this.appendLogWithLevel(LitAnalyzerLoggerLevel.DEBUG, ...args);
 	}
 
@@ -37,7 +37,7 @@ export class Logger extends DefaultLitAnalyzerLogger {
 	 * Logs if this.level >= ERROR
 	 * @param args
 	 */
-	error(...args: any[]): void {
+	override error(...args: any[]): void {
 		this.appendLogWithLevel(LitAnalyzerLoggerLevel.ERROR, ...args);
 	}
 
@@ -45,7 +45,7 @@ export class Logger extends DefaultLitAnalyzerLogger {
 	 * Logs if level >= WARN
 	 * @param args
 	 */
-	warn(...args: any[]): void {
+	override warn(...args: any[]): void {
 		this.appendLogWithLevel(LitAnalyzerLoggerLevel.WARN, ...args);
 	}
 
@@ -53,7 +53,7 @@ export class Logger extends DefaultLitAnalyzerLogger {
 	 * Logs if level >= VERBOSE
 	 * @param args
 	 */
-	verbose(...args: any[]): void {
+	override verbose(...args: any[]): void {
 		this.appendLogWithLevel(LitAnalyzerLoggerLevel.VERBOSE, ...args);
 	}
 

@@ -1,8 +1,8 @@
-import { Expression } from "typescript";
+import type { Expression } from "typescript";
 import { VirtualAstDocument } from "./virtual-ast-document.js";
 
 export class VirtualAstCssDocument extends VirtualAstDocument {
-	protected substituteExpression(length: number, expression: Expression, prev: string, next: string | undefined, _index: number): string {
+	protected override substituteExpression(length: number, expression: Expression, prev: string, next: string | undefined, _index: number): string {
 		const hasLeftColon = prev.match(/:[^;{]*\${$/) != null;
 		const hasRightColon = next != null && next.match(/^}\s*:\s+/) != null;
 		const hasRightSemicolon = next != null && next.match(/^}\s*;/) != null;

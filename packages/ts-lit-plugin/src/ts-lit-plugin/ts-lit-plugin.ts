@@ -1,5 +1,5 @@
 import { LitAnalyzer } from "lit-analyzer-fork";
-import {
+import type {
 	CodeFixAction,
 	CompletionEntryDetails,
 	CompletionInfo,
@@ -16,7 +16,7 @@ import {
 	TextChange,
 	UserPreferences
 } from "typescript";
-import { LitPluginContext } from "./lit-plugin-context.js";
+import type { LitPluginContext } from "./lit-plugin-context.js";
 import { translateCodeFixes } from "./translate/translate-code-fixes.js";
 import { translateCompletionDetails } from "./translate/translate-completion-details.js";
 import { translateCompletions } from "./translate/translate-completions.js";
@@ -29,13 +29,15 @@ import { translateRenameInfo } from "./translate/translate-rename-info.js";
 import { translateRenameLocations } from "./translate/translate-rename-locations.js";
 
 export class TsLitPlugin {
-	private litAnalyzer = new LitAnalyzer(this.context);
+	private litAnalyzer: LitAnalyzer;
 
 	private get program(): Program {
 		return this.prevLangService.getProgram()!;
 	}
 
-	constructor(private prevLangService: LanguageService, public readonly context: LitPluginContext) {}
+	constructor(private prevLangService: LanguageService, public readonly context: LitPluginContext) {
+		this.litAnalyzer = new LitAnalyzer(context);
+	}
 
 	// All methods in this file use ...args because these methods should override
 	// the methods on prevLangService, but that object may come from a future

@@ -1,6 +1,6 @@
-import { SourceFile } from "typescript";
-import { ComponentDeclaration, ComponentFeatures } from "./component-declaration";
-import { ComponentDefinition } from "./component-definition";
+import type { SourceFile } from "typescript";
+import type { ComponentDeclaration, ComponentFeatures } from "./component-declaration";
+import type { ComponentDefinition } from "./component-definition";
 
 /**
  * The result returned after components have been analyzed.

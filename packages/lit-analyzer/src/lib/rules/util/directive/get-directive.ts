@@ -1,7 +1,9 @@
-import { SimpleType, toSimpleType } from "ts-simple-type";
-import { Expression } from "typescript";
-import { HtmlNodeAttrAssignment, HtmlNodeAttrAssignmentKind } from "../../../analyze/types/html-node/html-node-attr-assignment-types.js";
-import { RuleModuleContext } from "../../../analyze/types/rule/rule-module-context.js";
+import type { SimpleType } from "ts-simple-type";
+import { toSimpleType } from "ts-simple-type";
+import type { Expression } from "typescript";
+import type { HtmlNodeAttrAssignment } from "../../../analyze/types/html-node/html-node-attr-assignment-types.js";
+import { HtmlNodeAttrAssignmentKind } from "../../../analyze/types/html-node/html-node-attr-assignment-types.js";
+import type { RuleModuleContext } from "../../../analyze/types/rule/rule-module-context.js";
 import { lazy } from "../../../analyze/util/general-util.js";
 import { removeUndefinedFromType } from "../type/remove-undefined-from-type.js";
 import { isLitDirective } from "./is-lit-directive.js";

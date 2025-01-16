@@ -1,15 +1,15 @@
-import { SimpleTypeStringLiteral } from "ts-simple-type";
-import { Node } from "typescript";
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
-import { ComponentCssPart } from "../../types/features/component-css-part";
-import { ComponentCssProperty } from "../../types/features/component-css-property";
-import { ComponentEvent } from "../../types/features/component-event";
-import { ComponentMember, ComponentMemberAttribute, ComponentMemberProperty } from "../../types/features/component-member";
-import { ComponentSlot } from "../../types/features/component-slot";
+import type { SimpleTypeStringLiteral } from "ts-simple-type";
+import type { Node } from "typescript";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { ComponentCssPart } from "../../types/features/component-css-part";
+import type { ComponentCssProperty } from "../../types/features/component-css-property";
+import type { ComponentEvent } from "../../types/features/component-event";
+import type { ComponentMember, ComponentMemberAttribute, ComponentMemberProperty } from "../../types/features/component-member";
+import type { ComponentSlot } from "../../types/features/component-slot";
 import { getNodeSourceFileLang } from "../../util/ast-util";
 import { parseSimpleJsDocTypeExpression } from "../../util/js-doc-util";
 import { lazy } from "../../util/lazy";
-import { FeatureDiscoverVisitMap } from "../analyzer-flavor";
+import type { FeatureDiscoverVisitMap } from "../analyzer-flavor";
 import { parseJsDocForNode } from "./parse-js-doc-for-node";
 
 export const discoverFeatures: Partial<FeatureDiscoverVisitMap<AnalyzerVisitContext>> = {

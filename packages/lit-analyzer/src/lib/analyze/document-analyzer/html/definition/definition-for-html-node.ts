@@ -1,6 +1,6 @@
-import { LitAnalyzerContext } from "../../../lit-analyzer-context.js";
-import { HtmlNode } from "../../../types/html-node/html-node-types.js";
-import { LitDefinition } from "../../../types/lit-definition.js";
+import type { LitAnalyzerContext } from "../../../lit-analyzer-context.js";
+import type { HtmlNode } from "../../../types/html-node/html-node-types.js";
+import type { LitDefinition } from "../../../types/lit-definition.js";
 import { getNodeIdentifier } from "../../../util/ast-util.js";
 import { rangeFromHtmlNode } from "../../../util/range-util.js";
 

@@ -1,4 +1,4 @@
-import { ComponentFeatureBase } from "./component-feature";
+import type { ComponentFeatureBase } from "./component-feature";
 
 export interface ComponentSlot extends ComponentFeatureBase {
 	name?: string;

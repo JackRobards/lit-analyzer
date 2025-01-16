@@ -1,18 +1,16 @@
 import { existsSync, readFileSync } from "fs";
+import type { CompilerOptions, Program, SourceFile } from "typescript";
 import {
-	CompilerOptions,
 	parseJsonConfigFileContent,
 	sys,
 	createProgram,
 	findConfigFile,
 	ModuleKind,
 	ModuleResolutionKind,
-	Program,
 	readConfigFile,
-	ScriptTarget,
-	SourceFile
+	ScriptTarget
 } from "typescript";
-import { LitAnalyzerConfig } from "../analyze/lit-analyzer-config.js";
+import type { LitAnalyzerConfig } from "../analyze/lit-analyzer-config.js";
 
 const requiredCompilerOptions: CompilerOptions = {
 	noEmitOnError: false,
@@ -37,7 +35,7 @@ const defaultCompilerOptions: CompilerOptions = {
 	allowSyntheticDefaultImports: true,
 	allowUnreachableCode: true,
 	allowUnusedLabels: true,
-	lib: ["lib.esnext.d.ts", "lib.dom.d.ts"]
+	lib: ["lib.es2023.d.ts", "lib.dom.d.ts"]
 };
 
 export interface CompileResult {
@@ -78,7 +76,7 @@ export function getCompilerOptions(): CompilerOptions {
 		// set module resolution to nodejs if it is classic
 		// but if the user has set it to something else, don't override it
 		if (!options.moduleResolution || options.moduleResolution === ModuleResolutionKind.Classic) {
-			options.moduleResolution = ModuleResolutionKind.NodeJs;
+			options.moduleResolution = ModuleResolutionKind.NodeNext;
 		}
 		return options;
 	}

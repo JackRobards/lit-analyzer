@@ -1,8 +1,8 @@
-import { Node } from "typescript";
+import type { Node } from "typescript";
 import { arrayDefined } from "../../../util/array-util";
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
-import { AnalyzerDeclarationVisitContext, AnalyzerFlavor, FeatureVisitReturnTypeMap } from "../../flavors/analyzer-flavor";
-import { ComponentFeature } from "../../types/features/component-feature";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { AnalyzerDeclarationVisitContext, AnalyzerFlavor, FeatureVisitReturnTypeMap } from "../../flavors/analyzer-flavor";
+import type { ComponentFeature } from "../../types/features/component-feature";
 
 export type VisitFeatureEmitMap = { [K in ComponentFeature]: (result: FeatureVisitReturnTypeMap[K][]) => void };
 

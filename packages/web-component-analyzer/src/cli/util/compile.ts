@@ -1,4 +1,5 @@
-import { CompilerOptions, createProgram, ModuleKind, ModuleResolutionKind, Program, ScriptTarget, SourceFile } from "typescript";
+import type { CompilerOptions, Program, SourceFile } from "typescript";
+import { createProgram, ModuleKind, ModuleResolutionKind, ScriptTarget } from "typescript";
 
 /**
  * The most general version of compiler options.
@@ -14,7 +15,7 @@ const defaultOptions: CompilerOptions = {
 	//module: ModuleKind.CommonJS,
 	//lib: ["ESNext", "DOM", "DOM.Iterable"],
 	strictNullChecks: true,
-	moduleResolution: ModuleResolutionKind.NodeJs,
+	moduleResolution: ModuleResolutionKind.NodeNext,
 	esModuleInterop: true,
 	noEmit: true,
 	allowSyntheticDefaultImports: true,

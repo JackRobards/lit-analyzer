@@ -1,6 +1,6 @@
-import { Node } from "typescript";
-import { AnalyzerVisitContext } from "../../analyzer-visit-context";
-import { DefinitionNodeResult } from "../../flavors/analyzer-flavor";
+import type { Node } from "typescript";
+import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
+import type { DefinitionNodeResult } from "../../flavors/analyzer-flavor";
 import { executeFunctionsUntilMatch } from "../../util/execute-functions-until-match";
 
 /**

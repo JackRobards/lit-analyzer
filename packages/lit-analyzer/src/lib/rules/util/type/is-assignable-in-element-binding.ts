@@ -1,6 +1,7 @@
-import { SimpleType, typeToString } from "ts-simple-type";
-import { HtmlNodeAttr } from "../../../analyze/types/html-node/html-node-attr-types.js";
-import { RuleModuleContext } from "../../../analyze/types/rule/rule-module-context.js";
+import type { SimpleType } from "ts-simple-type";
+import { typeToString } from "ts-simple-type";
+import type { HtmlNodeAttr } from "../../../analyze/types/html-node/html-node-attr-types.js";
+import type { RuleModuleContext } from "../../../analyze/types/rule/rule-module-context.js";
 import { rangeFromHtmlNodeAttr } from "../../../analyze/util/range-util.js";
 import { isLit2Directive, isLit1Directive } from "../directive/is-lit-directive.js";
 

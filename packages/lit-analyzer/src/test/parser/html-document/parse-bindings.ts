@@ -1,8 +1,8 @@
-import {
-	HtmlNodeAttrAssignmentKind,
+import type {
 	IHtmlNodeAttrAssignmentMixed,
 	IHtmlNodeAttrAssignmentString
 } from "../../../lib/analyze/types/html-node/html-node-attr-assignment-types.js";
+import { HtmlNodeAttrAssignmentKind } from "../../../lib/analyze/types/html-node/html-node-attr-assignment-types.js";
 import { parseHtml } from "../../helpers/parse-html.js";
 import { tsTest } from "../../helpers/ts-test.js";
 

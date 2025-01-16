@@ -1,5 +1,5 @@
-import { Node, TaggedTemplateExpression } from "typescript";
-import { HtmlDocument } from "../../lib/analyze/parse/document/text-document/html-document/html-document.js";
+import type { Node, TaggedTemplateExpression } from "typescript";
+import type { HtmlDocument } from "../../lib/analyze/parse/document/text-document/html-document/html-document.js";
 import { parseHtmlDocument } from "../../lib/analyze/parse/document/text-document/html-document/parse-html-document.js";
 import { compileFiles } from "./compile-files.js";
 import { getCurrentTsModule } from "./ts-test.js";

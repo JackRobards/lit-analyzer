@@ -1,20 +1,20 @@
-import { Program, TypeChecker } from "typescript";
-import { AnalyzerResult } from "../../analyze/types/analyzer-result";
-import { ComponentCssPart } from "../../analyze/types/features/component-css-part";
-import { ComponentCssProperty } from "../../analyze/types/features/component-css-property";
-import { ComponentEvent } from "../../analyze/types/features/component-event";
-import { ComponentMemberAttribute, ComponentMemberProperty } from "../../analyze/types/features/component-member";
-import { ComponentMethod } from "../../analyze/types/features/component-method";
-import { ComponentSlot } from "../../analyze/types/features/component-slot";
-import { VisibilityKind } from "../../analyze/types/visibility-kind";
+import type { Program, TypeChecker } from "typescript";
+import type { AnalyzerResult } from "../../analyze/types/analyzer-result";
+import type { ComponentCssPart } from "../../analyze/types/features/component-css-part";
+import type { ComponentCssProperty } from "../../analyze/types/features/component-css-property";
+import type { ComponentEvent } from "../../analyze/types/features/component-event";
+import type { ComponentMemberAttribute, ComponentMemberProperty } from "../../analyze/types/features/component-member";
+import type { ComponentMethod } from "../../analyze/types/features/component-method";
+import type { ComponentSlot } from "../../analyze/types/features/component-slot";
+import type { VisibilityKind } from "../../analyze/types/visibility-kind";
 import { getMixinHeritageClausesInChain } from "../../analyze/util/component-declaration-util";
 import { arrayDedupe, arrayDefined, arrayFlat } from "../../util/array-util";
 import { getExamplesFromComponent } from "../../util/get-examples-from-component";
 import { getTypeHintFromMethod } from "../../util/get-type-hint-from-method";
 import { getTypeHintFromType } from "../../util/get-type-hint-from-type";
 import { filterVisibility } from "../../util/model-util";
-import { TransformerConfig } from "../transformer-config";
-import { TransformerFunction } from "../transformer-function";
+import type { TransformerConfig } from "../transformer-config";
+import type { TransformerFunction } from "../transformer-function";
 import { markdownHeader, markdownHighlight, markdownTable } from "./markdown-util";
 
 /**

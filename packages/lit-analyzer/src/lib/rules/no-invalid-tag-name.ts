@@ -1,4 +1,4 @@
-import { RuleModule } from "../analyze/types/rule/rule-module.js";
+import type { RuleModule } from "../analyze/types/rule/rule-module.js";
 import { isValidCustomElementName } from "../analyze/util/is-valid-name.js";
 import { iterableFirst } from "../analyze/util/iterable-util.js";
 import { rangeFromNode } from "../analyze/util/range-util.js";

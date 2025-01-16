@@ -1,6 +1,7 @@
-import test, { ImplementationFn } from "ava";
+import type { ImplementationFn } from "ava";
+import test from "ava";
 import { dirname } from "path";
-import * as tsModule from "typescript";
+import type * as tsModule from "typescript";
 import { setTypescriptModule } from "../../lib/analyze/ts-module.js";
 
 // Based on the `ava` types for test.only and test.skip. This matches the format of the tests in this repo

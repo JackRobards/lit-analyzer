@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { isSimpleType, typeToString } from "ts-simple-type";
-import { Node, SourceFile, Type, TypeChecker } from "typescript";
+import type { Node, SourceFile, Type, TypeChecker } from "typescript";
 
 function isTypescriptNode(value: any): value is Node {
 	return value instanceof Object && "kind" in value && "flags" in value;

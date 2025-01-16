@@ -1,6 +1,7 @@
-import test, { ImplementationFn } from "ava";
+import type { ImplementationFn } from "ava";
+import test from "ava";
 import { dirname } from "path";
-import * as tsModule from "typescript";
+import type * as tsModule from "typescript";
 
 type TestFunction = (title: string, implementation: ImplementationFn<unknown[]>) => void;
 

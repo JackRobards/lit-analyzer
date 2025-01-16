@@ -2,7 +2,7 @@ import { getDiagnostics, getCodeFixesAtRange } from "../helpers/analyze.js";
 import { hasDiagnostic, hasNoDiagnostics } from "../helpers/assert.js";
 import { makeElement } from "../helpers/generate-test-file.js";
 import { tsTest } from "../helpers/ts-test.js";
-import { TestFile } from "../helpers/compile-files.js";
+import type { TestFile } from "../helpers/compile-files.js";
 
 tsTest("Report missing imports of custom elements", t => {
 	const { diagnostics } = getDiagnostics([makeElement({}), "html`<my-element></my-element>`"], { rules: { "no-missing-import": true } });

@@ -1,12 +1,12 @@
-import { SourceFile } from "typescript";
+import type { SourceFile } from "typescript";
 import { makeContextFromConfig } from "./make-context-from-config";
 import { analyzeComponentDeclaration } from "./stages/analyze-declaration";
 import { discoverDeclarations } from "./stages/discover-declarations";
 import { discoverDefinitions } from "./stages/discover-definitions";
 import { discoverGlobalFeatures } from "./stages/discover-global-features";
-import { AnalyzerOptions } from "./types/analyzer-options";
-import { AnalyzerResult } from "./types/analyzer-result";
-import { ComponentDeclaration, ComponentFeatures } from "./types/component-declaration";
+import type { AnalyzerOptions } from "./types/analyzer-options";
+import type { AnalyzerResult } from "./types/analyzer-result";
+import type { ComponentDeclaration, ComponentFeatures } from "./types/component-declaration";
 
 /**
  * Analyzes all components in a source file.

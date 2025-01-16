@@ -1,6 +1,7 @@
-import { SimpleType, SimpleTypeEnumMember, toSimpleType } from "ts-simple-type";
-import * as tsModule from "typescript";
-import { Node, Program } from "typescript";
+import type { SimpleType, SimpleTypeEnumMember } from "ts-simple-type";
+import { toSimpleType } from "ts-simple-type";
+import type * as tsModule from "typescript";
+import type { Node, Program } from "typescript";
 
 /**
  * Relax the type so that for example "string literal" become "string" and "function" become "any"

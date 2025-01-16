@@ -1,4 +1,4 @@
-import { RuleModule } from "../analyze/types/rule/rule-module.js";
+import type { RuleModule } from "../analyze/types/rule/rule-module.js";
 import noBooleanInAttributeBindingRule from "./no-boolean-in-attribute-binding.js";
 import noComplexAttributeBindingRule from "./no-complex-attribute-binding.js";
 import noExpressionlessPropertyBindingRule from "./no-expressionless-property-binding.js";

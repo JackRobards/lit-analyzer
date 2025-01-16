@@ -1,4 +1,4 @@
-import { LitAnalyzerRules } from "../analyze/lit-analyzer-config.js";
+import type { LitAnalyzerRules } from "../analyze/lit-analyzer-config.js";
 
 export type FormatterFormat = "code" | "list" | "markdown";
 

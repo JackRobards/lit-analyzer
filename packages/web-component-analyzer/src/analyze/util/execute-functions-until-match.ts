@@ -1,4 +1,4 @@
-import { AnalyzerVisitContext } from "../analyzer-visit-context";
+import type { AnalyzerVisitContext } from "../analyzer-visit-context";
 
 /**
  * Executes functions in a function map until some function returns a non-undefined value.

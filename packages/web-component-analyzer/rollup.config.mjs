@@ -32,7 +32,7 @@ export default [
 		plugins: [
 			replace(replaceVersionConfig),
 			ts({
-				module: "es2020"
+				module: "es2022"
 			}),
 			resolve(),
 			copy({
@@ -58,7 +58,7 @@ export default [
 		plugins: [
 			replace(replaceVersionConfig),
 			ts({
-				module: "es2020",
+				module: "es2022",
 				outDir: "./lib/cjs"
 			}),
 			resolve()

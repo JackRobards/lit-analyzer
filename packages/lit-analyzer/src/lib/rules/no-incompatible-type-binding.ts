@@ -4,7 +4,7 @@ import {
 	LIT_HTML_PROP_ATTRIBUTE_MODIFIER
 } from "../analyze/constants.js";
 import { HtmlNodeAttrAssignmentKind } from "../analyze/types/html-node/html-node-attr-assignment-types.js";
-import { RuleModule } from "../analyze/types/rule/rule-module.js";
+import type { RuleModule } from "../analyze/types/rule/rule-module.js";
 import { extractBindingTypes } from "./util/type/extract-binding-types.js";
 import { isAssignableInAttributeBinding } from "./util/type/is-assignable-in-attribute-binding.js";
 import { isAssignableInBooleanBinding } from "./util/type/is-assignable-in-boolean-binding.js";

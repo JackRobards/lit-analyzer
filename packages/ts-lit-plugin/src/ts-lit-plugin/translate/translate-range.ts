@@ -1,5 +1,5 @@
-import { Range } from "lit-analyzer-fork";
-import { TextSpan } from "typescript";
+import type { Range } from "lit-analyzer-fork";
+import type { TextSpan } from "typescript";
 
 export function translateRange(range: Range): TextSpan {
 	return {

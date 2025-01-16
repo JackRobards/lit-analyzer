@@ -1,4 +1,4 @@
-import {
+import type {
 	HtmlAttr,
 	HtmlAttrTarget,
 	HtmlCssPart,
@@ -10,17 +10,18 @@ import {
 	HtmlTag,
 	NamedHtmlDataCollection
 } from "../../parse/parse-html-data/html-tag.js";
-import {
+import type {
 	HtmlNodeAttr,
-	HtmlNodeAttrKind,
 	IHtmlNodeAttr,
 	IHtmlNodeAttrEventListener,
 	IHtmlNodeAttrProp,
 	IHtmlNodeBooleanAttribute
 } from "../../types/html-node/html-node-attr-types.js";
-import { HtmlNode } from "../../types/html-node/html-node-types.js";
-import { AnalyzerHtmlStore } from "../analyzer-html-store.js";
-import { HtmlDataSourceKind, HtmlDataSourceMerged } from "./html-data-source-merged.js";
+import { HtmlNodeAttrKind } from "../../types/html-node/html-node-attr-types.js";
+import type { HtmlNode } from "../../types/html-node/html-node-types.js";
+import type { AnalyzerHtmlStore } from "../analyzer-html-store.js";
+import type { HtmlDataSourceKind } from "./html-data-source-merged.js";
+import { HtmlDataSourceMerged } from "./html-data-source-merged.js";
 
 export class DefaultAnalyzerHtmlStore implements AnalyzerHtmlStore {
 	private dataSource = new HtmlDataSourceMerged();
