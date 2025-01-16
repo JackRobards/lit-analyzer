@@ -1,12 +1,12 @@
 {
-	"name": "ts-lit-plugin",
+	"name": "ts-lit-plugin-fork",
 	"version": "2.0.2",
-	"description": "Typescript plugin that adds type checking and code completion to lit-html",
-	"author": "runem",
+	"description": "Typescript plugin that adds type checking and code completion to lit-html. Fork of the original ts-lit-plugin.",
+	"author": "JackRobards",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/runem/lit-analyzer.git"
+		"url": "https://github.com/JackRobards/lit-analyzer.git"
 	},
 	"keywords": [
 		"lit-html",
@@ -54,8 +54,8 @@
 		"/html-documentation/"
 	],
 	"dependencies": {
-		"lit-analyzer": "^2.0.1",
-		"web-component-analyzer": "^2.0.0"
+		"lit-analyzer-fork": "^2.0.1",
+		"web-component-analyzer-fork": "^2.0.0"
 	},
 	"devDependencies": {
 		"@types/node": "^22.10.2",
@@ -77,7 +77,7 @@
 		{
 			"name": "You?",
 			"img": "https://joeschmoe.io/api/v1/random",
-			"url": "https://github.com/runem/lit-analyzer/blob/master/CONTRIBUTING.md"
+			"url": "https://github.com/JackRobards/lit-analyzer/blob/master/CONTRIBUTING.md"
 		}
 	]
 }

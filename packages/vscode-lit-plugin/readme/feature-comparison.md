@@ -5,7 +5,7 @@ This plugin is similar to [vscode-lit-html](https://github.com/mjbvz/vscode-lit-
 Below is a comparison table of the two plugins:
 
 <!-- prettier-ignore -->
-| Feature                 | [vscode-lit-html](https://github.com/mjbvz/vscode-lit-html)   | [vscode-lit-plugin](https://github.com/runem/vscode-lit-plugin) |
+| Feature                 | [vscode-lit-html](https://github.com/mjbvz/vscode-lit-html)   | [vscode-lit-plugin](https://github.com/JackRobards/vscode-lit-plugin) |
 |-------------------------|------------|------------|
 | CSS support             | ❌         | ✅         |
 | Goto definition         | ❌         | ✅         |

@@ -1,4 +1,4 @@
-import { LitDefinition, LitDefinitionTarget } from "lit-analyzer";
+import { LitDefinition, LitDefinitionTarget } from "lit-analyzer-fork";
 import { DefinitionInfo, DefinitionInfoAndBoundSpan } from "typescript";
 import { tsModule } from "../../ts-module.js";
 import { translateRange } from "./translate-range.js";

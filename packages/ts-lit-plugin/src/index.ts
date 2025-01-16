@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { LitAnalyzerConfig, LitAnalyzerLoggerLevel, makeConfig, VERSION } from "lit-analyzer";
+import { LitAnalyzerConfig, LitAnalyzerLoggerLevel, makeConfig, VERSION } from "lit-analyzer-fork";
 import * as ts from "typescript";
 import { CompilerOptions } from "typescript";
 import * as tsServer from "typescript/lib/tsserverlibrary.js";
-import { VERSION as WCA_VERSION } from "web-component-analyzer";
+import { VERSION as WCA_VERSION } from "web-component-analyzer-fork";
 import { decorateLanguageService } from "./decorate-language-service.js";
 import { logger } from "./logger.js";
 import { LitPluginContext } from "./ts-lit-plugin/lit-plugin-context.js";
@@ -61,7 +61,7 @@ export function init({ typescript }: { typescript: typeof ts }): tsServer.server
 
 				context.updateConfig(makeConfig(info.config));
 
-				logger.verbose("Starting ts-lit-plugin...");
+				logger.verbose("Starting ts-lit-plugin-fork...");
 
 				if (printDebugOnce != null) printDebugOnce();
 
@@ -74,7 +74,7 @@ export function init({ typescript }: { typescript: typeof ts }): tsServer.server
 
 				return decoratedService;
 			} catch (e) {
-				logger.error("ts-lit-plugin crashed while decorating the language service...", e);
+				logger.error("ts-lit-plugin-fork crashed while decorating the language service...", e);
 
 				return info.languageService;
 			}
@@ -110,13 +110,13 @@ export function init({ typescript }: { typescript: typeof ts }): tsServer.server
 }
 
 /**
- * Resolves the nearest tsconfig.json and returns the configuration seed within the plugins section for "ts-lit-plugin"
+ * Resolves the nearest tsconfig.json and returns the configuration seed within the plugins section for "ts-lit-plugin-fork"
  */
 function readLitAnalyzerConfigFromCompilerOptions(compilerOptions: CompilerOptions): Partial<LitAnalyzerConfig> | undefined {
 	// Finds the plugin section
 	if ("plugins" in compilerOptions) {
 		const plugins = compilerOptions.plugins as ({ name: string } & Partial<LitAnalyzerConfig>)[];
-		const tsLitPluginOptions = plugins.find(plugin => plugin.name === "ts-lit-plugin");
+		const tsLitPluginOptions = plugins.find(plugin => plugin.name === "ts-lit-plugin-fork");
 		if (tsLitPluginOptions != null) {
 			return tsLitPluginOptions;
 		}

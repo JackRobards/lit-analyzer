@@ -1,5 +1,5 @@
 import { SourceFile } from "typescript";
-import { AnalyzerResult, ComponentDeclaration, ComponentDefinition } from "web-component-analyzer";
+import { AnalyzerResult, ComponentDeclaration, ComponentDefinition } from "web-component-analyzer-fork";
 
 export interface AnalyzerDefinitionStore {
 	getAnalysisResultForFile(sourceFile: SourceFile): AnalyzerResult | undefined;

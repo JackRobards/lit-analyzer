@@ -1,4 +1,4 @@
-import { DefaultLitAnalyzerContext, LitAnalyzer, LitAnalyzerConfig, LitAnalyzerContext, makeConfig } from "lit-analyzer";
+import { DefaultLitAnalyzerContext, LitAnalyzer, LitAnalyzerConfig, LitAnalyzerContext, makeConfig } from "lit-analyzer-fork";
 import ts, { Diagnostic } from "typescript";
 import { translateDiagnostics } from "./ts-lit-plugin/translate/translate-diagnostics.js";
 

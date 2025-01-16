@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { appendFileSync, writeFileSync } from "fs";
-import { DefaultLitAnalyzerLogger, LitAnalyzerLoggerLevel } from "lit-analyzer";
+import { DefaultLitAnalyzerLogger, LitAnalyzerLoggerLevel } from "lit-analyzer-fork";
 import { join } from "path";
 import { inspect } from "util";
 import * as tsServer from "typescript/lib/tsserverlibrary.js";
@@ -91,7 +91,10 @@ export class Logger extends DefaultLitAnalyzerLogger {
 			} catch {
 				// ignore
 			}
-			this.tsLogger?.msg(`[ts-lit-plugin] ${message}`, level === LitAnalyzerLoggerLevel.ERROR ? tsServer.server.Msg.Err : tsServer.server.Msg.Info);
+			this.tsLogger?.msg(
+				`[ts-lit-plugin-fork] ${message}`,
+				level === LitAnalyzerLoggerLevel.ERROR ? tsServer.server.Msg.Err : tsServer.server.Msg.Info
+			);
 		}
 	}
 

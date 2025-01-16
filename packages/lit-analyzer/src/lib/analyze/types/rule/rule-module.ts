@@ -1,4 +1,4 @@
-import { ComponentDeclaration, ComponentDefinition, ComponentMember } from "web-component-analyzer";
+import { ComponentDeclaration, ComponentDefinition, ComponentMember } from "web-component-analyzer-fork";
 import { LitAnalyzerRuleId } from "../../lit-analyzer-config.js";
 import { HtmlNodeAttrAssignment } from "../html-node/html-node-attr-assignment-types.js";
 import { HtmlNodeAttr } from "../html-node/html-node-attr-types.js";

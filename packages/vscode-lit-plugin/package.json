@@ -13,14 +13,14 @@
 	"categories": [
 		"Programming Languages"
 	],
-	"homepage": "https://github.com/runem/lit-analyzer",
+	"homepage": "https://github.com/JackRobards/lit-analyzer",
 	"bugs": {
-		"url": "https://github.com/runem/lit-analyzer/issues",
+		"url": "https://github.com/JackRobards/lit-analyzer/issues",
 		"email": "runemehlsen@gmail.com"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/runem/lit-analyzer.git"
+		"url": "https://github.com/JackRobards/lit-analyzer.git"
 	},
 	"main": "bundle.js",
 	"scripts": {
@@ -131,7 +131,7 @@
 			],
 			"output": [
 				"built/bundle.js",
-				"built/node_modules/ts-lit-plugin/index.js"
+				"built/node_modules/ts-lit-plugin-fork/index.js"
 			]
 		},
 		"make-built-dir": {
@@ -152,8 +152,8 @@
 			"output": [
 				"built/docs",
 				"built/node_modules/typescript",
-				"built/node_modules/ts-lit-plugin/package.json",
-				"built/node_modules/ts-lit-plugin/index.js",
+				"built/node_modules/ts-lit-plugin-fork/package.json",
+				"built/node_modules/ts-lit-plugin-fork/index.js",
 				"built/schemas",
 				"built/syntaxes",
 				"built/LICENSE.md",
@@ -173,7 +173,7 @@
 		"@vscode/vsce": "^3.2.1",
 		"esbuild": "^0.24.2",
 		"fast-glob": "^3.2.11",
-		"lit-analyzer": "^2.0.3",
+		"lit-analyzer-fork": "^2.0.3",
 		"mocha": "^11.0.1",
 		"wireit": "^0.1.1"
 	},
@@ -198,7 +198,7 @@
 		{
 			"name": "You?",
 			"img": "https://joeschmoe.io/api/v1/random",
-			"url": "https://github.com/runem/lit-analyzer/blob/master/CONTRIBUTING.md"
+			"url": "https://github.com/JackRobards/lit-analyzer/blob/master/CONTRIBUTING.md"
 		}
 	],
 	"contributes": {
@@ -751,7 +751,7 @@
 		],
 		"typescriptServerPlugins": [
 			{
-				"name": "ts-lit-plugin",
+				"name": "ts-lit-plugin-fork",
 				"enableForWorkspaceTypeScriptVersions": true
 			}
 		],

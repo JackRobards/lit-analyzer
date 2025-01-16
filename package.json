@@ -1,13 +1,13 @@
 {
-	"name": "lit-analyzer",
+	"name": "lit-analyzer-fork",
 	"version": "1.0.0",
-	"description": "Monorepo for tools that analyze lit-html templates",
+	"description": "Monorepo for tools that analyze lit-html templates. Updated fork of the original lit-analyzer.",
 	"private": true,
-	"author": "runem",
+	"author": "JackRobards",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/runem/lit-analyzer.git"
+		"url": "https://github.com/JackRobards/lit-analyzer.git"
 	},
 	"workspaces": [
 		"packages/lit-analyzer",
@@ -16,9 +16,9 @@
 		"packages/web-component-analyzer"
 	],
 	"bugs": {
-		"url": "https://github.com/runem/lit-analyzer/issues"
+		"url": "https://github.com/JackRobards/lit-analyzer/issues"
 	},
-	"homepage": "https://github.com/runem/lit-analyzer#readme",
+	"homepage": "https://github.com/JackRobards/lit-analyzer#readme",
 	"keywords": [
 		"lit-html",
 		"lit",
@@ -153,7 +153,7 @@
 		{
 			"name": "You?",
 			"img": "https://joeschmoe.io/api/v1/random",
-			"url": "https://github.com/runem/lit-analyzer/blob/master/CONTRIBUTING.md"
+			"url": "https://github.com/JackRobards/lit-analyzer/blob/master/CONTRIBUTING.md"
 		}
 	]
 }

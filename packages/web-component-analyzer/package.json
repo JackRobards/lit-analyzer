@@ -1,5 +1,5 @@
 {
-	"name": "web-component-analyzer",
+	"name": "web-component-analyzer-fork",
 	"version": "2.0.0",
 	"description": "CLI that analyzes web components",
 	"main": "lib/cjs/api.js",
@@ -71,7 +71,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/runem/web-component-analyzer.git"
+		"url": "git+https://github.com/JackRobards/lit-analyzer.git"
 	},
 	"keywords": [
 		"web components",
@@ -88,9 +88,9 @@
 	"author": "Rune Mehlsen",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/runem/web-component-analyzer/issues"
+		"url": "https://github.com/JackRobards/lit-analyzer/issues"
 	},
-	"homepage": "https://github.com/runem/web-component-analyzer#readme",
+	"homepage": "https://github.com/JackRobards/lit-analyzer#readme",
 	"dependencies": {
 		"fast-glob": "^3.2.2",
 		"ts-simple-type": "2.0.0-next.0",
@@ -133,6 +133,6 @@
 	},
 	"bin": {
 		"wca": "cli.js",
-		"web-component-analyzer": "cli.js"
+		"web-component-analyzer-fork": "cli.js"
 	}
 }

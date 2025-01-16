@@ -1,4 +1,4 @@
-import { LitCompletionDetails } from "lit-analyzer";
+import { LitCompletionDetails } from "lit-analyzer-fork";
 import { CompletionEntryDetails } from "typescript";
 import { LitPluginContext } from "../lit-plugin-context.js";
 
