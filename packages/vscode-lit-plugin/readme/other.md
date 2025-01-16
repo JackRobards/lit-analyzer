@@ -22,7 +22,7 @@ When typing html inside a template tag `lit-plugin` auto-closes tags as you woul
 
 ### 🔍 Automatically finds custom elements
 
-If you define a custom element somewhere in your code `lit-plugin` will automatically find it. Then it will provide auto-import functionality, type checking and code completion out of the box by analyzing the element. [web-component-analyzer](https://github.com/JackRobards/web-component-analyzer) is the tool that takes care of analyzing components.
+If you define a custom element somewhere in your code `lit-plugin` will automatically find it. Then it will provide auto-import functionality, type checking and code completion out of the box by analyzing the element. [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/master/packages/web-component-analyzer) is the tool that takes care of analyzing components.
 
 ### 🌎 Support for dependencies that extend the global HTMLElementTagNameMap
 

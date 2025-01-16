@@ -58,7 +58,7 @@ Each rule can have severity of `off`, `warning` or `error`. You can toggle rules
 
 ### Validating custom elements
 
-All web components in your code are analyzed using [web-component-analyzer](https://github.com/runem/web-component-analyzer) which supports native custom elements and web components built with LitElement.
+All web components in your code are analyzed using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/master/packages/web-component-analyzer) which supports native custom elements and web components built with LitElement.
 
 #### 🤷‍ no-unknown-tag-name
 
@@ -154,7 +154,7 @@ declare global {
 
 ### Validating binding names
 
-Attributes, properties and events are picked up on custom elements using [web-component-analyzer](https://github.com/runem/web-component-analyzer) which supports native custom elements and web components built with LitElement.
+Attributes, properties and events are picked up on custom elements using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/master/packages/web-component-analyzer) which supports native custom elements and web components built with LitElement.
 
 #### ✅ no-unknown-attribute, no-unknown-property
 

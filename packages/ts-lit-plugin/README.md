@@ -48,7 +48,7 @@ Finally, restart you Typescript Language Service, and you should start getting d
 **Note:**
 
 - If you use Visual Studio Code you can also install the [lit-plugin](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin) extension.
-- If you would rather use a CLI, you can install the [lit-analyzer](https://github.com/runem/lit-analyzer/blob/master/packages/lit-analyzer).
+- If you would rather use a CLI, you can install the [lit-analyzer](https://github.com/JackRobards/lit-analyzer/blob/master/packages/lit-analyzer).
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#configuration)
 
@@ -81,7 +81,7 @@ You can configure this plugin through your `tsconfig.json`.
 <!-- prettier-ignore -->
 | Option | Description | Type | Default |
 | :----- | ----------- | ---- | ------- |
-| `strict` | Enabling strict mode will change which rules are applied as default (see list of [rules](https://github.com/runem/lit-analyzer/blob/master/docs/readme/rules.md)) | `boolean` | false |
+| `strict` | Enabling strict mode will change which rules are applied as default (see list of [rules](https://github.com/JackRobards/lit-analyzer/blob/master/docs/readme/rules.md)) | `boolean` | false |
 | `rules` | Enable/disable individual rules or set their severity. Example: `{"no-unknown-tag-name": "off"}` | `{"rule-name": "off" \| "warn" \| "error"}` | The default rules enabled depend on the `strict` option |
 | `disable` | Completely disable this plugin. | `boolean` | false |
 | `dontShowSuggestions` | This option sets strict as  | `boolean` | false |
@@ -156,7 +156,7 @@ Each rule can have severity of `off`, `warning` or `error`. You can toggle rules
 
 ### Validating custom elements
 
-All web components in your code are analyzed using [web-component-analyzer](https://github.com/runem/web-component-analyzer) which supports native custom elements and web components built with LitElement.
+All web components in your code are analyzed using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/master/packages/web-component-analyzer) which supports native custom elements and web components built with LitElement.
 
 #### 🤷‍ no-unknown-tag-name
 
@@ -252,7 +252,7 @@ declare global {
 
 ### Validating binding names
 
-Attributes, properties and events are picked up on custom elements using [web-component-analyzer](https://github.com/runem/web-component-analyzer) which supports native custom elements and web components built with LitElement.
+Attributes, properties and events are picked up on custom elements using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/master/packages/web-component-analyzer) which supports native custom elements and web components built with LitElement.
 
 #### ✅ no-unknown-attribute, no-unknown-property
 
@@ -712,7 +712,7 @@ css`
 
 ## ➤ Documenting slots, events, attributes and properties
 
-Code is analyzed using [web-component-analyzer](https://github.com/runem/web-component-analyzer) in order to find properties, attributes and events. Unfortunately, sometimes it's not possible to analyze these things by looking at the code, and you will have to document how your component looks using `jsdoc`like this:
+Code is analyzed using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/master/packages/web-component-analyzer) in order to find properties, attributes and events. Unfortunately, sometimes it's not possible to analyze these things by looking at the code, and you will have to document how your component looks using `jsdoc`like this:
 
 <!-- prettier-ignore -->
 ```js
@@ -740,9 +740,9 @@ customElements.define("my-element", MyElement);
 
 ## ➤ Contributors
 
-| [<img alt="Rune Mehlsen" src="https://avatars2.githubusercontent.com/u/5372940?s=460&v=4" width="100">](https://twitter.com/runemehlsen) | [<img alt="Andreas Mehlsen" src="https://avatars1.githubusercontent.com/u/6267397?s=460&v=4" width="100">](https://twitter.com/andreasmehlsen) | [<img alt="You?" src="https://joeschmoe.io/api/v1/random" width="100">](https://github.com/runem/lit-analyzer/blob/master/CONTRIBUTING.md) |
-| :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------: |
-|                                             [Rune Mehlsen](https://twitter.com/runemehlsen)                                              |                                             [Andreas Mehlsen](https://twitter.com/andreasmehlsen)                                              |                                 [You?](https://github.com/runem/lit-analyzer/blob/master/CONTRIBUTING.md)                                  |
+| [<img alt="Rune Mehlsen" src="https://avatars2.githubusercontent.com/u/5372940?s=460&v=4" width="100">](https://twitter.com/runemehlsen) | [<img alt="Andreas Mehlsen" src="https://avatars1.githubusercontent.com/u/6267397?s=460&v=4" width="100">](https://twitter.com/andreasmehlsen) | [<img alt="You?" src="https://joeschmoe.io/api/v1/random" width="100">](https://github.com/JackRobards/lit-analyzer/blob/master/CONTRIBUTING.md) |
+| :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                             [Rune Mehlsen](https://twitter.com/runemehlsen)                                              |                                             [Andreas Mehlsen](https://twitter.com/andreasmehlsen)                                              |                                 [You?](https://github.com/JackRobards/lit-analyzer/blob/master/CONTRIBUTING.md)                                  |
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#license)
 

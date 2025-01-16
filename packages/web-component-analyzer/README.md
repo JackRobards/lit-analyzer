@@ -1,17 +1,17 @@
 <h1 align="center">web-component-analyzer</h1>
 
 <p align="center">
-	<a href="https://npmcharts.com/compare/web-component-analyzer?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/web-component-analyzer.svg" height="20"/></a>
-	<a href="https://www.npmjs.com/package/web-component-analyzer"><img alt="NPM Version" src="https://img.shields.io/npm/v/web-component-analyzer.svg" height="20"/></a>
-	<a href="https://david-dm.org/runem/web-component-analyzer"><img alt="Dependencies" src="https://img.shields.io/david/runem/web-component-analyzer.svg" height="20"/></a>
-	<a href="https://github.com/runem/web-component-analyzer/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/runem/web-component-analyzer.svg" height="20"/></a>
+	<a href="https://npmcharts.com/compare/web-component-analyzer-fork?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/web-component-analyzer-fork.svg" height="20"/></a>
+	<a href="https://www.npmjs.com/package/web-component-analyzer-fork"><img alt="NPM Version" src="https://img.shields.io/npm/v/web-component-analyzer-fork.svg" height="20"/></a>
+	<a href="https://david-dm.org/JackRobards/lit-analyzer"><img alt="Dependencies" src="https://img.shields.io/david/JackRobards/lit-analyzer.svg" height="20"/></a>
+	<a href="https://github.com/JackRobards/lit-analyzer/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/JackRobards/lit-analyzer.svg" height="20"/></a>
 </p>
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/5372940/68087781-1044ce80-fe59-11e9-969c-4234f9287f1b.gif" alt="Web component analyzer GIF"/>
 </p>
 
-`web-component-analyzer` is a CLI that makes it possible to easily analyze web components. It analyzes your code and jsdoc in order to extract `properties`, `attributes`, `methods`, `events`, `slots`, `css shadow parts` and `css custom properties`. Works with both javascript and typescript.
+`web-component-analyzer-fork` is a CLI that makes it possible to easily analyze web components. It analyzes your code and jsdoc in order to extract `properties`, `attributes`, `methods`, `events`, `slots`, `css shadow parts` and `css custom properties`. Works with both javascript and typescript.
 
 Try the online playground [here](https://runem.github.io/web-component-analyzer/)
 
@@ -21,7 +21,7 @@ In addition to [vanilla web components](https://developer.mozilla.org/en-US/docs
 - [polymer](https://github.com/Polymer/polymer)
 - [stencil](https://github.com/ionic-team/stencil) (partial)
 - [lwc](https://github.com/salesforce/lwc)
-- [open an issue for library requests](https://github.com/runem/web-component-analyzer/issues)
+- [open an issue for library requests](https://github.com/JackRobards/lit-analyzer/issues)
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#installation)
 
@@ -29,14 +29,14 @@ In addition to [vanilla web components](https://developer.mozilla.org/en-US/docs
 
 <!-- prettier-ignore -->
 ```bash
-$ npm install -g web-component-analyzer
+$ npm install -g web-component-analyzer-fork
 ```
 
 **or**
 
 <!-- prettier-ignore -->
 ```bash
-$ npx web-component-analyzer src
+$ npx web-component-analyzer-fork src
 ```
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#usage)
@@ -191,7 +191,7 @@ class MyElement extends HTMLElement {
 
 This tool extract information about your components by looking at your code directly and by looking at your JSDoc comments.
 
-**Code**: Web Component Analyzer supports multiple libraries. [Click here](https://github.com/runem/web-component-analyzer/blob/master/ANALYZE.md) for an overview of how each library is analyzed.
+**Code**: Web Component Analyzer supports multiple libraries. [Click here](https://github.com/JackRobards/web-component-analyzer/blob/master/ANALYZE.md) for an overview of how each library is analyzed.
 
 **JSDoc**: Read next section to learn more about how JSDoc is analyzed.
 
@@ -203,7 +203,7 @@ You can also directly use the underlying functionality of this tool if you don't
 
 <!-- prettier-ignore -->
 ```typescript
-import { analyzeSourceFile } from "web-component-analyzer";
+import { analyzeSourceFile } from "web-component-analyzer-fork";
 
 const result = analyzeSourceFile(sourceFile, { checker });
 ```
@@ -212,7 +212,7 @@ const result = analyzeSourceFile(sourceFile, { checker });
 
 <!-- prettier-ignore -->
 ```javascript
-import { analyzeText } from "web-component-analyzer";
+import { analyzeText } from "web-component-analyzer-fork";
 
 const code = `class MyElement extends HTMLElement {
 
@@ -236,7 +236,7 @@ const { results, program } = analyzeText([
 
 <!-- prettier-ignore -->
 ```javascript
-import { transformAnalyzerResult } from "web-component-analyzer";
+import { transformAnalyzerResult } from "web-component-analyzer-fork";
 
 const result = // the result of analyzing the component using one of the above functions
 
