@@ -25,7 +25,7 @@ async function main() {
 	// We're only using the bundled version, so the plugin doesn't need any
 	// dependencies.
 	tsPluginPackageJson.dependencies = {};
-	await writeFile("./built/node_modules/ts-lit-plugin/package.json", JSON.stringify(tsPluginPackageJson, null, 2));
+	await writeFile("./built/node_modules/ts-lit-plugin-fork/package.json", JSON.stringify(tsPluginPackageJson, null, 2));
 	await copy("../ts-lit-plugin/index.js", "./built/node_modules/ts-lit-plugin-fork/index.js");
 
 	const pluginPackageJson = require("./package.json");
