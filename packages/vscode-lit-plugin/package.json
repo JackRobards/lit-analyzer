@@ -4,7 +4,7 @@
 	"displayName": "lit-plugin",
 	"description": "Syntax highlighting, type checking and code completion for lit-html",
 	"version": "1.4.3",
-	"publisher": "JackRobards",
+	"publisher": "runem",
 	"icon": "docs/assets/lit-plugin@256w.png",
 	"license": "MIT",
 	"engines": {
