@@ -1,4 +1,4 @@
-import chalk from "chalk";
+const chalk = require("chalk");
 import type { TextSpan } from "typescript";
 import type { AnalysisStats } from "./diagnostic-formatter.js";
 

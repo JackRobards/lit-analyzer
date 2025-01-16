@@ -1,4 +1,4 @@
-import chalk from "chalk";
+const chalk = require("chalk");
 import type { SourceFile } from "typescript";
 import type { LitDiagnostic } from "../../analyze/types/lit-diagnostic.js";
 import type { AnalysisStats, DiagnosticFormatter } from "./diagnostic-formatter.js";

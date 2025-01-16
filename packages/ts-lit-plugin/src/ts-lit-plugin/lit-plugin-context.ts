@@ -3,9 +3,9 @@ import { DefaultLitAnalyzerContext } from "lit-analyzer-fork";
 import { logger } from "../logger.js";
 
 export class LitPluginContext extends DefaultLitAnalyzerContext {
-	logger = logger;
+	override logger = logger;
 
-	public updateConfig(config: LitAnalyzerConfig): void {
+	public override updateConfig(config: LitAnalyzerConfig): void {
 		const hasChangedLogging = config.logging !== "off" && (this.config.logging !== config.logging || this.config.cwd !== config.cwd);
 
 		// Setup logging

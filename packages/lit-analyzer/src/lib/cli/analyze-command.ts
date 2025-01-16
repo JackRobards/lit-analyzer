@@ -1,4 +1,4 @@
-import chalk from "chalk";
+const chalk = require("chalk");
 import { appendFileSync, writeFileSync } from "fs";
 import type { Program, SourceFile } from "typescript";
 import { DefaultLitAnalyzerContext } from "../analyze/default-lit-analyzer-context.js";
