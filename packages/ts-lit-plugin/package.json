@@ -1,7 +1,7 @@
 {
-	"name": "ts-lit-plugin",
+	"name": "ts-lit-plugin-fork",
 	"version": "2.0.2",
-	"description": "Typescript plugin that adds type checking and code completion to lit-html",
+	"description": "Typescript plugin that adds type checking and code completion to lit-html. Fork of the original ts-lit-plugin.",
 	"author": "JackRobards",
 	"license": "MIT",
 	"repository": {

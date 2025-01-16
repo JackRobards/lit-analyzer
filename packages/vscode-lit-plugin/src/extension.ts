@@ -3,7 +3,7 @@ import { join } from "path";
 import { ColorProvider } from "./color-provider.js";
 import * as vscode from "vscode";
 
-const tsLitPluginId = "ts-lit-plugin";
+const tsLitPluginId = "ts-lit-plugin-fork";
 const typeScriptExtensionId = "vscode.typescript-language-features";
 const configurationSection = "lit-plugin";
 const configurationExperimentalHtmlSection = "html.experimental";

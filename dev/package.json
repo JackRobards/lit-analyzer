@@ -5,7 +5,7 @@
 	"dependencies": {
 		"lit-element": "^2.3.1",
 		"lit-html": "^1.2.1",
-		"ts-lit-plugin": "file:../packages/ts-lit-plugin"
+		"ts-lit-plugin-fork": "file:../packages/ts-lit-plugin"
 	},
 	"devDependencies": {
 		"typescript": "~5.7.2"

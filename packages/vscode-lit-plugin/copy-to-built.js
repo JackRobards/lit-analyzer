@@ -20,19 +20,19 @@ async function main() {
 
 	// For the TS compiler plugin, it must be in node modules because that's
 	// hard coded by the TS compiler's custom module resolution logic.
-	await mkdirp("./built/node_modules/ts-lit-plugin");
+	await mkdirp("./built/node_modules/ts-lit-plugin-fork");
 	const tsPluginPackageJson = require("../ts-lit-plugin/package.json");
 	// We're only using the bundled version, so the plugin doesn't need any
 	// dependencies.
 	tsPluginPackageJson.dependencies = {};
 	await writeFile("./built/node_modules/ts-lit-plugin/package.json", JSON.stringify(tsPluginPackageJson, null, 2));
-	await copy("../ts-lit-plugin/index.js", "./built/node_modules/ts-lit-plugin/index.js");
+	await copy("../ts-lit-plugin/index.js", "./built/node_modules/ts-lit-plugin-fork/index.js");
 
 	const pluginPackageJson = require("./package.json");
 	// vsce is _very_ picky about the directories in node_modules matching the
-	// extension's package.json, so we need an entry for ts-lit-plugin or it
+	// extension's package.json, so we need an entry for ts-lit-plugin-fork or it
 	// will think that it's extraneous.
-	pluginPackageJson.dependencies["ts-lit-plugin"] = "*";
+	pluginPackageJson.dependencies["ts-lit-plugin-fork"] = "*";
 	await writeFile("./built/package.json", JSON.stringify(pluginPackageJson, null, 2));
 
 	// Copy static files used by the extension.

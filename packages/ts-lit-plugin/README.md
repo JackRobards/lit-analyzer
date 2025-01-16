@@ -1,4 +1,4 @@
-<!-- ⚠️ This README has been generated from the file(s) "readme.blueprint.md" ⚠️--><h1 align="center">ts-lit-plugin</h1>
+<!-- ⚠️ This README has been generated from the file(s) "readme.blueprint.md" ⚠️--><h1 align="center">ts-lit-plugin-fork</h1>
 <p align="center">
   <b>Typescript plugin that adds type checking and code completion to lit-html</b></br>
   <sub><sub>
@@ -7,10 +7,10 @@
 <br />
 
 <p align="center">
-		<a href="https://npmcharts.com/compare/ts-lit-plugin?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/ts-lit-plugin.svg" height="20"/></a>
-<a href="https://www.npmjs.com/package/ts-lit-plugin"><img alt="NPM Version" src="https://img.shields.io/npm/v/ts-lit-plugin.svg" height="20"/></a>
-<a href="https://david-dm.org/runem/lit-analyzer"><img alt="Dependencies" src="https://img.shields.io/david/runem/lit-analyzer.svg" height="20"/></a>
-<a href="https://github.com/runem/lit-analyzer/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/runem/lit-analyzer.svg" height="20"/></a>
+		<a href="https://npmcharts.com/compare/ts-lit-plugin-fork?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/ts-lit-plugin-fork.svg" height="20"/></a>
+<a href="https://www.npmjs.com/package/ts-lit-plugin-fork"><img alt="NPM Version" src="https://img.shields.io/npm/v/ts-lit-plugin-fork.svg" height="20"/></a>
+<a href="https://david-dm.org/JackRobards/lit-analyzer"><img alt="Dependencies" src="https://img.shields.io/david/JackRobards/lit-analyzer.svg" height="20"/></a>
+<a href="https://github.com/JackRobards/lit-analyzer/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/JackRobards/lit-analyzer.svg" height="20"/></a>
 	</p>
 
 <p align="center">
@@ -25,7 +25,7 @@ First, install the plugin:
 
 <!-- prettier-ignore -->
 ```bash
-npm install ts-lit-plugin -D
+npm install ts-lit-plugin-fork -D
 ```
 
 Then add a `plugins` section to your [`tsconfig.json`](http://www.typescriptlang.org/docs/handbook/tsconfig-json.html):
@@ -36,14 +36,14 @@ Then add a `plugins` section to your [`tsconfig.json`](http://www.typescriptlang
   "compilerOptions": {
     "plugins": [
       {
-        "name": "ts-lit-plugin"
+        "name": "ts-lit-plugin-fork"
       }
     ]
   }
 }
 ```
 
-Finally, restart you Typescript Language Service, and you should start getting diagnostics from `ts-lit-plugin`.
+Finally, restart you Typescript Language Service, and you should start getting diagnostics from `ts-lit-plugin-fork`.
 
 **Note:**
 
@@ -64,7 +64,7 @@ You can configure this plugin through your `tsconfig.json`.
   "compilerOptions": {
     "plugins": [
       {
-        "name": "ts-lit-plugin",
+        "name": "ts-lit-plugin-fork",
         "strict": true,
         "rules": {
           "no-unknown-tag-name": "off",

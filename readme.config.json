@@ -8,17 +8,17 @@
 		},
 		{
 			"alt": "Downloads per Month",
-			"img": "https://img.shields.io/npm/dm/lit-analyzer.svg?label=lit-analyzer",
-			"url": "https://www.npmjs.com/package/lit-analyzer"
+			"img": "https://img.shields.io/npm/dm/lit-analyzer-fork.svg?label=lit-analyzer-fork",
+			"url": "https://www.npmjs.com/package/lit-analyzer-fork"
 		},
 		{
 			"alt": "Downloads per Month",
-			"img": "https://img.shields.io/npm/dm/ts-lit-plugin.svg?label=ts-lit-plugin",
-			"url": "https://www.npmjs.com/package/ts-lit-plugin"
+			"img": "https://img.shields.io/npm/dm/ts-lit-plugin-fork.svg?label=ts-lit-plugin-fork",
+			"url": "https://www.npmjs.com/package/ts-lit-plugin-fork"
 		},
 		{
 			"alt": "Contributors",
-			"img": "https://img.shields.io/github/contributors/JackRobards/lit-analyzer",
+			"img": "https://img.shields.io/github/contributors/JackRobards/lit-analyzer-fork",
 			"url": "https://github.com/JackRobards/lit-analyzer/graphs/contributors"
 		}
 	]

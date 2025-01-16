@@ -8,9 +8,9 @@
 
 <p align="center">
 		<a href="https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin"><img alt="Downloads per Month" src="https://vsmarketplacebadges.dev/downloads-short/runem.lit-plugin.svg?label=vscode-lit-plugin" height="20"/></a>
-<a href="https://www.npmjs.com/package/lit-analyzer"><img alt="Downloads per Month" src="https://img.shields.io/npm/dm/lit-analyzer.svg?label=lit-analyzer" height="20"/></a>
-<a href="https://www.npmjs.com/package/ts-lit-plugin"><img alt="Downloads per Month" src="https://img.shields.io/npm/dm/ts-lit-plugin.svg?label=ts-lit-plugin" height="20"/></a>
-<a href="https://github.com/runem/lit-analyzer/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/runem/lit-analyzer" height="20"/></a>
+<a href="https://www.npmjs.com/package/lit-analyzer-fork"><img alt="Downloads per Month" src="https://img.shields.io/npm/dm/lit-analyzer.svg?label=lit-analyzer" height="20"/></a>
+<a href="https://www.npmjs.com/package/ts-lit-plugin-fork"><img alt="Downloads per Month" src="https://img.shields.io/npm/dm/ts-lit-plugin-fork.svg?label=ts-lit-plugin-fork" height="20"/></a>
+<a href="https://github.com/runem/lit-analyzer/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/JackRobards/lit-analyzer" height="20"/></a>
 	</p>
 
 This mono-repository consists of the following tools:

@@ -650,14 +650,14 @@ css`
 
 You can configure this plugin by going to `VS Code Settings` > `Extension` > `lit-plugin`.
 
-**Note:** You can also configure the plugin using a `tsconfig.json` file (see [ts-lit-plugin](https://github.com/runem/lit-analyzer/blob/master/packages/ts-lit-plugin)).
+**Note:** You can also configure the plugin using a `tsconfig.json` file (see [ts-lit-plugin](https://github.com/JackRobards/lit-analyzer/blob/master/packages/ts-lit-plugin)).
 
 ### Available options
 
 <!-- prettier-ignore -->
 | Option | Description | Type | Default |
 | :----- | ----------- | ---- | ------- |
-| `strict` | Enabling strict mode will change which rules are applied as default (see list of [rules](https://github.com/runem/lit-analyzer/blob/master/docs/readme/rules.md)) | `boolean` | false |
+| `strict` | Enabling strict mode will change which rules are applied as default (see list of [rules](https://github.com/JackRobards/lit-analyzer/blob/master/docs/readme/rules.md)) | `boolean` | false |
 | `rules` | Enable/disable individual rules or set their severity. Example: `{"no-unknown-tag-name": "off"}` | `{"rule-name": "off" \| "warn" \| "error"}` | The default rules enabled depend on the `strict` option |
 | `disable` | Completely disable this plugin. | `boolean` | false |
 | `dontShowSuggestions` | This option sets strict as  | `boolean` | false |
@@ -785,7 +785,7 @@ Below is a comparison table of the two plugins:
 
 All features are provided by these three libraries:
 
-- **[ts-lit-plugin](https://github.com/runem/lit-analyzer)**: The typescript plugin that powers the logic through the typescript language service (code completion, type checking, eg.). Therefore issues regarding anything but syntax highlighting should be opened in `ts-lit-plugin` and not `vscode-lit-plugin`.
+- **[ts-lit-plugin](https://github.com/JackRobards/lit-analyzer)**: The typescript plugin that powers the logic through the typescript language service (code completion, type checking, eg.). Therefore issues regarding anything but syntax highlighting should be opened in `ts-lit-plugin` and not `vscode-lit-plugin`.
 - **[vscode-lit-html](https://github.com/mjbvz/vscode-lit-html)**: Provides highlighting for the html template tag.
 - **[vscode-styled-components](https://github.com/styled-components/vscode-styled-components)**: Provides highlighting for the css template tag.
 
