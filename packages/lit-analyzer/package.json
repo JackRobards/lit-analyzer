@@ -1,12 +1,12 @@
 {
-	"name": "lit-analyzer",
+	"name": "lit-analyzer-fork",
 	"version": "2.0.3",
 	"description": "CLI that type checks bindings in lit-html templates",
 	"author": "runem",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/runem/lit-analyzer.git"
+		"url": "https://github.com/JackRobards/lit-analyzer.git"
 	},
 	"keywords": [
 		"lit-html",
@@ -21,7 +21,7 @@
 		"template"
 	],
 	"bin": {
-		"lit-analyzer": "cli.js"
+		"lit-analyzer-fork": "cli.js"
 	},
 	"scripts": {
 		"build": "wireit",
@@ -135,7 +135,7 @@
 		{
 			"name": "You?",
 			"img": "https://joeschmoe.io/api/v1/random",
-			"url": "https://github.com/runem/lit-analyzer/blob/master/CONTRIBUTING.md"
+			"url": "https://github.com/JackRobards/lit-analyzer/blob/master/CONTRIBUTING.md"
 		}
 	]
 }

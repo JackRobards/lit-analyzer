@@ -1,4 +1,4 @@
-import { LitAnalyzerContext, LitDiagnostic } from "lit-analyzer";
+import { LitAnalyzerContext, LitDiagnostic } from "lit-analyzer-fork";
 import { DiagnosticMessageChain, DiagnosticWithLocation, SourceFile } from "typescript";
 import { translateRange } from "./translate-range.js";
 

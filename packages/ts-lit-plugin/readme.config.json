@@ -1,7 +1,7 @@
 {
 	"line": "rainbow",
 	"ids": {
-		"github": "runem/lit-analyzer",
+		"github": "JackRobards/lit-analyzer",
 		"npm": "ts-lit-plugin"
 	}
 }

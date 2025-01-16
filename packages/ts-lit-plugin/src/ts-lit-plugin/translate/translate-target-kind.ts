@@ -1,4 +1,4 @@
-import { LitTargetKind } from "lit-analyzer";
+import { LitTargetKind } from "lit-analyzer-fork";
 import { ScriptElementKind } from "typescript";
 import { tsModule } from "../../ts-module.js";
 

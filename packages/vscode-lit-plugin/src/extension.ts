@@ -1,4 +1,4 @@
-import { ALL_RULE_IDS, LitAnalyzerConfig } from "lit-analyzer";
+import { ALL_RULE_IDS, LitAnalyzerConfig } from "lit-analyzer-fork";
 import { join } from "path";
 import { ColorProvider } from "./color-provider.js";
 import * as vscode from "vscode";
@@ -211,7 +211,7 @@ function handleAnalyzeCommand() {
 			defaultAnalyzeGlob = glob;
 
 			const cliCommand = `npx lit-analyzer "${glob}"`;
-			const terminal = vscode.window.createTerminal("lit-analyzer");
+			const terminal = vscode.window.createTerminal("lit-analyzer-fork");
 			terminal.sendText(cliCommand, true);
 			terminal.show(true);
 		});

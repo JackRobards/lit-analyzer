@@ -1,4 +1,4 @@
-import { LitQuickInfo } from "lit-analyzer";
+import { LitQuickInfo } from "lit-analyzer-fork";
 import { QuickInfo } from "typescript";
 import { tsModule } from "../../ts-module.js";
 import { translateRange } from "./translate-range.js";

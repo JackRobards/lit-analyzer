@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { LitAnalyzerConfig, LitAnalyzerLoggerLevel, makeConfig, VERSION } from "lit-analyzer";
+import { LitAnalyzerConfig, LitAnalyzerLoggerLevel, makeConfig, VERSION } from "lit-analyzer-fork";
 import * as ts from "typescript";
 import { CompilerOptions } from "typescript";
 import * as tsServer from "typescript/lib/tsserverlibrary.js";
