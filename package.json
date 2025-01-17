@@ -63,8 +63,7 @@
 		"test": {
 			"dependencies": [
 				"test:headless",
-				"test:headful",
-				"lint"
+				"test:headful"
 			]
 		},
 		"lint": {
