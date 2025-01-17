@@ -100,7 +100,7 @@ export function convertComponentFeaturesToHtml(
 			kind: "attribute",
 			name: `on${event.name}`,
 			description: event.jsDoc?.description,
-			getType: lazy(() => ({ kind: "STRING" } as SimpleType)),
+			getType: lazy(() => ({ kind: "STRING" }) as SimpleType),
 			declaration: {
 				attrName: `on${event.name}`,
 				jsDoc: event.jsDoc,

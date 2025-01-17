@@ -44,7 +44,7 @@ export function analyzeText(inputFiles: VirtualSourceFile[] | VirtualSourceFile,
 						text: file,
 						fileName: `auto-generated-${Math.floor(Math.random() * 100000)}.ts`,
 						entry: true
-				  }
+					}
 				: file
 		)
 		.map(file => ({ ...file, fileName: file.fileName }));

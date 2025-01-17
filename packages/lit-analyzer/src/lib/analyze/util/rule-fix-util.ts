@@ -37,7 +37,7 @@ function ruleFixActionConverter(action: RuleFixAction): LitCodeFixAction[] {
 								}),
 								newText: action.newName
 							}
-					  ])
+						])
 			];
 		}
 

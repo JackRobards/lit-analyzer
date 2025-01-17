@@ -52,7 +52,7 @@ const rule: RuleModule = {
 										newName: suggestedName
 									}
 								]
-						  })
+							})
 			});
 		}
 

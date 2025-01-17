@@ -28,11 +28,11 @@ export function compileFiles(inputFiles: TestFile[] | TestFile = []): { program:
 						text: file,
 						fileName: `auto-generated-${Math.floor(Math.random() * 100000)}.ts`,
 						entry: true
-				  }
+					}
 				: {
 						...file,
 						fileName: file.fileName || `auto-generated-${Math.floor(Math.random() * 100000)}.ts`
-				  }
+					}
 		)
 		.map(file => ({ ...file, fileName: file.fileName }));
 

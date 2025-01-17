@@ -147,7 +147,7 @@ The value must be a comma-separated list of part mappings:
 							({
 								kind: "UNION",
 								types: [{ kind: "STRING" }, { kind: "NULL" }]
-							} as SimpleType)
+							}) as SimpleType
 					)
 				});
 				break;
@@ -173,7 +173,7 @@ The value must be a comma-separated list of part mappings:
 									},
 									{ kind: "STRING_LITERAL", value: "eager" }
 								]
-							} as SimpleType)
+							}) as SimpleType
 					)
 				});
 				break;
@@ -189,7 +189,7 @@ The value must be a comma-separated list of part mappings:
 							({
 								kind: "UNION",
 								types: [{ kind: "STRING" }, { kind: "NULL" }]
-							} as SimpleType)
+							}) as SimpleType
 					)
 				});
 				break;

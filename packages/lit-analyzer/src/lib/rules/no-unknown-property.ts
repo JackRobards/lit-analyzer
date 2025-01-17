@@ -64,7 +64,7 @@ const rule: RuleModule = {
 											htmlAttr
 										}
 									]
-								} as RuleFix)
+								}) as RuleFix
 			});
 		}
 
@@ -102,8 +102,8 @@ function getSuggestionText({
 	return tagIsBuiltIn
 		? `This is a built in tag. Please consider disabling the 'no-unknown-property' rule.`
 		: tagIsFromLibrary
-		? `If you are not the author of this component please consider disabling the 'no-unknown-property' rule.`
-		: tagHasDeclaration
-		? `Please consider adding a '@prop' tag to jsdoc on the component class or disabling the 'no-unknown-property' rule.`
-		: `Please consider disabling the 'no-unknown-property' rule.`;
+			? `If you are not the author of this component please consider disabling the 'no-unknown-property' rule.`
+			: tagHasDeclaration
+				? `Please consider adding a '@prop' tag to jsdoc on the component class or disabling the 'no-unknown-property' rule.`
+				: `Please consider disabling the 'no-unknown-property' rule.`;
 }

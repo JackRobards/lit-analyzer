@@ -231,5 +231,5 @@ export function getLeadingCommentForNode(node: Node, ts: typeof tsModule): strin
 export function getDecorators(node: Node, context: { ts: typeof tsModule }): ReadonlyArray<Decorator> {
 	const { ts } = context;
 
-	return ts.canHaveDecorators(node) ? ts.getDecorators(node) ?? [] : [];
+	return ts.canHaveDecorators(node) ? (ts.getDecorators(node) ?? []) : [];
 }

@@ -21,6 +21,6 @@ export function translateCompletionDetails(completionDetails: LitCompletionDetai
 							kind: "text",
 							text: completionDetails.secondaryInfo
 						}
-				  ]
+					]
 	};
 }

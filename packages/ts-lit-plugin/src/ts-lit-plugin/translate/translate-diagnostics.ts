@@ -32,7 +32,7 @@ function translateDiagnostic(diagnostic: LitDiagnostic, file: SourceFile, contex
 							category: context.ts.DiagnosticCategory.Suggestion
 						}
 					]
-			  }
+				}
 			: getMessageTextFromDiagnostic(diagnostic);
 
 	if (Number(context.ts.versionMajorMinor) < 3.6 && typeof messageText !== "string") {
