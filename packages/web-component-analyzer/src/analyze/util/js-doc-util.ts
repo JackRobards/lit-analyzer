@@ -77,12 +77,12 @@ export function getJsDoc(node: Node, ts: typeof tsModule, tagNames?: string[]): 
 
 							const fullComment = typeExpressionPart?.startsWith("@")
 								? // To make matters worse, if Typescript can't parse a certain jsdoc, it will include the rest of the jsdocs tag from there in "typeExpressionPart"
-								  // Therefore we check if there are multiple jsdoc tags in the string to only take the first one
-								  // This will discard the following jsdocs, but at least we don't crash :-)
-								  typeExpressionPart.split(/\n\s*\*\s?@/)[0] || ""
+									// Therefore we check if there are multiple jsdoc tags in the string to only take the first one
+									// This will discard the following jsdocs, but at least we don't crash :-)
+									typeExpressionPart.split(/\n\s*\*\s?@/)[0] || ""
 								: `@${tag}${typeExpressionPart != null ? ` ${typeExpressionPart} ` : ""}${namePart != null ? ` ${namePart} ` : ""} ${
 										node.comment || ""
-								  }`;
+									}`;
 
 							const comment = typeof node.comment === "string" ? node.comment.replace(/^\s*-\s*/, "").trim() : "";
 
@@ -93,7 +93,7 @@ export function getJsDoc(node: Node, ts: typeof tsModule, tagNames?: string[]): 
 								parsed: lazy(() => parseJsDocTagString(fullComment))
 							};
 						})
-				  )
+					)
 	};
 }
 

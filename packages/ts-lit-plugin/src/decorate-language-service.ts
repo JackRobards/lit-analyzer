@@ -3,6 +3,8 @@ import type { LanguageService } from "typescript";
 import { logger } from "./logger.js";
 import type { TsLitPlugin } from "./ts-lit-plugin/ts-lit-plugin.js";
 
+type LanguageServiceMethod = (...args: any[]) => any;
+
 export function decorateLanguageService(languageService: LanguageService, plugin: TsLitPlugin): LanguageService {
 	const languageServiceExtension: Partial<LanguageService> = {
 		getCompletionsAtPosition: plugin.getCompletionsAtPosition.bind(plugin),
@@ -26,10 +28,10 @@ export function decorateLanguageService(languageService: LanguageService, plugin
 
 	// Make sure to call the old service if config.disable === true
 	for (const methodName of Object.getOwnPropertyNames(languageServiceExtension) as (keyof LanguageService)[]) {
-		const newMethod: Function | undefined = decoratedLanguageService[methodName]!;
-		const oldMethod: Function | undefined = languageService[methodName];
+		const newMethod: LanguageServiceMethod = decoratedLanguageService[methodName]!;
+		const oldMethod: LanguageServiceMethod = languageService[methodName]!;
 
-		decoratedLanguageService[methodName] = function (): any {
+		decoratedLanguageService[methodName] = function () {
 			if (plugin.context.config.disable && oldMethod != null) {
 				return oldMethod(...arguments);
 			}
@@ -58,7 +60,7 @@ export function decorateLanguageService(languageService: LanguageService, plugin
  * @param oldMethod
  * @param methodName
  */
-function wrapTryCatch<T extends Function>(newMethod: T, oldMethod: T | undefined, methodName: string): T {
+function wrapTryCatch<T extends (...args: unknown[]) => unknown>(newMethod: T, oldMethod: T, methodName: string): T {
 	return ((...args: unknown[]) => {
 		try {
 			return newMethod(...args);
@@ -85,7 +87,7 @@ function wrapTryCatch<T extends Function>(newMethod: T, oldMethod: T | undefined
  * @param proxy
  * @param plugin
  */
-function wrapLog<T extends Function>(name: string, proxy: T, plugin: TsLitPlugin): T {
+function wrapLog<T extends LanguageServiceMethod>(name: string, proxy: T, plugin: TsLitPlugin): T {
 	return ((...args: unknown[]) => {
 		if (plugin.context.config.logging === "verbose") {
 			/**/

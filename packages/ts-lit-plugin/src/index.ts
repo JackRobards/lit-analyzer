@@ -27,7 +27,7 @@ export function init({ typescript }: { typescript: typeof ts }): tsServer.server
 	 * This function is used to print debug info once
 	 * Yes, it's a self destructing function!
 	 */
-	let printDebugOnce: Function | undefined = () => {
+	let printDebugOnce: (() => void) | undefined = () => {
 		if (logger.level >= LitAnalyzerLoggerLevel.DEBUG) {
 			logger.debug(`Lit Analyzer: ${VERSION}`);
 			logger.debug(`Web Component Analyzer: ${WCA_VERSION}`);

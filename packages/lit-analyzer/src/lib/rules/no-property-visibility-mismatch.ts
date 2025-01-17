@@ -57,7 +57,7 @@ const rule: RuleModule = {
 				...(inJsFile
 					? {
 							// We are in Javascript context. Add "@properted" or "@private" JSDoc
-					  }
+						}
 					: {
 							// We are in Typescript context. Add "protected" or "private" keyword
 							fixMessage: "Change the property access to 'private' or 'protected'?",
@@ -110,7 +110,7 @@ const rule: RuleModule = {
 
 								return [];
 							}
-					  })
+						})
 			});
 		}
 

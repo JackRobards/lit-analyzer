@@ -40,5 +40,5 @@
 
 		"lib": ["es2023"]
 	},
-	"exclude": ["node_modules", "**/*.spec.ts"]
+	"exclude": ["node_modules"]
 }

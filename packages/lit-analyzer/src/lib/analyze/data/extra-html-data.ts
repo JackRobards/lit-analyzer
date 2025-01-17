@@ -254,7 +254,7 @@ function stringToSimpleType(typeString: string | string[] | [string[]], name?: s
 
 		return {
 			kind: "UNION",
-			types: (typeString as string[]).map(value => ({ kind: "STRING_LITERAL", value } as SimpleTypeStringLiteral))
+			types: (typeString as string[]).map(value => ({ kind: "STRING_LITERAL", value }) as SimpleTypeStringLiteral)
 		};
 	}
 

@@ -82,7 +82,7 @@ const rule: RuleModule = {
 											}
 										]
 									} as RuleFix
-							  ])
+								])
 					] as RuleFix[]
 			});
 		}
@@ -119,8 +119,8 @@ function getSuggestionText({
 	return tagIsBuiltIn
 		? `This is a built in tag. Please consider using a 'data-*' attribute, adding the attribute to 'globalAttributes' or disabling the 'no-unknown-attribute' rule.`
 		: tagIsFromLibrary
-		? `If you are not the author of this component please consider using a 'data-*' attribute, adding the attribute to 'globalAttributes' or disabling the 'no-unknown-attribute' rule.`
-		: tagHasDeclaration
-		? `Please consider adding it as an attribute on the component, adding '@attr' tag to jsdoc on the component class or using a 'data-*' attribute instead.`
-		: `Please consider using a 'data-*' attribute.`;
+			? `If you are not the author of this component please consider using a 'data-*' attribute, adding the attribute to 'globalAttributes' or disabling the 'no-unknown-attribute' rule.`
+			: tagHasDeclaration
+				? `Please consider adding it as an attribute on the component, adding '@attr' tag to jsdoc on the component class or using a 'data-*' attribute instead.`
+				: `Please consider using a 'data-*' attribute.`;
 }

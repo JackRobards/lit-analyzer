@@ -192,9 +192,9 @@ function resolveHeritage(
 				heritage != null && typeof heritage === "string"
 					? heritage
 					: heritage?.token === ts.SyntaxKind.ImplementsKeyword ||
-					  (declarations.length > 0 && !declarations.some(decl => !context.ts.isInterfaceDeclaration(decl)))
-					? "implements"
-					: "extends";
+						  (declarations.length > 0 && !declarations.some(decl => !context.ts.isInterfaceDeclaration(decl)))
+						? "implements"
+						: "extends";
 
 			context.emitInheritance(kind, node);
 		}

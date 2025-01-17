@@ -6,6 +6,8 @@ import { parseSimpleJsDocTypeExpression } from "../../util/js-doc-util";
 import { lazy } from "../../util/lazy";
 import type { AnalyzerFlavor } from "../analyzer-flavor";
 
+type ApplyFuncType<T> = (event: T, jsDoc: JsDoc | undefined, context: AnalyzerVisitContext) => T;
+
 /**
  * Refines features by looking at the jsdoc tags on the feature
  */
@@ -19,7 +21,7 @@ export const refineFeature: AnalyzerFlavor["refineFeature"] = {
 		}
 
 		return [applyJsDocDeprecated, applyJsDocVisibility, applyJsDocType].reduce(
-			(event, applyFunc) => (applyFunc as Function)(event, event.jsDoc, context),
+			(event, applyFunc) => (applyFunc as ApplyFuncType<typeof event>)(event, event.jsDoc, context),
 			event
 		);
 	},
@@ -32,7 +34,7 @@ export const refineFeature: AnalyzerFlavor["refineFeature"] = {
 		}
 
 		method = [applyJsDocDeprecated, applyJsDocVisibility].reduce(
-			(method, applyFunc) => (applyFunc as Function)(method, method.jsDoc, context),
+			(method, applyFunc) => (applyFunc as ApplyFuncType<typeof method>)(method, method.jsDoc, context),
 			method
 		);
 
@@ -56,7 +58,7 @@ export const refineFeature: AnalyzerFlavor["refineFeature"] = {
 			applyJsDocType,
 			applyJsDocAttribute,
 			applyJsDocModifiers
-		].reduce((member, applyFunc) => (applyFunc as Function)(member, member.jsDoc, context), member);
+		].reduce((member, applyFunc) => (applyFunc as ApplyFuncType<typeof member>)(member, member.jsDoc, context), member);
 	}
 };
 

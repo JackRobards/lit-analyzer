@@ -32,7 +32,7 @@ export function completionsForHtmlAttrValues(
 						insert: slot.name || "",
 						documentation: () => slot.description,
 						kind: "enumElement"
-					} as LitCompletion)
+					}) as LitCompletion
 			);
 		}
 	}
@@ -45,7 +45,7 @@ export function completionsForHtmlAttrValues(
 				name: option,
 				insert: option,
 				kind: "enumElement"
-			} as LitCompletion)
+			}) as LitCompletion
 	);
 }
 

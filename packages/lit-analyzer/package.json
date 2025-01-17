@@ -27,6 +27,7 @@
 		"build": "wireit",
 		"prepublishOnly": "npm test",
 		"readme": "readme generate -i readme.blueprint.md -c readme.config.json",
+		"eslint": "eslint src",
 		"test": "wireit",
 		"test:ava": "wireit",
 		"test:all": "npm test",

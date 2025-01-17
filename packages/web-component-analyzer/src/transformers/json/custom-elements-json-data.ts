@@ -31,8 +31,10 @@ export interface HtmlDataProperty extends HtmlDataMember {
 	default?: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface HtmlDataSlot extends HtmlDataMember {}
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface HtmlDataEvent extends HtmlDataMember {}
 
 export interface HtmlDataCssProperty extends HtmlDataMember {
@@ -40,6 +42,7 @@ export interface HtmlDataCssProperty extends HtmlDataMember {
 	default?: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface HtmlDataCssPart extends HtmlDataMember {}
 
 export interface HtmlDataTag {

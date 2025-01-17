@@ -57,7 +57,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 	synchronizeConfig(api);
 }
 
-function synchronizeConfig(api: { configurePlugin: Function }) {
+function synchronizeConfig(api: { configurePlugin: (pluginId: typeof tsLitPluginId, config: Partial<LitAnalyzerConfig>) => void }) {
 	api.configurePlugin(tsLitPluginId, getConfig());
 }
 

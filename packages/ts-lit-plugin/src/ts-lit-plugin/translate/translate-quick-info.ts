@@ -22,6 +22,6 @@ export function translateQuickInfo(quickInfo: LitQuickInfo): QuickInfo {
 							kind: "text",
 							text: quickInfo.secondaryInfo
 						}
-				  ]
+					]
 	};
 }

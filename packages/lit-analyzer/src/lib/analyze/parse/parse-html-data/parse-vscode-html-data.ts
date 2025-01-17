@@ -95,7 +95,7 @@ function attrValuesToUnion(attrValues: IValueData[]): SimpleType {
 				({
 					value: value.name,
 					kind: "STRING_LITERAL"
-				} as SimpleTypeStringLiteral)
+				}) as SimpleTypeStringLiteral
 		)
 	};
 }
@@ -115,7 +115,7 @@ function attrsToEvents(htmlAttrs: HtmlAttr[]): HtmlEvent[] {
 			name: htmlAttr.name.replace(/^on/, ""),
 			description: htmlAttr.description,
 			fromTagName: htmlAttr.fromTagName,
-			getType: lazy(() => ({ kind: "ANY" } as SimpleType)),
+			getType: lazy(() => ({ kind: "ANY" }) as SimpleType),
 			builtIn: htmlAttr.builtIn
 		}));
 }

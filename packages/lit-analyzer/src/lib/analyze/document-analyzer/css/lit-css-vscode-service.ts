@@ -61,7 +61,7 @@ export class LitCssVscodeService {
 						}),
 						message: diagnostic.message,
 						file: context.currentFile
-					} as LitDiagnostic)
+					}) as LitDiagnostic
 			);
 	}
 
@@ -136,7 +136,7 @@ export class LitCssVscodeService {
 					documentation: lazy(() => (typeof i.documentation === "string" || i.documentation == null ? i.documentation : i.documentation.value)),
 					sortText: i.sortText,
 					range
-				} as LitCompletion)
+				}) as LitCompletion
 		);
 
 		// Add completions for css custom properties
@@ -269,7 +269,7 @@ class LitVscodeCSSDataProvider {
 						description: documentationForHtmlTag(tag),
 						name: tag.tagName,
 						status: "standard"
-					} as IPseudoElementData)
+					}) as IPseudoElementData
 			)
 		);
 	}

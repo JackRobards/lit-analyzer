@@ -9,7 +9,7 @@ type TestFunction = (title: string, implementation: ImplementationFn<unknown[]>)
 
 const TS_MODULES_ALL = ["current", "5.4", "5.5", "5.6"] as const;
 
-type TsModuleKind = typeof TS_MODULES_ALL[number];
+type TsModuleKind = (typeof TS_MODULES_ALL)[number];
 
 const TS_MODULES_DEFAULT: TsModuleKind[] = ["current", "5.4", "5.5", "5.6"];
 

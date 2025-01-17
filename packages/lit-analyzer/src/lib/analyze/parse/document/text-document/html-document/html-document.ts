@@ -6,7 +6,10 @@ import type { VirtualDocument } from "../../virtual-document/virtual-document.js
 import { TextDocument } from "../text-document.js";
 
 export class HtmlDocument extends TextDocument {
-	constructor(virtualDocument: VirtualDocument, public rootNodes: HtmlNode[]) {
+	constructor(
+		virtualDocument: VirtualDocument,
+		public rootNodes: HtmlNode[]
+	) {
 		super(virtualDocument);
 	}
 

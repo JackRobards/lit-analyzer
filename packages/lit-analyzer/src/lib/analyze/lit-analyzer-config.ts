@@ -68,10 +68,13 @@ export const ALL_RULE_IDS = Object.keys(DEFAULT_RULES_SEVERITY).sort() as LitAna
 //   should not be depended on by the user.
 // The user should always use the "rule id" string.
 // Consider if this map should be manually maintained in the future.
-export const RULE_ID_CODE_MAP = ALL_RULE_IDS.reduce((acc, ruleId, i) => {
-	acc[ruleId] = i + 2300;
-	return acc;
-}, {} as Record<LitAnalyzerRuleId, number>);
+export const RULE_ID_CODE_MAP = ALL_RULE_IDS.reduce(
+	(acc, ruleId, i) => {
+		acc[ruleId] = i + 2300;
+		return acc;
+	},
+	{} as Record<LitAnalyzerRuleId, number>
+);
 
 export function ruleIdCode(ruleId: LitAnalyzerRuleId): number {
 	return RULE_ID_CODE_MAP[ruleId];
@@ -211,11 +214,14 @@ function getUserRules(userOptions: Partial<LitAnalyzerConfig>): LitAnalyzerRules
 function getDefaultRules(userOptions: Partial<LitAnalyzerConfig>): LitAnalyzerRules {
 	const isStrict = userOptions.strict || false;
 
-	return ALL_RULE_IDS.reduce((acc, ruleId) => {
-		const severities = DEFAULT_RULES_SEVERITY[ruleId];
-		acc[ruleId] = isStrict ? severities[1] : severities[0];
-		return acc;
-	}, {} as unknown as LitAnalyzerRules);
+	return ALL_RULE_IDS.reduce(
+		(acc, ruleId) => {
+			const severities = DEFAULT_RULES_SEVERITY[ruleId];
+			acc[ruleId] = isStrict ? severities[1] : severities[0];
+			return acc;
+		},
+		{} as unknown as LitAnalyzerRules
+	);
 }
 
 function getDeprecatedMappedRules(userOptions: Partial<LitAnalyzerConfig>): LitAnalyzerRules {

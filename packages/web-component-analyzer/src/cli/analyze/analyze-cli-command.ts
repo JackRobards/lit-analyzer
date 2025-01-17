@@ -173,7 +173,6 @@ async function distributeResultsIntoFiles(results: AnalyzerResult[], config: Ana
 	// Output all results into a single file
 	else if (config.outFile != null) {
 		// Guess format based on outFile extension
-		// eslint-disable-next-line require-atomic-updates
 		config.format = config.format || extensionToFormat(config.outFile);
 
 		const path = resolve(process.cwd(), config.outFile);
@@ -186,7 +185,6 @@ async function distributeResultsIntoFiles(results: AnalyzerResult[], config: Ana
 	// Output all results into multiple files
 	else if (config.outFiles != null) {
 		// Guess format based on outFile extension
-		// eslint-disable-next-line require-atomic-updates
 		config.format = config.format || extensionToFormat(config.outFiles);
 
 		for (const result of results) {

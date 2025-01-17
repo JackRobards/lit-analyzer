@@ -35,7 +35,10 @@ export class TsLitPlugin {
 		return this.prevLangService.getProgram()!;
 	}
 
-	constructor(private prevLangService: LanguageService, public readonly context: LitPluginContext) {
+	constructor(
+		private prevLangService: LanguageService,
+		public readonly context: LitPluginContext
+	) {
 		this.litAnalyzer = new LitAnalyzer(context);
 	}
 
