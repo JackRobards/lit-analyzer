@@ -13,6 +13,7 @@ export default tseslint.config(
 			"**/out",
 			"**/dist",
 			"**/dev",
+			"**/fixtures",
 			"packages/*/lib",
 			"packages/*/out",
 			"packages/*/scripts",
