@@ -18,7 +18,7 @@ export function parseLitAttrName(attributeName: string): { name: string; modifie
 	return { name, modifier: modifier as LitHtmlAttributeModifier };
 }
 
-export function lazy<T extends Function>(func: T): T {
+export function lazy<T extends (...args: unknown[]) => unknown>(func: T): T {
 	let called = false;
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	let value: any;

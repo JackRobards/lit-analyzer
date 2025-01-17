@@ -23,7 +23,6 @@ export function log(text: unknown | (() => string), config: AnalyzerCliConfig, l
 		text = text();
 	}
 
-	// eslint-disable-next-line no-console
 	if (typeof text === "object") {
 		// eslint-disable-next-line no-console
 		console.dir(text, { depth: 10 });

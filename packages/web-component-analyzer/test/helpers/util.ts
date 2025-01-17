@@ -29,15 +29,15 @@ export function assertHasMembers(
 
 		const name = expectedMember.propName || expectedMember.attrName;
 
-		"attrName" in expectedMember && t.is(actualMember.attrName, expectedMember.attrName, `Attribute names are not the same`);
-		"propName" in expectedMember && t.is(actualMember.propName, expectedMember.propName, `Property names are not the same`);
-		"default" in expectedMember && t.deepEqual(actualMember.default, expectedMember.default, `Default value for ${name} doesn't match`);
-		"visibility" in expectedMember && t.is(actualMember.visibility, expectedMember.visibility, `Visibility for ${name} doesn't match`);
-		"reflect" in expectedMember && t.is(actualMember.reflect, expectedMember.reflect, `Reflect for ${name} doesn't match`);
-		"required" in expectedMember && t.is(actualMember.required, expectedMember.required, `Required for ${name} doesn't match`);
-		"deprecated" in expectedMember && t.is(actualMember.deprecated, expectedMember.deprecated, `Deprecated for ${name} doesn't match`);
-		"typeHint" in expectedMember && t.is(actualMember.typeHint, expectedMember.typeHint, `TypeHint for ${name} doesn't match`);
-		"jsDoc" in expectedMember && t.is(actualMember?.jsDoc?.description, expectedMember?.jsDoc?.description, `JSDoc for ${name} doesn't match`);
+		if ("attrName" in expectedMember) t.is(actualMember.attrName, expectedMember.attrName, `Attribute names are not the same`);
+		if ("propName" in expectedMember) t.is(actualMember.propName, expectedMember.propName, `Property names are not the same`);
+		if ("default" in expectedMember) t.deepEqual(actualMember.default, expectedMember.default, `Default value for ${name} doesn't match`);
+		if ("visibility" in expectedMember) t.is(actualMember.visibility, expectedMember.visibility, `Visibility for ${name} doesn't match`);
+		if ("reflect" in expectedMember) t.is(actualMember.reflect, expectedMember.reflect, `Reflect for ${name} doesn't match`);
+		if ("required" in expectedMember) t.is(actualMember.required, expectedMember.required, `Required for ${name} doesn't match`);
+		if ("deprecated" in expectedMember) t.is(actualMember.deprecated, expectedMember.deprecated, `Deprecated for ${name} doesn't match`);
+		if ("typeHint" in expectedMember) t.is(actualMember.typeHint, expectedMember.typeHint, `TypeHint for ${name} doesn't match`);
+		if ("jsDoc" in expectedMember) t.is(actualMember?.jsDoc?.description, expectedMember?.jsDoc?.description, `JSDoc for ${name} doesn't match`);
 		if ("meta" in expectedMember) {
 			const metaWithoutNode = { ...(actualMember?.meta || {}) };
 			delete metaWithoutNode.node;
