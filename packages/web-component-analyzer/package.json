@@ -24,7 +24,7 @@
 		"test:current": "wireit",
 		"eslint": "eslint src test",
 		"test:update": "ava --update-snapshots",
-		"test:watch": "ava --watch",
+		"test:watch": "ava --watch --color",
 		"prettier:check": "prettier --check \"src/**/*.{ts,tsx}\"",
 		"prettier:write": "prettier --write \"src/**/*.{ts,tsx}\""
 	},
