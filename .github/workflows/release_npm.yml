@@ -1,0 +1,42 @@
+name: Release NPM
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Release NPM
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write # npm provenance
+
+    # Don't run on forks, only the main repository can release
+    if: github.repository == 'JackRobards/lit-analyzer'
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+
+      - name: Install
+        run: npm ci
+
+      - name: Create Release Pull Request or Publish to npm
+        id: cs
+        uses: changesets/action@v1
+        with:
+          publish: npm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
