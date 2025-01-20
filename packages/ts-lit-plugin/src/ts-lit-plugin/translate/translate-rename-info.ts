@@ -1,4 +1,4 @@
-import type { LitRenameInfo } from "lit-analyzer-fork";
+import type { LitRenameInfo } from "@jackolope/lit-analyzer";
 import type { RenameInfo } from "typescript";
 import { translateTargetKind } from "./translate-target-kind.js";
 import { translateRange } from "./translate-range.js";

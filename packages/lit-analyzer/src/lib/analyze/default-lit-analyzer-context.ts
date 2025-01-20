@@ -1,7 +1,7 @@
 import * as tsMod from "typescript";
 import type { HostCancellationToken, Program, SourceFile, TypeChecker } from "typescript";
 import type * as tsServer from "typescript/lib/tsserverlibrary.js";
-import { analyzeHTMLElement, analyzeSourceFile } from "web-component-analyzer-fork";
+import { analyzeHTMLElement, analyzeSourceFile } from "@jackolope/web-component-analyzer";
 import { ALL_RULES } from "../rules/all-rules.js";
 import { MAX_RUNNING_TIME_PER_OPERATION } from "./constants.js";
 import { getBuiltInHtmlCollection } from "./data/get-built-in-html-collection.js";

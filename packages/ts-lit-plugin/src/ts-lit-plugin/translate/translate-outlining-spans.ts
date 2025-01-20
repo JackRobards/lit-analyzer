@@ -1,4 +1,4 @@
-import type { LitOutliningSpan } from "lit-analyzer-fork";
+import type { LitOutliningSpan } from "@jackolope/lit-analyzer";
 import { translateRange } from "./translate-range.js";
 import type * as ts from "typescript";
 

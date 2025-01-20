@@ -1,5 +1,5 @@
-import type { LitAnalyzerConfig, LitAnalyzerContext } from "lit-analyzer-fork";
-import { DefaultLitAnalyzerContext, LitAnalyzer, makeConfig } from "lit-analyzer-fork";
+import type { LitAnalyzerConfig, LitAnalyzerContext } from "@jackolope/lit-analyzer";
+import { DefaultLitAnalyzerContext, LitAnalyzer, makeConfig } from "@jackolope/lit-analyzer";
 import type { Diagnostic } from "typescript";
 import ts from "typescript";
 import { translateDiagnostics } from "./ts-lit-plugin/translate/translate-diagnostics.js";

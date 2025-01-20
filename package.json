@@ -1,5 +1,5 @@
 {
-	"name": "lit-analyzer-fork",
+	"name": "@jackolope/lit-analyzer",
 	"version": "1.0.0",
 	"description": "Monorepo for tools that analyze lit-html templates. Updated fork of the original lit-analyzer.",
 	"private": true,

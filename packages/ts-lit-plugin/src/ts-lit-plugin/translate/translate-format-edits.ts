@@ -1,4 +1,4 @@
-import type { LitFormatEdit } from "lit-analyzer-fork";
+import type { LitFormatEdit } from "@jackolope/lit-analyzer";
 import type * as ts from "typescript";
 import { translateRange } from "./translate-range.js";
 

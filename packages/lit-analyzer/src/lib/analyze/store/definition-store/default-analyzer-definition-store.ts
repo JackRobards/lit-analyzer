@@ -1,6 +1,6 @@
 import type { SourceFile } from "typescript";
-import type { AnalyzerResult, ComponentDeclaration, ComponentDefinition } from "web-component-analyzer-fork";
-import { visitAllHeritageClauses } from "web-component-analyzer-fork";
+import type { AnalyzerResult, ComponentDeclaration, ComponentDefinition } from "@jackolope/web-component-analyzer";
+import { visitAllHeritageClauses } from "@jackolope/web-component-analyzer";
 import { getDeclarationsInFile } from "../../util/component-util.js";
 import type { AnalyzerDefinitionStore } from "../analyzer-definition-store.js";
 

@@ -1,10 +1,10 @@
-import type { LitAnalyzerConfig } from "lit-analyzer-fork";
-import { ALL_RULE_IDS } from "lit-analyzer-fork";
+import type { LitAnalyzerConfig } from "@jackolope/lit-analyzer";
+import { ALL_RULE_IDS } from "@jackolope/lit-analyzer";
 import { join } from "path";
 import { ColorProvider } from "./color-provider.js";
 import * as vscode from "vscode";
 
-const tsLitPluginId = "ts-lit-plugin-fork";
+const tsLitPluginId = "@jackolope/ts-lit-plugin";
 const typeScriptExtensionId = "vscode.typescript-language-features";
 const configurationSection = "lit-plugin";
 const configurationExperimentalHtmlSection = "html.experimental";
@@ -212,7 +212,7 @@ function handleAnalyzeCommand() {
 			defaultAnalyzeGlob = glob;
 
 			const cliCommand = `npx lit-analyzer "${glob}"`;
-			const terminal = vscode.window.createTerminal("lit-analyzer-fork");
+			const terminal = vscode.window.createTerminal("@jackolope/lit-analyzer");
 			terminal.sendText(cliCommand, true);
 			terminal.show(true);
 		});

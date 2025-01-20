@@ -1,4 +1,4 @@
-import { LitAnalyzer } from "lit-analyzer-fork";
+import { LitAnalyzer } from "@jackolope/lit-analyzer";
 import type {
 	CodeFixAction,
 	CompletionEntryDetails,

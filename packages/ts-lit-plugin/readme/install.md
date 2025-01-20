@@ -4,7 +4,7 @@ First, install the plugin:
 
 <!-- prettier-ignore -->
 ```bash
-npm install ts-lit-plugin-fork -D
+npm install @jackolope/ts-lit-plugin -D
 ```
 
 Then add a `plugins` section to your [`tsconfig.json`](http://www.typescriptlang.org/docs/handbook/tsconfig-json.html):
@@ -15,14 +15,14 @@ Then add a `plugins` section to your [`tsconfig.json`](http://www.typescriptlang
   "compilerOptions": {
     "plugins": [
       {
-        "name": "ts-lit-plugin-fork"
+        "name": "@jackolope/ts-lit-plugin"
       }
     ]
   }
 }
 ```
 
-Finally, restart you Typescript Language Service, and you should start getting diagnostics from `ts-lit-plugin-fork`.
+Finally, restart you Typescript Language Service, and you should start getting diagnostics from `@jackolope/ts-lit-plugin`.
 
 **Note:**
 

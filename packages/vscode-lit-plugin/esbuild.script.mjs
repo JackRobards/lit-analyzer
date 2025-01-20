@@ -16,7 +16,7 @@ await esbuild.build({
 await esbuild.build({
 	entryPoints: ["../ts-lit-plugin/src/index.ts"],
 	bundle: true,
-	outfile: "built/node_modules/ts-lit-plugin-fork/lib/index.js",
+	outfile: "built/node_modules/@jackolope/ts-lit-plugin/lib/index.js",
 	platform: "node",
 	external: ["typescript"],
 	minify: true,

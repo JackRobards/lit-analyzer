@@ -10,7 +10,7 @@ You can configure this plugin through your `tsconfig.json`.
   "compilerOptions": {
     "plugins": [
       {
-        "name": "ts-lit-plugin-fork",
+        "name": "@jackolope/ts-lit-plugin",
         "strict": true,
         "rules": {
           "no-unknown-tag-name": "off",

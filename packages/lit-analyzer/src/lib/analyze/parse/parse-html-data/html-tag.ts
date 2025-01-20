@@ -7,7 +7,7 @@ import type {
 	ComponentEvent,
 	ComponentMember,
 	ComponentSlot
-} from "web-component-analyzer-fork";
+} from "@jackolope/web-component-analyzer";
 import {
 	LIT_HTML_BOOLEAN_ATTRIBUTE_MODIFIER,
 	LIT_HTML_EVENT_LISTENER_ATTRIBUTE_MODIFIER,

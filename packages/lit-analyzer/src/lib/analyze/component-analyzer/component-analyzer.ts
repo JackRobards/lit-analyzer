@@ -1,4 +1,4 @@
-import type { ComponentDeclaration, ComponentDefinition } from "web-component-analyzer-fork";
+import type { ComponentDeclaration, ComponentDefinition } from "@jackolope/web-component-analyzer";
 import type { LitAnalyzerContext } from "../lit-analyzer-context.js";
 import type { ReportedRuleDiagnostic } from "../rule-collection.js";
 import type { LitCodeFix } from "../types/lit-code-fix.js";

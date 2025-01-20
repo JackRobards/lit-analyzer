@@ -1,7 +1,7 @@
 import type { SimpleType, SimpleTypeAny } from "ts-simple-type";
 import { isSimpleType, toSimpleType } from "ts-simple-type";
 import type { TypeChecker } from "typescript";
-import type { AnalyzerResult, ComponentDeclaration, ComponentDefinition, ComponentFeatures } from "web-component-analyzer-fork";
+import type { AnalyzerResult, ComponentDeclaration, ComponentDefinition, ComponentFeatures } from "@jackolope/web-component-analyzer";
 import { lazy } from "../util/general-util.js";
 import type { HtmlDataCollection, HtmlDataFeatures, HtmlTag } from "./parse-html-data/html-tag.js";
 

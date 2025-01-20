@@ -1,4 +1,4 @@
-import type { LitRenameLocation } from "lit-analyzer-fork";
+import type { LitRenameLocation } from "@jackolope/lit-analyzer";
 import { translateRange } from "./translate-range.js";
 import type { RenameLocation } from "typescript";
 

@@ -1,4 +1,4 @@
-import type { LitCompletion } from "lit-analyzer-fork";
+import type { LitCompletion } from "@jackolope/lit-analyzer";
 import type { CompletionEntry, CompletionInfo } from "typescript";
 import { translateRange } from "./translate-range.js";
 import { translateTargetKind } from "./translate-target-kind.js";
