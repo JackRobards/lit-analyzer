@@ -7,7 +7,7 @@ You can configure the CLI with arguments:
 lit-analyzer --strict --rules.no-unknown-tag-name off --format markdown
 ```
 
-**Note:** You can also configure the CLI using a `tsconfig.json` file (see [ts-lit-plugin](https://github.com/JackRobards/lit-analyzer/blob/master/packages/ts-lit-plugin)).
+**Note:** You can also configure the CLI using a `tsconfig.json` file (see [ts-lit-plugin-fork](https://github.com/JackRobards/lit-analyzer/blob/master/packages/ts-lit-plugin)).
 
 ### Available arguments
 
