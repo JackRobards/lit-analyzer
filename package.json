@@ -33,7 +33,7 @@
 	],
 	"scripts": {
 		"prettier:write": "prettier --write \"packages/*/src/**/*.ts\"",
-		"readme": "npx @appnest/readme generate -i readme.blueprint.md -c readme.config.json",
+		"readme": "wireit",
 		"dev": "cd dev && TSS_DEBUG=5999 code . --disable-extension runem.lit-plugin",
 		"dev:logs": "touch dev/lit-plugin.log && tail -f dev/lit-plugin.log",
 		"lint": "wireit",
@@ -109,6 +109,14 @@
 			"dependencies": [
 				"./packages/vscode-lit-plugin:package"
 			]
+		},
+		"readme": {
+			"dependencies": [
+				"./packages/lit-analyzer:readme",
+				"./packages/ts-lit-plugin:readme",
+				"./packages/vscode-lit-plugin:readme"
+			],
+			"command": "npx @appnest/readme generate -i readme.blueprint.md -c readme.config.json"
 		}
 	},
 	"devDependencies": {

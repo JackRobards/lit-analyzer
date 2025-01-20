@@ -25,7 +25,7 @@
 		"build": "wireit",
 		"eslint": "eslint src",
 		"test": "wireit",
-		"readme": "readme generate -i readme.blueprint.md -c readme.config.json"
+		"readme": "npx @appnest/readme generate -i readme.blueprint.md -c readme.config.json"
 	},
 	"wireit": {
 		"build": {
