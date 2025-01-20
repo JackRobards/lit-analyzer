@@ -119,6 +119,18 @@ function visitDirectImports(node: Node, context: IVisitDependenciesContext): voi
 			 return;
 			 }*/
 
+			const namedBindings = context.ts.isImportDeclaration(node) && node.importClause?.namedBindings;
+
+			// Exclude files that only have type imports like `import { type MyElement } from "./file1"`
+			if (
+				namedBindings &&
+				context.ts.isNamedImports(namedBindings) &&
+				namedBindings.elements.length > 0 &&
+				namedBindings.elements.every(e => e.isTypeOnly)
+			) {
+				return;
+			}
+
 			emitDirectModuleImportWithName(node.moduleSpecifier.text, node, context);
 		}
 	}
