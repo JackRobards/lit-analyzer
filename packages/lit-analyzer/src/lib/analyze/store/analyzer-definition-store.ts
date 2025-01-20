@@ -1,5 +1,5 @@
 import type { SourceFile } from "typescript";
-import type { AnalyzerResult, ComponentDeclaration, ComponentDefinition } from "web-component-analyzer-fork";
+import type { AnalyzerResult, ComponentDeclaration, ComponentDefinition } from "@jackolope/web-component-analyzer";
 
 export interface AnalyzerDefinitionStore {
 	getAnalysisResultForFile(sourceFile: SourceFile): AnalyzerResult | undefined;

@@ -106,7 +106,7 @@ export function resolveTsConfigCompilerOptions(): CompilerOptions | undefined {
 }
 
 /**
- * Resolves the nearest tsconfig.json and returns the configuration seed within the plugins section for "ts-lit-plugin-fork"
+ * Resolves the nearest tsconfig.json and returns the configuration seed within the plugins section for "@jackolope/ts-lit-plugin"
  */
 export function readLitAnalyzerConfigFromTsConfig(): Partial<LitAnalyzerConfig> | undefined {
 	const compilerOptions = resolveTsConfigCompilerOptions();
@@ -114,7 +114,7 @@ export function readLitAnalyzerConfigFromTsConfig(): Partial<LitAnalyzerConfig> 
 	// Finds the plugin section
 	if (compilerOptions != null && "plugins" in compilerOptions) {
 		const plugins = compilerOptions.plugins as ({ name: string } & Partial<LitAnalyzerConfig>)[];
-		const tsLitPluginOptions = plugins.find(plugin => plugin.name === "ts-lit-plugin-fork");
+		const tsLitPluginOptions = plugins.find(plugin => plugin.name === "@jackolope/ts-lit-plugin");
 		if (tsLitPluginOptions != null) {
 			return tsLitPluginOptions;
 		}

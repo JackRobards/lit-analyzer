@@ -1,7 +1,7 @@
 import type { SimpleType, SimpleTypeKind } from "ts-simple-type";
 import { isAssignableToSimpleTypeKind, isSimpleType, toSimpleType, typeToString } from "ts-simple-type";
 import type { Node } from "typescript";
-import type { LitElementPropertyConfig } from "web-component-analyzer-fork";
+import type { LitElementPropertyConfig } from "@jackolope/web-component-analyzer";
 import type { RuleModule } from "../analyze/types/rule/rule-module.js";
 import type { RuleModuleContext } from "../analyze/types/rule/rule-module-context.js";
 import { joinArray } from "../analyze/util/array-util.js";

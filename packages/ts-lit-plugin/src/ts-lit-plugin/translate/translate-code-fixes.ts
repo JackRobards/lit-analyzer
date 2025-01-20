@@ -1,4 +1,4 @@
-import type { LitCodeFix, LitCodeFixAction } from "lit-analyzer-fork";
+import type { LitCodeFix, LitCodeFixAction } from "@jackolope/lit-analyzer";
 import type { CodeFixAction, FileTextChanges, SourceFile } from "typescript";
 import { translateRange } from "./translate-range.js";
 

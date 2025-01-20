@@ -1,5 +1,5 @@
 import type { SourceFile } from "typescript";
-import type { ComponentDefinition } from "web-component-analyzer-fork";
+import type { ComponentDefinition } from "@jackolope/web-component-analyzer";
 import type { LitAnalyzerContext } from "../../lit-analyzer-context.js";
 import { visitIndirectImportsFromSourceFile } from "./visit-dependencies.js";
 

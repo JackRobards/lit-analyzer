@@ -1,5 +1,5 @@
 import type { Identifier, ObjectLiteralExpression } from "typescript";
-import type { ComponentMember } from "web-component-analyzer-fork";
+import type { ComponentMember } from "@jackolope/web-component-analyzer";
 import type { RuleFixAction, RuleFixActionChangeRange } from "../analyze/types/rule/rule-fix-action.js";
 import type { RuleModule } from "../analyze/types/rule/rule-module.js";
 import type { RuleModuleContext } from "../analyze/types/rule/rule-module-context.js";

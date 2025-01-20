@@ -1,5 +1,5 @@
 {
-	"name": "web-component-analyzer-fork",
+	"name": "@jackolope/web-component-analyzer",
 	"version": "2.0.0",
 	"description": "CLI that analyzes web components",
 	"main": "lib/cjs/api.js",
@@ -132,6 +132,6 @@
 	},
 	"bin": {
 		"wca": "cli.js",
-		"web-component-analyzer-fork": "cli.js"
+		"@jackolope/web-component-analyzer": "cli.js"
 	}
 }

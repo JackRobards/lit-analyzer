@@ -650,7 +650,7 @@ css`
 
 You can configure this plugin by going to `VS Code Settings` > `Extension` > `lit-plugin`.
 
-**Note:** You can also configure the plugin using a `tsconfig.json` file (see [ts-lit-plugin-fork](https://github.com/JackRobards/lit-analyzer/blob/master/packages/ts-lit-plugin)).
+**Note:** You can also configure the plugin using a `tsconfig.json` file (see [@jackolope/ts-lit-plugin](https://github.com/JackRobards/lit-analyzer/blob/master/packages/ts-lit-plugin)).
 
 ### Available options
 
@@ -785,7 +785,7 @@ Below is a comparison table of the two plugins:
 
 All features are provided by these three libraries:
 
-- **[ts-lit-plugin-fork](https://github.com/JackRobards/lit-analyzer)**: The typescript plugin that powers the logic through the typescript language service (code completion, type checking, eg.). Therefore issues regarding anything but syntax highlighting should be opened in `ts-lit-plugin` and not `vscode-lit-plugin`.
+- **[@jackolope/ts-lit-plugin](https://github.com/JackRobards/lit-analyzer)**: The typescript plugin that powers the logic through the typescript language service (code completion, type checking, eg.). Therefore issues regarding anything but syntax highlighting should be opened in `ts-lit-plugin` and not `vscode-lit-plugin`.
 - **[vscode-lit-html](https://github.com/mjbvz/vscode-lit-html)**: Provides highlighting for the html template tag.
 - **[vscode-styled-components](https://github.com/styled-components/vscode-styled-components)**: Provides highlighting for the css template tag.
 

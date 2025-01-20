@@ -1,5 +1,5 @@
 {
-	"name": "lit-analyzer-fork",
+	"name": "@jackolope/lit-analyzer",
 	"version": "2.0.3",
 	"description": "CLI that type checks bindings in lit-html templates",
 	"author": "runem",
@@ -21,7 +21,7 @@
 		"template"
 	],
 	"bin": {
-		"lit-analyzer-fork": "cli.js"
+		"@jackolope/lit-analyzer": "cli.js"
 	},
 	"scripts": {
 		"build": "wireit",
@@ -98,7 +98,7 @@
 		"ts-simple-type": "~2.0.0-next.0",
 		"vscode-css-languageservice": "6.3.2",
 		"vscode-html-languageservice": "5.3.1",
-		"web-component-analyzer-fork": "^2.0.0"
+		"@jackolope/web-component-analyzer": "^2.0.0"
 	},
 	"devDependencies": {
 		"@types/node": "^22.10.2",

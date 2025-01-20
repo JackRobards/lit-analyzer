@@ -1,4 +1,4 @@
-<!-- ⚠️ This README has been generated from the file(s) "readme.blueprint.md" ⚠️--><h1 align="center">lit-analyzer-fork</h1>
+<!-- ⚠️ This README has been generated from the file(s) "readme.blueprint.md" ⚠️--><h1 align="center">@jackolope/lit-analyzer</h1>
 <p align="center">
   <b>Monorepo for tools that analyze lit-html templates. Updated fork of the original lit-analyzer.</b></br>
   <sub><sub>
@@ -8,9 +8,9 @@
 
 <p align="center">
 		<a href="https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin"><img alt="Downloads per Month" src="https://vsmarketplacebadges.dev/downloads-short/runem.lit-plugin.svg?label=vscode-lit-plugin" height="20"/></a>
-<a href="https://www.npmjs.com/package/lit-analyzer-fork"><img alt="Downloads per Month" src="https://img.shields.io/npm/dm/lit-analyzer-fork.svg?label=lit-analyzer-fork" height="20"/></a>
-<a href="https://www.npmjs.com/package/ts-lit-plugin-fork"><img alt="Downloads per Month" src="https://img.shields.io/npm/dm/ts-lit-plugin-fork.svg?label=ts-lit-plugin-fork" height="20"/></a>
-<a href="https://github.com/JackRobards/lit-analyzer/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/JackRobards/lit-analyzer-fork" height="20"/></a>
+<a href="https://www.npmjs.com/package/@jackolope/lit-analyzer"><img alt="Downloads per Month" src="https://img.shields.io/npm/dm/@jackolope/lit-analyzer.svg?label=@jackolope/lit-analyzer" height="20"/></a>
+<a href="https://www.npmjs.com/package/@jackolope/ts-lit-plugin"><img alt="Downloads per Month" src="https://img.shields.io/npm/dm/@jackolope/ts-lit-plugin.svg?label=@jackolope/ts-lit-plugin" height="20"/></a>
+<a href="https://github.com/JackRobards/lit-analyzer/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/JackRobards/@jackolope/lit-analyzer" height="20"/></a>
 	</p>
 
 This mono-repository consists of the following tools:

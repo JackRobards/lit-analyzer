@@ -1,4 +1,4 @@
-<!-- ⚠️ This README has been generated from the file(s) "readme.blueprint.md" ⚠️--><h1 align="center">lit-analyzer-fork</h1>
+<!-- ⚠️ This README has been generated from the file(s) "readme.blueprint.md" ⚠️--><h1 align="center">@jackolope/lit-analyzer</h1>
 <p align="center">
   <b>CLI that type checks bindings in lit-html templates</b></br>
   <sub><sub>
@@ -7,8 +7,8 @@
 <br />
 
 <p align="center">
-		<a href="https://npmcharts.com/compare/lit-analyzer-fork?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/lit-analyzer-fork.svg" height="20"/></a>
-<a href="https://www.npmjs.com/package/lit-analyzer-fork"><img alt="NPM Version" src="https://img.shields.io/npm/v/lit-analyzer-fork.svg" height="20"/></a>
+		<a href="https://npmcharts.com/compare/@jackolope/lit-analyzer?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/@jackolope/lit-analyzer.svg" height="20"/></a>
+<a href="https://www.npmjs.com/package/@jackolope/lit-analyzer"><img alt="NPM Version" src="https://img.shields.io/npm/v/@jackolope/lit-analyzer.svg" height="20"/></a>
 <a href="https://david-dm.org/JackRobards/lit-analyzer"><img alt="Dependencies" src="https://img.shields.io/david/JackRobards/lit-analyzer.svg" height="20"/></a>
 <a href="https://github.com/JackRobards/lit-analyzer/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/JackRobards/lit-analyzer.svg" height="20"/></a>
 	</p>
@@ -25,7 +25,7 @@ npm install lit-analyzer -g
 **Note:**
 
 - If you use Visual Studio Code you can also install the [lit-plugin](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin) extension.
-- If you use Typescript you can also install [ts-lit-plugin-fork](https://github.com/JackRobards/lit-analyzer/blob/master/packages/ts-lit-plugin).
+- If you use Typescript you can also install [@jackolope/ts-lit-plugin](https://github.com/JackRobards/lit-analyzer/blob/master/packages/ts-lit-plugin).
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#usage)
 
@@ -52,7 +52,7 @@ You can configure the CLI with arguments:
 lit-analyzer --strict --rules.no-unknown-tag-name off --format markdown
 ```
 
-**Note:** You can also configure the CLI using a `tsconfig.json` file (see [ts-lit-plugin-fork](https://github.com/JackRobards/lit-analyzer/blob/master/packages/ts-lit-plugin)).
+**Note:** You can also configure the CLI using a `tsconfig.json` file (see [@jackolope/ts-lit-plugin](https://github.com/JackRobards/lit-analyzer/blob/master/packages/ts-lit-plugin)).
 
 ### Available arguments
 

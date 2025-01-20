@@ -1,8 +1,8 @@
 <h1 align="center">web-component-analyzer</h1>
 
 <p align="center">
-	<a href="https://npmcharts.com/compare/web-component-analyzer-fork?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/web-component-analyzer-fork.svg" height="20"/></a>
-	<a href="https://www.npmjs.com/package/web-component-analyzer-fork"><img alt="NPM Version" src="https://img.shields.io/npm/v/web-component-analyzer-fork.svg" height="20"/></a>
+	<a href="https://npmcharts.com/compare/@jackolope/web-component-analyzer?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/@jackolope/web-component-analyzer.svg" height="20"/></a>
+	<a href="https://www.npmjs.com/package/@jackolope/web-component-analyzer"><img alt="NPM Version" src="https://img.shields.io/npm/v/@jackolope/web-component-analyzer.svg" height="20"/></a>
 	<a href="https://david-dm.org/JackRobards/lit-analyzer"><img alt="Dependencies" src="https://img.shields.io/david/JackRobards/lit-analyzer.svg" height="20"/></a>
 	<a href="https://github.com/JackRobards/lit-analyzer/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/JackRobards/lit-analyzer.svg" height="20"/></a>
 </p>
@@ -11,7 +11,7 @@
   <img src="https://user-images.githubusercontent.com/5372940/68087781-1044ce80-fe59-11e9-969c-4234f9287f1b.gif" alt="Web component analyzer GIF"/>
 </p>
 
-`web-component-analyzer-fork` is a CLI that makes it possible to easily analyze web components. It analyzes your code and jsdoc in order to extract `properties`, `attributes`, `methods`, `events`, `slots`, `css shadow parts` and `css custom properties`. Works with both javascript and typescript.
+`@jackolope/web-component-analyzer` is a CLI that makes it possible to easily analyze web components. It analyzes your code and jsdoc in order to extract `properties`, `attributes`, `methods`, `events`, `slots`, `css shadow parts` and `css custom properties`. Works with both javascript and typescript.
 
 Try the online playground [here](https://runem.github.io/web-component-analyzer/)
 
@@ -29,14 +29,14 @@ In addition to [vanilla web components](https://developer.mozilla.org/en-US/docs
 
 <!-- prettier-ignore -->
 ```bash
-$ npm install -g web-component-analyzer-fork
+$ npm install -g @jackolope/web-component-analyzer
 ```
 
 **or**
 
 <!-- prettier-ignore -->
 ```bash
-$ npx web-component-analyzer-fork src
+$ npx @jackolope/web-component-analyzer src
 ```
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#usage)
@@ -203,7 +203,7 @@ You can also directly use the underlying functionality of this tool if you don't
 
 <!-- prettier-ignore -->
 ```typescript
-import { analyzeSourceFile } from "web-component-analyzer-fork";
+import { analyzeSourceFile } from "@jackolope/web-component-analyzer";
 
 const result = analyzeSourceFile(sourceFile, { checker });
 ```
@@ -212,7 +212,7 @@ const result = analyzeSourceFile(sourceFile, { checker });
 
 <!-- prettier-ignore -->
 ```javascript
-import { analyzeText } from "web-component-analyzer-fork";
+import { analyzeText } from "@jackolope/web-component-analyzer";
 
 const code = `class MyElement extends HTMLElement {
 
@@ -236,7 +236,7 @@ const { results, program } = analyzeText([
 
 <!-- prettier-ignore -->
 ```javascript
-import { transformAnalyzerResult } from "web-component-analyzer-fork";
+import { transformAnalyzerResult } from "@jackolope/web-component-analyzer";
 
 const result = // the result of analyzing the component using one of the above functions
 

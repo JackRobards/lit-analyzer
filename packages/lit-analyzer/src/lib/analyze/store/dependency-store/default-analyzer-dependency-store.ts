@@ -1,5 +1,5 @@
 import type { SourceFile } from "typescript";
-import type { ComponentDefinition } from "web-component-analyzer-fork";
+import type { ComponentDefinition } from "@jackolope/web-component-analyzer";
 import type { AnalyzerDependencyStore } from "../analyzer-dependency-store.js";
 
 export class DefaultAnalyzerDependencyStore implements AnalyzerDependencyStore {

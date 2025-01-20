@@ -2,6 +2,6 @@
 	"line": "rainbow",
 	"ids": {
 		"github": "JackRobards/lit-analyzer",
-		"npm": "lit-analyzer-fork"
+		"npm": "@jackolope/lit-analyzer"
 	}
 }
