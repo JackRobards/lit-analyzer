@@ -26,6 +26,14 @@ tsTest("Can assign 'null' in property binding", t => {
 	hasNoDiagnostics(t, diagnostics);
 });
 
+tsTest("Return type of `ifDefined` is not `null`", t => {
+	const { diagnostics } = getDiagnostics(`
+		const ifDefined = <T>(x: T) => x ?? "non-null";
+		html\`<input some-attribute="$\{ifDefined(Math.random() < 0.5 ? 123 : null)}" />\`;
+	`);
+	hasNoDiagnostics(t, diagnostics);
+});
+
 tsTest("Message for 'null' in attribute detects null type correctly", t => {
 	const { diagnostics } = getDiagnostics('html`<input maxlength="${{} as number | null}" />`');
 	hasDiagnostic(t, diagnostics, "no-nullable-attribute-binding");
