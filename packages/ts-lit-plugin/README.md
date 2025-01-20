@@ -1,6 +1,6 @@
 <!-- ⚠️ This README has been generated from the file(s) "readme.blueprint.md" ⚠️--><h1 align="center">ts-lit-plugin-fork</h1>
 <p align="center">
-  <b>Typescript plugin that adds type checking and code completion to lit-html</b></br>
+  <b>Typescript plugin that adds type checking and code completion to lit-html. Fork of the original ts-lit-plugin.</b></br>
   <sub><sub>
 </p>
 
