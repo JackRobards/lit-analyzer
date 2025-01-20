@@ -106,8 +106,7 @@ export function compileFiles(inputFiles: TestFile[] | TestFile = []): { program:
 
 	const program = ts.createProgram({
 		//rootNames: [...files.map(file => file.fileName!), "node_modules/typescript/lib/lib.dom.d.ts"],
-		rootNames: [...files.map(file => file.fileName!), ...(includeLib ? ["node_modules/typescript/lib/lib.dom.d.ts"] : [])],
-		//rootNames: files.map(file => file.fileName!),
+		rootNames: [...files.map(file => file.fileName!), ...(includeLib ? ["node_modules/typescript/lib/lib.dom.d.ts"] : [])], //rootNames: files.map(file => file.fileName!),
 		options: compilerOptions,
 		host: compilerHost
 	});
