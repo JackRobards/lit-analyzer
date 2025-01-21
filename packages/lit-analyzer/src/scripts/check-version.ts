@@ -1,7 +1,8 @@
 import * as fs from "fs";
 import * as path from "path";
+// @ts-expect-error - This script file is run in a different "scope" - where the package.json file is at a different relative location
+import pkg from "../package.json" with { type: "json" };
 
-const pkg = require("../package.json");
 const { version } = pkg;
 
 const constantsPath = path.resolve("src/lib/analyze/constants.ts");

@@ -24,6 +24,7 @@
 		"url": "https://github.com/JackRobards/lit-analyzer.git"
 	},
 	"exports": "./bundle.js",
+	"main": "bundle.js",
 	"scripts": {
 		"watch": "tsc -watch -p ./",
 		"package": "wireit",

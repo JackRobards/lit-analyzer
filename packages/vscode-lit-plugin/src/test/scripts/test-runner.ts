@@ -7,6 +7,8 @@ import * as path from "path";
 
 import { runTests } from "@vscode/test-electron";
 
+const __dirname = import.meta.dirname;
+
 async function main() {
 	try {
 		if (process.argv.length !== 3) {

@@ -1,6 +1,5 @@
 import type { IP5CommentNode, IP5DocumentFragmentNode, IP5NodeBase, IP5TagNode, IP5TextNode, P5Node } from "./parse-html-types.js";
-
-const { parseFragment } = require("parse5");
+import { parseFragment } from "parse5";
 
 /**
  * Returns if a p5Node is a tag node.
@@ -39,5 +38,5 @@ export function isCommentNode(node: P5Node): node is IP5CommentNode {
  * @param html
  */
 export function parseHtml(html: string): IP5DocumentFragmentNode {
-	return parseFragment(html, { sourceCodeLocationInfo: true, locationInfo: true });
+	return parseFragment(html, { sourceCodeLocationInfo: true }) as IP5DocumentFragmentNode;
 }
