@@ -7,8 +7,6 @@ import * as path from "path";
 import * as vscode from "vscode";
 // import * as litPlugin from "../extension.js";
 
-const __dirname = import.meta.dirname;
-
 // wait until the TS language server is ready and diagnostics are produced
 async function getDiagnostics(docUri: vscode.Uri, retries = 1000) {
 	for (let i = 0; i < retries; i++) {

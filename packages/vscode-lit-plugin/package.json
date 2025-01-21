@@ -7,7 +7,6 @@
 	"publisher": "jackolope",
 	"icon": "docs/assets/lit-plugin@256w.png",
 	"license": "MIT",
-	"type": "module",
 	"engines": {
 		"node": ">=18",
 		"vscode": "^1.63.0"
@@ -23,7 +22,6 @@
 		"type": "git",
 		"url": "https://github.com/JackRobards/lit-analyzer.git"
 	},
-	"exports": "./bundle.js",
 	"main": "bundle.js",
 	"scripts": {
 		"watch": "tsc -watch -p ./",
@@ -125,12 +123,12 @@
 			"dependencies": [
 				"../lit-analyzer:build"
 			],
-			"command": "node esbuild.script.js",
+			"command": "node esbuild.script.mjs",
 			"files": [
 				"src/**/*",
 				"../ts-lit-plugin/src/**/*",
 				"../ts-lit-plugin/index.js",
-				"esbuild.script.js"
+				"esbuild.script.mjs"
 			],
 			"output": [
 				"built/bundle.js",

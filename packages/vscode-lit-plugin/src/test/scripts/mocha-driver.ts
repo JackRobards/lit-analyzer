@@ -2,8 +2,6 @@ import * as path from "path";
 import Mocha from "mocha";
 import fastGlob from "fast-glob";
 
-const __dirname = import.meta.dirname;
-
 /**
  * Runs all tests in src/test that are named like *-test.ts with Mocha.
  *

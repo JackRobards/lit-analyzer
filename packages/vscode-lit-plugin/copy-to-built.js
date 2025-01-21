@@ -1,6 +1,4 @@
-import pluginPackageJson from "./package.json" with { type: "json" };
-import tsPluginPackageJson from "../ts-lit-plugin/package.json" with { type: "json" };
-import { copy, mkdirp, outputFile } from "fs-extra/esm";
+const { copy, mkdirp, writeFile } = require("fs-extra");
 
 /**
  * Copy files into the ./built directory.
@@ -23,17 +21,19 @@ async function main() {
 	// For the TS compiler plugin, it must be in node modules because that's
 	// hard coded by the TS compiler's custom module resolution logic.
 	await mkdirp("./built/node_modules/@jackolope/ts-lit-plugin");
+	const tsPluginPackageJson = require("../ts-lit-plugin/package.json");
 	// We're only using the bundled version, so the plugin doesn't need any
 	// dependencies.
 	tsPluginPackageJson.dependencies = {};
-	await outputFile("./built/node_modules/@jackolope/ts-lit-plugin/package.json", JSON.stringify(tsPluginPackageJson, null, 2));
+	await writeFile("./built/node_modules/@jackolope/ts-lit-plugin/package.json", JSON.stringify(tsPluginPackageJson, null, 2));
 	await copy("../ts-lit-plugin/index.js", "./built/node_modules/@jackolope/ts-lit-plugin/index.js");
 
+	const pluginPackageJson = require("./package.json");
 	// vsce is _very_ picky about the directories in node_modules matching the
 	// extension's package.json, so we need an entry for @jackolope/ts-lit-plugin or it
 	// will think that it's extraneous.
 	pluginPackageJson.dependencies["@jackolope/ts-lit-plugin"] = "*";
-	await outputFile("./built/package.json", JSON.stringify(pluginPackageJson, null, 2));
+	await writeFile("./built/package.json", JSON.stringify(pluginPackageJson, null, 2));
 
 	// Copy static files used by the extension.
 	await copy("./LICENSE.md", "./built/LICENSE.md");
