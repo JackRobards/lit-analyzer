@@ -4,7 +4,7 @@
 	"displayName": "lit-plugin",
 	"description": "Syntax highlighting, type checking and code completion for lit-html",
 	"version": "1.4.3",
-	"publisher": "runem",
+	"publisher": "jackolope",
 	"icon": "docs/assets/lit-plugin@256w.png",
 	"license": "MIT",
 	"engines": {
@@ -15,8 +15,7 @@
 	],
 	"homepage": "https://github.com/JackRobards/lit-analyzer",
 	"bugs": {
-		"url": "https://github.com/JackRobards/lit-analyzer/issues",
-		"email": "runemehlsen@gmail.com"
+		"url": "https://github.com/JackRobards/lit-analyzer/issues"
 	},
 	"repository": {
 		"type": "git",

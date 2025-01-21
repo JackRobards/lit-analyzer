@@ -28,7 +28,7 @@ suite("Extension Test Suite", () => {
 
 	test("The extension is installed", () => {
 		const extensionIds = vscode.extensions.all.map(extension => extension.id);
-		const ourId = "runem.lit-plugin";
+		const ourId = "jackolope.lit-plugin";
 		assert.ok(extensionIds.includes(ourId), `Expected ${JSON.stringify(extensionIds)} to include '${ourId}'`);
 	});
 
