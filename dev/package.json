@@ -2,6 +2,7 @@
 	"name": "dev",
 	"version": "1.0.0",
 	"description": "",
+	"type": "module",
 	"dependencies": {
 		"lit-element": "^2.3.1",
 		"lit-html": "^1.2.1",
