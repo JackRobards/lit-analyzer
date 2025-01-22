@@ -3,9 +3,9 @@ import { existsSync, lstatSync } from "fs";
 import { join } from "path";
 import type { Diagnostic, Program, SourceFile } from "typescript";
 import { arrayFlat } from "../analyze/util/array-util.js";
-import type { CompileResult } from "./compile.js";
-import { compileTypescript } from "./compile.js";
-import type { LitAnalyzerCliConfig } from "./lit-analyzer-cli-config.js";
+import type { CompileResult } from "./compile.mjs";
+import { compileTypescript } from "./compile.mjs";
+import type { LitAnalyzerCliConfig } from "./lit-analyzer-cli-config.mjs";
 
 //const IGNORE_GLOBS = ["!**/node_modules/**", "!**/web_modules/**"];
 const IGNORE_GLOBS: string[] = [];

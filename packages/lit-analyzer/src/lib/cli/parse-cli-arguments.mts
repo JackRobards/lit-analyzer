@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { dashToCamelCase } from "./util.js";
+import { dashToCamelCase } from "./util.mjs";
 
 export type CliArguments = { _: string[] } & Record<string, number | string | boolean>;
 

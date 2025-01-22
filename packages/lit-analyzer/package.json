@@ -21,7 +21,7 @@
 		"template"
 	],
 	"bin": {
-		"@jackolope/lit-analyzer": "cli.js"
+		"lit-analyzer": "cli.mjs"
 	},
 	"scripts": {
 		"build": "wireit",
@@ -87,7 +87,7 @@
 		"index.js",
 		"index.d.ts",
 		"index.d.ts.map",
-		"cli.js"
+		"cli.mjs"
 	],
 	"dependencies": {
 		"@vscode/web-custom-data": "^0.4.2",
@@ -139,5 +139,8 @@
 			"img": "https://joeschmoe.io/api/v1/random",
 			"url": "https://github.com/JackRobards/lit-analyzer/blob/master/CONTRIBUTING.md"
 		}
-	]
+	],
+	"engines": {
+		"node": ">=18"
+	}
 }

@@ -8,6 +8,7 @@
 	"icon": "docs/assets/lit-plugin@256w.png",
 	"license": "MIT",
 	"engines": {
+		"node": ">=18",
 		"vscode": "^1.63.0"
 	},
 	"categories": [

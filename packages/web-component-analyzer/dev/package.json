@@ -28,5 +28,8 @@
 		"progress-ring-component": "^1.0.36",
 		"weightless": "^0.0.37",
 		"wired-elements": "^2.1.2"
+	},
+	"engines": {
+		"node": ">=18"
 	}
 }

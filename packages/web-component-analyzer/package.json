@@ -132,6 +132,9 @@
 	},
 	"bin": {
 		"wca": "cli.js",
-		"@jackolope/web-component-analyzer": "cli.js"
+		"web-component-analyzer": "cli.js"
+	},
+	"engines": {
+		"node": ">=18"
 	}
 }

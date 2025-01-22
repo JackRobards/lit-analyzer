@@ -1,6 +1,6 @@
-const chalk = require("chalk");
+import chalk from "chalk";
 import type { TextSpan } from "typescript";
-import type { AnalysisStats } from "./diagnostic-formatter.js";
+import type { AnalysisStats } from "./diagnostic-formatter.mjs";
 
 export function generalReport(stats: AnalysisStats): string {
 	function numberStatText(n: number, text: string): string {

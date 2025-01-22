@@ -165,5 +165,8 @@
 			"img": "https://joeschmoe.io/api/v1/random",
 			"url": "https://github.com/JackRobards/lit-analyzer/blob/master/CONTRIBUTING.md"
 		}
-	]
+	],
+	"engines": {
+		"node": ">=18"
+	}
 }

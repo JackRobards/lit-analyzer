@@ -1,9 +1,9 @@
 import type { LitAnalyzerRuleId, LitAnalyzerRules } from "../analyze/lit-analyzer-config.js";
 import { ALL_RULE_IDS } from "../analyze/lit-analyzer-config.js";
-import { analyzeCommand } from "./analyze-command.js";
-import type { LitAnalyzerCliConfig } from "./lit-analyzer-cli-config.js";
-import { parseCliArguments } from "./parse-cli-arguments.js";
-import { camelToDashCase } from "./util.js";
+import { analyzeCommand } from "./analyze-command.mjs";
+import type { LitAnalyzerCliConfig } from "./lit-analyzer-cli-config.mjs";
+import { parseCliArguments } from "./parse-cli-arguments.mjs";
+import { camelToDashCase } from "./util.mjs";
 
 const DEFAULT_GLOB = "src/**/*.{js,jsx,ts,tsx}";
 
