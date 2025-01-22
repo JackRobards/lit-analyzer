@@ -38,7 +38,10 @@
 		"noImplicitReturns": true,
 		"outDir": "./lib",
 
-		"lib": ["es2023"]
+		"lib": ["es2023"],
+
+		"types": ["node"]
 	},
+
 	"exclude": ["node_modules"]
 }

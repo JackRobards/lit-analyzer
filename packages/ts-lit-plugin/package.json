@@ -4,6 +4,7 @@
 	"description": "Typescript plugin that adds type checking and code completion to lit-html. Fork of the original ts-lit-plugin.",
 	"author": "JackRobards",
 	"license": "MIT",
+	"type": "module",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/JackRobards/lit-analyzer.git"
@@ -49,7 +50,7 @@
 			]
 		}
 	},
-	"main": "index.js",
+	"exports": "./index.js",
 	"files": [
 		"/lib/",
 		"/html-documentation/"

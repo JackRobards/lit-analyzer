@@ -1,5 +1,5 @@
-import type { LitAnalyzerConfig } from "@jackolope/lit-analyzer";
-import { ALL_RULE_IDS } from "@jackolope/lit-analyzer";
+import type { LitAnalyzerConfig } from "@jackolope/lit-analyzer" with { "resolution-mode": "import" };
+const litAnalyzer = import("@jackolope/lit-analyzer");
 import { join } from "path";
 import { ColorProvider } from "./color-provider.js";
 import * as vscode from "vscode";
@@ -32,9 +32,9 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 
 	// Subscribe to configuration change
 	vscode.workspace.onDidChangeConfiguration(
-		e => {
+		async e => {
 			if (e.affectsConfiguration(configurationSection) || e.affectsConfiguration(configurationExperimentalHtmlSection)) {
-				synchronizeConfig(api);
+				await synchronizeConfig(api);
 			}
 		},
 		undefined,
@@ -54,14 +54,14 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 	);
 	context.subscriptions.push(registration);
 
-	synchronizeConfig(api);
+	await synchronizeConfig(api);
 }
 
-function synchronizeConfig(api: { configurePlugin: (pluginId: typeof tsLitPluginId, config: Partial<LitAnalyzerConfig>) => void }) {
-	api.configurePlugin(tsLitPluginId, getConfig());
+async function synchronizeConfig(api: { configurePlugin: (pluginId: typeof tsLitPluginId, config: Partial<LitAnalyzerConfig>) => void }) {
+	api.configurePlugin(tsLitPluginId, await getConfig());
 }
 
-function getConfig(): Partial<LitAnalyzerConfig> {
+async function getConfig(): Promise<Partial<LitAnalyzerConfig>> {
 	const config = vscode.workspace.getConfiguration(configurationSection);
 	const outConfig: Partial<LitAnalyzerConfig> = {};
 
@@ -150,6 +150,8 @@ function getConfig(): Partial<LitAnalyzerConfig> {
 
 	// Apply rules
 	const rules = outConfig.rules || {};
+
+	const ALL_RULE_IDS = (await litAnalyzer).ALL_RULE_IDS;
 
 	ALL_RULE_IDS.forEach(ruleName => {
 		withConfigValue(config, `rules.${ruleName}`, value => {

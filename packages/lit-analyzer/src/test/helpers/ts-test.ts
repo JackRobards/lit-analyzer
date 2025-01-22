@@ -2,6 +2,8 @@ import type { ImplementationFn } from "ava";
 import test from "ava";
 import { dirname } from "path";
 import type * as tsModule from "typescript";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
 import { setTypescriptModule } from "../../lib/analyze/ts-module.js";
 
 // Based on the `ava` types for test.only and test.skip. This matches the format of the tests in this repo

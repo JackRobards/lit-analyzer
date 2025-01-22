@@ -11,6 +11,7 @@ import { LitPluginContext } from "./ts-lit-plugin/lit-plugin-context.js";
 import { TsLitPlugin } from "./ts-lit-plugin/ts-lit-plugin.js";
 import { setTypescriptModule } from "./ts-module.js";
 
+const __dirname = import.meta.dirname;
 const tsHtmlPluginSymbol = Symbol.for("__tsHtmlPlugin__");
 
 let context: LitPluginContext | undefined = undefined;
