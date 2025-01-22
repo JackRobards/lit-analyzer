@@ -175,7 +175,7 @@
 		"esbuild": "^0.24.2",
 		"fast-glob": "^3.2.11",
 		"@jackolope/lit-analyzer": "^2.0.3",
-		"mocha": "^11.0.1",
+		"mocha": "^11.1.0",
 		"wireit": "^0.1.1"
 	},
 	"activationEvents": [
