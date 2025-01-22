@@ -16,7 +16,7 @@ Please run `npm run readme` when you want to rebuild all readme files.
 
 ### Debugging the CLI
 
-You can always try out the CLI by running `./cli.js path-to-a-file.js` from `packages/lit-analyzer`.
+You can always try out the CLI by running `./cli.mjs path-to-a-file.js` from `packages/lit-analyzer`.
 
 ### Debugging the language service
 
