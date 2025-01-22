@@ -21,7 +21,7 @@
 		"template"
 	],
 	"bin": {
-		"@jackolope/lit-analyzer": "cli.js"
+		"lit-analyzer": "cli.js"
 	},
 	"scripts": {
 		"build": "wireit",
@@ -139,5 +139,8 @@
 			"img": "https://joeschmoe.io/api/v1/random",
 			"url": "https://github.com/JackRobards/lit-analyzer/blob/master/CONTRIBUTING.md"
 		}
-	]
+	],
+	"engines": {
+		"node": ">=18"
+	}
 }
