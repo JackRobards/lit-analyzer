@@ -20,5 +20,3 @@ export * from "./lib/analyze/types/lit-quick-info.js";
 export * from "./lib/analyze/types/lit-rename-info.js";
 export * from "./lib/analyze/types/lit-rename-location.js";
 export * from "./lib/analyze/types/lit-target-kind.js";
-
-export * from "./lib/cli/cli.js";

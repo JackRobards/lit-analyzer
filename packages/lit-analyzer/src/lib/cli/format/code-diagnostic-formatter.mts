@@ -1,8 +1,8 @@
-const chalk = require("chalk");
+import chalk from "chalk";
 import type { SourceFile } from "typescript";
 import type { LitDiagnostic } from "../../analyze/types/lit-diagnostic.js";
-import type { AnalysisStats, DiagnosticFormatter } from "./diagnostic-formatter.js";
-import { generalReport, markText, relativeFileName } from "./util.js";
+import type { AnalysisStats, DiagnosticFormatter } from "./diagnostic-formatter.mjs";
+import { generalReport, markText, relativeFileName } from "./util.mjs";
 
 export class CodeDiagnosticFormatter implements DiagnosticFormatter {
 	report(stats: AnalysisStats): string | undefined {

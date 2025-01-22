@@ -21,7 +21,7 @@
 		"template"
 	],
 	"bin": {
-		"lit-analyzer": "cli.js"
+		"lit-analyzer": "cli.mjs"
 	},
 	"scripts": {
 		"build": "wireit",
@@ -87,7 +87,7 @@
 		"index.js",
 		"index.d.ts",
 		"index.d.ts.map",
-		"cli.js"
+		"cli.mjs"
 	],
 	"dependencies": {
 		"@vscode/web-custom-data": "^0.4.2",
