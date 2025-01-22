@@ -3,7 +3,7 @@
 	"private": true,
 	"displayName": "lit-plugin",
 	"description": "Syntax highlighting, type checking and code completion for lit-html",
-	"version": "1.4.3",
+	"version": "2.0.0",
 	"publisher": "jackolope",
 	"icon": "docs/assets/lit-plugin@256w.png",
 	"license": "MIT",
@@ -174,7 +174,7 @@
 		"@vscode/vsce": "^3.2.1",
 		"esbuild": "^0.24.2",
 		"fast-glob": "^3.2.11",
-		"@jackolope/lit-analyzer": "^2.0.3",
+		"@jackolope/lit-analyzer": "^3.0.0",
 		"mocha": "^11.1.0",
 		"wireit": "^0.1.1"
 	},
