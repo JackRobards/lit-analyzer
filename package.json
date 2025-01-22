@@ -46,7 +46,7 @@
 		"test:packaged": "wireit",
 		"prettier:check": "wireit",
 		"package": "wireit",
-		"release": "npm run build && npm run changeset publish"
+		"release": "npm run build && npx changeset publish"
 	},
 	"wireit": {
 		"build": {
