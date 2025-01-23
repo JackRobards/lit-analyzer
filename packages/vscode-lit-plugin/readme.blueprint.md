@@ -1,6 +1,7 @@
 {{ load:./readme/header.md }}
 
 {{ load:./readme/install.md }}
+{{ load:./readme/this-version.md }}
 {{ load:./../../docs/readme/rules.md }}
 {{ load:./readme/config.md }}
 {{ load:./readme/other.md }}

@@ -5,6 +5,7 @@ Hi there, I really appreciate you considering contributing to this repository! T
 1. Clone the monorepo: `git clone https://github.com/JackRobards/lit-analyzer.git`
 2. Install dependencies: `npm ci`
 3. Run tests: `npm test`
+4. When you are ready to create a PR with any changes, please run `npx @changesets/cli` in order to generate a [changesets file](https://github.com/changesets/changesets) describing what it is you changed. This is only needed if you are updating the source code, not for things like documentation or tests.
 
 ## Contributing to readmes
 

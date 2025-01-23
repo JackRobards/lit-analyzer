@@ -1,6 +1,6 @@
 # Change Log
 
-All notable changes to this project will be documented in this file.
+Please refer to the individual package CHANGELOG.md files or the GitHub Release notes for all future versions.
 
 <!-- ### Added -->
 <!-- ### Changed -->

@@ -34,7 +34,7 @@
 	"scripts": {
 		"prettier:write": "prettier --write \"packages/*/src/**/*.ts\"",
 		"readme": "wireit",
-		"dev": "cd dev && TSS_DEBUG=5999 code . --disable-extension jackolope.lit-plugin",
+		"dev": "cd dev && TSS_DEBUG=5999 code . --disable-extension jackolope.lit-analyzer-plugin",
 		"dev:logs": "touch dev/lit-plugin.log && tail -f dev/lit-plugin.log",
 		"lint": "wireit",
 		"eslint": "wireit",

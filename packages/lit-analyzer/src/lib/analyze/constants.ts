@@ -12,7 +12,7 @@ export const LIT_HTML_ATTRIBUTE_MODIFIERS: LitHtmlAttributeModifier[] = [
 	LIT_HTML_EVENT_LISTENER_ATTRIBUTE_MODIFIER
 ];
 
-export const DIAGNOSTIC_SOURCE = "lit-plugin";
+export const DIAGNOSTIC_SOURCE = "lit-analyzer-plugin";
 
 export const TS_IGNORE_FLAG = "@ts-ignore";
 

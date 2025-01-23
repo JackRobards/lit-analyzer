@@ -7,7 +7,7 @@
 <br />
 
 <p align="center">
-		<a href="https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin"><img alt="Downloads per Month" src="https://vsmarketplacebadges.dev/downloads-short/runem.lit-plugin.svg?label=vscode-lit-plugin" height="20"/></a>
+		<a href="https://marketplace.visualstudio.com/items?itemName=jackolope.lit-analyzer-plugin"><img alt="Downloads per Month" src="https://vsmarketplacebadges.dev/downloads-short/jackolope.lit-analyzer-plugin.svg?label=vscode-lit-plugin" height="20"/></a>
 <a href="https://www.npmjs.com/package/@jackolope/lit-analyzer"><img alt="Downloads per Month" src="https://img.shields.io/npm/dm/@jackolope/lit-analyzer.svg?label=@jackolope/lit-analyzer" height="20"/></a>
 <a href="https://www.npmjs.com/package/@jackolope/ts-lit-plugin"><img alt="Downloads per Month" src="https://img.shields.io/npm/dm/@jackolope/ts-lit-plugin.svg?label=@jackolope/ts-lit-plugin" height="20"/></a>
 <a href="https://github.com/JackRobards/lit-analyzer/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/JackRobards/@jackolope/lit-analyzer" height="20"/></a>
@@ -21,11 +21,13 @@ This mono-repository consists of the following tools:
 
 - [**`lit-analyzer`**](/packages/lit-analyzer) CLI that analyzes lit-html templates in your code to validate html and type check bindings.
 
+- [**`web-component-analyzer`**](/packages/web-component-analyzer) CLI to analyze web components. Used mainly for `lit-analyzer`, and I would recommend looking into the [@custom-elements-manifest/analyzer](https://www.npmjs.com/package/@custom-elements-manifest/analyzer) for a tool that complies with the standard Custom Element Manifest instead of using this directly.
+
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#rules)
 
 ## ➤ Rules
 
-You can find a list of all rules [here](https://github.com/JackRobards/lit-analyzer/blob/master/docs/readme/rules.md).
+You can find a list of all rules [here](https://github.com/JackRobards/lit-analyzer/blob/main/docs/readme/rules.md).
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#contributing)
 

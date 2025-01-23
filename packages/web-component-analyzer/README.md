@@ -13,6 +13,8 @@
 
 `@jackolope/web-component-analyzer` is a CLI that makes it possible to easily analyze web components. It analyzes your code and jsdoc in order to extract `properties`, `attributes`, `methods`, `events`, `slots`, `css shadow parts` and `css custom properties`. Works with both javascript and typescript.
 
+Used internally for `lit-analyzer`, and I would recommend looking into the [@custom-elements-manifest/analyzer](https://www.npmjs.com/package/@custom-elements-manifest/analyzer) for a tool that complies with the standard Custom Element Manifest instead of using this directly.
+
 Try the online playground [here](https://runem.github.io/web-component-analyzer/)
 
 In addition to [vanilla web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) this tool supports web components built with the following libraries:
@@ -191,7 +193,7 @@ class MyElement extends HTMLElement {
 
 This tool extract information about your components by looking at your code directly and by looking at your JSDoc comments.
 
-**Code**: Web Component Analyzer supports multiple libraries. [Click here](https://github.com/JackRobards/web-component-analyzer/blob/master/ANALYZE.md) for an overview of how each library is analyzed.
+**Code**: Web Component Analyzer supports multiple libraries. [Click here](https://github.com/JackRobards/web-component-analyzer/blob/main/ANALYZE.md) for an overview of how each library is analyzed.
 
 **JSDoc**: Read next section to learn more about how JSDoc is analyzed.
 

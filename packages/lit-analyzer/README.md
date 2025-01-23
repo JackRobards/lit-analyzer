@@ -19,13 +19,13 @@
 
 <!-- prettier-ignore -->
 ```bash
-npm install lit-analyzer -g
+npm install @jackolope/lit-analyzer -g
 ```
 
 **Note:**
 
-- If you use Visual Studio Code you can also install the [lit-plugin](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin) extension.
-- If you use Typescript you can also install [@jackolope/ts-lit-plugin](https://github.com/JackRobards/lit-analyzer/blob/master/packages/ts-lit-plugin).
+- If you use Visual Studio Code you can also install the [lit-analyzer-plugin](https://marketplace.visualstudio.com/items?itemName=jackolope.lit-analyzer-plugin) extension.
+- If you use Typescript you can also install [@jackolope/ts-lit-plugin](https://github.com/JackRobards/lit-analyzer/blob/main/packages/ts-lit-plugin).
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#usage)
 
@@ -52,7 +52,7 @@ You can configure the CLI with arguments:
 lit-analyzer --strict --rules.no-unknown-tag-name off --format markdown
 ```
 
-**Note:** You can also configure the CLI using a `tsconfig.json` file (see [@jackolope/ts-lit-plugin](https://github.com/JackRobards/lit-analyzer/blob/master/packages/ts-lit-plugin)).
+**Note:** You can also configure the CLI using a `tsconfig.json` file (see [@jackolope/ts-lit-plugin](https://github.com/JackRobards/lit-analyzer/blob/main/packages/ts-lit-plugin)).
 
 ### Available arguments
 
@@ -60,7 +60,7 @@ lit-analyzer --strict --rules.no-unknown-tag-name off --format markdown
 | Option | Description | Type | Default |
 | :----- | ----------- | ---- | ------- |
 | `--help` | Print help message | `boolean` | |
-| `--rules.rule-name` | Enable or disable rules (example: --rules.no-unknown-tag-name off). Severity can be "off" \| "warn" \| "error". See a list of rules [here](https://github.com/JackRobards/lit-analyzer/blob/master/docs/readme/rules.md). | `{"rule-name": "off" \| "warn" \| "error"}` |  |
+| `--rules.rule-name` | Enable or disable rules (example: --rules.no-unknown-tag-name off). Severity can be "off" \| "warn" \| "error". See a list of rules [here](https://github.com/JackRobards/lit-analyzer/blob/main/docs/readme/rules.md). | `{"rule-name": "off" \| "warn" \| "error"}` |  |
 | `--strict` | Enable strict mode. This changes the default ruleset | `boolean` | |
 | `--format` | Change the format of how diagnostics are reported | `code` \| `list` \| `markdown` | code |
 | `--maxWarnings` | Fail only when the number of warnings is larger than this number | `number` | -1 |
@@ -131,7 +131,7 @@ Each rule can have severity of `off`, `warning` or `error`. You can toggle rules
 
 ### Validating custom elements
 
-All web components in your code are analyzed using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/master/packages/web-component-analyzer) which supports native custom elements and web components built with LitElement.
+All web components in your code are analyzed using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/main/packages/web-component-analyzer) which supports native custom elements and web components built with LitElement.
 
 #### 🤷‍ no-unknown-tag-name
 
@@ -227,7 +227,7 @@ declare global {
 
 ### Validating binding names
 
-Attributes, properties and events are picked up on custom elements using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/master/packages/web-component-analyzer) which supports native custom elements and web components built with LitElement.
+Attributes, properties and events are picked up on custom elements using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/main/packages/web-component-analyzer) which supports native custom elements and web components built with LitElement.
 
 #### ✅ no-unknown-attribute, no-unknown-property
 
@@ -687,7 +687,7 @@ css`
 
 ## ➤ Documenting slots, events, attributes and properties
 
-Code is analyzed using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/master/packages/web-component-analyzer) in order to find properties, attributes and events. Unfortunately, sometimes it's not possible to analyze these things by looking at the code, and you will have to document how your component looks using `jsdoc`like this:
+Code is analyzed using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/main/packages/web-component-analyzer) in order to find properties, attributes and events. Unfortunately, sometimes it's not possible to analyze these things by looking at the code, and you will have to document how your component looks using `jsdoc`like this:
 
 <!-- prettier-ignore -->
 ```js

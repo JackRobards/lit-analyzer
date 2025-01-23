@@ -1,7 +1,7 @@
 {
-	"name": "lit-plugin",
+	"name": "lit-analyzer-plugin",
 	"private": true,
-	"displayName": "lit-plugin",
+	"displayName": "lit-analyzer-plugin",
 	"description": "Syntax highlighting, type checking and code completion for lit-html",
 	"version": "2.0.0",
 	"publisher": "jackolope",
@@ -35,7 +35,8 @@
 		"create-isolated-extension-dir": "wireit",
 		"test:packaged-sequentialized": "wireit",
 		"bundle": "wireit",
-		"make-built-dir": "wireit"
+		"make-built-dir": "wireit",
+		"publish": "wireit"
 	},
 	"wireit": {
 		"build": {
@@ -179,7 +180,7 @@
 		"wireit": "^0.1.1"
 	},
 	"activationEvents": [
-		"onCommand:lit-plugin.analyze",
+		"onCommand:lit-analyzer-plugin.analyze",
 		"onLanguage:javascript",
 		"onLanguage:javascriptreact",
 		"onLanguage:typescript",
@@ -205,36 +206,36 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "lit-plugin.analyze",
+				"command": "lit-analyzer-plugin.analyze",
 				"title": "Analyze lit-html templates"
 			}
 		],
 		"configuration": [
 			{
-				"id": "lit-plugin",
-				"title": "lit-plugin",
+				"id": "lit-analyzer-plugin",
+				"title": "lit-analyzer-plugin",
 				"properties": {
-					"lit-plugin.disable": {
+					"lit-analyzer-plugin.disable": {
 						"type": "boolean",
 						"description": "Completely disable this plugin.",
 						"default": false
 					},
-					"lit-plugin.strict": {
+					"lit-analyzer-plugin.strict": {
 						"type": "boolean",
 						"description": "Enable strict mode.",
 						"default": false
 					},
-					"lit-plugin.maxProjectImportDepth": {
+					"lit-analyzer-plugin.maxProjectImportDepth": {
 						"type": "integer",
 						"description": "Determines how many modules deep dependencies are followed to determine whether a custom element is available in the current file. When `-1` is used, dependencies will be followed infinitely deep.",
 						"default": -1
 					},
-					"lit-plugin.maxNodeModuleImportDepth": {
+					"lit-analyzer-plugin.maxNodeModuleImportDepth": {
 						"type": "integer",
 						"description": "Determines how many modules deep dependencies in npm packages are followed to determine whether a custom element is available in the current file. When `-1` is used, dependencies will be followed infinitely deep.",
 						"default": 1
 					},
-					"lit-plugin.securitySystem": {
+					"lit-analyzer-plugin.securitySystem": {
 						"type": "string",
 						"description": "The lit-html security sanitization strategy to assume.",
 						"default": "off",
@@ -243,7 +244,7 @@
 							"ClosureSafeTypes"
 						]
 					},
-					"lit-plugin.htmlTemplateTags": {
+					"lit-analyzer-plugin.htmlTemplateTags": {
 						"type": "array",
 						"description": "List of template tags to enable html support in.",
 						"items": {
@@ -255,7 +256,7 @@
 							"raw"
 						]
 					},
-					"lit-plugin.cssTemplateTags": {
+					"lit-analyzer-plugin.cssTemplateTags": {
 						"type": "array",
 						"description": "List of template tags to enable css support in.",
 						"items": {
@@ -266,12 +267,12 @@
 							"css"
 						]
 					},
-					"lit-plugin.dontShowSuggestions": {
+					"lit-analyzer-plugin.dontShowSuggestions": {
 						"type": "boolean",
 						"description": "Don't append messages suggesting how to fix diagnostics.",
 						"default": false
 					},
-					"lit-plugin.globalTags": {
+					"lit-analyzer-plugin.globalTags": {
 						"type": "array",
 						"description": "List of html tag names that you expect to be present at all times.",
 						"items": {
@@ -279,7 +280,7 @@
 							"description": "Tag name."
 						}
 					},
-					"lit-plugin.globalAttributes": {
+					"lit-analyzer-plugin.globalAttributes": {
 						"type": "array",
 						"description": "List of html attributes names that you expect to be present at all times. These attributes are not checked at all.",
 						"items": {
@@ -287,7 +288,7 @@
 							"description": "Attribute name."
 						}
 					},
-					"lit-plugin.globalEvents": {
+					"lit-analyzer-plugin.globalEvents": {
 						"type": "array",
 						"description": "List of event names that you expect to be present at all times. These events are not checked at all.",
 						"items": {
@@ -295,7 +296,7 @@
 							"description": "Event name."
 						}
 					},
-					"lit-plugin.logging": {
+					"lit-analyzer-plugin.logging": {
 						"type": "string",
 						"description": "Log to a file called 'lit-plugin.log' which will be created in the root of the project.",
 						"default": "off",
@@ -307,7 +308,7 @@
 							"verbose"
 						]
 					},
-					"lit-plugin.rules.no-unknown-tag-name": {
+					"lit-analyzer-plugin.rules.no-unknown-tag-name": {
 						"type": "string",
 						"description": "Check the existence of tag names.",
 						"default": "default",
@@ -318,7 +319,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-missing-import": {
+					"lit-analyzer-plugin.rules.no-missing-import": {
 						"type": "string",
 						"description": "Check that custom elements used are imported.",
 						"default": "default",
@@ -329,7 +330,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-missing-element-type-definition": {
+					"lit-analyzer-plugin.rules.no-missing-element-type-definition": {
 						"type": "string",
 						"description": "This rule will ensure that custom elements are registered on the HTMLElementTagNameMap Typescript interface.",
 						"default": "default",
@@ -340,7 +341,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-unclosed-tag": {
+					"lit-analyzer-plugin.rules.no-unclosed-tag": {
 						"type": "string",
 						"description": "Check that all tags are properly closed.",
 						"default": "default",
@@ -351,7 +352,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-unknown-attribute": {
+					"lit-analyzer-plugin.rules.no-unknown-attribute": {
 						"type": "string",
 						"description": "Check the existence of attribute names.",
 						"default": "default",
@@ -362,7 +363,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-unknown-property": {
+					"lit-analyzer-plugin.rules.no-unknown-property": {
 						"type": "string",
 						"description": "Check the existence of property names.",
 						"default": "default",
@@ -373,7 +374,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-unknown-event": {
+					"lit-analyzer-plugin.rules.no-unknown-event": {
 						"type": "string",
 						"description": "Check the existence of event names.",
 						"default": "default",
@@ -384,7 +385,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-unknown-slot": {
+					"lit-analyzer-plugin.rules.no-unknown-slot": {
 						"type": "string",
 						"description": "Check the existence of slot names (requires '@slot' jsdoc on custom element declarations).",
 						"default": "default",
@@ -395,7 +396,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-invalid-boolean-binding": {
+					"lit-analyzer-plugin.rules.no-invalid-boolean-binding": {
 						"type": "string",
 						"description": "Disallow boolean attribute bindings on non-boolean types.",
 						"default": "default",
@@ -406,7 +407,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-expressionless-property-binding": {
+					"lit-analyzer-plugin.rules.no-expressionless-property-binding": {
 						"type": "string",
 						"description": "Disallow property bindings without an expression.",
 						"default": "default",
@@ -417,7 +418,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-noncallable-event-binding": {
+					"lit-analyzer-plugin.rules.no-noncallable-event-binding": {
 						"type": "string",
 						"description": "Disallow event listener bindings with a noncallable type.",
 						"default": "default",
@@ -428,7 +429,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-boolean-in-attribute-binding": {
+					"lit-analyzer-plugin.rules.no-boolean-in-attribute-binding": {
 						"type": "string",
 						"description": "Disallow attribute bindings with a boolean type.",
 						"default": "default",
@@ -439,7 +440,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-complex-attribute-binding": {
+					"lit-analyzer-plugin.rules.no-complex-attribute-binding": {
 						"type": "string",
 						"description": "Disallow attribute bindings with a complex type.",
 						"default": "default",
@@ -450,7 +451,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-nullable-attribute-binding": {
+					"lit-analyzer-plugin.rules.no-nullable-attribute-binding": {
 						"type": "string",
 						"description": "Disallow attribute bindings with nullable types such as \"null\" or \"undefined\".",
 						"default": "default",
@@ -461,7 +462,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-incompatible-type-binding": {
+					"lit-analyzer-plugin.rules.no-incompatible-type-binding": {
 						"type": "string",
 						"description": "Disallow incompatible type in bindings.",
 						"default": "default",
@@ -472,7 +473,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-invalid-directive-binding": {
+					"lit-analyzer-plugin.rules.no-invalid-directive-binding": {
 						"type": "string",
 						"description": "Disallow using built-in directives in unsupported bindings.",
 						"default": "default",
@@ -483,7 +484,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-incompatible-property-type": {
+					"lit-analyzer-plugin.rules.no-incompatible-property-type": {
 						"type": "string",
 						"description": "Check the 'type' key of the @property decorator against the actual property type.",
 						"default": "default",
@@ -494,7 +495,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-invalid-attribute-name": {
+					"lit-analyzer-plugin.rules.no-invalid-attribute-name": {
 						"type": "string",
 						"description": "Check the validity of the attribute names.",
 						"default": "default",
@@ -505,7 +506,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-invalid-tag-name": {
+					"lit-analyzer-plugin.rules.no-invalid-tag-name": {
 						"type": "string",
 						"description": "Check the validity of the tag name when defining custom elements.",
 						"default": "default",
@@ -516,7 +517,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.rules.no-invalid-css": {
+					"lit-analyzer-plugin.rules.no-invalid-css": {
 						"type": "string",
 						"description": "Check CSS within the css tagged template literal.",
 						"default": "default",
@@ -527,7 +528,7 @@
 							"error"
 						]
 					},
-					"lit-plugin.customHtmlData": {
+					"lit-analyzer-plugin.customHtmlData": {
 						"version": 1,
 						"title": "VS Code HTML Custom Data format",
 						"description": "Format for loading html data in VS Code's HTML custom data format",
