@@ -29,6 +29,12 @@ This mono-repository consists of the following tools:
 
 You can find a list of all rules [here](https://github.com/JackRobards/lit-analyzer/blob/main/docs/readme/rules.md).
 
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#status)
+
+## ➤ Status
+
+If you are interested in the reasons for this fork and the status of the packages please read [`status.md`](/STATUS.md).
+
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#contributing)
 
 ## ➤ Contributing
