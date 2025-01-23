@@ -7,13 +7,13 @@
 	"badges": [
 		{
 			"alt": "Published at vscode marketplace",
-			"url": "https://marketplace.visualstudio.com/items?itemName=jackolope.lit-plugin",
-			"img": "https://vsmarketplacebadges.dev/version/jackolope.lit-plugin.svg"
+			"url": "https://marketplace.visualstudio.com/items?itemName=jackolope.lit-analyzer-plugin",
+			"img": "https://vsmarketplacebadges.dev/version/jackolope.lit-analyzer-plugin.svg"
 		},
 		{
 			"alt": "Downloads per Month",
-			"img": "https://vsmarketplacebadges.dev/downloads-short/jackolope.lit-plugin.svg?label=vscode-lit-plugin",
-			"url": "https://marketplace.visualstudio.com/items?itemName=jackolope.lit-plugin"
+			"img": "https://vsmarketplacebadges.dev/downloads-short/jackolope.lit-analyzer-plugin.svg?label=vscode-lit-plugin",
+			"url": "https://marketplace.visualstudio.com/items?itemName=jackolope.lit-analyzer-plugin"
 		}
 	]
 }

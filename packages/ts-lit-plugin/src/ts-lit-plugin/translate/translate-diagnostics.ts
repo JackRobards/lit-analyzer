@@ -50,6 +50,6 @@ function translateDiagnostic(diagnostic: LitDiagnostic, file: SourceFile, contex
 		messageText,
 		category,
 		code,
-		source: diagnostic.source == null ? undefined : `lit-plugin(${diagnostic.source})`
+		source: diagnostic.source == null ? undefined : `lit-analyzer-plugin(${diagnostic.source})`
 	};
 }

@@ -6,9 +6,9 @@ import * as vscode from "vscode";
 
 const tsLitPluginId = "@jackolope/ts-lit-plugin";
 const typeScriptExtensionId = "vscode.typescript-language-features";
-const configurationSection = "lit-plugin";
+const configurationSection = "lit-analyzer-plugin";
 const configurationExperimentalHtmlSection = "html.experimental";
-const analyzeCommandId = "lit-plugin.analyze";
+const analyzeCommandId = "lit-analyzer-plugin.analyze";
 
 let defaultAnalyzeGlob = "src";
 
@@ -143,7 +143,7 @@ function getConfig(): Partial<LitAnalyzerConfig> {
 	// Experimental values from vscode
 	const experimental = vscode.workspace.getConfiguration(configurationExperimentalHtmlSection, null);
 	withConfigValue(experimental, "customData", value => {
-		// Merge value from vscode with "lit-plugin.customHtmlData"
+		// Merge value from vscode with "lit-analyzer-plugin.customHtmlData"
 		const filePaths = (Array.isArray(value) ? value : [value]).map(path => (typeof path === "string" ? toWorkspacePath(path) : path));
 		outConfig.customHtmlData = outConfig.customHtmlData == null ? filePaths : filePaths.concat(outConfig.customHtmlData as []);
 	});

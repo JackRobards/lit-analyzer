@@ -28,14 +28,14 @@ suite("Extension Test Suite", () => {
 
 	test("The extension is installed", () => {
 		const extensionIds = vscode.extensions.all.map(extension => extension.id);
-		const ourId = "jackolope.lit-plugin";
+		const ourId = "jackolope.lit-analyzer-plugin";
 		assert.ok(extensionIds.includes(ourId), `Expected ${JSON.stringify(extensionIds)} to include '${ourId}'`);
 	});
 
 	test("We produce a diagnostic", async () => {
 		const config = vscode.workspace.getConfiguration();
-		await config.update("lit-plugin.logging", "verbose", true);
-		await config.update("lit-plugin.rules.no-missing-element-type-definition", "error", true);
+		await config.update("lit-analyzer-plugin.logging", "verbose", true);
+		await config.update("lit-analyzer-plugin.rules.no-missing-element-type-definition", "error", true);
 		const doc = await vscode.workspace.openTextDocument(vscode.Uri.file(path.join(__dirname, "../../src/test/fixtures/missing-elem-type.ts")));
 		await vscode.window.showTextDocument(doc);
 
@@ -48,8 +48,8 @@ suite("Extension Test Suite", () => {
 
 	test("We detect no-missing-import properly", async () => {
 		const config = vscode.workspace.getConfiguration();
-		await config.update("lit-plugin.logging", "verbose", true);
-		await config.update("lit-plugin.rules.no-missing-import", "error", true);
+		await config.update("lit-analyzer-plugin.logging", "verbose", true);
+		await config.update("lit-analyzer-plugin.rules.no-missing-import", "error", true);
 		const doc = await vscode.workspace.openTextDocument(vscode.Uri.file(path.join(__dirname, "../../src/test/fixtures/missing-import.ts")));
 		const editor = await vscode.window.showTextDocument(doc);
 

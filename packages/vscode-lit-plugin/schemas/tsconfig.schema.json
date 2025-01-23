@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"title": "lit-plugin plugin contributions to tsconfig.json",
+	"title": "lit-analyzer-plugin plugin contributions to tsconfig.json",
 	"type": "object",
 	"properties": {
 		"compilerOptions": {

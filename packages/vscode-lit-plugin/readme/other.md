@@ -18,11 +18,11 @@ Hover above a tag, attribute, property or event and see more information about t
 
 ### 🚪 Auto close tags
 
-When typing html inside a template tag `lit-plugin` auto-closes tags as you would expect.
+When typing html inside a template tag `lit-analyzer-plugin` auto-closes tags as you would expect.
 
 ### 🔍 Automatically finds custom elements
 
-If you define a custom element somewhere in your code `lit-plugin` will automatically find it. Then it will provide auto-import functionality, type checking and code completion out of the box by analyzing the element. [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/master/packages/web-component-analyzer) is the tool that takes care of analyzing components.
+If you define a custom element somewhere in your code `lit-analyzer-plugin` will automatically find it. Then it will provide auto-import functionality, type checking and code completion out of the box by analyzing the element. [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/main/packages/web-component-analyzer) is the tool that takes care of analyzing components.
 
 ### 🌎 Support for dependencies that extend the global HTMLElementTagNameMap
 
@@ -42,6 +42,6 @@ declare global {
 **Two limitations using this approach as of now**
 
 - By using this approach the plugin wont see detailed information about a given element as (e.g @property decorators and initializers) because it can only read public fields and their corresponding types. Therefore all properties on custom elements imported from libraries are optional and wont respect meta information in @property decorators.
-- `lit-plugin` will only be able two find your elements if you somewhere in the code imports the file. Before your import the file it will complain that the element is unknown not that it can be imported. This due to the constraint that Typescript only adds library files to the array of program files once the file has been imported.
+- `lit-analyzer-plugin` will only be able two find your elements if you somewhere in the code imports the file. Before your import the file it will complain that the element is unknown not that it can be imported. This due to the constraint that Typescript only adds library files to the array of program files once the file has been imported.
 
 This plugin already supports [custom vscode html data format](https://code.visualstudio.com/updates/v1_31#_html-and-css-custom-data-support) (see the configuration section) and I will of course work on supporting more ways of shipping metadata alongside custom elements.

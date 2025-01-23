@@ -11,9 +11,9 @@
 
 <br />
 
-[![](https://vsmarketplacebadges.dev/version-short/runem.lit-plugin.svg)](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin)
-[![](https://vsmarketplacebadges.dev/downloads-short/runem.lit-plugin.svg)](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin)
-[![](https://vsmarketplacebadges.dev/rating-short/runem.lit-plugin.svg)](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin)
+[![](https://vsmarketplacebadges.dev/version-short/jackolope.lit-analyzer-plugin.svg)](https://marketplace.visualstudio.com/items?itemName=jackolope.lit-analyzer-plugin)
+[![](https://vsmarketplacebadges.dev/downloads-short/jackolope.lit-analyzer-plugin.svg)](https://marketplace.visualstudio.com/items?itemName=jackolope.lit-analyzer-plugin)
+[![](https://vsmarketplacebadges.dev/rating-short/jackolope.lit-analyzer-plugin.svg)](https://marketplace.visualstudio.com/items?itemName=jackolope.lit-analyzer-plugin)
 <a href="https://opensource.org/licenses/MIT"><img alt="MIT License" src="https://img.shields.io/badge/License-MIT-green.svg" height="20"></img></a>
 <a href="https://david-dm.org/JackRobards/lit-analyzer"><img alt="Dependencies" src="https://img.shields.io/david/JackRobards/lit-analyzer.svg?color=green" height="20"/></a>
 <a href="https://github.com/JackRobards/lit-analyzer/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/JackRobards/lit-analyzer.svg" height="20"/></a>
@@ -26,9 +26,17 @@
 
 ## ➤ Installation
 
-Simply search for [lit-plugin](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin) in the vscode marketplace and install the extension.
+Simply search for [lit-analyzer-plugin](https://marketplace.visualstudio.com/items?itemName=jackolope.lit-analyzer-plugin) in the vscode marketplace and install the extension.
 
-**Note**: You can also run `code --install-extension runem.lit-plugin` to install it.
+**Note**: You can also run `code --install-extension jackolope.lit-analyzer-plugin` to install it.
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#this-version)
+
+## ➤ This Version
+
+Fork of the original runem.lit-plugin.
+
+This VSCode extension functions very similarly in concept to the original runem.lit-plugin but should receive more consistent updates. The vscode extension and related packages have all been forked and updated. If you would like to see the full list of changes, then refer to the Github release notes.
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#rules)
 
@@ -92,7 +100,7 @@ Each rule can have severity of `off`, `warning` or `error`. You can toggle rules
 
 ### Validating custom elements
 
-All web components in your code are analyzed using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/master/packages/web-component-analyzer) which supports native custom elements and web components built with LitElement.
+All web components in your code are analyzed using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/main/packages/web-component-analyzer) which supports native custom elements and web components built with LitElement.
 
 #### 🤷‍ no-unknown-tag-name
 
@@ -188,7 +196,7 @@ declare global {
 
 ### Validating binding names
 
-Attributes, properties and events are picked up on custom elements using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/master/packages/web-component-analyzer) which supports native custom elements and web components built with LitElement.
+Attributes, properties and events are picked up on custom elements using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/main/packages/web-component-analyzer) which supports native custom elements and web components built with LitElement.
 
 #### ✅ no-unknown-attribute, no-unknown-property
 
@@ -648,16 +656,16 @@ css`
 
 ## ➤ Configuration
 
-You can configure this plugin by going to `VS Code Settings` > `Extension` > `lit-plugin`.
+You can configure this plugin by going to `VS Code Settings` > `Extension` > `lit-analyzer-plugin`.
 
-**Note:** You can also configure the plugin using a `tsconfig.json` file (see [@jackolope/ts-lit-plugin](https://github.com/JackRobards/lit-analyzer/blob/master/packages/ts-lit-plugin)).
+**Note:** You can also configure the plugin using a `tsconfig.json` file (see [@jackolope/ts-lit-plugin](https://github.com/JackRobards/lit-analyzer/blob/main/packages/ts-lit-plugin)).
 
 ### Available options
 
 <!-- prettier-ignore -->
 | Option | Description | Type | Default |
 | :----- | ----------- | ---- | ------- |
-| `strict` | Enabling strict mode will change which rules are applied as default (see list of [rules](https://github.com/JackRobards/lit-analyzer/blob/master/docs/readme/rules.md)) | `boolean` | false |
+| `strict` | Enabling strict mode will change which rules are applied as default (see list of [rules](https://github.com/JackRobards/lit-analyzer/blob/main/docs/readme/rules.md)) | `boolean` | false |
 | `rules` | Enable/disable individual rules or set their severity. Example: `{"no-unknown-tag-name": "off"}` | `{"rule-name": "off" \| "warn" \| "error"}` | The default rules enabled depend on the `strict` option |
 | `disable` | Completely disable this plugin. | `boolean` | false |
 | `dontShowSuggestions` | This option sets strict as  | `boolean` | false |
@@ -692,11 +700,11 @@ Hover above a tag, attribute, property or event and see more information about t
 
 ### 🚪 Auto close tags
 
-When typing html inside a template tag `lit-plugin` auto-closes tags as you would expect.
+When typing html inside a template tag `lit-analyzer-plugin` auto-closes tags as you would expect.
 
 ### 🔍 Automatically finds custom elements
 
-If you define a custom element somewhere in your code `lit-plugin` will automatically find it. Then it will provide auto-import functionality, type checking and code completion out of the box by analyzing the element. [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/master/packages/web-component-analyzer) is the tool that takes care of analyzing components.
+If you define a custom element somewhere in your code `lit-analyzer-plugin` will automatically find it. Then it will provide auto-import functionality, type checking and code completion out of the box by analyzing the element. [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/main/packages/web-component-analyzer) is the tool that takes care of analyzing components.
 
 ### 🌎 Support for dependencies that extend the global HTMLElementTagNameMap
 
@@ -716,7 +724,7 @@ declare global {
 **Two limitations using this approach as of now**
 
 - By using this approach the plugin wont see detailed information about a given element as (e.g @property decorators and initializers) because it can only read public fields and their corresponding types. Therefore all properties on custom elements imported from libraries are optional and wont respect meta information in @property decorators.
-- `lit-plugin` will only be able two find your elements if you somewhere in the code imports the file. Before your import the file it will complain that the element is unknown not that it can be imported. This due to the constraint that Typescript only adds library files to the array of program files once the file has been imported.
+- `lit-analyzer-plugin` will only be able two find your elements if you somewhere in the code imports the file. Before your import the file it will complain that the element is unknown not that it can be imported. This due to the constraint that Typescript only adds library files to the array of program files once the file has been imported.
 
 This plugin already supports [custom vscode html data format](https://code.visualstudio.com/updates/v1_31#_html-and-css-custom-data-support) (see the configuration section) and I will of course work on supporting more ways of shipping metadata alongside custom elements.
 
@@ -724,7 +732,7 @@ This plugin already supports [custom vscode html data format](https://code.visua
 
 ## ➤ Documenting slots, events, attributes and properties
 
-Code is analyzed using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/master/packages/web-component-analyzer) in order to find properties, attributes and events. Unfortunately, sometimes it's not possible to analyze these things by looking at the code, and you will have to document how your component looks using `jsdoc`like this:
+Code is analyzed using [web-component-analyzer](https://github.com/JackRobards/lit-analyzer/tree/main/packages/web-component-analyzer) in order to find properties, attributes and events. Unfortunately, sometimes it's not possible to analyze these things by looking at the code, and you will have to document how your component looks using `jsdoc`like this:
 
 <!-- prettier-ignore -->
 ```js
@@ -757,7 +765,7 @@ This plugin is similar to [vscode-lit-html](https://github.com/mjbvz/vscode-lit-
 Below is a comparison table of the two plugins:
 
 <!-- prettier-ignore -->
-| Feature                 | [vscode-lit-html](https://github.com/mjbvz/vscode-lit-html)   | [vscode-lit-plugin](https://github.com/JackRobards/vscode-lit-plugin) |
+| Feature                 | [vscode-lit-html](https://github.com/mjbvz/vscode-lit-html)   | [vscode-lit-plugin](https://github.com/JackRobards/lit-analyzer/tree/main/packages/vscode-lit-plugin) |
 |-------------------------|------------|------------|
 | CSS support             | ❌         | ✅         |
 | Goto definition         | ❌         | ✅         |
@@ -785,11 +793,11 @@ Below is a comparison table of the two plugins:
 
 All features are provided by these three libraries:
 
-- **[@jackolope/ts-lit-plugin](https://github.com/JackRobards/lit-analyzer)**: The typescript plugin that powers the logic through the typescript language service (code completion, type checking, eg.). Therefore issues regarding anything but syntax highlighting should be opened in `ts-lit-plugin` and not `vscode-lit-plugin`.
+- **[@jackolope/ts-lit-plugin](https://github.com/JackRobards/lit-analyzer)**: The typescript plugin that powers the logic through the typescript language service (code completion, type checking, eg.).
 - **[vscode-lit-html](https://github.com/mjbvz/vscode-lit-html)**: Provides highlighting for the html template tag.
 - **[vscode-styled-components](https://github.com/styled-components/vscode-styled-components)**: Provides highlighting for the css template tag.
 
-This library couples it all together and synchronizes relevant settings between vscode and `ts-lit-plugin`.
+This library couples it all together and synchronizes relevant settings between vscode and `@jackolope/ts-lit-plugin`.
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#contributors)
 
