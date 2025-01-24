@@ -294,6 +294,23 @@ tsTest("Attribute binding: the target attribute is correctly type checked when g
 	hasNoDiagnostics(t, diagnostics);
 });
 
+tsTest("Strings are assignable to types with converters", t => {
+	const { diagnostics } = getDiagnostics([
+		makeElement({
+			properties: [
+				`@property({ converter: {
+					fromAttribute(str) { return str.split(','); },
+					toAttribute(arr) { return arr.join(','); }
+				}})
+				complex: string[];`
+			],
+			fullPropertyDeclaration: true
+		}),
+		'html`<my-element complex="foo,bar"></my-element>`'
+	]);
+	hasNoDiagnostics(t, diagnostics);
+});
+
 tsTest("Attribute binding: any symbols are ignored on type checking", t => {
 	const { diagnostics } = getDiagnostics(`
 declare const value: boolean | unique symbol;
