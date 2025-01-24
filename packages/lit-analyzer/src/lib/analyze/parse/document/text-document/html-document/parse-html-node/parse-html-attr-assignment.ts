@@ -3,9 +3,8 @@ import type { HtmlNodeAttrAssignment } from "../../../../../types/html-node/html
 import { HtmlNodeAttrAssignmentKind } from "../../../../../types/html-node/html-node-attr-assignment-types.js";
 import type { HtmlNodeAttr } from "../../../../../types/html-node/html-node-attr-types.js";
 import type { Range } from "../../../../../types/range.js";
-import type { IP5NodeAttr, IP5TagNode } from "../parse-html-p5/parse-html-types.js";
-import { getSourceLocation } from "../parse-html-p5/parse-html-types.js";
 import type { ParseHtmlContext } from "./parse-html-context.js";
+import type { DefaultTreeAdapterTypes, Token } from "parse5";
 
 /**
  * Parses a html attribute assignment.
@@ -15,8 +14,8 @@ import type { ParseHtmlContext } from "./parse-html-context.js";
  * @param context
  */
 export function parseHtmlAttrAssignment(
-	p5Node: IP5TagNode,
-	p5Attr: IP5NodeAttr,
+	p5Node: DefaultTreeAdapterTypes.Element,
+	p5Attr: Token.Attribute,
 	htmlAttr: HtmlNodeAttr,
 	context: ParseHtmlContext
 ): HtmlNodeAttrAssignment | undefined {
@@ -70,13 +69,18 @@ export function parseHtmlAttrAssignment(
 	}
 }
 
-function getAssignmentLocation(p5Node: IP5TagNode, p5Attr: IP5NodeAttr, htmlAttr: HtmlNodeAttr, context: ParseHtmlContext): Range | undefined {
-	const sourceLocation = getSourceLocation(p5Node);
+function getAssignmentLocation(
+	p5Node: DefaultTreeAdapterTypes.Element,
+	p5Attr: Token.Attribute,
+	htmlAttr: HtmlNodeAttr,
+	context: ParseHtmlContext
+): Range | undefined {
+	const sourceLocation = p5Node.sourceCodeLocation;
 	if (sourceLocation == null) {
 		return undefined;
 	}
 
-	const htmlAttrLocation = (sourceLocation.startTag.attrs || {})[p5Attr.name];
+	const htmlAttrLocation = ((sourceLocation.startTag as Token.LocationWithAttributes)?.attrs || {})[p5Attr.name];
 	if (htmlAttrLocation == null) return undefined;
 
 	const nameEndOffset = htmlAttr.location.name.end;

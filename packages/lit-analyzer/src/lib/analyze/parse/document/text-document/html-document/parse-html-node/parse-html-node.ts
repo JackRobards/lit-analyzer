@@ -2,8 +2,7 @@ import { TS_IGNORE_FLAG } from "../../../../../constants.js";
 import type { HtmlNode, IHtmlNodeBase, IHtmlNodeSourceCodeLocation } from "../../../../../types/html-node/html-node-types.js";
 import { HtmlNodeKind } from "../../../../../types/html-node/html-node-types.js";
 import { isCommentNode, isTagNode } from "../parse-html-p5/parse-html.js";
-import type { IP5TagNode, P5Node } from "../parse-html-p5/parse-html-types.js";
-import { getSourceLocation } from "../parse-html-p5/parse-html-types.js";
+import type { DefaultTreeAdapterTypes } from "parse5";
 import { parseHtmlNodeAttrs } from "./parse-html-attribute.js";
 import type { ParseHtmlContext } from "./parse-html-context.js";
 
@@ -13,7 +12,7 @@ import type { ParseHtmlContext } from "./parse-html-context.js";
  * @param parent
  * @param context
  */
-export function parseHtmlNodes(p5Nodes: P5Node[], parent: HtmlNode | undefined, context: ParseHtmlContext): HtmlNode[] {
+export function parseHtmlNodes(p5Nodes: DefaultTreeAdapterTypes.Node[], parent: HtmlNode | undefined, context: ParseHtmlContext): HtmlNode[] {
 	const htmlNodes: HtmlNode[] = [];
 	let ignoreNextNode = false;
 	for (const p5Node of p5Nodes) {
@@ -45,9 +44,13 @@ export function parseHtmlNodes(p5Nodes: P5Node[], parent: HtmlNode | undefined, 
  * @param parent
  * @param context
  */
-export function parseHtmlNode(p5Node: IP5TagNode, parent: HtmlNode | undefined, context: ParseHtmlContext): HtmlNode | undefined {
+export function parseHtmlNode(
+	p5Node: DefaultTreeAdapterTypes.Element,
+	parent: HtmlNode | undefined,
+	context: ParseHtmlContext
+): HtmlNode | undefined {
 	// `sourceCodeLocation` will be undefined if the element was implicitly created by the parser.
-	if (getSourceLocation(p5Node) == null) return undefined;
+	if (p5Node.sourceCodeLocation == null) return undefined;
 
 	const htmlNodeBase: IHtmlNodeBase = {
 		tagName: p5Node.tagName.toLowerCase(),
@@ -75,19 +78,19 @@ export function parseHtmlNode(p5Node: IP5TagNode, parent: HtmlNode | undefined, 
  * @param p5Node
  * @param context
  */
-function makeHtmlNodeLocation(p5Node: IP5TagNode, context: ParseHtmlContext): IHtmlNodeSourceCodeLocation {
-	const loc = getSourceLocation(p5Node)!;
+function makeHtmlNodeLocation(p5Node: DefaultTreeAdapterTypes.Element, context: ParseHtmlContext): IHtmlNodeSourceCodeLocation {
+	const loc = p5Node.sourceCodeLocation!;
 
 	return {
 		start: loc.startOffset,
 		end: loc.endOffset,
 		name: {
-			start: loc.startTag.startOffset + 1, // take '<' into account
-			end: loc.startTag.startOffset + 1 + p5Node.tagName.length
+			start: loc.startTag!.startOffset + 1, // take '<' into account
+			end: loc.startTag!.startOffset + 1 + p5Node.tagName.length
 		},
 		startTag: {
-			start: loc.startTag.startOffset,
-			end: loc.startTag.endOffset
+			start: loc.startTag!.startOffset,
+			end: loc.startTag!.endOffset
 		},
 		endTag:
 			loc.endTag == null
