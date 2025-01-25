@@ -775,7 +775,8 @@
 					"source.jsx",
 					"source.ts",
 					"source.tsx",
-					"text.html.basic"
+					"text.html.basic",
+					"text.html.derivative"
 				],
 				"scopeName": "inline.lit-html",
 				"path": "./syntaxes/vscode-lit-html/lit-html.json",
@@ -792,7 +793,8 @@
 					"source.jsx",
 					"source.ts",
 					"source.tsx",
-					"text.html.basic"
+					"text.html.basic",
+					"text.html.derivative"
 				],
 				"scopeName": "inline.lit-html.string.injection",
 				"path": "./syntaxes/vscode-lit-html/lit-html-string-injection.json",
@@ -807,7 +809,8 @@
 					"source.jsx",
 					"source.ts",
 					"source.tsx",
-					"text.html.basic"
+					"text.html.basic",
+					"text.html.derivative"
 				],
 				"scopeName": "inline.lit-html.style.injection",
 				"path": "./syntaxes/vscode-lit-html/lit-html-style-injection.json",
@@ -822,7 +825,8 @@
 					"source.jsx",
 					"source.ts",
 					"source.tsx",
-					"text.html.basic"
+					"text.html.basic",
+					"text.html.derivative"
 				],
 				"scopeName": "inline.lit-html-svg",
 				"path": "./syntaxes/vscode-lit-html/lit-html-svg.json",
