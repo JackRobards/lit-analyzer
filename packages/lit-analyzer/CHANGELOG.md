@@ -1,5 +1,15 @@
 # @jackolope/lit-analyzer
 
+## 3.0.1
+
+### Patch Changes
+
+- [#133](https://github.com/JackRobards/lit-analyzer/pull/133) [`37332b5`](https://github.com/JackRobards/lit-analyzer/commit/37332b5843034cb7a30575b93ec5b5d13dc7a65c) Thanks [@JackRobards](https://github.com/JackRobards)! - Update parse5 logic to use the built-in types instead of custom ones
+
+- [#135](https://github.com/JackRobards/lit-analyzer/pull/135) [`63ee9f6`](https://github.com/JackRobards/lit-analyzer/commit/63ee9f6ab488927d2e464b039014d62ac9793ec9) Thanks [@JackRobards](https://github.com/JackRobards)! - fix: Take the presence of converter functions into account for attributes with no-complex-attribute-binding and no-incompatible-type-binding rules
+
+- [#111](https://github.com/JackRobards/lit-analyzer/pull/111) [`4322ba8`](https://github.com/JackRobards/lit-analyzer/commit/4322ba8f51207609eadb2d6f05c303b00274355c) Thanks [@JackRobards](https://github.com/JackRobards)! - Fix dependency visiting logic to exclude imports with type-only bindings
+
 ## 3.0.0
 
 ### Major Changes
