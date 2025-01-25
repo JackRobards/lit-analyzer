@@ -1,6 +1,6 @@
 {
 	"name": "@jackolope/lit-analyzer",
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"description": "CLI that type checks bindings in lit-html templates",
 	"author": "runem",
 	"license": "MIT",
