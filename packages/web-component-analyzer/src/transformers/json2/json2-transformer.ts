@@ -1,6 +1,6 @@
 import { basename, relative } from "path";
 import { isSimpleType, toSimpleType } from "ts-simple-type";
-import * as tsModule from "typescript";
+import tsModule from "typescript";
 import type { Node, Program, SourceFile, Type, TypeChecker } from "typescript";
 import type { AnalyzerResult } from "../../analyze/types/analyzer-result";
 import type { ComponentDeclaration, ComponentHeritageClause } from "../../analyze/types/component-declaration";

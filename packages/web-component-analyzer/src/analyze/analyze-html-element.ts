@@ -1,4 +1,4 @@
-import * as tsModule from "typescript";
+import tsModule from "typescript";
 import type { Node, Program } from "typescript";
 import type { AnalyzerVisitContext } from "./analyzer-visit-context";
 import { DEFAULT_COMPONENT_DECLARATION_CACHE, DEFAULT_FEATURE_COLLECTION_CACHE } from "./constants";

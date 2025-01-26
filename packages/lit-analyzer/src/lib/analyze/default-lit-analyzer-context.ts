@@ -1,4 +1,4 @@
-import * as tsMod from "typescript";
+import tsMod from "typescript";
 import type { HostCancellationToken, Program, SourceFile, TypeChecker } from "typescript";
 import type * as tsServer from "typescript/lib/tsserverlibrary.js";
 import { analyzeHTMLElement, analyzeSourceFile } from "@jackolope/web-component-analyzer";

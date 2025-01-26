@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from "fs";
 import { dirname, join } from "path";
-import * as tsModule from "typescript";
+import tsModule from "typescript";
 import type { CompilerOptions, Program, ScriptTarget, SourceFile, System, TypeChecker } from "typescript";
 import { ScriptKind } from "typescript";
 //import * as ts from "typescript";
