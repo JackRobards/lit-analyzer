@@ -1,16 +1,16 @@
 import { existsSync, readFileSync } from "fs";
 import type { CompilerOptions, Program, SourceFile } from "typescript";
-import {
-	parseJsonConfigFileContent,
-	sys,
-	createProgram,
-	findConfigFile,
-	ModuleKind,
-	ModuleResolutionKind,
-	readConfigFile,
-	ScriptTarget
-} from "typescript";
 import type { LitAnalyzerConfig } from "../analyze/lit-analyzer-config.js";
+
+// Since we use the project version of TypeScript `typescript`, we must use a default import here for compatibility. Not all of these modules are exported by name in older versions.
+// If we only supported TypeScript >= 5.5, then we could change this back to a normal, non-default, import.
+// The update that fixed this: https://devblogs.microsoft.com/typescript/announcing-typescript-5-5/#easier-api-consumption-from-ecmascript-modules
+//
+// Without this, the error message we can run into is:
+// SyntaxError: Named export 'ModuleKind' not found. The requested module 'typescript' is a CommonJS module, which may not support all module.exports as named exports.
+// CommonJS modules can always be imported via the default export, for example using:
+import pkg from "typescript";
+const { parseJsonConfigFileContent, sys, createProgram, findConfigFile, ModuleKind, ModuleResolutionKind, readConfigFile, ScriptTarget } = pkg;
 
 const requiredCompilerOptions: CompilerOptions = {
 	noEmitOnError: false,
