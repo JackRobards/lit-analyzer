@@ -1,5 +1,11 @@
 # @jackolope/lit-analyzer
 
+## 3.0.2
+
+### Patch Changes
+
+- [#140](https://github.com/JackRobards/lit-analyzer/pull/140) [`73f7f4e`](https://github.com/JackRobards/lit-analyzer/commit/73f7f4e1c7ae5160faff6cb8f3b3f254ef4a0835) Thanks [@JackRobards](https://github.com/JackRobards)! - fix: lit-analyzer CLI stopped working when the workspace version of TypeScript was < 5.5
+
 ## 3.0.1
 
 ### Patch Changes
