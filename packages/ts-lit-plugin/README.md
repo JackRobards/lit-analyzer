@@ -145,7 +145,7 @@ Each rule can have severity of `off`, `warning` or `error`. You can toggle rules
 | [no-incompatible-property-type](#-no-incompatible-property-type) | When using the @property decorator in Typescript, the property option `type` is checked against the declared property Typescript type | warn | error |
 | [no-invalid-attribute-name](#-no-invalid-attribute-name)         | When using the property option `attribute`, the value is checked to make sure it's a valid attribute name. | error | error |
 | [no-invalid-tag-name](#-no-invalid-tag-name)                     | When defining a custom element the tag name is checked to make sure it's valid. | error | error |
-| [no-property-visibility-mismatch](#no-property-visibility-mismatch) | This rule will ensure public properties use `@property` and non-public properties use `@internalProperty`. | off | warn |
+| [no-property-visibility-mismatch](#no-property-visibility-mismatch) | This rule will ensure public properties use `@property` and non-public properties use `@state`. | off | warn |
 
 **Validating CSS**
 
@@ -663,11 +663,11 @@ customElements.define("correct-element-name", MyElement);
 
 When using the `@property` decorator, your property should be publicly visible,
 expected to be exposed to consumers of the element. Private and protected
-properties however, should make use of the `@internalProperty` decorator
+properties however, should make use of the `@state` decorator
 instead.
 
 This rule will ensure public properties use `@property` and non-public
-properties use `@internalProperty`.
+properties use `@state`.
 
 The following example is considered a warning:
 

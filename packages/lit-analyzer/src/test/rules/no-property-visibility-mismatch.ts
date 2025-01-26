@@ -8,16 +8,14 @@ function makeTestElement({ properties }: { properties?: Array<{ visibility: stri
 		fileName: "my-element.ts",
 		text: `
 		class MyElement extends HTMElement {
-			${(properties || [])
-				.map(({ name, visibility, internal }) => `@${internal ? "internalProperty" : "property"}() ${visibility} ${name}: any;`)
-				.join("\n")}
+			${(properties || []).map(({ name, visibility, internal }) => `@${internal ? "state" : "property"}() ${visibility} ${name}: any;`).join("\n")}
 		};
 		customElements.define("my-element", MyElement);
 		`
 	};
 }
 
-tsTest("Report public @internalProperty properties", t => {
+tsTest("Report public @state properties", t => {
 	const { diagnostics } = getDiagnostics(
 		makeTestElement({
 			properties: [{ name: "foo", visibility: "public", internal: true }]

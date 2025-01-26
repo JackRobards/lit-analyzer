@@ -44,16 +44,16 @@ const rule: RuleModule = {
 
 		// Get the decorator of interest
 		const decoratorName = decoratorIdentifier.text;
-		const hasInternalDecorator = decoratorName === "internalProperty";
+		const hasInternalDecorator = decoratorName === "state";
 		const hasPropertyDecorator = decoratorName === "property";
 
-		// Handle cases where @internalProperty decorator is used, but the property is public
+		// Handle cases where @state decorator is used, but the property is public
 		if (hasInternalDecorator && (member.visibility === "public" || member.visibility == null)) {
 			const inJsFile = context.file.fileName.endsWith(".js");
 
 			context.report({
 				location: rangeFromNode(decoratorIdentifier),
-				message: `'${member.propName}' is marked as an internal property (@internalProperty) but is publicly accessible.`,
+				message: `'${member.propName}' is marked as an internal property (@state) but is publicly accessible.`,
 				...(inJsFile
 					? {
 							// We are in Javascript context. Add "@properted" or "@private" JSDoc
@@ -119,10 +119,10 @@ const rule: RuleModule = {
 			context.report({
 				location: rangeFromNode(decoratorIdentifier),
 				message: `'${member.propName}' is not publicly accessible but is marked as a public property (@property).`,
-				fixMessage: "Use the '@internalProperty' decorator instead?",
+				fixMessage: "Use the '@state' decorator instead?",
 				fix: () => {
 					// Return a code action that can replace the identifier of the decorator
-					const newText = `internalProperty`;
+					const newText = `state`;
 
 					// Change identifier to "internal property"
 					const actions: RuleFixAction[] = [
@@ -139,9 +139,9 @@ const rule: RuleModule = {
 					);
 
 					if (objectLiteralNode != null) {
-						// Remove the configuration if the config doesn't have any shared properties with the "internalProperty" config
-						const internalPropertyConfigProperties = ["hasChanged"];
-						if (!objectLiteralNode.properties?.some(propertyNode => internalPropertyConfigProperties.includes(propertyNode.name?.getText() || ""))) {
+						// Remove the configuration if the config doesn't have any shared properties with the "state" config
+						const stateConfigProperties = ["hasChanged"];
+						if (!objectLiteralNode.properties?.some(propertyNode => stateConfigProperties.includes(propertyNode.name?.getText() || ""))) {
 							actions.push({
 								kind: "changeRange",
 								range: rangeFromNode(objectLiteralNode),
