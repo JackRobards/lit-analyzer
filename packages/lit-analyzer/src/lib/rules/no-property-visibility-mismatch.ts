@@ -56,7 +56,7 @@ const rule: RuleModule = {
 				message: `'${member.propName}' is marked as an internal property (@state) but is publicly accessible.`,
 				...(inJsFile
 					? {
-							// We are in Javascript context. Add "@properted" or "@private" JSDoc
+							// We are in Javascript context. Add "@protected" or "@private" JSDoc
 						}
 					: {
 							// We are in Typescript context. Add "protected" or "private" keyword
@@ -116,6 +116,11 @@ const rule: RuleModule = {
 
 		// Handle cases where @property decorator is used, but the property is not public
 		else if (hasPropertyDecorator && member.visibility !== "public") {
+			// If the Lit `state` option is set on the decorator, then that is also considered valid
+			if (member.meta?.state) {
+				return;
+			}
+
 			context.report({
 				location: rangeFromNode(decoratorIdentifier),
 				message: `'${member.propName}' is not publicly accessible but is marked as a public property (@property).`,
