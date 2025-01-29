@@ -1,13 +1,14 @@
-import { customElement, html, LitElement, property, internalProperty } from "lit-element";
+import { html, LitElement } from "lit";
+import { customElement, property, state } from "lit/decorators.js";
 import "./my-element-2";
 
 @customElement("my-element")
 export class MyElement extends LitElement {
 	@property({ attribute: "hell>o" }) test: number | undefined;
 
-	@property({ type: Date }) test2: number | undefined;
+	@property({ type: Date }) private test2: number | undefined;
 
-	@internalProperty() internal: number | undefined;
+	@state() internal: number | undefined;
 
 	static get observedAttributes() {
 		return ["this is a test", "testing"];

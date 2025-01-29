@@ -2,10 +2,10 @@
 	"name": "dev",
 	"version": "1.0.0",
 	"description": "",
+	"type": "module",
 	"dependencies": {
-		"lit-element": "^2.3.1",
-		"lit-html": "^1.2.1",
-		"@jackolope/ts-lit-plugin": "file:../packages/ts-lit-plugin"
+		"@jackolope/ts-lit-plugin": "file:../packages/ts-lit-plugin",
+		"lit": "^3.2.1"
 	},
 	"devDependencies": {
 		"typescript": "~5.7.2"
