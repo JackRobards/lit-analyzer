@@ -28,19 +28,3 @@ export function arrayFlat<T>(items: (T[] | T)[]): T[] {
 export function arrayDefined<T>(array: (T | undefined)[]): T[] {
 	return array.filter((item): item is NonNullable<typeof item> => item != null);
 }
-
-/**
- * Filters an array returning only unique itesm
- * @param array
- */
-export function arrayDedupe<T>(array: T[]): T[] {
-	const uniqueItems: T[] = [];
-
-	for (const item of array) {
-		if (uniqueItems.indexOf(item) === -1) {
-			uniqueItems.push(item);
-		}
-	}
-
-	return uniqueItems;
-}

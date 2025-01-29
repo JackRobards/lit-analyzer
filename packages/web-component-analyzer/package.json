@@ -1,7 +1,7 @@
 {
 	"name": "@jackolope/web-component-analyzer",
 	"version": "3.0.0",
-	"description": "CLI that analyzes web components",
+	"description": "Utilities for analyzer the types of web components",
 	"main": "lib/cjs/api.js",
 	"module": "lib/esm/api.js",
 	"typings": "lib/cjs/src/api.d.ts",
@@ -18,12 +18,10 @@
 		"prepare": "npm run build",
 		"build": "wireit",
 		"watch": "rollup -c --watch",
-		"pretest": "cd dev && npm i",
 		"test": "wireit",
 		"test:all": "wireit",
 		"test:current": "wireit",
 		"eslint": "eslint src test",
-		"test:update": "ava --update-snapshots",
 		"test:watch": "ava --watch --color",
 		"prettier:check": "prettier --check \"src/**/*.{ts,tsx}\"",
 		"prettier:write": "prettier --write \"src/**/*.{ts,tsx}\""
@@ -93,17 +91,14 @@
 	},
 	"homepage": "https://github.com/JackRobards/lit-analyzer#readme",
 	"dependencies": {
-		"fast-glob": "^3.2.2",
 		"ts-simple-type": "2.0.0-next.0",
-		"typescript": "^5.7.2",
-		"yargs": "^17.7.2"
+		"typescript": "^5.7.2"
 	},
 	"devDependencies": {
 		"@rollup/plugin-node-resolve": "^16.0.0",
 		"@rollup/plugin-replace": "^6.0.2",
 		"@rollup/plugin-typescript": "^12.1.2",
 		"@types/node": "^22.13.5",
-		"@types/yargs": "^17.0.28",
 		"ava": "^6.2.0",
 		"cross-env": "^7.0.2",
 		"rollup": "^4.34.8",
@@ -117,7 +112,6 @@
 		"wireit": "^0.14.11"
 	},
 	"ava": {
-		"snapshotDir": "test/snapshots/results",
 		"extensions": [
 			"ts"
 		],
@@ -126,13 +120,9 @@
 		],
 		"files": [
 			"test/**/*.ts",
-			"!test/{helpers,snapshots}/**/*"
+			"!test/helpers/**/*"
 		],
 		"timeout": "2m"
-	},
-	"bin": {
-		"wca": "cli.js",
-		"web-component-analyzer": "cli.js"
 	},
 	"engines": {
 		"node": ">=18"
