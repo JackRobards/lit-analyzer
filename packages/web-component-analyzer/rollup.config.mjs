@@ -8,7 +8,7 @@ const require = createRequire(import.meta.url);
 const { dirname } = require("path");
 const pkg = require("./package.json");
 const watch = { include: "src/**" };
-const external = ["typescript", "fast-glob", "path", "fs", "ts-simple-type", "yargs"];
+const external = ["typescript", "path", "fs", "ts-simple-type"];
 const replaceVersionConfig = {
 	VERSION: pkg.version,
 	delimiters: ["<@", "@>"],
@@ -19,8 +19,7 @@ export default [
 	// Standard module config
 	{
 		input: {
-			api: "src/api.ts",
-			cli: "src/cli.ts"
+			api: "src/api.ts"
 		},
 		output: [
 			{
@@ -45,8 +44,7 @@ export default [
 	// CommonJS config
 	{
 		input: {
-			api: "src/api.ts",
-			cli: "src/cli.ts"
+			api: "src/api.ts"
 		},
 		output: [
 			{

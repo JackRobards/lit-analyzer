@@ -1,8 +1,6 @@
-import type { SimpleType, SimpleTypeAlias } from "ts-simple-type";
-import { isSimpleType, typeToString } from "ts-simple-type";
+import type { SimpleType } from "ts-simple-type";
+import { typeToString } from "ts-simple-type";
 import type { Type, TypeChecker } from "typescript";
-import { TypeFormatFlags } from "typescript";
-import type { TransformerConfig } from "../transformers/transformer-config";
 
 /**
  * Returns a "type hint" from a type
@@ -11,17 +9,13 @@ import type { TransformerConfig } from "../transformers/transformer-config";
  * @param checker
  * @param config
  */
-export function getTypeHintFromType(
-	type: string | Type | SimpleType | undefined,
-	checker: TypeChecker,
-	config: TransformerConfig
-): string | undefined {
+export function getTypeHintFromType(type: string | Type | SimpleType | undefined, checker: TypeChecker): string | undefined {
 	if (type == null) return undefined;
 	if (typeof type === "string") return type;
 
 	let typeHint: string;
 
-	if (config.inlineTypes) {
+	/*if (config.inlineTypes) {
 		// Inline aliased types
 		if (isSimpleType(type)) {
 			// Expand a possible alias
@@ -35,10 +29,10 @@ export function getTypeHintFromType(
 			// The "InTypeAlias" flag expands the type.
 			typeHint = checker.typeToString(type, undefined, TypeFormatFlags.InTypeAlias);
 		}
-	} else {
-		// Transform types to string
-		typeHint = typeToString(type, checker);
-	}
+	} else {*/
+	// Transform types to string
+	// eslint-disable-next-line prefer-const
+	typeHint = typeToString(type, checker);
 
 	// Replace "anys" and "{}" with more human friendly representations
 	if (typeHint === "any") return undefined;
@@ -55,6 +49,6 @@ export function getTypeHintFromType(
  * Checks if a type is a type alias simple type
  * @param simpleType
  */
-function isUnionTypeAlias(simpleType: SimpleType): simpleType is SimpleTypeAlias {
-	return simpleType.kind === "ALIAS" && simpleType.target.kind === "UNION";
-}
+//function isUnionTypeAlias(simpleType: SimpleType): simpleType is SimpleTypeAlias {
+//	return simpleType.kind === "ALIAS" && simpleType.target.kind === "UNION";
+//}
