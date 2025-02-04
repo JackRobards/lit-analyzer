@@ -6,12 +6,10 @@
 
 <br />
 
-<p align="center">
-		<a href="https://npmcharts.com/compare/@jackolope/ts-lit-plugin?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/@jackolope/ts-lit-plugin.svg" height="20"/></a>
+<a href="https://npmcharts.com/compare/@jackolope/ts-lit-plugin?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/@jackolope/ts-lit-plugin.svg" height="20"/></a>
 <a href="https://www.npmjs.com/package/@jackolope/ts-lit-plugin"><img alt="NPM Version" src="https://img.shields.io/npm/v/@jackolope/ts-lit-plugin.svg" height="20"/></a>
-<a href="https://david-dm.org/JackRobards/lit-analyzer"><img alt="Dependencies" src="https://img.shields.io/david/JackRobards/lit-analyzer.svg" height="20"/></a>
+[![Dependencies](https://img.shields.io/librariesio/release/npm/@jackolope/ts-lit-plugin)](https://libraries.io/npm/@jackolope/ts-lit-plugin)
 <a href="https://github.com/JackRobards/lit-analyzer/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/JackRobards/lit-analyzer.svg" height="20"/></a>
-	</p>
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/5372940/62078476-02c1ec00-b24d-11e9-8de5-1322012cbde2.gif" alt="Lit plugin GIF"/>
