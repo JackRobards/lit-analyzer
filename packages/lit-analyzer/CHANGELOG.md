@@ -1,5 +1,11 @@
 # @jackolope/lit-analyzer
 
+## 3.1.0
+
+### Minor Changes
+
+- [#142](https://github.com/JackRobards/lit-analyzer/pull/142) [`d83e9fb`](https://github.com/JackRobards/lit-analyzer/commit/d83e9fb20d5285a8df21e5246a2e48b365b75bff) Thanks [@JackRobards](https://github.com/JackRobards)! - feat: Update no-property-visibility-mismatch rule to check for @state decorator instead of deprecated @internalProperty decorator
+
 ## 3.0.2
 
 ### Patch Changes
