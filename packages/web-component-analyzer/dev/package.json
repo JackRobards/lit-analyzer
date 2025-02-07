@@ -21,7 +21,7 @@
 		"@polymer/iron-input": "^3.0.1",
 		"@polymer/paper-button": "^3.0.1",
 		"@vaadin/vaadin-button": "^23.5.11",
-		"@vaadin/vaadin-upload": "^23.5.11",
+		"@vaadin/vaadin-upload": "^23.5.12",
 		"elix": "^15.0.1",
 		"lit-element": "^4.1.1",
 		"lit-html": "^3.2.1",
