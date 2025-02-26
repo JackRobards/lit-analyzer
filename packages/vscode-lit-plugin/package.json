@@ -173,7 +173,7 @@
 		"@types/node": "^22.13.5",
 		"@types/vscode": "^1.30.0",
 		"@vscode/vsce": "^3.2.2",
-		"esbuild": "^0.24.2",
+		"esbuild": "^0.25.0",
 		"fast-glob": "^3.2.11",
 		"@jackolope/lit-analyzer": "^3.0.0",
 		"mocha": "^11.1.0",
