@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.0
+
+### Major Changes
+
+- [#155](https://github.com/JackRobards/lit-analyzer/pull/155) [`e827ea1`](https://github.com/JackRobards/lit-analyzer/commit/e827ea1cbb36ce518b87033a08b9f7d2efac8f7a) Thanks [@JackRobards](https://github.com/JackRobards)! - refactor: Remove CLI functionality from web-component-analyzer
+
 ## 3.0.0
 
 ### Major Changes
