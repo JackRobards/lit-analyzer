@@ -1,5 +1,17 @@
 # @jackolope/ts-lit-plugin
 
+## 3.1.0
+
+### Minor Changes
+
+- [#142](https://github.com/JackRobards/lit-analyzer/pull/142) [`d83e9fb`](https://github.com/JackRobards/lit-analyzer/commit/d83e9fb20d5285a8df21e5246a2e48b365b75bff) Thanks [@JackRobards](https://github.com/JackRobards)! - feat: Update no-property-visibility-mismatch rule to check for @state decorator instead of deprecated @internalProperty decorator
+
+### Patch Changes
+
+- Updated dependencies [[`d83e9fb`](https://github.com/JackRobards/lit-analyzer/commit/d83e9fb20d5285a8df21e5246a2e48b365b75bff), [`e827ea1`](https://github.com/JackRobards/lit-analyzer/commit/e827ea1cbb36ce518b87033a08b9f7d2efac8f7a)]:
+  - @jackolope/lit-analyzer@3.1.0
+  - @jackolope/web-component-analyzer@4.0.0
+
 ## 3.0.0
 
 ### Major Changes
