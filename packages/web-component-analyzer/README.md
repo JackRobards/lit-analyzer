@@ -3,7 +3,7 @@
 <p align="center">
 	<a href="https://npmcharts.com/compare/@jackolope/web-component-analyzer?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/@jackolope/web-component-analyzer.svg" height="20"/></a>
 	<a href="https://www.npmjs.com/package/@jackolope/web-component-analyzer"><img alt="NPM Version" src="https://img.shields.io/npm/v/@jackolope/web-component-analyzer.svg" height="20"/></a>
-	<a href="https://david-dm.org/JackRobards/lit-analyzer"><img alt="Dependencies" src="https://img.shields.io/david/JackRobards/lit-analyzer.svg" height="20"/></a>
+[![Dependencies](https://img.shields.io/librariesio/release/npm/@jackolope/web-component-analyzer)](https://libraries.io/npm/@jackolope/web-component-analyzer)
 	<a href="https://github.com/JackRobards/lit-analyzer/graphs/contributors"><img alt="Contributors" src="https://img.shields.io/github/contributors/JackRobards/lit-analyzer.svg" height="20"/></a>
 </p>
 
