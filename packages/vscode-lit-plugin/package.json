@@ -171,7 +171,7 @@
 	"devDependencies": {
 		"@types/mocha": "^10.0.10",
 		"@types/node": "^22.13.5",
-		"@types/vscode": "^1.30.0",
+		"@types/vscode": "^1.97.0",
 		"@vscode/vsce": "^3.2.2",
 		"esbuild": "^0.25.0",
 		"fast-glob": "^3.2.11",
