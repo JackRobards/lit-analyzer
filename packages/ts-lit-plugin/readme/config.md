@@ -10,6 +10,7 @@ You can configure this plugin through your `tsconfig.json`.
   "compilerOptions": {
     "plugins": [
       {
+				// Also supports the name `ts-lit-plugin` for compatibility with the original version
         "name": "@jackolope/ts-lit-plugin",
         "strict": true,
         "rules": {

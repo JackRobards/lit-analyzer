@@ -64,6 +64,7 @@ You can configure this plugin through your `tsconfig.json`.
   "compilerOptions": {
     "plugins": [
       {
+				// Also supports the name `ts-lit-plugin` for compatibility with the original version
         "name": "@jackolope/ts-lit-plugin",
         "strict": true,
         "rules": {
@@ -132,7 +133,7 @@ Each rule can have severity of `off`, `warning` or `error`. You can toggle rules
 | [no-noncallable-event-binding](#-no-noncallable-event-binding)   | Disallow event listener bindings with a noncallable type. | error | error |
 | [no-boolean-in-attribute-binding](#-no-boolean-in-attribute-binding) | Disallow attribute bindings with a boolean type. | error | error |
 | [no-complex-attribute-binding](#-no-complex-attribute-binding)   | Disallow attribute bindings with a complex type. | error | error |
-| [no-nullable-attribute-binding](#-no-nullable-attribute-binding) | Disallow attribute bindings with nullable types such as "null" or "undefined".  | error | error |
+| [no-nullable-attribute-binding](#-no-nullable-attribute-binding) | Disallow attribute bindings with nullable types such as "null" or "undefined". This is not needed in newer versions of Lit, but can still be configured if desired.  | off | off |
 | [no-incompatible-type-binding](#-no-incompatible-type-binding)   | Disallow incompatible type in bindings.  | error | error |
 | [no-invalid-directive-binding](#-no-invalid-directive-binding)   | Disallow using built-in directives in unsupported bindings. | error | error |
 | [no-unintended-mixed-binding](#-no-unintended-mixed-binding)   | Disallow mixed value bindings where a character `'`, `"`, `}` or `/` is unintentionally included in the binding. | warning | warning |
@@ -453,6 +454,8 @@ html`<my-list .listItems="${listItems}"></my-list>`
 ```
 
 #### ⭕️ no-nullable-attribute-binding
+
+This is not needed in newer versions of Lit, but can still be configured if desired.
 
 Binding `undefined` or `null` in an attribute binding will result in binding the string "undefined" or "null". Here you should probably wrap your expression in the "ifDefined" directive.
 

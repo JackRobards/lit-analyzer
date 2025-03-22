@@ -112,12 +112,13 @@ export function init({ typescript }: { typescript: typeof ts }): tsServer.server
 
 /**
  * Resolves the nearest tsconfig.json and returns the configuration seed within the plugins section for "@jackolope/ts-lit-plugin"
+ * Also supports `ts-lit-plugin` to support code configured with the original ts-lit-plugin.
  */
 function readLitAnalyzerConfigFromCompilerOptions(compilerOptions: CompilerOptions): Partial<LitAnalyzerConfig> | undefined {
 	// Finds the plugin section
 	if ("plugins" in compilerOptions) {
 		const plugins = compilerOptions.plugins as ({ name: string } & Partial<LitAnalyzerConfig>)[];
-		const tsLitPluginOptions = plugins.find(plugin => plugin.name === "@jackolope/ts-lit-plugin");
+		const tsLitPluginOptions = plugins.find(plugin => plugin.name === "@jackolope/ts-lit-plugin" || plugin.name === "ts-lit-plugin");
 		if (tsLitPluginOptions != null) {
 			return tsLitPluginOptions;
 		}
