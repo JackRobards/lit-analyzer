@@ -217,6 +217,30 @@ tsTest("Property binding: Boolean type expression is not assignable to boolean p
 	hasNoDiagnostics(t, diagnostics);
 });
 
+tsTest("Property binding: Type expression correctly removes 'undefined' from the type union 1", t => {
+	const { diagnostics } = getDiagnostics([
+		makeElement({ properties: ["foo = ''"] }),
+		'html`<my-element .foo="${"bar" as string | undefined}"></my-element>`'
+	]);
+	hasNoDiagnostics(t, diagnostics);
+});
+
+tsTest("Property binding: Type expression correctly removes 'undefined' from the type union 2", t => {
+	const { diagnostics } = getDiagnostics([
+		makeElement({ properties: ["foo: string | number = 0"] }),
+		'html`<my-element .foo="${5 as string | number | undefined}"></my-element>`'
+	]);
+	hasNoDiagnostics(t, diagnostics);
+});
+
+tsTest("Property binding: Type expression correctly reports a type union that is only partially met", t => {
+	const { diagnostics } = getDiagnostics([
+		makeElement({ properties: ["foo: number = 0"] }),
+		'html`<my-element .foo="${"bar" as string | number}"></my-element>`'
+	]);
+	hasDiagnostic(t, diagnostics, "no-incompatible-type-binding");
+});
+
 tsTest("Attribute binding: 'ifDefined' directive correctly removes 'undefined' from the type union 1", t => {
 	const { diagnostics } = getDiagnostics('type ifDefined = Function; html`<input maxlength="${ifDefined({} as number | undefined)}" />`');
 	hasNoDiagnostics(t, diagnostics);
