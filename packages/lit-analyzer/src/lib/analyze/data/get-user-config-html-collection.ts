@@ -6,8 +6,9 @@ import type { HtmlAttr, HtmlDataCollection, HtmlEvent, HtmlTag } from "../parse/
 import { mergeHtmlAttrs, mergeHtmlEvents, mergeHtmlTags } from "../parse/parse-html-data/html-tag.js";
 import { parseVscodeHtmlData } from "../parse/parse-html-data/parse-vscode-html-data.js";
 import { lazy } from "../util/general-util.js";
+import type { LitAnalyzerContext } from "../lit-analyzer-context.js";
 
-export function getUserConfigHtmlCollection(config: LitAnalyzerConfig): HtmlDataCollection {
+export function getUserConfigHtmlCollection(config: LitAnalyzerConfig, context: LitAnalyzerContext): HtmlDataCollection {
 	const collection = (() => {
 		let collection: HtmlDataCollection = { tags: [], global: {} };
 		for (const customHtmlData of Array.isArray(config.customHtmlData) ? config.customHtmlData : [config.customHtmlData]) {
@@ -16,7 +17,7 @@ export function getUserConfigHtmlCollection(config: LitAnalyzerConfig): HtmlData
 					typeof customHtmlData === "string" && existsSync(customHtmlData)
 						? JSON.parse(readFileSync(customHtmlData, "utf8").toString())
 						: customHtmlData;
-				const parsedCollection = parseVscodeHtmlData(data);
+				const parsedCollection = parseVscodeHtmlData(data, context);
 				collection = {
 					tags: mergeHtmlTags([...collection.tags, ...parsedCollection.tags]),
 					global: {
@@ -25,7 +26,7 @@ export function getUserConfigHtmlCollection(config: LitAnalyzerConfig): HtmlData
 					}
 				};
 			} catch (e) {
-				//logger.error("Error parsing user configuration 'customHtmlData'", e, customHtmlData);
+				context.logger.error("Error parsing user configuration 'customHtmlData'", e, customHtmlData);
 			}
 		}
 		return collection;
