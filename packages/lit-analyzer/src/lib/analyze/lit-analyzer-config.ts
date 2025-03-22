@@ -48,7 +48,7 @@ const DEFAULT_RULES_SEVERITY: Record<LitAnalyzerRuleId, [LitAnalyzerRuleSeverity
 	"no-noncallable-event-binding": ["error", "error"],
 	"no-boolean-in-attribute-binding": ["error", "error"],
 	"no-complex-attribute-binding": ["error", "error"],
-	"no-nullable-attribute-binding": ["error", "error"],
+	"no-nullable-attribute-binding": ["off", "off"],
 	"no-incompatible-type-binding": ["error", "error"],
 	"no-invalid-directive-binding": ["error", "error"],
 	"no-incompatible-property-type": ["warn", "error"],
