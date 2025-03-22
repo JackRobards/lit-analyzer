@@ -166,7 +166,7 @@ function validateLitPropertyConfig(
 	}
 
 	// If no type has been specified, suggest what to use as the @property type
-	else if (litConfig.attribute !== false) {
+	else if (litConfig.attribute !== false && !litConfig.state) {
 		// Don't do anything if there are multiple possibilities for a type.
 		if (isAssignableTo("ANY")) {
 			return;
