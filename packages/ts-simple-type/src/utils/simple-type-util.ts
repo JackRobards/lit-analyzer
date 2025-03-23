@@ -1,7 +1,5 @@
 import { DEFAULT_GENERIC_PARAMETER_TYPE } from "../constants";
-import {
-	isSimpleTypeLiteral,
-	PRIMITIVE_TYPE_KINDS,
+import type {
 	SimpleType,
 	SimpleTypeBooleanLiteral,
 	SimpleTypeGenericArguments,
@@ -10,6 +8,7 @@ import {
 	SimpleTypeTuple,
 	SimpleTypeUndefined
 } from "../simple-type";
+import { isSimpleTypeLiteral, PRIMITIVE_TYPE_KINDS } from "../simple-type";
 import { resolveType } from "./resolve-type";
 
 /**

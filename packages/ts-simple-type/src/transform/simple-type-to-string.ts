@@ -1,4 +1,5 @@
-import { isSimpleTypePrimitive, SimpleType, SimpleTypeFunctionParameter } from "../simple-type";
+import type { SimpleType, SimpleTypeFunctionParameter } from "../simple-type";
+import { isSimpleTypePrimitive } from "../simple-type";
 
 /**
  * Converts a simple type to a string.

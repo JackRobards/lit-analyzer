@@ -1,9 +1,8 @@
-import * as tsModule from "typescript";
-import { Declaration, Node, Signature, SignatureDeclaration, Symbol as ESSymbol, Type, TypeChecker } from "typescript";
+import type * as tsModule from "typescript";
+import type { Declaration, Node, Signature, SignatureDeclaration, Symbol as ESSymbol, Type, TypeChecker } from "typescript";
 import { inspect } from "util";
 import { DEFAULT_TYPE_CACHE } from "../constants";
-import {
-	isSimpleType,
+import type {
 	SimpleType,
 	SimpleTypeAlias,
 	SimpleTypeEnumMember,
@@ -16,6 +15,7 @@ import {
 	SimpleTypeMethod,
 	SimpleTypeObject
 } from "../simple-type";
+import { isSimpleType } from "../simple-type";
 import { getTypescriptModule } from "../ts-module";
 import { simplifySimpleTypes } from "../utils/simple-type-util";
 import {
@@ -661,8 +661,7 @@ function getTypeParameters(obj: ESSymbol | Declaration | undefined, options: ToS
 	return undefined;
 }
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
+// @ts-expect-error - This is unused, but useful for debugging
 function log(input: unknown, d = 3) {
 	const str = inspect(input, { depth: d, colors: true });
 

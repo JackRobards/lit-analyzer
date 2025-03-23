@@ -1,4 +1,5 @@
-import { isSimpleType, SimpleType } from "../simple-type";
+import type { SimpleType } from "../simple-type";
+import { isSimpleType } from "../simple-type";
 
 const TYPE_REF_PREFIX = "__REF__";
 

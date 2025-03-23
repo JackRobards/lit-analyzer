@@ -1,5 +1,5 @@
 import { DEFAULT_GENERIC_PARAMETER_TYPE } from "../constants";
-import { SimpleType, SimpleTypeGenericArguments, SimpleTypeGenericParameter } from "../simple-type";
+import type { SimpleType, SimpleTypeGenericArguments, SimpleTypeGenericParameter } from "../simple-type";
 import { extendTypeParameterMap } from "./simple-type-util";
 
 export function resolveType(

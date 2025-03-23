@@ -1,11 +1,25 @@
+/* eslint-disable no-console */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { basename, relative, resolve } from "path";
-import { CompilerOptions, convertCompilerOptionsFromJson, createProgram, findConfigFile, Program, readConfigFile, SourceFile, TypeChecker } from "typescript";
+import type {
+	CompilerOptions,
+	Program,
+	SourceFile,
+	TypeChecker
+} from "typescript";
+import {
+	convertCompilerOptionsFromJson,
+	createProgram,
+	findConfigFile,
+	readConfigFile
+} from "typescript";
 import { isAssignableToSimpleType } from "./src/is-assignable/is-assignable-to-simple-type";
 import { deserializeSimpleType, serializeSimpleType } from "./src/transform/serialize-simple-type";
-import { isSimpleType, SimpleType } from "./src/simple-type";
+import type { SimpleType } from "./src/simple-type";
+import { isSimpleType } from "./src/simple-type";
 import { toSimpleType } from "./src/transform/to-simple-type";
 import { visitNodeComparisons } from "./test/helpers/visit-type-comparisons";
+import type { TypeCheckerWithInternals } from "./src/is-assignable/is-assignable-to-type";
 
 const PLAYGROUND_DIRECTORY = resolve("playground");
 const PLAYGROUND_PATH_SF = resolve(PLAYGROUND_DIRECTORY, "playground.ts");
@@ -28,7 +42,6 @@ async function run() {
 	visitComparisons(sourceFile, program);
 }
 
-// @ts-ignore
 function ensurePlayground(): void {
 	if (!existsSync(PLAYGROUND_DIRECTORY)) {
 		console.log(`Directory '${relative(process.cwd(), PLAYGROUND_DIRECTORY)}' doesn't exists. Creating directory...`);
@@ -111,7 +124,7 @@ function visitComparisons(sourceFile: SourceFile, program: Program) {
 		const typeAString = checker.typeToString(typeA);
 		const typeBString = checker.typeToString(typeB);
 
-		const expected = (checker as any).isTypeAssignableTo(typeB, typeA);
+		const expected = (checker as TypeCheckerWithInternals).isTypeAssignableTo(typeB, typeA);
 
 		console.log(`\n------------- Checking line ${line} (${typeAString} === ${typeBString}) --------------`);
 
@@ -149,7 +162,9 @@ function visitComparisons(sourceFile: SourceFile, program: Program) {
 		if (actual !== expected) {
 			throw new Error(
 				[
-					expected ? "Expected types to be assignable, but tsSimpleType returned 'false'" : "Expected types not to be assignable, but tsSimpleType returned 'true'",
+					expected
+						? "Expected types to be assignable, but tsSimpleType returned 'false'"
+						: "Expected types not to be assignable, but tsSimpleType returned 'true'",
 					`Compiler options: ${JSON.stringify({ strict, strictNullChecks, strictFunctionTypes })}`,
 					`Line: ${line}`,
 					`Eager: ${eager}`,

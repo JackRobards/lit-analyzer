@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from "fs";
 import { dirname, join } from "path";
-import { CompilerOptions, createProgram, createSourceFile, getDefaultLibFileName, ModuleKind, Program, ScriptKind, ScriptTarget, SourceFile, sys } from "typescript";
+import type { CompilerOptions, Program, SourceFile} from "typescript";
+import { createProgram, createSourceFile, getDefaultLibFileName, ModuleKind, ScriptKind, ScriptTarget, sys } from "typescript";
 
 export interface ITestFile {
 	fileName: string;

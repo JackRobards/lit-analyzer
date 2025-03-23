@@ -1,5 +1,6 @@
-import { Type, TypeChecker } from "typescript";
-import { PRIMITIVE_TYPE_KINDS, SimpleType } from "../simple-type";
+import type { Type, TypeChecker } from "typescript";
+import type { SimpleType } from "../simple-type";
+import { PRIMITIVE_TYPE_KINDS } from "../simple-type";
 import { isTypeChecker } from "../utils/ts-util";
 import { isAssignableToSimpleTypeKind } from "./is-assignable-to-simple-type-kind";
 

@@ -1,7 +1,5 @@
 import { DEFAULT_GENERIC_PARAMETER_TYPE, DEFAULT_RESULT_CACHE, NEVER_TYPE } from "../constants";
-import {
-	isSimpleTypeLiteral,
-	isSimpleTypePrimitive,
+import type {
 	SimpleType,
 	SimpleTypeFunctionParameter,
 	SimpleTypeGenericArguments,
@@ -13,12 +11,13 @@ import {
 	SimpleTypeObjectTypeBase,
 	SimpleTypeTuple
 } from "../simple-type";
+import { isSimpleTypeLiteral, isSimpleTypePrimitive } from "../simple-type";
 import { simpleTypeToString } from "../transform/simple-type-to-string";
 import { and, or } from "../utils/list-util";
 import { resolveType as resolveTypeUnsafe } from "../utils/resolve-type";
 import { extendTypeParameterMap, getTupleLengthType } from "../utils/simple-type-util";
 import { isAssignableToSimpleTypeKind } from "./is-assignable-to-simple-type-kind";
-import { SimpleTypeComparisonOptions } from "./simple-type-comparison-options";
+import type { SimpleTypeComparisonOptions } from "./simple-type-comparison-options";
 
 interface IsAssignableToSimpleTypeInternalOptions {
 	config: SimpleTypeComparisonOptions;
@@ -931,8 +930,7 @@ function isAssignableToSimpleTypeInternal(typeA: SimpleType, typeB: SimpleType, 
 		}
 	}
 
-	// If we some how end up here (we shouldn't), return "true" as a safe fallback
-	// @ts-ignore
+	// @ts-expect-error - If we some how end up here (we shouldn't), return "true" as a safe fallback
 	return true;
 }
 

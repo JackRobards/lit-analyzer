@@ -1,5 +1,5 @@
 import { DEFAULT_GENERIC_PARAMETER_TYPE } from "../constants";
-import { SimpleType } from "../simple-type";
+import type { SimpleType } from "../simple-type";
 import { and, or } from "./list-util";
 import { extendTypeParameterMap } from "./simple-type-util";
 

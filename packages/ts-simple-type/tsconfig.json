@@ -1,17 +1,7 @@
 {
-	"include": ["src", "test", "./package.json"],
+	"extends": "../../tsconfig.json",
+	"include": ["./src/**/*", "./test/**/*", "./package.json", "./run-playground.ts", "./rollup.config.mjs"],
 	"compilerOptions": {
-		"incremental": true,
-		"target": "ES2018",
-		"module": "commonjs",
-		"lib": ["esnext"],
-		"outDir": "./dist",
-		"downlevelIteration": true,
-		"strict": true,
-		"noImplicitAny": true,
-		"allowUnusedLabels": false,
-		"allowUnreachableCode": false,
-		"noUnusedLocals": true,
-		"pretty": true
+		"outDir": "./dist"
 	}
 }

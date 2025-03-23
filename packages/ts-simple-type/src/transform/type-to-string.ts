@@ -1,5 +1,6 @@
-import { Type, TypeChecker } from "typescript";
-import { isSimpleType, SimpleType } from "../simple-type";
+import type { Type, TypeChecker } from "typescript";
+import type { SimpleType } from "../simple-type";
+import { isSimpleType } from "../simple-type";
 import { simpleTypeToString } from "./simple-type-to-string";
 
 /**
