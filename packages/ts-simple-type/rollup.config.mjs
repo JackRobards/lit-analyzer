@@ -1,7 +1,9 @@
 import ts from "@rollup/plugin-typescript";
-import { createRequire } from "module";
 
+// create a require
+import { createRequire } from "module";
 const require = createRequire(import.meta.url);
+const { dirname } = require("path");
 const pkg = require("./package.json");
 
 const input = "src/index.ts";
@@ -10,17 +12,38 @@ const watch = {
 };
 
 export default [
+	// Standard module config
 	{
 		input,
 		output: [
 			{
-				file: pkg.main,
-				format: "cjs"
+				dir: dirname(pkg.module),
+				format: "esm",
+				chunkFileNames: "chunk-[name]-[hash].js"
 			}
 		],
 		plugins: [
 			ts({
-				tsconfig: "./tsconfig.prod.json"
+				tsconfig: "./tsconfig.prod.json",
+				outDir: "./lib/esm"
+			})
+		],
+		watch
+	},
+	// CommonJS config
+	{
+		input,
+		output: [
+			{
+				dir: dirname(pkg.main),
+				format: "cjs",
+				chunkFileNames: "chunk-[name]-[hash].js"
+			}
+		],
+		plugins: [
+			ts({
+				tsconfig: "./tsconfig.prod.json",
+				outDir: "./lib/cjs"
 			})
 		],
 		watch

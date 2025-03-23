@@ -31,11 +31,11 @@
 				"src/**/*",
 				"test/**/*",
 				"tsconfig.json",
+				"rollup.config.mjs",
 				"../../tsconfig.json"
 			],
 			"output": [
 				"lib",
-				"dist",
 				".rollup.cache",
 				"./tsbuildinfo"
 			],
@@ -57,11 +57,17 @@
 			"command": "ava --color"
 		}
 	},
-	"main": "lib/index.cjs.js",
-	"typings": "lib/index.cjs.d.ts",
+	"main": "lib/cjs/index.js",
+	"module": "lib/esm/index.js",
+	"typings": "lib/cjs/src/index.d.ts",
 	"files": [
 		"lib"
 	],
+	"exports": {
+		"types": "./lib/cjs/src/index.d.ts",
+		"import": "./lib/esm/index.js",
+		"require": "./lib/cjs/index.js"
+	},
 	"devDependencies": {
 		"@rollup/plugin-typescript": "^12.1.2",
 		"ava": "^6.2.0",
