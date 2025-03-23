@@ -7,7 +7,11 @@ export function validateType(type: SimpleType, callback: (simpleType: SimpleType
 	return validateTypeInternal(type, callback, new Map());
 }
 
-function validateTypeInternal(type: SimpleType, callback: (simpleType: SimpleType) => boolean | undefined | void, parameterMap: Map<string, SimpleType>): boolean {
+function validateTypeInternal(
+	type: SimpleType,
+	callback: (simpleType: SimpleType) => boolean | undefined | void,
+	parameterMap: Map<string, SimpleType>
+): boolean {
 	const res = callback(type);
 
 	if (res != null) {

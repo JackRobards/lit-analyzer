@@ -191,7 +191,10 @@ function toSimpleTypeCached(type: Type, options: ToSimpleTypeInternalOptions): S
  * @param type
  * @param options
  */
-function liftGenericType(type: Type, options: ToSimpleTypeInternalOptions): { generic: (target: SimpleType) => SimpleType; target: Type } | undefined {
+function liftGenericType(
+	type: Type,
+	options: ToSimpleTypeInternalOptions
+): { generic: (target: SimpleType) => SimpleType; target: Type } | undefined {
 	// Check for alias reference
 	if (type.aliasSymbol != null) {
 		const aliasDeclaration = getDeclaration(type.aliasSymbol, options.ts);
@@ -386,7 +389,8 @@ function toSimpleTypeInternal(type: Type, options: ToSimpleTypeInternalOptions):
 			const ctor = (() => {
 				const ctorSymbol = symbol != null && symbol.members != null ? symbol.members.get("__constructor" as never) : undefined;
 				if (ctorSymbol != null && symbol != null) {
-					const ctorDecl = ctorSymbol.declarations !== undefined && ctorSymbol.declarations?.length > 0 ? ctorSymbol.declarations[0] : ctorSymbol.valueDeclaration;
+					const ctorDecl =
+						ctorSymbol.declarations !== undefined && ctorSymbol.declarations?.length > 0 ? ctorSymbol.declarations[0] : ctorSymbol.valueDeclaration;
 
 					if (ctorDecl != null && ts.isConstructorDeclaration(ctorDecl)) {
 						return getSimpleFunctionFromSignatureDeclaration(ctorDecl, options) as SimpleTypeFunction;
@@ -456,8 +460,9 @@ function toSimpleTypeInternal(type: Type, options: ToSimpleTypeInternalOptions):
 		const call = getSimpleFunctionFromCallSignatures(type.getCallSignatures(), options) as SimpleTypeFunction;
 
 		const typeParameters =
-			(type.isClassOrInterface() && type.typeParameters != null ? type.typeParameters.map(t => toSimpleTypeCached(t, options) as SimpleTypeGenericParameter) : undefined) ||
-			(symbol != null ? getTypeParameters(getDeclaration(symbol, ts), options) : undefined);
+			(type.isClassOrInterface() && type.typeParameters != null
+				? type.typeParameters.map(t => toSimpleTypeCached(t, options) as SimpleTypeGenericParameter)
+				: undefined) || (symbol != null ? getTypeParameters(getDeclaration(symbol, ts), options) : undefined);
 
 		let indexType: SimpleTypeInterface["indexType"] = {};
 		if (type.getStringIndexType()) {
@@ -569,7 +574,11 @@ function primitiveLiteralToSimpleType(type: Type, checker: TypeChecker, ts: type
 	}
 }
 
-function getSimpleFunctionFromCallSignatures(signatures: readonly Signature[], options: ToSimpleTypeInternalOptions, fallbackName?: string): SimpleTypeFunction | SimpleTypeMethod | undefined {
+function getSimpleFunctionFromCallSignatures(
+	signatures: readonly Signature[],
+	options: ToSimpleTypeInternalOptions,
+	fallbackName?: string
+): SimpleTypeFunction | SimpleTypeMethod | undefined {
 	if (signatures.length === 0) {
 		return undefined;
 	}

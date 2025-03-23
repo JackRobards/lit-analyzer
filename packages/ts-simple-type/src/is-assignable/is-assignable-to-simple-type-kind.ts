@@ -14,8 +14,17 @@ import { SimpleTypeKindComparisonOptions } from "./simple-type-comparison-option
  * @param checker TypeCHecker if type is a typescript type
  * @param options Options
  */
-export function isAssignableToSimpleTypeKind(type: SimpleType, kind: SimpleTypeKind | SimpleTypeKind[], options?: SimpleTypeKindComparisonOptions): boolean;
-export function isAssignableToSimpleTypeKind(type: Type | SimpleType, kind: SimpleTypeKind | SimpleTypeKind[], checker: TypeChecker, options?: SimpleTypeKindComparisonOptions): boolean;
+export function isAssignableToSimpleTypeKind(
+	type: SimpleType,
+	kind: SimpleTypeKind | SimpleTypeKind[],
+	options?: SimpleTypeKindComparisonOptions
+): boolean;
+export function isAssignableToSimpleTypeKind(
+	type: Type | SimpleType,
+	kind: SimpleTypeKind | SimpleTypeKind[],
+	checker: TypeChecker,
+	options?: SimpleTypeKindComparisonOptions
+): boolean;
 export function isAssignableToSimpleTypeKind(
 	type: Type | SimpleType,
 	kind: SimpleTypeKind | SimpleTypeKind[],
