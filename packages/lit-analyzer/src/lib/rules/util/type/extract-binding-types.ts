@@ -1,5 +1,11 @@
-import type { SimpleType, SimpleTypeBooleanLiteral, SimpleTypeEnumMember, SimpleTypeString, SimpleTypeStringLiteral } from "ts-simple-type";
-import { isSimpleType, toSimpleType } from "ts-simple-type";
+import type {
+	SimpleType,
+	SimpleTypeBooleanLiteral,
+	SimpleTypeEnumMember,
+	SimpleTypeString,
+	SimpleTypeStringLiteral
+} from "@jackolope/ts-simple-type";
+import { isSimpleType, toSimpleType } from "@jackolope/ts-simple-type";
 import type { Expression, Type, TypeChecker } from "typescript";
 import type { HtmlNodeAttrAssignment } from "../../../analyze/types/html-node/html-node-attr-assignment-types.js";
 import { HtmlNodeAttrAssignmentKind } from "../../../analyze/types/html-node/html-node-attr-assignment-types.js";

@@ -1,4 +1,4 @@
-import { isAssignableToSimpleTypeKind, typeToString } from "ts-simple-type";
+import { isAssignableToSimpleTypeKind, typeToString } from "@jackolope/ts-simple-type";
 import { HtmlNodeAttrAssignmentKind } from "../analyze/types/html-node/html-node-attr-assignment-types.js";
 import { HtmlNodeAttrKind } from "../analyze/types/html-node/html-node-attr-types.js";
 import type { RuleModule } from "../analyze/types/rule/rule-module.js";

@@ -1,4 +1,4 @@
-import { isAssignableToSimpleTypeKind } from "ts-simple-type";
+import { isAssignableToSimpleTypeKind } from "@jackolope/ts-simple-type";
 import { LIT_HTML_BOOLEAN_ATTRIBUTE_MODIFIER } from "../analyze/constants.js";
 import { HtmlNodeAttrAssignmentKind } from "../analyze/types/html-node/html-node-attr-assignment-types.js";
 import { HtmlNodeAttrKind } from "../analyze/types/html-node/html-node-attr-types.js";

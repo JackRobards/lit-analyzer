@@ -1,4 +1,4 @@
-import { isAssignableToSimpleTypeKind } from "ts-simple-type";
+import { isAssignableToSimpleTypeKind } from "@jackolope/ts-simple-type";
 import { analyzeTextWithCurrentTsModule } from "../../helpers/analyze-text-with-current-ts-module";
 import { tsTest } from "../../helpers/ts-test";
 import { getComponentProp } from "../../helpers/util";

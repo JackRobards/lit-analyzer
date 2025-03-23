@@ -1,5 +1,5 @@
 import type { ExecutionContext } from "ava";
-import { isAssignableToType, typeToString } from "ts-simple-type";
+import { isAssignableToType, typeToString } from "@jackolope/ts-simple-type";
 import type { TypeChecker } from "typescript";
 import type { ComponentMember, ComponentMemberProperty } from "../../src/analyze/types/features/component-member";
 import { arrayDefined } from "../../src/util/array-util";

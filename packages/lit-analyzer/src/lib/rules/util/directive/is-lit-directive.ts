@@ -1,4 +1,4 @@
-import type { SimpleType } from "ts-simple-type";
+import type { SimpleType } from "@jackolope/ts-simple-type";
 
 const partTypeNames: ReadonlySet<string | undefined> = new Set([
 	"Part",

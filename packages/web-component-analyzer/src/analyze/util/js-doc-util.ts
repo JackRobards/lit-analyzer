@@ -1,4 +1,4 @@
-import type { SimpleType, SimpleTypeStringLiteral } from "ts-simple-type";
+import type { SimpleType, SimpleTypeStringLiteral } from "@jackolope/ts-simple-type";
 import type * as tsModule from "typescript";
 import type { JSDoc, JSDocParameterTag, JSDocTypeTag, Node, Program } from "typescript";
 import { arrayDefined } from "../../util/array-util";

@@ -1,5 +1,5 @@
-import type { SimpleType, SimpleTypeEnumMember } from "ts-simple-type";
-import { toSimpleType } from "ts-simple-type";
+import type { SimpleType, SimpleTypeEnumMember } from "@jackolope/ts-simple-type";
+import { toSimpleType } from "@jackolope/ts-simple-type";
 import type * as tsModule from "typescript";
 import type { Node, Program } from "typescript";
 

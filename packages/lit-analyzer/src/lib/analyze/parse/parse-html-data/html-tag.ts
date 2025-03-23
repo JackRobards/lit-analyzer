@@ -1,5 +1,5 @@
-import type { SimpleType } from "ts-simple-type";
-import { isAssignableToSimpleTypeKind, typeToString } from "ts-simple-type";
+import type { SimpleType } from "@jackolope/ts-simple-type";
+import { isAssignableToSimpleTypeKind, typeToString } from "@jackolope/ts-simple-type";
 import type {
 	ComponentCssPart,
 	ComponentCssProperty,

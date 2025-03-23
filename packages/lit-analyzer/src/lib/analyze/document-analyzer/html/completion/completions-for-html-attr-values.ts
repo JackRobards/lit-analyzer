@@ -1,5 +1,5 @@
-import type { SimpleType } from "ts-simple-type";
-import { isSimpleTypeLiteral } from "ts-simple-type";
+import type { SimpleType } from "@jackolope/ts-simple-type";
+import { isSimpleTypeLiteral } from "@jackolope/ts-simple-type";
 import type { LitAnalyzerContext } from "../../../lit-analyzer-context.js";
 import { HtmlNodeAttrAssignmentKind } from "../../../types/html-node/html-node-attr-assignment-types.js";
 import type { HtmlNodeAttr } from "../../../types/html-node/html-node-attr-types.js";
