@@ -1,5 +1,5 @@
-import type { SimpleType, SimpleTypeKind } from "ts-simple-type";
-import { isAssignableToSimpleTypeKind, isSimpleType, toSimpleType, typeToString } from "ts-simple-type";
+import type { SimpleType, SimpleTypeKind } from "@jackolope/ts-simple-type";
+import { isAssignableToSimpleTypeKind, isSimpleType, toSimpleType, typeToString } from "@jackolope/ts-simple-type";
 import type { Node } from "typescript";
 import type { LitElementPropertyConfig } from "@jackolope/web-component-analyzer";
 import type { RuleModule } from "../analyze/types/rule/rule-module.js";

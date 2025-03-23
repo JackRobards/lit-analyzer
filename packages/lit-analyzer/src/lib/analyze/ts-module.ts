@@ -1,4 +1,4 @@
-import { setTypescriptModule as tsSimpleTypeSetTypescriptModule } from "ts-simple-type";
+import { setTypescriptModule as tsSimpleTypeSetTypescriptModule } from "@jackolope/ts-simple-type";
 import * as tsModuleType from "typescript";
 
 export const tsModule: { ts: typeof tsModuleType } = { ts: tsModuleType };

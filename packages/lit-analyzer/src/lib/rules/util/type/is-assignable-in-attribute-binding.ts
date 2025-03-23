@@ -1,5 +1,5 @@
-import type { SimpleType, SimpleTypeComparisonOptions } from "ts-simple-type";
-import { isAssignableToType as _isAssignableToType, typeToString } from "ts-simple-type";
+import type { SimpleType, SimpleTypeComparisonOptions } from "@jackolope/ts-simple-type";
+import { isAssignableToType as _isAssignableToType, typeToString } from "@jackolope/ts-simple-type";
 import type { HtmlNodeAttrAssignment } from "../../../analyze/types/html-node/html-node-attr-assignment-types.js";
 import { HtmlNodeAttrAssignmentKind } from "../../../analyze/types/html-node/html-node-attr-assignment-types.js";
 import type { HtmlNodeAttr } from "../../../analyze/types/html-node/html-node-attr-types.js";

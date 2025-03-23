@@ -84,14 +84,14 @@
 			"img": "https://avatars0.githubusercontent.com/u/5372940?s=400&u=43d97899257af3c47715679512919eadb07eab26&v=4"
 		}
 	],
-	"author": "Rune Mehlsen",
+	"author": "JackRobards",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/JackRobards/lit-analyzer/issues"
 	},
 	"homepage": "https://github.com/JackRobards/lit-analyzer#readme",
 	"dependencies": {
-		"ts-simple-type": "2.0.0-next.0",
+		"@jackolope/ts-simple-type": "^3.0.0",
 		"typescript": "^5.8.3"
 	},
 	"devDependencies": {

@@ -1,4 +1,4 @@
-import type { SimpleType, SimpleTypeUnion } from "ts-simple-type";
+import type { SimpleType, SimpleTypeUnion } from "@jackolope/ts-simple-type";
 import type {
 	HtmlAttr,
 	HtmlCssPart,

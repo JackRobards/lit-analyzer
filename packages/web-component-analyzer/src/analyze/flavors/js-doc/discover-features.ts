@@ -1,4 +1,4 @@
-import type { SimpleTypeStringLiteral } from "ts-simple-type";
+import type { SimpleTypeStringLiteral } from "@jackolope/ts-simple-type";
 import type { Node } from "typescript";
 import type { AnalyzerVisitContext } from "../../analyzer-visit-context";
 import type { ComponentCssPart } from "../../types/features/component-css-part";

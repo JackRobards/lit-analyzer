@@ -1,5 +1,5 @@
-import type { SimpleType, SimpleTypeAny } from "ts-simple-type";
-import { isSimpleType, toSimpleType } from "ts-simple-type";
+import type { SimpleType, SimpleTypeAny } from "@jackolope/ts-simple-type";
+import { isSimpleType, toSimpleType } from "@jackolope/ts-simple-type";
 import type { TypeChecker } from "typescript";
 import type { AnalyzerResult, ComponentDeclaration, ComponentDefinition, ComponentFeatures } from "@jackolope/web-component-analyzer";
 import { lazy } from "../util/general-util.js";

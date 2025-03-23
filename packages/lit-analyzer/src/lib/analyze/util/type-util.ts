@@ -1,4 +1,4 @@
-import type { SimpleType, SimpleTypeUnion } from "ts-simple-type";
+import type { SimpleType, SimpleTypeUnion } from "@jackolope/ts-simple-type";
 
 const PRIMITIVE_STRING_ARRAY_TYPE_BRAND = Symbol("PRIMITIVE_STRING_ARRAY_TYPE");
 
