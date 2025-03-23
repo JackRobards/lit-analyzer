@@ -3,17 +3,22 @@ import type { HTMLDataV1, IAttributeData, ITagData, IValueData, IValueSet } from
 import type { MarkupContent } from "vscode-languageserver-types";
 import { lazy } from "../../util/general-util.js";
 import type { HtmlAttr, HtmlDataCollection, HtmlEvent, HtmlTag } from "./html-tag.js";
+import type { LitAnalyzerContext } from "../../lit-analyzer-context.js";
 
 export interface ParseVscodeHtmlDataConfig {
 	builtIn?: boolean;
 	typeMap?: Map<string, SimpleType>;
 }
 
-export function parseVscodeHtmlData(data: HTMLDataV1, config: ParseVscodeHtmlDataConfig = {}): HtmlDataCollection {
+export function parseVscodeHtmlData(data: HTMLDataV1, context: LitAnalyzerContext, config: ParseVscodeHtmlDataConfig = {}): HtmlDataCollection {
 	switch (data.version) {
 		case 1:
 		case 1.1:
 			return parseVscodeDataV1(data, config);
+		default:
+			context.logger.warn(`Unsupported Version ${data.version} found for VSCodeHtmlData. Supported versions are 1 and 1.1. Not including ${data}`);
+
+			return { tags: [], global: {} };
 	}
 }
 

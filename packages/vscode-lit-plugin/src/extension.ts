@@ -7,7 +7,7 @@ import * as vscode from "vscode";
 const tsLitPluginId = "@jackolope/ts-lit-plugin";
 const typeScriptExtensionId = "vscode.typescript-language-features";
 const configurationSection = "lit-analyzer-plugin";
-const configurationExperimentalHtmlSection = "html.experimental";
+const configurationHtmlSection = "html";
 const analyzeCommandId = "lit-analyzer-plugin.analyze";
 
 let defaultAnalyzeGlob = "src";
@@ -33,7 +33,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 	// Subscribe to configuration change
 	vscode.workspace.onDidChangeConfiguration(
 		e => {
-			if (e.affectsConfiguration(configurationSection) || e.affectsConfiguration(configurationExperimentalHtmlSection)) {
+			if (e.affectsConfiguration(configurationSection) || e.affectsConfiguration(configurationHtmlSection)) {
 				synchronizeConfig(api);
 			}
 		},
@@ -140,9 +140,8 @@ function getConfig(): Partial<LitAnalyzerConfig> {
 		outConfig.customHtmlData = value;
 	});
 
-	// Experimental values from vscode
-	const experimental = vscode.workspace.getConfiguration(configurationExperimentalHtmlSection, null);
-	withConfigValue(experimental, "customData", value => {
+	const htmlSection = vscode.workspace.getConfiguration(configurationHtmlSection, null);
+	withConfigValue(htmlSection, "customData", value => {
 		// Merge value from vscode with "lit-analyzer-plugin.customHtmlData"
 		const filePaths = (Array.isArray(value) ? value : [value]).map(path => (typeof path === "string" ? toWorkspacePath(path) : path));
 		outConfig.customHtmlData = outConfig.customHtmlData == null ? filePaths : filePaths.concat(outConfig.customHtmlData as []);

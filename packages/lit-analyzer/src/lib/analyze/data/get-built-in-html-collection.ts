@@ -5,8 +5,9 @@ import type { HtmlAttr, HtmlDataCollection } from "../parse/parse-html-data/html
 import { parseVscodeHtmlData } from "../parse/parse-html-data/parse-vscode-html-data.js";
 import { lazy } from "../util/general-util.js";
 import { EXTRA_HTML5_EVENTS, hasTypeForAttrName, html5TagAttrType } from "./extra-html-data.js";
+import type { LitAnalyzerContext } from "../lit-analyzer-context.js";
 
-export function getBuiltInHtmlCollection(): HtmlDataCollection {
+export function getBuiltInHtmlCollection(context: LitAnalyzerContext): HtmlDataCollection {
 	const vscodeHtmlData = htmlDataJson as HTMLDataV1;
 
 	const version = vscodeHtmlData.version;
@@ -120,18 +121,30 @@ The value must be a comma-separated list of part mappings:
 		}
 	);
 
+	let result: HtmlDataCollection = { tags: [], global: {} };
+
 	// Parse vscode html data
-	const result = parseVscodeHtmlData(
-		{
+	try {
+		result = parseVscodeHtmlData(
+			{
+				version,
+				globalAttributes,
+				tags,
+				valueSets
+			},
+			context,
+			{
+				builtIn: true
+			}
+		);
+	} catch (e) {
+		context.logger.error("Error parsing configured html data", e, {
 			version,
 			globalAttributes,
 			tags,
 			valueSets
-		},
-		{
-			builtIn: true
-		}
-	);
+		});
+	}
 
 	// Add missing properties to the result, because they are not included in vscode html data
 	for (const tag of result.tags) {

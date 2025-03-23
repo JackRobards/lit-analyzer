@@ -145,7 +145,7 @@ export class DefaultLitAnalyzerContext implements LitAnalyzerContext {
 		})();
 
 		// Add user configured HTML5 collection
-		const collection = getUserConfigHtmlCollection(config);
+		const collection = getUserConfigHtmlCollection(config, this);
 		this.htmlStore.absorbCollection(collection, HtmlDataSourceKind.USER);
 	}
 
@@ -164,7 +164,7 @@ export class DefaultLitAnalyzerContext implements LitAnalyzerContext {
 
 	constructor(private handler: LitPluginContextHandler) {
 		// Add all HTML5 tags and attributes
-		const builtInCollection = getBuiltInHtmlCollection();
+		const builtInCollection = getBuiltInHtmlCollection(this);
 		this.htmlStore.absorbCollection(builtInCollection, HtmlDataSourceKind.BUILT_IN);
 	}
 
