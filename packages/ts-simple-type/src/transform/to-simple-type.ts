@@ -587,6 +587,10 @@ function getSimpleFunctionFromCallSignatures(
 
 	const signatureDeclaration = signature.getDeclaration();
 
+	// According to the types the signatureDeclaration should always have a value, but there was an error after upgrading to a newer TS (~5.7) version that was getting thrown because it returned undefined
+	// The error was coming from the `infinity.spec.ts` test
+	if (!signatureDeclaration) return undefined;
+
 	return getSimpleFunctionFromSignatureDeclaration(signatureDeclaration, options, fallbackName);
 }
 
