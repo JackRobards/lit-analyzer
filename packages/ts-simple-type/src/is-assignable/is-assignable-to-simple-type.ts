@@ -169,7 +169,9 @@ function isAssignableToSimpleTypeInternal(typeA: SimpleType, typeB: SimpleType, 
 			logDebug(
 				options,
 				"inside type",
-				`{${typeA.kind}, ${typeB.kind}} {typeA: ${options.insideType.has(typeA)}} {typeB: ${options.insideType.has(typeB)}} {insideTypeMap: ${Array.from(options.insideType.keys())
+				`{${typeA.kind}, ${typeB.kind}} {typeA: ${options.insideType.has(typeA)}} {typeB: ${options.insideType.has(typeB)}} {insideTypeMap: ${Array.from(
+					options.insideType.keys()
+				)
 					.map(t => simpleTypeToStringLazy(t))
 					.join()}}`
 			);
@@ -418,7 +420,9 @@ function isAssignableToSimpleTypeInternal(typeA: SimpleType, typeB: SimpleType, 
 			// Some types seems to absorb other types when type checking a union (eg. 'unknown').
 			// Usually typescript will absorb those types for us, but not when working with generic parameters.
 			// The following line needs to be improved.
-			const types = typeA.types.filter(t => resolveType(t, options.genericParameterMapA) !== DEFAULT_GENERIC_PARAMETER_TYPE || typeB === DEFAULT_GENERIC_PARAMETER_TYPE);
+			const types = typeA.types.filter(
+				t => resolveType(t, options.genericParameterMapA) !== DEFAULT_GENERIC_PARAMETER_TYPE || typeB === DEFAULT_GENERIC_PARAMETER_TYPE
+			);
 			return or(types, childTypeA => isAssignableToSimpleTypeCached(childTypeA, typeB, options));
 		}
 
@@ -734,7 +738,7 @@ function isAssignableToSimpleTypeInternal(typeA: SimpleType, typeB: SimpleType, 
 									...options.config,
 									strictNullChecks: false,
 									strictFunctionTypes: false
-							  }
+								}
 							: options.config,
 					cache: new WeakMap(),
 					genericParameterMapB: options.genericParameterMapA,
@@ -769,9 +773,13 @@ function isAssignableToSimpleTypeInternal(typeA: SimpleType, typeB: SimpleType, 
 					logDebug(options, "object-type", `typeA is the empty object '{}'`);
 				}
 
-				return !isAssignableToSimpleTypeKind(typeB, ["NULL", "UNDEFINED", "NEVER", "VOID", ...(options.config.strictNullChecks ? ["UNKNOWN"] : [])] as SimpleTypeKind[], {
-					matchAny: false
-				});
+				return !isAssignableToSimpleTypeKind(
+					typeB,
+					["NULL", "UNDEFINED", "NEVER", "VOID", ...(options.config.strictNullChecks ? ["UNKNOWN"] : [])] as SimpleTypeKind[],
+					{
+						matchAny: false
+					}
+				);
 			}
 
 			switch (typeB.kind) {
@@ -798,9 +806,9 @@ function isAssignableToSimpleTypeInternal(typeA: SimpleType, typeB: SimpleType, 
 						if (memberB != null) membersInCommon += 1;
 						return memberB == null
 							? // If corresponding "memberB" couldn't be found, return true if "memberA" is optional
-							  memberA.optional
+								memberA.optional
 							: // If corresponding "memberB" was found, return true if "memberA" is optional or "memberB" is not optional
-							  memberA.optional || !memberB.optional;
+								memberA.optional || !memberB.optional;
 					});
 
 					if (!requiredMembersInTypeAExistsInTypeB) {
@@ -849,7 +857,8 @@ function isAssignableToSimpleTypeInternal(typeA: SimpleType, typeB: SimpleType, 
 
 					// They are not assignable if typeB has 0 members in common with typeA, and there are more than 0 members in typeB.
 					// The ctor of classes are not counted towards if typeB is empty
-					const typeBIsEmpty = membersB.length === 0 && typeB.call == null && ((typeB.kind !== "CLASS" && typeB.ctor == null) || typeB.kind === "CLASS");
+					const typeBIsEmpty =
+						membersB.length === 0 && typeB.call == null && ((typeB.kind !== "CLASS" && typeB.ctor == null) || typeB.kind === "CLASS");
 					if (membersInCommon === 0 && !typeBIsEmpty) {
 						if (options.config.debug) {
 							logDebug(options, "object-type", `typeB has 0 members in common with typeA and there are more than 0 members in typeB`);
@@ -995,7 +1004,10 @@ function reduceIntersectionIfPossible(simpleType: SimpleTypeIntersection, parame
 		for (const type of typeKindMap.get("OBJECT") as SimpleTypeObject[]) {
 			for (const member of type.members || []) {
 				if (members.has(member.name)) {
-					const combinedMemberType = reduceIntersectionIfPossible({ kind: "INTERSECTION", types: [members.get(member.name)!.type, member.type] }, parameterMap);
+					const combinedMemberType = reduceIntersectionIfPossible(
+						{ kind: "INTERSECTION", types: [members.get(member.name)!.type, member.type] },
+						parameterMap
+					);
 					if (combinedMemberType.kind === "NEVER") {
 						return combinedMemberType;
 					}
@@ -1014,10 +1026,15 @@ function reduceIntersectionIfPossible(simpleType: SimpleTypeIntersection, parame
 }
 
 function isObjectEmpty(simpleType: SimpleTypeObjectTypeBase, { ignoreOptionalMembers }: { ignoreOptionalMembers?: boolean }): boolean {
-	return simpleType.members == null || simpleType.members.length === 0 || (ignoreOptionalMembers && !simpleType.members.some(m => !m.optional)) || false;
+	return (
+		simpleType.members == null || simpleType.members.length === 0 || (ignoreOptionalMembers && !simpleType.members.some(m => !m.optional)) || false
+	);
 }
 
-export function resolveType(simpleType: SimpleType, parameterMap: Map<string, SimpleType>): Exclude<SimpleType, SimpleTypeGenericParameter | SimpleTypeGenericArguments> {
+export function resolveType(
+	simpleType: SimpleType,
+	parameterMap: Map<string, SimpleType>
+): Exclude<SimpleType, SimpleTypeGenericParameter | SimpleTypeGenericArguments> {
 	return resolveTypeUnsafe(simpleType, parameterMap);
 }
 
@@ -1065,7 +1082,11 @@ function simpleTypeToStringLazy(simpleType: SimpleType | undefined): string {
 	return simpleTypeToString(simpleType);
 }
 
-function colorText(options: IsAssignableToSimpleTypeInternalOptions, text: unknown, color: "cyan" | "gray" | "red" | "blue" | "green" | "yellow"): string {
+function colorText(
+	options: IsAssignableToSimpleTypeInternalOptions,
+	text: unknown,
+	color: "cyan" | "gray" | "red" | "blue" | "green" | "yellow"
+): string {
 	if (options.config.debugLog != null) {
 		return `${text}`;
 	}

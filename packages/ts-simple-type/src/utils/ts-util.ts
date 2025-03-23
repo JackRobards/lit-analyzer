@@ -180,7 +180,11 @@ export function isFunction(type: Type, ts: typeof tsModule): type is ObjectType 
 	if (!isObject(type, ts)) return false;
 	const symbol = type.getSymbol();
 	if (symbol == null) return false;
-	return (symbol.flags & ts.SymbolFlags.Function) !== 0 || symbol.escapedName === "Function" || (symbol.members != null && symbol.members.has("__call" as never));
+	return (
+		(symbol.flags & ts.SymbolFlags.Function) !== 0 ||
+		symbol.escapedName === "Function" ||
+		(symbol.members != null && symbol.members.has("__call" as never))
+	);
 }
 
 export function getTypeArguments(type: ObjectType, checker: TypeChecker, ts: typeof tsModule): Type[] {

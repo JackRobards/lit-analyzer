@@ -121,7 +121,9 @@ function simpleTypeToStringInternal(type: SimpleType, visitTypeSet: Set<SimpleTy
 			return `[${type.members.map(member => `${simpleTypeToStringInternal(member.type, visitTypeSet)}${member.optional ? "?" : ""}`).join(", ")}]`;
 		case "GENERIC_ARGUMENTS": {
 			const { target, typeArguments } = type;
-			return typeArguments.length === 0 ? target.name || "" : `${target.name}<${typeArguments.map(t => simpleTypeToStringInternal(t, visitTypeSet)).join(", ")}>`;
+			return typeArguments.length === 0
+				? target.name || ""
+				: `${target.name}<${typeArguments.map(t => simpleTypeToStringInternal(t, visitTypeSet)).join(", ")}>`;
 		}
 		case "PROMISE":
 			return `${type.name || "Promise"}<${simpleTypeToStringInternal(type.type, visitTypeSet)}>`;
@@ -132,7 +134,11 @@ function simpleTypeToStringInternal(type: SimpleType, visitTypeSet: Set<SimpleTy
 	}
 }
 
-function truncateAndJoinList(items: string[], combine: string, { maxLength, maxContentLength }: { maxLength?: number; maxContentLength?: number }): string {
+function truncateAndJoinList(
+	items: string[],
+	combine: string,
+	{ maxLength, maxContentLength }: { maxLength?: number; maxContentLength?: number }
+): string {
 	const text = items.join(combine);
 
 	// Truncate if too long

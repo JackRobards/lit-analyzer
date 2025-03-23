@@ -6,7 +6,9 @@ function isTypeRef(value: unknown): value is string {
 	return typeof value === "string" && value.startsWith(TYPE_REF_PREFIX);
 }
 
-export type SerializedSimpleTypeWithRef<ST = SimpleType> = { [key in keyof ST]: ST[key] extends SimpleType ? string : SerializedSimpleTypeWithRef<ST[key]> };
+export type SerializedSimpleTypeWithRef<ST = SimpleType> = {
+	[key in keyof ST]: ST[key] extends SimpleType ? string : SerializedSimpleTypeWithRef<ST[key]>;
+};
 
 export interface SerializedSimpleType {
 	typeMap: Record<number, SerializedSimpleTypeWithRef>;

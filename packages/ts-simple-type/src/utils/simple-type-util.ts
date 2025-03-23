@@ -42,7 +42,7 @@ export function getTupleLengthType(tuple: SimpleTypeTuple): SimpleType {
 				({
 					kind: "NUMBER_LITERAL",
 					value: minLength + i
-				} as SimpleTypeNumberLiteral)
+				}) as SimpleTypeNumberLiteral
 		)
 	};
 }

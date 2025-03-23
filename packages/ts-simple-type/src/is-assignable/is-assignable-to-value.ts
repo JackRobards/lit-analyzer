@@ -92,7 +92,7 @@ function convertValueToSimpleType(value: unknown, { visitValueSet, widening }: {
 				({
 					name: key,
 					type: convertValueToSimpleType(value, { visitValueSet, widening })
-				} as SimpleTypeMemberNamed)
+				}) as SimpleTypeMemberNamed
 		);
 
 		return {
