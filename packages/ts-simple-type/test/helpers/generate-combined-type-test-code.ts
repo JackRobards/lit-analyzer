@@ -35,9 +35,13 @@ function generateTypeTestCode([tA, tB]: TypeTest): string[] {
 	for (const tA of Array.isArray(typeA) ? typeA : [typeA]) {
 		for (const tB of Array.isArray(typeB) ? typeB : [typeB]) {
 			testCode.push(
-				[`{`, ...(setupA != null ? [`  ${setupA.replace(/\n/g, "\n  ")}`] : []), ...(setupB != null ? [`  ${setupB.replace(/\n/g, "\n  ")}`] : []), `  const _: ${tA} = {} as ${tB}`, `}`].join(
-					"\n"
-				)
+				[
+					`{`,
+					...(setupA != null ? [`  ${setupA.replace(/\n/g, "\n  ")}`] : []),
+					...(setupB != null ? [`  ${setupB.replace(/\n/g, "\n  ")}`] : []),
+					`  const _: ${tA} = {} as ${tB}`,
+					`}`
+				].join("\n")
 			);
 		}
 	}

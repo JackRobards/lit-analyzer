@@ -13,11 +13,25 @@ export const ES_SYMBOL_TYPES: TypescriptType[] = [`Symbol`, `Symbol("hello")`, `
 
 export const NULLABLE_TYPES: TypescriptType[] = [`undefined`, `null`];
 
-export const PRIMITIVE_TYPES: TypescriptType[] = [...BOOLEAN_TYPES, ...NUMBER_TYPES, ...STRING_TYPES, ...NULLABLE_TYPES, ...BIG_INT_TYPES, ...ES_SYMBOL_TYPES];
+export const PRIMITIVE_TYPES: TypescriptType[] = [
+	...BOOLEAN_TYPES,
+	...NUMBER_TYPES,
+	...STRING_TYPES,
+	...NULLABLE_TYPES,
+	...BIG_INT_TYPES,
+	...ES_SYMBOL_TYPES
+];
 
 export const SPECIAL_TYPES: TypescriptType[] = [`never`, `void`, `any`, `unknown`];
 
-export const TUPLE_TYPES: TypescriptType[] = [`[]`, `[string]`, `[string, number]`, `[string, boolean?]`, `[string, ...boolean[]]`, `[{ foo: string, bar: number }]`];
+export const TUPLE_TYPES: TypescriptType[] = [
+	`[]`,
+	`[string]`,
+	`[string, number]`,
+	`[string, boolean?]`,
+	`[string, ...boolean[]]`,
+	`[{ foo: string, bar: number }]`
+];
 
 export const ARRAY_TYPES: TypescriptType[] = [
 	`Array<string>`,
@@ -153,9 +167,17 @@ export const FUNCTION_TYPES: TypescriptType[] = [
 	`(): string | boolean | null | {a: string}`
 ];
 
-export const FUNCTION_THIS_TYPES: TypescriptType[] = [`(this: string, a: number) => any`, `(this: number, a: number) => any`, `(this: number) => any`];
+export const FUNCTION_THIS_TYPES: TypescriptType[] = [
+	`(this: string, a: number) => any`,
+	`(this: number, a: number) => any`,
+	`(this: number) => any`
+];
 
-export const FUNCTION_REST_TYPES: TypescriptType[] = [`(...spread: number[]) => boolean`, `(...spread: (string | number)[]) => boolean`, `(a: number, b?: string, ...args: number[]) => boolean`];
+export const FUNCTION_REST_TYPES: TypescriptType[] = [
+	`(...spread: number[]) => boolean`,
+	`(...spread: (string | number)[]) => boolean`,
+	`(a: number, b?: string, ...args: number[]) => boolean`
+];
 
 export const UNION_TYPES: TypescriptType[] = [`string | number`, `undefined | null | string`];
 

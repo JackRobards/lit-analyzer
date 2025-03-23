@@ -33,7 +33,7 @@
 		"template"
 	],
 	"scripts": {
-		"prettier:write": "prettier --write \"packages/*/src/**/*.ts\"",
+		"prettier:write": "prettier --write \"packages/**/*.ts\"",
 		"readme": "wireit",
 		"dev": "cd dev && TSS_DEBUG=5999 code . --disable-extension jackolope.lit-analyzer-plugin",
 		"dev:logs": "touch dev/lit-plugin.log && tail -f dev/lit-plugin.log",
@@ -107,7 +107,7 @@
 				"packages/*/src/**/*.ts",
 				"prettier.config.js"
 			],
-			"command": "prettier --check \"packages/*/src/**/*.ts\""
+			"command": "prettier --check \"packages/**/*.ts\""
 		},
 		"package": {
 			"dependencies": [

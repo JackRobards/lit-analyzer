@@ -7,7 +7,7 @@ type TestFunction = (title: string, implementation: ImplementationFn<unknown[]>)
 
 const TS_MODULES_ALL = ["current", "5.4", "5.5", "5.6", "5.7"] as const;
 
-type TsModuleKind = typeof TS_MODULES_ALL[number];
+type TsModuleKind = (typeof TS_MODULES_ALL)[number];
 
 const TS_MODULES_DEFAULT: TsModuleKind[] = ["current", "5.4", "5.5", "5.6", "5.7"];
 
@@ -114,7 +114,11 @@ function setupTest(testFunction: TestFunction, tsModuleKind: TsModuleKind | unde
  * @param title
  * @param cb
  */
-function setupTests(testFunction: (title: string, implementation: ImplementationFn<unknown[]>) => void, title: string, cb: ImplementationFn<unknown[]>) {
+function setupTests(
+	testFunction: (title: string, implementation: ImplementationFn<unknown[]>) => void,
+	title: string,
+	cb: ImplementationFn<unknown[]>
+) {
 	// Find the user specified TS_MODULE at setup time
 	const moduleKinds: readonly TsModuleKind[] = (() => {
 		const currentTsModuleKind = getCurrentTsModuleKind();
