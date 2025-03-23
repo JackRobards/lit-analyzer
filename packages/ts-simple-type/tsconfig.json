@@ -1,0 +1,17 @@
+{
+	"include": ["src", "test", "./package.json"],
+	"compilerOptions": {
+		"incremental": true,
+		"target": "ES2018",
+		"module": "commonjs",
+		"lib": ["esnext"],
+		"outDir": "./dist",
+		"downlevelIteration": true,
+		"strict": true,
+		"noImplicitAny": true,
+		"allowUnusedLabels": false,
+		"allowUnreachableCode": false,
+		"noUnusedLocals": true,
+		"pretty": true
+	}
+}
