@@ -30,7 +30,8 @@
 	"wireit": {
 		"build": {
 			"dependencies": [
-				"../lit-analyzer:build"
+				"../lit-analyzer:build",
+				"../web-component-analyzer:build"
 			],
 			"command": "tsc --build --pretty",
 			"files": [

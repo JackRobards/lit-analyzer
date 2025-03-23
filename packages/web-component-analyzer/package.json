@@ -28,6 +28,9 @@
 	},
 	"wireit": {
 		"build": {
+			"dependencies": [
+				"../ts-simple-type:build"
+			],
 			"command": "rollup -c",
 			"files": [
 				"src/**/*",

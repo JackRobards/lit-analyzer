@@ -36,6 +36,10 @@
 	},
 	"wireit": {
 		"build": {
+			"dependencies": [
+				"../ts-simple-type:build",
+				"../web-component-analyzer:build"
+			],
 			"command": "tsc --build --pretty",
 			"files": [
 				"src/**/*",
