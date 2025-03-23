@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from "fs";
 import { dirname, join } from "path";
-import type { CompilerOptions, Program, SourceFile} from "typescript";
+import type { CompilerOptions, Program, SourceFile } from "typescript";
 import { createProgram, createSourceFile, getDefaultLibFileName, ModuleKind, ScriptKind, ScriptTarget, sys } from "typescript";
 
 export interface ITestFile {
@@ -16,7 +16,10 @@ export type TestFile = ITestFile | string;
  * @param {ITestFile[]|TestFile} inputFiles
  * @param options
  */
-export function programWithVirtualFiles(inputFiles: TestFile[] | TestFile, { options, includeLib }: { options?: CompilerOptions; includeLib?: boolean } = {}): Program {
+export function programWithVirtualFiles(
+	inputFiles: TestFile[] | TestFile,
+	{ options, includeLib }: { options?: CompilerOptions; includeLib?: boolean } = {}
+): Program {
 	const cwd = process.cwd();
 
 	const files: ITestFile[] = (Array.isArray(inputFiles) ? inputFiles : [inputFiles])
@@ -26,7 +29,7 @@ export function programWithVirtualFiles(inputFiles: TestFile[] | TestFile, { opt
 						text: file,
 						fileName: `auto-generated-${Math.floor(Math.random() * 100000)}.ts`,
 						entry: true
-				  }
+					}
 				: file
 		)
 		.map(file => ({ ...file, fileName: join(cwd, file.fileName) }));

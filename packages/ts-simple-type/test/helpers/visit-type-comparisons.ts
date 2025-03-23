@@ -41,7 +41,11 @@ export interface VisitComparisonInTestCodeOptions {
  * @param callback
  * @param compilerOptions
  */
-export function visitComparisonsInTestCode(testCode: string, compilerOptions: CompilerOptions, callback: (options: VisitComparisonInTestCodeOptions) => void) {
+export function visitComparisonsInTestCode(
+	testCode: string,
+	compilerOptions: CompilerOptions,
+	callback: (options: VisitComparisonInTestCodeOptions) => void
+) {
 	const program = programWithVirtualFiles({ fileName: "test-code.ts", text: testCode }, { options: compilerOptions, includeLib: true });
 
 	const [sourceFile] = program.getSourceFiles().filter(f => f.fileName.includes("test-code"));
@@ -61,7 +65,12 @@ export function visitComparisonsInTestCode(testCode: string, compilerOptions: Co
 	});
 }
 
-export function visitTypeComparisons(typesX: TypescriptType[], typesY: TypescriptType[], compilerOptions: CompilerOptions, callback: (options: VisitComparisonInTestCodeOptions) => void): void {
+export function visitTypeComparisons(
+	typesX: TypescriptType[],
+	typesY: TypescriptType[],
+	compilerOptions: CompilerOptions,
+	callback: (options: VisitComparisonInTestCodeOptions) => void
+): void {
 	const testCode = generateCombinedTypeTestCode(typesX, typesY);
 	visitComparisonsInTestCode(testCode, compilerOptions, callback);
 }

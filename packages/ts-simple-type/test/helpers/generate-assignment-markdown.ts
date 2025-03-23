@@ -28,7 +28,10 @@ export function generateAssignmentTableMarkdown(types: TypescriptType[], compile
 	const headerRow: string[] = ["typeB ➡️\ntypeA ⬇️", ...Array.from(typeResults.keys())];
 
 	// Generate all table rows using the nested maps
-	const rows: string[][] = Array.from(typeResults.entries()).map(([title, typeResult]) => [title, ...Array.from(typeResult.values()).map(assignable => (assignable ? "✅" : "❌"))]);
+	const rows: string[][] = Array.from(typeResults.entries()).map(([title, typeResult]) => [
+		title,
+		...Array.from(typeResult.values()).map(assignable => (assignable ? "✅" : "❌"))
+	]);
 	const tableRows = [headerRow, ...rows];
 
 	return markdownTable(tableRows);

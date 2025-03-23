@@ -1,4 +1,4 @@
-import type { SimpleType} from "ts-simple-type";
+import type { SimpleType } from "ts-simple-type";
 import { isAssignableToSimpleTypeKind, isAssignableToType, typeToString } from "ts-simple-type";
 import { getLibTypeWithName } from "../../../src/analyze/util/type-util";
 import { analyzeTextWithCurrentTsModule } from "../../helpers/analyze-text-with-current-ts-module";

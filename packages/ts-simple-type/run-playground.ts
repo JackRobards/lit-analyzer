@@ -1,18 +1,8 @@
 /* eslint-disable no-console */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { basename, relative, resolve } from "path";
-import type {
-	CompilerOptions,
-	Program,
-	SourceFile,
-	TypeChecker
-} from "typescript";
-import {
-	convertCompilerOptionsFromJson,
-	createProgram,
-	findConfigFile,
-	readConfigFile
-} from "typescript";
+import type { CompilerOptions, Program, SourceFile, TypeChecker } from "typescript";
+import { convertCompilerOptionsFromJson, createProgram, findConfigFile, readConfigFile } from "typescript";
 import { isAssignableToSimpleType } from "./src/is-assignable/is-assignable-to-simple-type";
 import { deserializeSimpleType, serializeSimpleType } from "./src/transform/serialize-simple-type";
 import type { SimpleType } from "./src/simple-type";
