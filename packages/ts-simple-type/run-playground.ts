@@ -9,7 +9,6 @@ import type { SimpleType } from "./src/simple-type";
 import { isSimpleType } from "./src/simple-type";
 import { toSimpleType } from "./src/transform/to-simple-type";
 import { visitNodeComparisons } from "./test/helpers/visit-type-comparisons";
-import type { TypeCheckerWithInternals } from "./src/is-assignable/is-assignable-to-type";
 
 const PLAYGROUND_DIRECTORY = resolve("playground");
 const PLAYGROUND_PATH_SF = resolve(PLAYGROUND_DIRECTORY, "playground.ts");
@@ -114,7 +113,7 @@ function visitComparisons(sourceFile: SourceFile, program: Program) {
 		const typeAString = checker.typeToString(typeA);
 		const typeBString = checker.typeToString(typeB);
 
-		const expected = (checker as TypeCheckerWithInternals).isTypeAssignableTo(typeB, typeA);
+		const expected = checker.isTypeAssignableTo(typeB, typeA);
 
 		console.log(`\n------------- Checking line ${line} (${typeAString} === ${typeBString}) --------------`);
 

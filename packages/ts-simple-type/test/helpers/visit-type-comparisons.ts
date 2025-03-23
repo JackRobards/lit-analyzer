@@ -3,7 +3,6 @@ import { isBinaryExpression, isVariableDeclaration, SyntaxKind } from "typescrip
 import { programWithVirtualFiles } from "./analyze-text";
 import { generateCombinedTypeTestCode } from "./generate-combined-type-test-code";
 import type { TypescriptType } from "./type-test";
-import type { TypeCheckerWithInternals } from "../../src/is-assignable/is-assignable-to-type";
 
 /**
  * Visits all type comparisons by traversing the AST recursively
@@ -59,7 +58,7 @@ export function visitComparisonsInTestCode(
 		const typeAString = checker.typeToString(typeA);
 		const typeBString = checker.typeToString(typeB);
 
-		const assignable = (checker as TypeCheckerWithInternals).isTypeAssignableTo(typeB, typeA);
+		const assignable = checker.isTypeAssignableTo(typeB, typeA);
 
 		callback({ line, typeA, typeB, typeAString, typeBString, program, checker, assignable, nodeA, nodeB });
 	});

@@ -6,10 +6,6 @@ import { isNode, isProgram, isTypeChecker } from "../utils/ts-util";
 import { isAssignableToSimpleType } from "./is-assignable-to-simple-type";
 import type { SimpleTypeComparisonOptions } from "./simple-type-comparison-options";
 
-export interface TypeCheckerWithInternals extends TypeChecker {
-	isTypeAssignableTo(source: Type, target: Type): boolean;
-}
-
 /**
  * Tests if "typeA = typeB" in strict mode.
  * @param typeA - Type A
@@ -64,8 +60,8 @@ export function isAssignableToType(
 	typeB = isNode(typeB) ? checker!.getTypeAtLocation(typeB) : typeB;
 
 	// Use native "isTypeAssignableTo" if both types are native TS-types and "isTypeAssignableTo" is exposed on TypeChecker
-	if (!isSimpleType(typeA) && !isSimpleType(typeB) && checker != null && (checker as TypeCheckerWithInternals).isTypeAssignableTo != null) {
-		return (checker as TypeCheckerWithInternals).isTypeAssignableTo(typeB, typeA);
+	if (!isSimpleType(typeA) && !isSimpleType(typeB) && checker != null && checker.isTypeAssignableTo != null) {
+		return checker.isTypeAssignableTo(typeB, typeA);
 	}
 
 	// Convert the TS types to SimpleTypes
