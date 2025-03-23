@@ -12,6 +12,7 @@
 	"workspaces": [
 		"packages/lit-analyzer",
 		"packages/ts-lit-plugin",
+		"packages/ts-simple-type",
 		"packages/vscode-lit-plugin",
 		"packages/web-component-analyzer"
 	],
@@ -53,6 +54,7 @@
 			"dependencies": [
 				"./packages/lit-analyzer:build",
 				"./packages/ts-lit-plugin:build",
+				"./packages/ts-simple-type:build",
 				"./packages/vscode-lit-plugin:build",
 				"./packages/web-component-analyzer:build"
 			]
@@ -72,6 +74,7 @@
 		"test:headless": {
 			"dependencies": [
 				"./packages/lit-analyzer:test",
+				"./packages/ts-simple-type:test",
 				"./packages/web-component-analyzer:test:all"
 			]
 		},
@@ -94,6 +97,7 @@
 			"dependencies": [
 				"./packages/lit-analyzer:eslint",
 				"./packages/ts-lit-plugin:eslint",
+				"./packages/ts-simple-type:eslint",
 				"./packages/vscode-lit-plugin:eslint",
 				"./packages/web-component-analyzer:eslint"
 			]
@@ -123,6 +127,7 @@
 		"@changesets/changelog-github": "^0.5.1",
 		"@changesets/cli": "^2.29.0",
 		"@eslint/js": "^9.24.0",
+		"@types/node": "^22.14.1",
 		"@vscode/test-electron": "^2.3.8",
 		"eslint": "^9.24.0",
 		"eslint-config-prettier": "^10.1.2",
