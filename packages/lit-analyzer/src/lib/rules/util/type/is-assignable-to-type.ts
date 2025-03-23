@@ -1,5 +1,5 @@
-import type { SimpleType, SimpleTypeComparisonOptions } from "ts-simple-type";
-import { isAssignableToType as _isAssignableToType } from "ts-simple-type";
+import type { SimpleType, SimpleTypeComparisonOptions } from "@jackolope/ts-simple-type";
+import { isAssignableToType as _isAssignableToType } from "@jackolope/ts-simple-type";
 import type { RuleModuleContext } from "../../../analyze/types/rule/rule-module-context.js";
 
 export function isAssignableToType(

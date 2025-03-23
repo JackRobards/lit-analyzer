@@ -1,5 +1,5 @@
-import type { SimpleType } from "ts-simple-type";
-import { isAssignableToSimpleTypeKind } from "ts-simple-type";
+import type { SimpleType } from "@jackolope/ts-simple-type";
+import { isAssignableToSimpleTypeKind } from "@jackolope/ts-simple-type";
 import {
 	LIT_HTML_BOOLEAN_ATTRIBUTE_MODIFIER,
 	LIT_HTML_EVENT_LISTENER_ATTRIBUTE_MODIFIER,

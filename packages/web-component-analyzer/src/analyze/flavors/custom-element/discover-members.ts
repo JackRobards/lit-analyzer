@@ -1,4 +1,4 @@
-import { toSimpleType } from "ts-simple-type";
+import { toSimpleType } from "@jackolope/ts-simple-type";
 import type { BinaryExpression, ExpressionStatement, Node, ReturnStatement } from "typescript";
 import type { ComponentMember } from "../../types/features/component-member";
 import { getMemberVisibilityFromNode, getModifiersFromNode, hasModifier } from "../../util/ast-util";

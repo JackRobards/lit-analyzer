@@ -1,4 +1,4 @@
-import type { SimpleType } from "ts-simple-type";
+import type { SimpleType } from "@jackolope/ts-simple-type";
 import type { Node, Type } from "typescript";
 import type { PriorityKind } from "../../flavors/analyzer-flavor";
 import type { ModifierKind } from "../modifier-kind";

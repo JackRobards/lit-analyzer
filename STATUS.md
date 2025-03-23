@@ -26,7 +26,3 @@ The Lit team also have [this RFC](https://github.com/lit/rfcs/pull/41) outlining
 
 As a shoutout, some of the tools by break-stuff are great if you are wanting to generate a custom element manifest file. I would highly recommend checking them out:
 https://github.com/break-stuff/cem-tools
-
-## TS Simple Type
-
-Currently, this repo doesn't include the [ts-simple-type](https://github.com/runem/ts-simple-type) repo that was also created by Rune. There is a good chance it will be included here in the future, or an alternative will be found. If there is an update that you'd like to make to this package let me know, and I can see about getting it added here as well so that it is easier to do so!

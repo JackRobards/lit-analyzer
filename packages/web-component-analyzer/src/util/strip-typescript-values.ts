@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { isSimpleType, typeToString } from "ts-simple-type";
+import { isSimpleType, typeToString } from "@jackolope/ts-simple-type";
 import type { Node, SourceFile, Type, TypeChecker } from "typescript";
 
 function isTypescriptNode(value: any): value is Node {

@@ -1,5 +1,5 @@
-import type { SimpleType } from "ts-simple-type";
-import { toSimpleType } from "ts-simple-type";
+import type { SimpleType } from "@jackolope/ts-simple-type";
+import { toSimpleType } from "@jackolope/ts-simple-type";
 import type { Expression } from "typescript";
 import type { HtmlNodeAttrAssignment } from "../../../analyze/types/html-node/html-node-attr-assignment-types.js";
 import { HtmlNodeAttrAssignmentKind } from "../../../analyze/types/html-node/html-node-attr-assignment-types.js";

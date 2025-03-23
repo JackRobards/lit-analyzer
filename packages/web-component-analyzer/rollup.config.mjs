@@ -8,7 +8,7 @@ const require = createRequire(import.meta.url);
 const { dirname } = require("path");
 const pkg = require("./package.json");
 const watch = { include: "src/**" };
-const external = ["typescript", "path", "fs", "ts-simple-type"];
+const external = ["typescript", "path", "fs", "@jackolope/ts-simple-type"];
 const replaceVersionConfig = {
 	VERSION: pkg.version,
 	delimiters: ["<@", "@>"],
