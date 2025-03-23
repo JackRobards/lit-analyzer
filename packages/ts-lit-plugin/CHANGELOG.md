@@ -1,5 +1,25 @@
 # @jackolope/ts-lit-plugin
 
+## 3.1.0
+
+### Minor Changes
+
+- [#142](https://github.com/JackRobards/lit-analyzer/pull/142) [`d83e9fb`](https://github.com/JackRobards/lit-analyzer/commit/d83e9fb20d5285a8df21e5246a2e48b365b75bff) Thanks [@JackRobards](https://github.com/JackRobards)! - feat: Update no-property-visibility-mismatch rule to check for @state decorator instead of deprecated @internalProperty decorator
+
+### Patch Changes
+
+- [#207](https://github.com/JackRobards/lit-analyzer/pull/207) [`2250324`](https://github.com/JackRobards/lit-analyzer/commit/225032460b92f3f7652061fa7ea275231e69943c) Thanks [@JackRobards](https://github.com/JackRobards)! - fix: Make no-incompatible-type-binding rule ignore undefined when binding a property (with .) on union types
+
+- [#207](https://github.com/JackRobards/lit-analyzer/pull/207) [`0061d9d`](https://github.com/JackRobards/lit-analyzer/commit/0061d9db945ff7310d6ec7c70cf2b4f7d46a3c1d) Thanks [@JackRobards](https://github.com/JackRobards)! - fix: Turn no-nullable-attribute-binding off by default as it is no longer relevant in newer Lit versions. It can still be turned on via configuration if so desired.
+
+- [#207](https://github.com/JackRobards/lit-analyzer/pull/207) [`e869530`](https://github.com/JackRobards/lit-analyzer/commit/e869530d7b868a293f76ba8363f9a25f48475c06) Thanks [@JackRobards](https://github.com/JackRobards)! - fix: Make no-incompatible-property-type rule ignor e @property decorators with a `state: true` option in the same way as it ignores `attribute: false`
+
+- [#207](https://github.com/JackRobards/lit-analyzer/pull/207) [`ca7deda`](https://github.com/JackRobards/lit-analyzer/commit/ca7deda7cfb6d422f2e4e75324e6e34c0229a787) Thanks [@JackRobards](https://github.com/JackRobards)! - chore: Support configuring in the tsconfig.json by the name ts-lit-plugin as well for compatibility with the original.
+
+- Updated dependencies [[`e77eeb7`](https://github.com/JackRobards/lit-analyzer/commit/e77eeb79f78380671a1e6171d2d84d6d4e677512), [`2250324`](https://github.com/JackRobards/lit-analyzer/commit/225032460b92f3f7652061fa7ea275231e69943c), [`0061d9d`](https://github.com/JackRobards/lit-analyzer/commit/0061d9db945ff7310d6ec7c70cf2b4f7d46a3c1d), [`d83e9fb`](https://github.com/JackRobards/lit-analyzer/commit/d83e9fb20d5285a8df21e5246a2e48b365b75bff), [`e827ea1`](https://github.com/JackRobards/lit-analyzer/commit/e827ea1cbb36ce518b87033a08b9f7d2efac8f7a), [`e869530`](https://github.com/JackRobards/lit-analyzer/commit/e869530d7b868a293f76ba8363f9a25f48475c06)]:
+  - @jackolope/lit-analyzer@3.1.0
+  - @jackolope/web-component-analyzer@4.0.0
+
 ## 3.0.0
 
 ### Major Changes

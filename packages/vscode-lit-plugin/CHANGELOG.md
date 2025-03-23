@@ -1,5 +1,21 @@
 # Change Log
 
+## 2.1.0
+
+### Minor Changes
+
+- [#208](https://github.com/JackRobards/lit-analyzer/pull/208) [`e77eeb7`](https://github.com/JackRobards/lit-analyzer/commit/e77eeb79f78380671a1e6171d2d84d6d4e677512) Thanks [@JackRobards](https://github.com/JackRobards)! - feat: Add support for VSCode's html.customData setting to vscode plugin
+
+- [#142](https://github.com/JackRobards/lit-analyzer/pull/142) [`d83e9fb`](https://github.com/JackRobards/lit-analyzer/commit/d83e9fb20d5285a8df21e5246a2e48b365b75bff) Thanks [@JackRobards](https://github.com/JackRobards)! - feat: Update no-property-visibility-mismatch rule to check for @state decorator instead of deprecated @internalProperty decorator
+
+### Patch Changes
+
+- [#207](https://github.com/JackRobards/lit-analyzer/pull/207) [`2250324`](https://github.com/JackRobards/lit-analyzer/commit/225032460b92f3f7652061fa7ea275231e69943c) Thanks [@JackRobards](https://github.com/JackRobards)! - fix: Make no-incompatible-type-binding rule ignore undefined when binding a property (with .) on union types
+
+- [#207](https://github.com/JackRobards/lit-analyzer/pull/207) [`0061d9d`](https://github.com/JackRobards/lit-analyzer/commit/0061d9db945ff7310d6ec7c70cf2b4f7d46a3c1d) Thanks [@JackRobards](https://github.com/JackRobards)! - fix: Turn no-nullable-attribute-binding off by default as it is no longer relevant in newer Lit versions. It can still be turned on via configuration if so desired.
+
+- [#207](https://github.com/JackRobards/lit-analyzer/pull/207) [`e869530`](https://github.com/JackRobards/lit-analyzer/commit/e869530d7b868a293f76ba8363f9a25f48475c06) Thanks [@JackRobards](https://github.com/JackRobards)! - fix: Make no-incompatible-property-type rule ignor e @property decorators with a `state: true` option in the same way as it ignores `attribute: false`
+
 ## 2.0.0
 
 ### Major Changes
