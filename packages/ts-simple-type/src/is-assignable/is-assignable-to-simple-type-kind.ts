@@ -1,10 +1,11 @@
-import { Type, TypeChecker } from "typescript";
-import { isSimpleType, SimpleType, SimpleTypeKind } from "../simple-type";
+import type { Type, TypeChecker } from "typescript";
+import type { SimpleType, SimpleTypeKind } from "../simple-type";
+import { isSimpleType } from "../simple-type";
 import { toSimpleType } from "../transform/to-simple-type";
 import { or } from "../utils/list-util";
 import { isTypeChecker } from "../utils/ts-util";
 import { validateType } from "../utils/validate-type";
-import { SimpleTypeKindComparisonOptions } from "./simple-type-comparison-options";
+import type { SimpleTypeKindComparisonOptions } from "./simple-type-comparison-options";
 
 /**
  * Checks if a simple type kind is assignable to a type.

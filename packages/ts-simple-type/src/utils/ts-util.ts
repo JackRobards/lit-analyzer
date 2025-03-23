@@ -1,5 +1,5 @@
-import * as tsModule from "typescript";
-import {
+import type * as tsModule from "typescript";
+import type {
 	BigIntLiteralType,
 	Declaration,
 	GenericType,
@@ -15,7 +15,7 @@ import {
 	TypeReference,
 	UniqueESSymbolType
 } from "typescript";
-import { SimpleTypeModifierKind } from "../simple-type";
+import type { SimpleTypeModifierKind } from "../simple-type";
 import { and, or } from "./list-util";
 
 export function isTypeChecker(obj: unknown): obj is TypeChecker {

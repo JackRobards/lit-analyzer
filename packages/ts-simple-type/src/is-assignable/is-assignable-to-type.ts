@@ -1,11 +1,12 @@
-import { Node, Program, Type, TypeChecker } from "typescript";
-import { isSimpleType, SimpleType } from "../simple-type";
+import type { Node, Program, Type, TypeChecker } from "typescript";
+import type { SimpleType } from "../simple-type";
+import { isSimpleType } from "../simple-type";
 import { toSimpleType } from "../transform/to-simple-type";
 import { isNode, isProgram, isTypeChecker } from "../utils/ts-util";
 import { isAssignableToSimpleType } from "./is-assignable-to-simple-type";
-import { SimpleTypeComparisonOptions } from "./simple-type-comparison-options";
+import type { SimpleTypeComparisonOptions } from "./simple-type-comparison-options";
 
-interface TypeCheckerWithInternals extends TypeChecker {
+export interface TypeCheckerWithInternals extends TypeChecker {
 	isTypeAssignableTo(source: Type, target: Type): boolean;
 }
 

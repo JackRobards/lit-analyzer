@@ -1,5 +1,5 @@
-import { Node, Program, Type, TypeChecker } from "typescript";
-import { SimpleType, SimpleTypeMemberNamed } from "../simple-type";
+import type { Node, Program, Type, TypeChecker } from "typescript";
+import type { SimpleType, SimpleTypeMemberNamed } from "../simple-type";
 import { isAssignableToType } from "./is-assignable-to-type";
 
 /**

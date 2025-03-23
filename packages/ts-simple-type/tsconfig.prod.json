@@ -3,8 +3,6 @@
 	"include": ["src"],
 	"compilerOptions": {
 		"incremental": false,
-		"outDir": "lib",
-		"declaration": true,
-		"declarationMap": true
+		"outDir": "./lib"
 	}
 }

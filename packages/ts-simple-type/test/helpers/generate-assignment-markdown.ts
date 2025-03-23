@@ -2,9 +2,9 @@ import { writeFileSync } from "fs";
 import { join } from "path";
 import { generateCombinedTypeTestCode } from "./generate-combined-type-test-code";
 import { markdownTable } from "./markdown-util";
-import { TypescriptType } from "./type-test";
+import type { TypescriptType } from "./type-test";
 import { visitComparisonsInTestCode } from "./visit-type-comparisons";
-import { CompilerOptions } from "typescript";
+import type { CompilerOptions } from "typescript";
 import { PRIMITIVE_TYPES, SPECIAL_TYPES } from "../type-combinations.spec";
 
 /**
@@ -64,6 +64,7 @@ Each cell shows if the assignment \`typeA = typeB\` is valid.
 export function writeAssignmentMarkdown(path: string = "./assignments.md") {
 	const markdown = generateAssignmentMarkdown([...PRIMITIVE_TYPES, ...SPECIAL_TYPES, "{}", "void"]);
 	const absolutePath = join(process.cwd(), path);
+	// eslint-disable-next-line no-console
 	console.log(`Writing comparison table to ${absolutePath}`);
 	writeFileSync(absolutePath, markdown);
 }

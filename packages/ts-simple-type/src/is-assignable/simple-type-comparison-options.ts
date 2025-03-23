@@ -1,5 +1,6 @@
-import { SimpleType } from "../simple-type";
+import type { SimpleType } from "../simple-type";
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface SimpleTypeBaseOptions {}
 
 export interface SimpleTypeComparisonOptions extends SimpleTypeBaseOptions {

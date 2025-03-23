@@ -1,6 +1,9 @@
-import ts from "@wessberg/rollup-plugin-ts";
+import ts from "@rollup/plugin-typescript";
+import { createRequire } from "module";
 
+const require = createRequire(import.meta.url);
 const pkg = require("./package.json");
+
 const input = "src/index.ts";
 const watch = {
 	include: "src/**"

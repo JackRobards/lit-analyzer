@@ -1,11 +1,13 @@
+/* eslint-disable no-console */
 import test from "ava";
 import { existsSync, writeFileSync } from "fs";
-import { CompilerOptions, isBlock, Node } from "typescript";
+import type { CompilerOptions, Node } from "typescript";
+import { isBlock } from "typescript";
 import { inspect } from "util";
 import { isAssignableToType } from "../../src/is-assignable/is-assignable-to-type";
 import { toSimpleType } from "../../src/transform/to-simple-type";
 import { generateCombinedTypeTestCode } from "./generate-combined-type-test-code";
-import { TypescriptType } from "./type-test";
+import type { TypescriptType } from "./type-test";
 import { visitComparisonsInTestCode } from "./visit-type-comparisons";
 
 /**

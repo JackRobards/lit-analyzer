@@ -1,7 +1,8 @@
 import test from "ava";
 import * as ts from "typescript";
-import { Program } from "typescript";
-import { deserializeSimpleType, serializeSimpleType, SimpleType } from "../src";
+import type { Program } from "typescript";
+import type { SimpleType } from "../src";
+import { deserializeSimpleType, serializeSimpleType } from "../src";
 import { isAssignableToSimpleType } from "../src/is-assignable/is-assignable-to-simple-type";
 import { toSimpleType } from "../src/transform/to-simple-type";
 import { programWithVirtualFiles } from "./helpers/analyze-text";
