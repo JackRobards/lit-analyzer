@@ -1,7 +1,4 @@
 {
 	"extends": "../../tsconfig.json",
-	"include": ["./src/**/*", "./test/**/*", "./package.json", "./run-playground.ts", "./rollup.config.mjs"],
-	"compilerOptions": {
-		"outDir": "./dist"
-	}
+	"include": ["./src/**/*", "./test/**/*", "./package.json", "./run-playground.ts", "./rollup.config.mjs"]
 }
