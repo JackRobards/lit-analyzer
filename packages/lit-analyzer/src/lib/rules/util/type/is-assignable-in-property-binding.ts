@@ -18,10 +18,7 @@ export function isAssignableInPropertyBinding(
 		return securitySystemResult;
 	}
 
-	// Exclude `undefined` from union type checks
-	const filteredTypeB = typeB.kind === "UNION" ? { ...typeB, types: typeB.types.filter(type => type.kind !== "UNDEFINED") } : typeB;
-
-	if (!isAssignableToType({ typeA, typeB: filteredTypeB }, context)) {
+	if (!isAssignableToType({ typeA, typeB }, context)) {
 		context.report({
 			location: rangeFromHtmlNodeAttr(htmlAttr),
 			message: `Type '${typeToString(typeB)}' is not assignable to '${typeToString(typeA)}'`
