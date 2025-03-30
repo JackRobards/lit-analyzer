@@ -1,5 +1,15 @@
 # @jackolope/ts-lit-plugin
 
+## 3.1.1
+
+### Patch Changes
+
+- [#221](https://github.com/JackRobards/lit-analyzer/pull/221) [`cbad127`](https://github.com/JackRobards/lit-analyzer/commit/cbad1272bc0a77bd9e1c208eed872c843cce0b13) Thanks [@JackRobards](https://github.com/JackRobards)! - Updated dependency `@types/node` to `^22.13.14`.
+  Updated dependency `esbuild` to `^0.25.1`.
+- Updated dependencies [[`cbad127`](https://github.com/JackRobards/lit-analyzer/commit/cbad1272bc0a77bd9e1c208eed872c843cce0b13), [`cbad127`](https://github.com/JackRobards/lit-analyzer/commit/cbad1272bc0a77bd9e1c208eed872c843cce0b13), [`9fc7ff2`](https://github.com/JackRobards/lit-analyzer/commit/9fc7ff21d354df4d1f84ea325b5b63eb00e7e6de)]:
+  - @jackolope/lit-analyzer@3.1.1
+  - @jackolope/web-component-analyzer@4.0.1
+
 ## 3.1.0
 
 ### Minor Changes
