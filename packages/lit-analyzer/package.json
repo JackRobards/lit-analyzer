@@ -104,7 +104,7 @@
 		"@types/node": "^22.13.14",
 		"ava": "^6.2.0",
 		"tslib": "^2.0.0",
-		"typescript": "^5.7.2",
+		"typescript": "^5.8.2",
 		"typescript-5.4": "npm:typescript@~5.4.0",
 		"typescript-5.5": "npm:typescript@~5.5.0",
 		"typescript-5.6": "npm:typescript@~5.6.0",

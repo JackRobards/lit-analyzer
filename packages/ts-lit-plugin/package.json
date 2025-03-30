@@ -61,7 +61,7 @@
 	"devDependencies": {
 		"@types/node": "^22.13.14",
 		"esbuild": "^0.25.1",
-		"typescript": "^5.7.2",
+		"typescript": "^5.8.2",
 		"wireit": "^0.14.11"
 	},
 	"contributors": [
