@@ -1,8 +1,5 @@
 ---
-'@jackolope/lit-analyzer': patch
-'@jackolope/ts-lit-plugin': patch
-'lit-analyzer-plugin': patch
-'@jackolope/web-component-analyzer': patch
+"@jackolope/lit-analyzer": patch
 ---
 
 Updated dependency `@vscode/web-custom-data` to `^0.5.0`.

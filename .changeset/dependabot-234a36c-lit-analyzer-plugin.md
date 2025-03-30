@@ -1,8 +1,5 @@
 ---
-'@jackolope/lit-analyzer': patch
-'@jackolope/ts-lit-plugin': patch
-'lit-analyzer-plugin': patch
-'@jackolope/web-component-analyzer': patch
+"lit-analyzer-plugin": patch
 ---
 
 Updated dependency `@types/node` to `^22.13.14`.
