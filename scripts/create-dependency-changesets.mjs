@@ -10,7 +10,7 @@ import process from "node:process";
 const getExecOutput = promisify(exec);
 
 // Replace this with the number of commits to look back for changes. Either since the last release, or dependency changeset was generated.
-const commitCount = "11";
+const commitCount = "10";
 
 // Parses package.json files and returns the package names
 async function getPackagesNames(files) {
@@ -68,5 +68,5 @@ for (const [i, file] of files.entries()) {
 
 	const packageBumps = await getBumps([file]);
 	console.log(`Package updates for ${file}:\n`, packageBumps);
-	await createChangeset(fileName, packageBumps, packageNames);
+	await createChangeset(fileName, packageBumps, [packageNames[i]]);
 }
