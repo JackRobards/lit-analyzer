@@ -1,5 +1,12 @@
 # Change Log
 
+## 4.0.1
+
+### Patch Changes
+
+- [#221](https://github.com/JackRobards/lit-analyzer/pull/221) [`cbad127`](https://github.com/JackRobards/lit-analyzer/commit/cbad1272bc0a77bd9e1c208eed872c843cce0b13) Thanks [@JackRobards](https://github.com/JackRobards)! - Updated dependency `@types/node` to `^22.13.14`.
+  Updated dependency `rollup` to `^4.37.0`.
+
 ## 4.0.0
 
 ### Major Changes
