@@ -5,11 +5,11 @@ import type * as tsModule from "typescript";
 
 type TestFunction = (title: string, implementation: ImplementationFn<unknown[]>) => void;
 
-const TS_MODULES_ALL = ["current", "5.4", "5.5", "5.6"] as const;
+const TS_MODULES_ALL = ["current", "5.4", "5.5", "5.6", "5.7"] as const;
 
 type TsModuleKind = typeof TS_MODULES_ALL[number];
 
-const TS_MODULES_DEFAULT: TsModuleKind[] = ["current", "5.4", "5.5", "5.6"];
+const TS_MODULES_DEFAULT: TsModuleKind[] = ["current", "5.4", "5.5", "5.6", "5.7"];
 
 /**
  * Returns the name of the module to require for a specific ts module kind
@@ -21,6 +21,7 @@ function getTsModuleNameWithKind(kind: TsModuleKind | undefined): string {
 		case "5.4":
 		case "5.5":
 		case "5.6":
+		case "5.7":
 			return `typescript-${kind}`;
 		case "current":
 		case undefined:
