@@ -1,4 +1,5 @@
 import * as vscode from "vscode";
+import { getRegexMatches } from "./utils.js";
 
 /**
  * Regex to match colors in a string
@@ -79,26 +80,6 @@ function hexToVscodeColor(hex: string): vscode.Color | undefined {
 	const rgba = hexToRGBA(hex);
 	if (rgba == null) return undefined;
 	return new vscode.Color(rgba.red / 255, rgba.green / 255, rgba.blue / 255, rgba.alpha / 255);
-}
-
-/**
- * Matches a regex on a text and returns all positions where a match was found
- * @param regex
- * @param text
- * @param callback
- */
-function getRegexMatches(regex: RegExp, text: string): { start: number; text: string }[] {
-	// Find all hex colors in the document
-	let match: RegExpExecArray | null = null;
-
-	const matches: { start: number; text: string }[] = [];
-
-	while ((match = regex.exec(text)) != null) {
-		const start = match.index;
-		matches.push({ start, text: match[0] });
-	}
-
-	return matches;
 }
 
 /**

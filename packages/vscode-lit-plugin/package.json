@@ -177,6 +177,8 @@
 		"fast-glob": "^3.2.11",
 		"@jackolope/lit-analyzer": "^3.1.1",
 		"mocha": "^11.1.0",
+		"vscode-css-languageservice": "6.3.4",
+		"vscode-html-languageservice": "5.3.3",
 		"wireit": "^0.14.11"
 	},
 	"activationEvents": [
@@ -266,6 +268,11 @@
 						"default": [
 							"css"
 						]
+					},
+					"lit-analyzer-plugin.enableTaggedTemplateFolding": {
+						"type": "boolean",
+						"description": "Enables folding (code collapse) inside html, css, and svg tagged template literals. Defaults to false if editor.foldingStrategy is 'indentation'.",
+						"default": true
 					},
 					"lit-analyzer-plugin.dontShowSuggestions": {
 						"type": "boolean",

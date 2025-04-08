@@ -63,6 +63,11 @@
 									},
 									"default": ["css"]
 								},
+								"enableTaggedTemplateFolding": {
+									"type": "boolean",
+									"description": "Enables folding (code collapse) inside html, css, and svg tagged template literals. Defaults to false if editor.foldingStrategy is 'indentation'.",
+									"default": true
+								},
 								"dontShowSuggestions": {
 									"type": "boolean",
 									"description": "Don't append messages suggesting how to fix diagnostics.",
