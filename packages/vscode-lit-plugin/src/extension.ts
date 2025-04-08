@@ -2,6 +2,7 @@ import type { LitAnalyzerConfig } from "@jackolope/lit-analyzer";
 import { ALL_RULE_IDS } from "@jackolope/lit-analyzer";
 import { join } from "path";
 import { ColorProvider } from "./color-provider.js";
+import { FoldingProvider } from "./folding-provider.js";
 import * as vscode from "vscode";
 
 const tsLitPluginId = "@jackolope/ts-lit-plugin";
@@ -13,6 +14,7 @@ const analyzeCommandId = "lit-analyzer-plugin.analyze";
 let defaultAnalyzeGlob = "src";
 
 const colorProvider = new ColorProvider();
+const foldingProvider = new FoldingProvider();
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
 	const extension = vscode.extensions.getExtension(typeScriptExtensionId);
@@ -45,14 +47,23 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 	context.subscriptions.push(vscode.commands.registerCommand(analyzeCommandId, handleAnalyzeCommand));
 
 	// Register a color provider
-	const registration = vscode.languages.registerColorProvider(
+	const colorRegistration = vscode.languages.registerColorProvider(
 		[
 			{ scheme: "file", language: "typescript" },
 			{ scheme: "file", language: "javascript" }
 		],
 		colorProvider
 	);
-	context.subscriptions.push(registration);
+
+	const foldingRegistration = vscode.languages.registerFoldingRangeProvider(
+		[
+			{ scheme: "file", language: "typescript" },
+			{ scheme: "file", language: "javascript" }
+		],
+		foldingProvider
+	);
+	context.subscriptions.push(colorRegistration);
+	context.subscriptions.push(foldingRegistration);
 
 	synchronizeConfig(api);
 }
