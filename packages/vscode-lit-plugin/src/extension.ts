@@ -9,6 +9,7 @@ const tsLitPluginId = "@jackolope/ts-lit-plugin";
 const typeScriptExtensionId = "vscode.typescript-language-features";
 const configurationSection = "lit-analyzer-plugin";
 const configurationHtmlSection = "html";
+const configurationEditorSection = "editor";
 const analyzeCommandId = "lit-analyzer-plugin.analyze";
 
 let defaultAnalyzeGlob = "src";
@@ -54,16 +55,26 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 		],
 		colorProvider
 	);
-
-	const foldingRegistration = vscode.languages.registerFoldingRangeProvider(
-		[
-			{ scheme: "file", language: "typescript" },
-			{ scheme: "file", language: "javascript" }
-		],
-		foldingProvider
-	);
 	context.subscriptions.push(colorRegistration);
-	context.subscriptions.push(foldingRegistration);
+
+	const config = vscode.workspace.getConfiguration(configurationSection);
+
+	// For folding strategy "indentation", do not enable tagged template folding feature by default
+	const editorConfig = vscode.workspace.getConfiguration(configurationEditorSection);
+	const foldingStrategy = editorConfig.get("foldingStrategy");
+	const enableTaggedTemplateFolding = config.get("enableTaggedTemplateFolding", foldingStrategy !== "indentation");
+
+	// Register a folding provider to tagged template literals
+	if (enableTaggedTemplateFolding) {
+		const foldingRegistration = vscode.languages.registerFoldingRangeProvider(
+			[
+				{ scheme: "file", language: "typescript" },
+				{ scheme: "file", language: "javascript" }
+			],
+			foldingProvider
+		);
+		context.subscriptions.push(foldingRegistration);
+	}
 
 	synchronizeConfig(api);
 }
@@ -173,7 +184,7 @@ function getConfig(): Partial<LitAnalyzerConfig> {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function withConfigValue(config: vscode.WorkspaceConfiguration, key: string, withValue: (value: any) => void): void {
+function withConfigValue(config: vscode.WorkspaceConfiguration, key: string, withValue: (value: any) => void, defaultValue?: any): void {
 	const configSetting = config.inspect(key);
 	if (!configSetting) {
 		return;
@@ -189,7 +200,7 @@ function withConfigValue(config: vscode.WorkspaceConfiguration, key: string, wit
 		return;
 	}
 
-	const value = config.get(key, undefined);
+	const value = config.get(key, defaultValue);
 
 	if (typeof value !== "undefined") {
 		withValue(value);

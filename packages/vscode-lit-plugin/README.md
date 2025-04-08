@@ -673,6 +673,7 @@ You can configure this plugin by going to `VS Code Settings` > `Extension` > `li
 | `dontShowSuggestions` | This option sets strict as  | `boolean` | false |
 | `htmlTemplateTags` | List of template tags to enable html support in. | `string[]` | ["html", "raw"] | |
 | `cssTemplateTags` | This option sets strict as | `string[]` | ["css"] |
+| `enableTaggedTemplateFolding` | Enables folding (code collapse) inside html, css, and svg tagged template literals. | `boolean` | true if `editor.foldingStrategy !== "indentation"`. false if it is |
 | `globalTags` |  List of html tag names that you expect to be present at all times. | `string[]` | |
 | `globalAttributes` | List of html attributes names that you expect to be present at all times. | `string[]` | |
 | `globalEvents` | List of event names that you expect to be present at all times | `string[]` | |
