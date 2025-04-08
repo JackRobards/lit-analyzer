@@ -23,7 +23,7 @@ async function getPackagesNames(files) {
 }
 
 async function createChangeset(fileName, packageBumps, packages) {
-	let message = "";
+	let message = "Updated dependencies:\n";
 	for (const [pkg, bump] of packageBumps) {
 		message = message + `Updated dependency \`${pkg}\` to \`${bump}\`.\n`;
 	}
@@ -43,7 +43,11 @@ async function getBumps(files) {
 				continue;
 			}
 			const match = change.match(/"(.*?)"/g);
-			bumps.set(match[0].replace(/"/g, ""), match[1].replace(/"/g, ""));
+
+			// Not a version change
+			if (!match || match.length !== 2) continue;
+
+			bumps.set(match[0]?.replace(/"/g, ""), match[1]?.replace(/"/g, ""));
 		}
 	}
 	return bumps;
@@ -64,7 +68,8 @@ if (!packageNames.length) {
 const { stdout: shortHash } = await getExecOutput("git rev-parse --short HEAD");
 
 for (const [i, file] of files.entries()) {
-	const fileName = `.changeset/dependabot-${shortHash.trim()}-${packageNames[i].replace("/", "-")}.md`;
+	// zzz so that the dependency changes will always come last
+	const fileName = `.changeset/zzz_dependabot-${shortHash.trim()}-${packageNames[i].replace("/", "-")}.md`;
 
 	const packageBumps = await getBumps([file]);
 	console.log(`Package updates for ${file}:\n`, packageBumps);
