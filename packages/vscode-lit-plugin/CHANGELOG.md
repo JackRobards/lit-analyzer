@@ -1,5 +1,21 @@
 # Change Log
 
+## 2.2.0
+
+### Minor Changes
+
+- [#236](https://github.com/JackRobards/lit-analyzer/pull/236) [`76e43ac`](https://github.com/JackRobards/lit-analyzer/commit/76e43ac516e1f6d6c7e07e1c7b993475f00730af) Thanks [@JackRobards](https://github.com/JackRobards)! - feat: Add ability to fold (collapse) code inside of html, css, and svg tempalte literals.
+
+  This feature can be configured by a new "lit-analyzer-plugin.enableTaggedTemplateFolding" vscode setting. By default it is enabled, unless your editor.foldingStrategy setting is set to "indentation".
+
+### Patch Changes
+
+- [#236](https://github.com/JackRobards/lit-analyzer/pull/236) [`672a7c6`](https://github.com/JackRobards/lit-analyzer/commit/672a7c6aa9b449044cdbb384923219518bc24107) Thanks [@JackRobards](https://github.com/JackRobards)! - Updated dependencies:
+  Updated devDependency `@types/node` to `^22.14.0`.
+  Updated dependency `@vscode/vsce` to `^3.3.2`.
+  Updated dependency `@jackolope/lit-analyzer` to new version.
+  Updated dependency `vscode-css-languageservice` to `6.3.4`.
+
 ## 2.1.1
 
 ### Patch Changes

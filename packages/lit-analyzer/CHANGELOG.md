@@ -1,5 +1,13 @@
 # @jackolope/lit-analyzer
 
+## 3.1.2
+
+### Patch Changes
+
+- [#236](https://github.com/JackRobards/lit-analyzer/pull/236) [`672a7c6`](https://github.com/JackRobards/lit-analyzer/commit/672a7c6aa9b449044cdbb384923219518bc24107) Thanks [@JackRobards](https://github.com/JackRobards)! - Updated dependencies:
+  Updated dependency `vscode-css-languageservice` to `6.3.4`.
+  Updated devDependency `@types/node` to `^22.14.0`.
+
 ## 3.1.1
 
 ### Patch Changes
