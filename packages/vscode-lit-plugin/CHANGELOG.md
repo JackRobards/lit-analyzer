@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.2.1
+
+### Patch Changes
+
+- [#234](https://github.com/JackRobards/lit-analyzer/pull/234) [`361442a`](https://github.com/JackRobards/lit-analyzer/commit/361442aa78a0a616b3ead06f67dba7fc42f01931) Thanks [@dependabot](https://github.com/apps/dependabot)! - chore: Add support for TypeScript 5.8
+
 ## 2.2.0
 
 ### Minor Changes
