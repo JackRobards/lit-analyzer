@@ -1,4 +1,4 @@
-import type { SimpleType, SimpleTypeStringLiteral } from "ts-simple-type";
+import type { SimpleType, SimpleTypeStringLiteral } from "@jackolope/ts-simple-type";
 import type { HTMLDataV1, IAttributeData, ITagData, IValueData, IValueSet } from "vscode-html-languageservice";
 import type { MarkupContent } from "vscode-languageserver-types";
 import { lazy } from "../../util/general-util.js";

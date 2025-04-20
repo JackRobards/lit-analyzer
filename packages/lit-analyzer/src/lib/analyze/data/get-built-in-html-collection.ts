@@ -1,4 +1,4 @@
-import type { SimpleType } from "ts-simple-type";
+import type { SimpleType } from "@jackolope/ts-simple-type";
 import type { HTMLDataV1 } from "vscode-html-languageservice";
 import htmlDataJson from "@vscode/web-custom-data/data/browsers.html-data.json";
 import type { HtmlAttr, HtmlDataCollection } from "../parse/parse-html-data/html-tag.js";

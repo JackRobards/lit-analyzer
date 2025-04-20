@@ -28,10 +28,15 @@
 	},
 	"wireit": {
 		"build": {
+			"dependencies": [
+				"../ts-simple-type:build",
+				"build:types"
+			],
 			"command": "rollup -c",
 			"files": [
 				"src/**/*",
 				"test/**/*",
+				"rollup.config.mjs",
 				"tsconfig.json",
 				"../../tsconfig.json"
 			],
@@ -41,6 +46,9 @@
 				"./tsbuildinfo"
 			],
 			"clean": "if-file-deleted"
+		},
+		"build:types": {
+			"command": "tsc --build --pretty --noEmit"
 		},
 		"test": {
 			"dependencies": [
@@ -84,21 +92,20 @@
 			"img": "https://avatars0.githubusercontent.com/u/5372940?s=400&u=43d97899257af3c47715679512919eadb07eab26&v=4"
 		}
 	],
-	"author": "Rune Mehlsen",
+	"author": "JackRobards",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/JackRobards/lit-analyzer/issues"
 	},
 	"homepage": "https://github.com/JackRobards/lit-analyzer#readme",
 	"dependencies": {
-		"ts-simple-type": "2.0.0-next.0",
+		"@jackolope/ts-simple-type": "^3.0.0",
 		"typescript": "^5.8.3"
 	},
 	"devDependencies": {
 		"@rollup/plugin-node-resolve": "^16.0.1",
 		"@rollup/plugin-replace": "^6.0.2",
 		"@rollup/plugin-typescript": "^12.1.2",
-		"@types/node": "^22.14.1",
 		"ava": "^6.2.0",
 		"cross-env": "^7.0.2",
 		"rollup": "^4.39.0",

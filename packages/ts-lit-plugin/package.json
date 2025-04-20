@@ -30,7 +30,8 @@
 	"wireit": {
 		"build": {
 			"dependencies": [
-				"../lit-analyzer:build"
+				"../lit-analyzer:build",
+				"../web-component-analyzer:build"
 			],
 			"command": "tsc --build --pretty",
 			"files": [
@@ -59,7 +60,6 @@
 		"@jackolope/web-component-analyzer": "^4.0.1"
 	},
 	"devDependencies": {
-		"@types/node": "^22.14.1",
 		"esbuild": "^0.25.1",
 		"typescript": "^5.8.3",
 		"wireit": "^0.14.11"

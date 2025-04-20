@@ -2,7 +2,7 @@
 	"name": "@jackolope/lit-analyzer",
 	"version": "3.1.2",
 	"description": "CLI that type checks bindings in lit-html templates",
-	"author": "runem",
+	"author": "JackRobards",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
@@ -36,6 +36,10 @@
 	},
 	"wireit": {
 		"build": {
+			"dependencies": [
+				"../ts-simple-type:build",
+				"../web-component-analyzer:build"
+			],
 			"command": "tsc --build --pretty",
 			"files": [
 				"src/**/*",
@@ -90,18 +94,17 @@
 		"cli.mjs"
 	],
 	"dependencies": {
+		"@jackolope/ts-simple-type": "^3.0.0",
+		"@jackolope/web-component-analyzer": "^4.0.1",
 		"@vscode/web-custom-data": "^0.5.0",
 		"chalk": "^5.4.0",
 		"didyoumean2": "7.0.4",
 		"fast-glob": "^3.2.11",
 		"parse5": "7.2.1",
-		"ts-simple-type": "~2.0.0-next.0",
 		"vscode-css-languageservice": "6.3.4",
-		"vscode-html-languageservice": "5.3.3",
-		"@jackolope/web-component-analyzer": "^4.0.1"
+		"vscode-html-languageservice": "5.3.3"
 	},
 	"devDependencies": {
-		"@types/node": "^22.14.1",
 		"ava": "^6.2.0",
 		"tslib": "^2.0.0",
 		"typescript": "^5.8.3",

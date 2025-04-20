@@ -19,6 +19,8 @@ export default tseslint.config(
 			"packages/*/scripts",
 			"packages/*/test",
 			"packages/*/index.*",
+			"packages/ts-simple-type/.rollup.cache",
+			"!packages/ts-simple-type/test",
 			"packages/vscode-lit-plugin/built",
 			"packages/web-component-analyzer/.rollup.cache",
 			"!packages/web-component-analyzer/test",

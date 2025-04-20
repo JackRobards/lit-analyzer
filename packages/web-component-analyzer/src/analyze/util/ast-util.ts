@@ -1,4 +1,4 @@
-import { isAssignableToSimpleTypeKind } from "ts-simple-type";
+import { isAssignableToSimpleTypeKind } from "@jackolope/ts-simple-type";
 import type * as tsModule from "typescript";
 import type {
 	Decorator,
