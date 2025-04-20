@@ -496,8 +496,8 @@ function isAssignableToSimpleTypeInternal(typeA: SimpleType, typeB: SimpleType, 
 
 		// [typeA] (compare)
 		case "ENUM_MEMBER": {
-			// You can always assign a "number" | "number literal" to a "number literal" enum member type.
-			if (resolveType(typeA.type, options.genericParameterMapA).kind === "NUMBER_LITERAL" && ["NUMBER", "NUMBER_LITERAL"].includes(typeB.kind)) {
+			// You can always assign a "number" to a "number literal" enum member type.
+			if (resolveType(typeA.type, options.genericParameterMapA).kind === "NUMBER_LITERAL" && ["NUMBER"].includes(typeB.kind)) {
 				if (typeB.name != null) {
 					return false;
 				}
