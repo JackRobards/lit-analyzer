@@ -84,6 +84,7 @@ function simpleTypeToStringInternal(type: SimpleType, visitTypeSet: Set<SimpleTy
 				" & ",
 				{ maxContentLength: 200 }
 			);
+		// @ts-expect-error Fallthrough case is intentional
 		case "INTERFACE":
 			if (type.name != null) return type.name;
 		// this fallthrough is intentional

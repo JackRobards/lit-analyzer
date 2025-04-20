@@ -1,4 +1,3 @@
-// @ts-expect-error - need to upgrade to type module in package.json
 import didYouMean, * as dym from "didyoumean2";
 import type { Omit } from "./general-util.js";
 

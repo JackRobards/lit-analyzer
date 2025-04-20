@@ -65,5 +65,6 @@ export function isAssignableToSimpleTypeKind(
 				return isAssignableToSimpleTypeKind(simpleType.type, kind, options);
 			}
 		}
+		return;
 	});
 }

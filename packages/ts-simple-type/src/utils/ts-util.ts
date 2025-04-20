@@ -205,6 +205,7 @@ export function getTargetType(type: Type, ts: typeof tsModule): GenericType | un
 	if (isObject(type, ts) && isObjectTypeReference(type, ts)) {
 		return type.target;
 	}
+	return;
 }
 
 export function getModifiersFromDeclaration(declaration: Declaration, ts: typeof tsModule): SimpleTypeModifierKind[] {

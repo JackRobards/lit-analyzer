@@ -930,7 +930,8 @@ function isAssignableToSimpleTypeInternal(typeA: SimpleType, typeB: SimpleType, 
 		}
 	}
 
-	// @ts-expect-error - If we some how end up here (we shouldn't), return "true" as a safe fallback
+	// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	// @ts-ignore - If we some how end up here (we shouldn't), return "true" as a safe fallback
 	return true;
 }
 
@@ -1042,7 +1043,7 @@ function logDebugHeader(typeA: SimpleType, typeB: SimpleType, options: IsAssigna
 	try {
 		result = isAssignableToSimpleType(typeA, typeB, silentConfig);
 	} catch (e) {
-		result = e.message;
+		result = (e as Error).message;
 	}
 	const depthChars = "   ".repeat(options.depth);
 

@@ -396,6 +396,7 @@ function toSimpleTypeInternal(type: Type, options: ToSimpleTypeInternalOptions):
 						return getSimpleFunctionFromSignatureDeclaration(ctorDecl, options) as SimpleTypeFunction;
 					}
 				}
+				return;
 			})();
 
 			const call = getSimpleFunctionFromCallSignatures(type.getCallSignatures(), options) as SimpleTypeFunction;
@@ -572,6 +573,7 @@ function primitiveLiteralToSimpleType(type: Type, checker: TypeChecker, ts: type
 			value: String(type.escapedName) || Math.floor(Math.random() * 100000000).toString()
 		};
 	}
+	return;
 }
 
 function getSimpleFunctionFromCallSignatures(

@@ -41,10 +41,11 @@ export function deserializeSimpleType(serializedSimpleType: SerializedSimpleType
 				const typeId = Number(obj.replace(TYPE_REF_PREFIX, ""));
 				return deserializedTypeMap.get(typeId)!;
 			}
+			return;
 		});
 
 		// Merge the content of "deserialized type" into the reference
-		Object.assign(deserializedTypeMap.get(Number(typeId)), deserializedType);
+		Object.assign(deserializedTypeMap.get(Number(typeId))!, deserializedType);
 	}
 
 	// Return the main deserialized type
@@ -115,6 +116,7 @@ function serializeTypeInternal(
 			const id = serializeTypeInternal(obj, { emitType, getIdFromType, assignIdToType });
 			return `${TYPE_REF_PREFIX}${id}`;
 		}
+		return;
 	});
 
 	// Emit this serialized type to the type map
