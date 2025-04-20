@@ -5,6 +5,7 @@
 		"importHelpers": false,
 		"lib": ["es2023", "dom"],
 		"outDir": "./lib/esm",
-		"pretty": true
+		"pretty": true,
+		"tsBuildInfoFile": "./.tsbuildinfo"
 	}
 }

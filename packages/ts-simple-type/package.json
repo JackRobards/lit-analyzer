@@ -26,6 +26,9 @@
 	},
 	"wireit": {
 		"build": {
+			"dependencies": [
+				"build:types"
+			],
 			"command": "rollup -c",
 			"files": [
 				"src/**/*",
@@ -40,6 +43,9 @@
 				"./tsbuildinfo"
 			],
 			"clean": "if-file-deleted"
+		},
+		"build:types": {
+			"command": "tsc --build --pretty --noEmit"
 		},
 		"test": {
 			"dependencies": [
