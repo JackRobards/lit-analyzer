@@ -48,7 +48,7 @@ const rule: RuleModule = {
 		const hasPropertyDecorator = decoratorName === "property";
 
 		// Handle cases where @state decorator is used, but the property is public
-		if (hasInternalDecorator && (member.visibility === "public" || member.visibility == null)) {
+		if (hasInternalDecorator && (member.visibility === "public" || member.visibility == null) && member.propName[0] !== "#") {
 			const inJsFile = context.file.fileName.endsWith(".js");
 
 			context.report({
@@ -115,7 +115,7 @@ const rule: RuleModule = {
 		}
 
 		// Handle cases where @property decorator is used, but the property is not public
-		else if (hasPropertyDecorator && member.visibility !== "public") {
+		else if (hasPropertyDecorator && (member.visibility !== "public" || member.propName[0] === "#")) {
 			// If the Lit `state` option is set on the decorator, then that is also considered valid
 			if (member.meta?.state) {
 				return;

@@ -71,3 +71,31 @@ tsTest("Don't report private @property properties with `state` true", t => {
 	);
 	hasNoDiagnostics(t, diagnostics);
 });
+
+tsTest("Don't report @state properties with '#' prefix", t => {
+	const { diagnostics } = getDiagnostics(
+		makeTestElement({
+			properties: [{ name: "#foo", visibility: "", internal: true }]
+		}),
+		{
+			rules: {
+				"no-property-visibility-mismatch": true
+			}
+		}
+	);
+	hasNoDiagnostics(t, diagnostics);
+});
+
+tsTest("Report @property properties with '#' prefix", t => {
+	const { diagnostics } = getDiagnostics(
+		makeTestElement({
+			properties: [{ name: "#foo", visibility: "", internal: false }]
+		}),
+		{
+			rules: {
+				"no-property-visibility-mismatch": true
+			}
+		}
+	);
+	hasDiagnostic(t, diagnostics, "no-property-visibility-mismatch");
+});
