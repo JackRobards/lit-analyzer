@@ -22,6 +22,11 @@ tsTest("Event binding: Function is bindable", t => {
 	hasNoDiagnostics(t, diagnostics);
 });
 
+tsTest("Event binding: Function with property is bindable", t => {
+	const { diagnostics } = getDiagnostics('const foo = Object.assign(() => {}, {passive: true}); html`<input @change="${foo}" />`');
+	hasNoDiagnostics(t, diagnostics);
+});
+
 tsTest("Event binding: Called function is not bindable", t => {
 	const { diagnostics } = getDiagnostics('function foo() {}; html`<input @change="${foo()}" />`');
 	hasDiagnostic(t, diagnostics, "no-noncallable-event-binding");
