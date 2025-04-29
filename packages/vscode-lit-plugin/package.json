@@ -179,7 +179,7 @@
 		"mocha": "^11.1.0",
 		"vscode-css-languageservice": "6.3.4",
 		"vscode-html-languageservice": "5.3.3",
-		"wireit": "^0.14.11"
+		"wireit": "^0.14.12"
 	},
 	"activationEvents": [
 		"onCommand:lit-analyzer-plugin.analyze",

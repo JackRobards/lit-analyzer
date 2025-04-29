@@ -62,7 +62,7 @@
 		"@types/node": "^22.14.1",
 		"esbuild": "^0.25.1",
 		"typescript": "^5.8.3",
-		"wireit": "^0.14.11"
+		"wireit": "^0.14.12"
 	},
 	"contributors": [
 		{
