@@ -123,7 +123,7 @@
 		"@changesets/changelog-github": "^0.5.1",
 		"@changesets/cli": "^2.29.0",
 		"@eslint/js": "^9.25.1",
-		"@vscode/test-electron": "^2.3.8",
+		"@vscode/test-electron": "^2.5.2",
 		"eslint": "^9.25.1",
 		"eslint-config-prettier": "^10.1.2",
 		"eslint-plugin-import": "^2.31.0",
