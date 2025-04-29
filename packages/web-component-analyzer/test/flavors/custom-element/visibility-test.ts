@@ -70,3 +70,37 @@ tsTest("Handle visibility for private '_' prefixed names", t => {
 		checker
 	);
 });
+
+tsTest("Handle visibility for private '#' prefixed names", t => {
+	const {
+		results: [result],
+		checker
+	} = analyzeTextWithCurrentTsModule(`
+	/**
+	 * @element
+	 */
+	class MyElement extends HTMLElement {
+		#myProp = 123;
+		#myMethod () {
+		}
+	}
+`);
+
+	const { members = [], methods: [method] = [] } = result.componentDefinitions[0]?.declaration || {};
+
+	t.is(method.name, "#myMethod");
+	t.is(method.visibility, "private");
+
+	assertHasMembers(
+		members,
+		[
+			{
+				kind: "property",
+				propName: "#myProp",
+				visibility: "private"
+			}
+		],
+		t,
+		checker
+	);
+});
