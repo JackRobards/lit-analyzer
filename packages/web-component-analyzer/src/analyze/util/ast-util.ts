@@ -64,7 +64,13 @@ export function getMemberVisibilityFromNode(
 	node: PropertyDeclaration | PropertySignature | SetAccessorDeclaration | Node,
 	ts: typeof tsModule
 ): VisibilityKind | undefined {
-	if (hasModifier(node, ts.SyntaxKind.PrivateKeyword, ts) || ("name" in node && ts.isIdentifier(node.name) && isNamePrivate(node.name.text))) {
+	// Has a private '#' Identifier
+	const isTrulyPrivate = "name" in node && ts.isPrivateIdentifier(node.name);
+
+	// Name starts with an underscore `_`
+	const hasPrivateName = "name" in node && ts.isIdentifier(node.name) && isNamePrivate(node.name.text);
+
+	if (hasModifier(node, ts.SyntaxKind.PrivateKeyword, ts) || isTrulyPrivate || hasPrivateName) {
 		return "private";
 	} else if (hasModifier(node, ts.SyntaxKind.ProtectedKeyword, ts)) {
 		return "protected";

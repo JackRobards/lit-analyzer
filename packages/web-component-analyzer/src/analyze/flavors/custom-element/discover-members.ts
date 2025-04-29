@@ -62,7 +62,7 @@ export function discoverMembers(node: Node, context: AnalyzerDeclarationVisitCon
 			return node;
 		})();
 
-		if (ts.isIdentifier(name) || ts.isStringLiteralLike(name)) {
+		if (ts.isIdentifier(name) || ts.isStringLiteralLike(name) || ts.isPrivateIdentifier(name)) {
 			// Always ignore the "prototype" property
 			if (name.text === "prototype") {
 				return undefined;
