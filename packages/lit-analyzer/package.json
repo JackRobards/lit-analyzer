@@ -96,7 +96,7 @@
 		"fast-glob": "^3.2.11",
 		"parse5": "7.2.1",
 		"ts-simple-type": "~2.0.0-next.0",
-		"vscode-css-languageservice": "6.3.4",
+		"vscode-css-languageservice": "6.3.5",
 		"vscode-html-languageservice": "5.3.3",
 		"@jackolope/web-component-analyzer": "^4.0.1"
 	},
