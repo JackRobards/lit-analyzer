@@ -7,7 +7,6 @@ import type {
 	Diagnostic,
 	JsxClosingTagInfo,
 	LanguageService,
-	OutliningSpan,
 	Program,
 	QuickInfo,
 	RenameInfo,
@@ -23,7 +22,6 @@ import { translateCompletions } from "./translate/translate-completions.js";
 import { translateDefinition } from "./translate/translate-definition.js";
 import { translateDiagnostics } from "./translate/translate-diagnostics.js";
 import { translateFormatEdits } from "./translate/translate-format-edits.js";
-import { translateOutliningSpans } from "./translate/translate-outlining-spans.js";
 import { translateQuickInfo } from "./translate/translate-quick-info.js";
 import { translateRenameInfo } from "./translate/translate-rename-info.js";
 import { translateRenameLocations } from "./translate/translate-rename-locations.js";
@@ -93,16 +91,6 @@ export class TsLitPlugin {
 		const file = this.program.getSourceFile(fileName)!;
 		const quickInfo = this.litAnalyzer.getQuickInfoAtPosition(file, position);
 		return (quickInfo && translateQuickInfo(quickInfo)) || this.prevLangService.getQuickInfoAtPosition(...args);
-	}
-
-	getOutliningSpans(...args: Parameters<LanguageService["getOutliningSpans"]>): OutliningSpan[] {
-		const [fileName] = args;
-		const file = this.program.getSourceFile(fileName)!;
-
-		const prev = this.prevLangService.getOutliningSpans(...args);
-		const outliningSpans = translateOutliningSpans(this.litAnalyzer.getOutliningSpansInFile(file));
-
-		return [...prev, ...outliningSpans];
 	}
 
 	getJsxClosingTagAtPosition(...args: Parameters<LanguageService["getJsxClosingTagAtPosition"]>): JsxClosingTagInfo | undefined {

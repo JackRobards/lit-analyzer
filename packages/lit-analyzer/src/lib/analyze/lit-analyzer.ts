@@ -16,7 +16,6 @@ import type { LitCompletionDetails } from "./types/lit-completion-details.js";
 import type { LitDefinition } from "./types/lit-definition.js";
 import type { LitDiagnostic } from "./types/lit-diagnostic.js";
 import type { LitFormatEdit } from "./types/lit-format-edit.js";
-import type { LitOutliningSpan } from "./types/lit-outlining-span.js";
 import type { LitQuickInfo } from "./types/lit-quick-info.js";
 import type { LitRenameInfo } from "./types/lit-rename-info.js";
 import type { LitRenameLocation } from "./types/lit-rename-location.js";
@@ -35,26 +34,6 @@ export class LitAnalyzer {
 		// Set the Typescript module
 		// I plan on removing this function, so only "context.ts" is used.
 		setTypescriptModule(context.ts);
-	}
-
-	getOutliningSpansInFile(file: SourceFile): LitOutliningSpan[] {
-		this.context.setContextBase({ file });
-
-		const documents = this.getDocumentsInFile(file);
-
-		this.context.updateComponents(file);
-
-		return arrayFlat(
-			documents.map(document => {
-				if (document instanceof CssDocument) {
-					return [];
-				} else if (document instanceof HtmlDocument) {
-					return this.litHtmlDocumentAnalyzer.getOutliningSpans(document);
-				}
-
-				return [];
-			})
-		);
 	}
 
 	getDefinitionAtPosition(file: SourceFile, position: SourceFilePosition): LitDefinition | undefined {

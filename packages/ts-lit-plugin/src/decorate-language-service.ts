@@ -17,7 +17,6 @@ export function decorateLanguageService(languageService: LanguageService, plugin
 		getRenameInfo: plugin.getRenameInfo.bind(plugin),
 		findRenameLocations: plugin.findRenameLocations.bind(plugin),
 		getSignatureHelpItems: plugin.getSignatureHelpItems.bind(plugin)
-		//getOutliningSpans: plugin.getOutliningSpans.bind(plugin)
 		//getFormattingEditsForRange: plugin.getFormattingEditsForRange.bind(plugin)
 	};
 
