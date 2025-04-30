@@ -12,13 +12,10 @@ import type { LitCompletionDetails } from "../../types/lit-completion-details.js
 import type { LitDefinition } from "../../types/lit-definition.js";
 import type { LitDiagnostic } from "../../types/lit-diagnostic.js";
 import type { LitFormatEdit } from "../../types/lit-format-edit.js";
-import type { LitOutliningSpan } from "../../types/lit-outlining-span.js";
-import { LitOutliningSpanKind } from "../../types/lit-outlining-span.js";
 import type { LitQuickInfo } from "../../types/lit-quick-info.js";
 import type { LitRenameInfo } from "../../types/lit-rename-info.js";
 import type { LitRenameLocation } from "../../types/lit-rename-location.js";
 import type { DocumentOffset, DocumentRange } from "../../types/range.js";
-import { iterableDefined } from "../../util/iterable-util.js";
 import { documentRangeToSFRange } from "../../util/range-util.js";
 import { codeFixesForHtmlDocument } from "./code-fix/code-fixes-for-html-document.js";
 import { completionsAtOffset } from "./completion/completions-at-offset.js";
@@ -119,33 +116,6 @@ export class LitHtmlDocumentAnalyzer {
 			return quickInfoForHtmlAttr(hit, context);
 		}
 		return;
-	}
-
-	getOutliningSpans(document: HtmlDocument): LitOutliningSpan[] {
-		return iterableDefined(
-			document.mapNodes(node => {
-				if (node.location.endTag == null) return undefined;
-
-				// Calculate last index of the collapsed span.
-				// We don't want to include the last line because it will include the </endtag> in the collapsed region
-				const endIndex = (() => {
-					const lastChild = node.children[node.children.length - 1];
-
-					if (lastChild != null) {
-						return lastChild.location.endTag != null ? lastChild.location.endTag.start : lastChild.location.startTag.end;
-					}
-
-					return node.location.endTag.start;
-				})();
-
-				return {
-					autoCollapse: false,
-					bannerText: node.tagName,
-					kind: LitOutliningSpanKind.Code,
-					location: documentRangeToSFRange(document, { start: node.location.startTag.end, end: endIndex })
-				} as LitOutliningSpan;
-			})
-		);
 	}
 
 	getFormatEdits(document: HtmlDocument, settings: FormatCodeSettings): LitFormatEdit[] {
