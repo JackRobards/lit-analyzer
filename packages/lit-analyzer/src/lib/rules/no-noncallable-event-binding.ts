@@ -50,6 +50,10 @@ function isTypeBindableToEventListener(type: SimpleType): boolean {
 
 	return validateType(type, simpleType => {
 		switch (simpleType.kind) {
+			// Intersection types can be used if one of the types is callable
+			case "INTERSECTION": {
+				return simpleType.types.some(t => isTypeBindableToEventListener(t));
+			}
 			// Object types with attributes for the setup function of the event listener can be used
 			case "OBJECT":
 			case "INTERFACE": {
