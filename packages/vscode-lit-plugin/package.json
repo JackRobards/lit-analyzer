@@ -176,7 +176,7 @@
 		"esbuild": "^0.25.3",
 		"fast-glob": "^3.2.11",
 		"@jackolope/lit-analyzer": "^3.1.2",
-		"mocha": "^11.1.0",
+		"mocha": "^11.2.2",
 		"vscode-css-languageservice": "6.3.5",
 		"vscode-html-languageservice": "5.4.0",
 		"wireit": "^0.14.12"
