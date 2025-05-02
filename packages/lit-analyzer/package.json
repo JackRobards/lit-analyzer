@@ -102,7 +102,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^22.15.3",
-		"ava": "^6.2.0",
+		"ava": "^6.3.0",
 		"tslib": "^2.0.0",
 		"typescript": "^5.8.3",
 		"typescript-5.4": "npm:typescript@~5.4.0",
