@@ -1,5 +1,28 @@
 # @jackolope/lit-analyzer
 
+## 3.1.3
+
+### Patch Changes
+
+- [#276](https://github.com/JackRobards/lit-analyzer/pull/276) [`0cf6a54`](https://github.com/JackRobards/lit-analyzer/commit/0cf6a54d7bd40b57e7b869048f7a44133f2cd35e) Thanks [@JackRobards](https://github.com/JackRobards)! - add `#property` support for rule: `no-property-visibility-mismatch`
+
+- [#270](https://github.com/JackRobards/lit-analyzer/pull/270) [`583220d`](https://github.com/JackRobards/lit-analyzer/commit/583220d89c38b9a8f7496f05034763acaaa5cb03) Thanks [@JackRobards](https://github.com/JackRobards)! - chore: Remove unused getOutliningSpans logic related to old code collapse implementation
+
+- [#259](https://github.com/JackRobards/lit-analyzer/pull/259) [`0eb2b09`](https://github.com/JackRobards/lit-analyzer/commit/0eb2b096fc3578713ec6d4e939ed148da744403e) Thanks [@Gaubee](https://github.com/Gaubee)! - add INTERSECTION-kind support for `no-noncallable-event-binding` rule check
+
+- [#234](https://github.com/JackRobards/lit-analyzer/pull/234) [`361442a`](https://github.com/JackRobards/lit-analyzer/commit/361442aa78a0a616b3ead06f67dba7fc42f01931) Thanks [@dependabot](https://github.com/apps/dependabot)! - chore: Add support for TypeScript 5.8
+
+- [#276](https://github.com/JackRobards/lit-analyzer/pull/276) [`ef41a49`](https://github.com/JackRobards/lit-analyzer/commit/ef41a490eea17c9e084f6e32ad7242eb2681c275) Thanks [@JackRobards](https://github.com/JackRobards)! - Updated dependencies:
+  Updated dependency `@vscode/web-custom-data` to `^0.5.2`.
+  Updated dependency `vscode-css-languageservice` to `6.3.5`.
+  Updated dependency `vscode-html-languageservice` to `5.4.0`.
+  Updated devDependency `@types/node` to `^22.15.3`.
+  Updated devDependency `ava` to `^6.3.0`.
+  Updated devDependency `typescript` to `^5.8.3`.
+  Updated devDependency `wireit` to `^0.14.12`.
+- Updated dependencies [[`0c72e78`](https://github.com/JackRobards/lit-analyzer/commit/0c72e78abcfdc249f7c34e26164a5a8dbe92e5a9), [`361442a`](https://github.com/JackRobards/lit-analyzer/commit/361442aa78a0a616b3ead06f67dba7fc42f01931), [`ef41a49`](https://github.com/JackRobards/lit-analyzer/commit/ef41a490eea17c9e084f6e32ad7242eb2681c275)]:
+  - @jackolope/web-component-analyzer@4.0.2
+
 ## 3.1.2
 
 ### Patch Changes

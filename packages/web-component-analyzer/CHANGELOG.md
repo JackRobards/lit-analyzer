@@ -1,5 +1,20 @@
 # Change Log
 
+## 4.0.2
+
+### Patch Changes
+
+- [#262](https://github.com/JackRobards/lit-analyzer/pull/262) [`0c72e78`](https://github.com/JackRobards/lit-analyzer/commit/0c72e78abcfdc249f7c34e26164a5a8dbe92e5a9) Thanks [@JackRobards](https://github.com/JackRobards)! - Add private `#property` support for web-component-analyzer
+
+- [#234](https://github.com/JackRobards/lit-analyzer/pull/234) [`361442a`](https://github.com/JackRobards/lit-analyzer/commit/361442aa78a0a616b3ead06f67dba7fc42f01931) Thanks [@dependabot](https://github.com/apps/dependabot)! - chore: Add support for TypeScript 5.8
+
+- [#276](https://github.com/JackRobards/lit-analyzer/pull/276) [`ef41a49`](https://github.com/JackRobards/lit-analyzer/commit/ef41a490eea17c9e084f6e32ad7242eb2681c275) Thanks [@JackRobards](https://github.com/JackRobards)! - Updated dependencies:
+  Updated devDependency `typescript` to `^5.8.3`.
+  Updated devDependency `@types/node` to `^22.15.3`.
+  Updated devDependency `ava` to `^6.3.0`.
+  Updated devDependency `rollup` to `^4.39.0`.
+  Updated devDependency `wireit` to `^0.14.12`.
+
 ## 4.0.1
 
 ### Patch Changes
