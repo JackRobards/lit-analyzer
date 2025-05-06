@@ -18,7 +18,7 @@ jobs:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
       - name: Enable auto-merge for Dependabot PRs
         # Automatically merge semver-patch and semver-minor PRs for certain devDependencies
-        if: "${{ (contains(steps.metadata.outputs.dependency-names, 'eslint') || contains(steps.metadata.outputs.dependency-names, '@types/')) && 
+        if: "${{ (contains(steps.metadata.outputs.dependency-names, 'eslint') || contains(steps.metadata.outputs.dependency-names, '@types/node')) &&
           (steps.metadata.outputs.update-type == 'version-update:semver-minor' || steps.metadata.outputs.update-type == 'version-update:semver-patch') }}"
         run: gh pr review --approve "$PR_URL" && gh pr merge --auto --merge "$PR_URL"
         env:
