@@ -1,6 +1,6 @@
 {
-	"fileTypes": [],
-	"injectionSelector": "L:source.js -comment -(string -meta.embedded), L:source.jsx -comment -(string -meta.embedded),  L:source.js.jsx -comment -(string -meta.embedded), L:source.ts -comment -(string -meta.embedded), L:source.tsx -comment -(string -meta.embedded)",
+	"fileTypes": ["js", "ts"],
+	"injectionSelector": "L:source.js -comment -(string -meta.embedded), L:source.ts -comment -(string -meta.embedded)",
 	"injections": {
 		"L:source": {
 			"patterns": [
@@ -13,7 +13,6 @@
 	},
 	"patterns": [
 		{
-			"name": "string.js.taggedTemplate",
 			"contentName": "meta.embedded.block.html",
 			"begin": "(?x)(\\b(?:\\w+\\.)*(?:html|raw)\\s*)(`)",
 			"beginCaptures": {
@@ -38,10 +37,112 @@
 					"include": "source.ts#template-substitution-element"
 				},
 				{
-					"include": "text.html.basic"
+					"include": "text.html.ember-handlebars"
+				}
+			]
+		},
+		{
+			"begin": "((createTemplate|hbs|html))(\\()",
+			"contentName": "meta.embedded.block.html",
+			"beginCaptures": {
+				"1": {
+					"name": "entity.name.function.ts"
+				},
+				"2": {
+					"name": "meta.function-call.ts"
+				},
+				"3": {
+					"name": "meta.brace.round.ts"
+				}
+			},
+			"end": "(\\))",
+			"endCaptures": {
+				"1": {
+					"name": "meta.brace.round.ts"
+				}
+			},
+			"patterns": [
+				{
+					"begin": "((`|'|\"))",
+					"beginCaptures": {
+						"1": {
+							"name": "string.template.ts"
+						},
+						"2": {
+							"name": "punctuation.definition.string.template.begin.ts"
+						}
+					},
+					"end": "((`|'|\"))",
+					"endCaptures": {
+						"1": {
+							"name": "string.template.ts"
+						},
+						"2": {
+							"name": "punctuation.definition.string.template.end.ts"
+						}
+					},
+					"patterns": [
+						{
+							"include": "text.html.ember-handlebars"
+						}
+					]
+				}
+			]
+		},
+		{
+			"begin": "((precompileTemplate)\\s*)(\\()",
+			"beginCaptures": {
+				"1": {
+					"name": "entity.name.function.ts"
+				},
+				"2": {
+					"name": "meta.function-call.ts"
+				},
+				"3": {
+					"name": "meta.brace.round.ts"
+				}
+			},
+			"end": "(\\))",
+			"endCaptures": {
+				"1": {
+					"name": "meta.brace.round.ts"
+				}
+			},
+			"patterns": [
+				{
+					"begin": "((`|'|\"))",
+					"contentName": "meta.embedded.block.html",
+					"beginCaptures": {
+						"1": {
+							"name": "string.template.ts"
+						},
+						"2": {
+							"name": "punctuation.definition.string.template.begin.ts"
+						}
+					},
+					"end": "((`|'|\"))",
+					"endCaptures": {
+						"1": {
+							"name": "string.template.ts"
+						},
+						"2": {
+							"name": "punctuation.definition.string.template.end.ts"
+						}
+					},
+					"patterns": [
+						{
+							"include": "text.html.ember-handlebars"
+						}
+					]
+				},
+				{
+					"include": "source.ts#object-literal"
+				},
+				{
+					"include": "source.ts"
 				}
 			]
 		}
 	],
-	"scopeName": "inline.lit-html"
+	"scopeName": "inline.hbs"
 }
