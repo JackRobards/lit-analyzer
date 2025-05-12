@@ -3,7 +3,7 @@
 	"private": true,
 	"displayName": "lit-analyzer-plugin",
 	"description": "Syntax highlighting, type checking and code completion for lit-html",
-	"version": "2.2.1",
+	"version": "2.3.0",
 	"publisher": "jackolope",
 	"icon": "docs/assets/lit-plugin@256w.png",
 	"license": "MIT",
