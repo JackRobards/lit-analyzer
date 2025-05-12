@@ -1,5 +1,15 @@
 # Change Log
 
+## 2.3.0
+
+### Minor Changes
+
+- [#290](https://github.com/JackRobards/lit-analyzer/pull/290) [`822956b`](https://github.com/JackRobards/lit-analyzer/commit/822956b8c1817eb3e58a6a97a8c4c33ea16348d0) Thanks [@JackRobards](https://github.com/JackRobards)! - Update lit-html syntaxes for nicer styling inside tagged templates
+
+### Patch Changes
+
+- [#291](https://github.com/JackRobards/lit-analyzer/pull/291) [`ea9de0e`](https://github.com/JackRobards/lit-analyzer/commit/ea9de0e43d080572aea4ab088468ca6a6c8d19b0) Thanks [@JackRobards](https://github.com/JackRobards)! - Update minor vulnerable package versions using npm audit fix
+
 ## 2.2.1
 
 ### Patch Changes
