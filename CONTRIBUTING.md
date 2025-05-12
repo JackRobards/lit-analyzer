@@ -42,4 +42,8 @@ You can use this script if you want to generate an installable package of vscode
 
 ### Syntaxes
 
-All syntaxes come from [vscode-lit-html](https://github.com/mjbvz/vscode-lit-html) and [vscode-styled-components](https://github.com/styled-components/vscode-styled-components). Because these repositories are not published as npm-packages, they are instead installed from Github URLs. Therefore, as of now, changes to syntaxes must be upstreamed to one of these repositories.
+All syntaxes originally came from [vscode-lit-html](https://github.com/mjbvz/vscode-lit-html) and [vscode-styled-components](https://github.com/styled-components/vscode-styled-components). They are copied here and bundled as part of the VSCode extension.
+
+The `text.html.lit-template` syntax is based on the `text.html.ember-handlebars` one for [vsc-ember-syntax](https://github.com/lifeart/vsc-ember-syntax/tree/master/syntaxes), but modified and simplified to fit Lit.
+
+Big thanks and credit to the original authors for these syntaxes!
