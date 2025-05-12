@@ -776,6 +776,11 @@
 		],
 		"grammars": [
 			{
+				"label": "HTML Template (Lit)",
+				"scopeName": "text.html.lit-template",
+				"path": "./syntaxes/vscode-lit-html/text.html.lit-template.json"
+			},
+			{
 				"injectTo": [
 					"source.js",
 					"source.js.jsx",
