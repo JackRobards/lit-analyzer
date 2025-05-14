@@ -59,7 +59,7 @@
 		"@jackolope/web-component-analyzer": "^4.0.2"
 	},
 	"devDependencies": {
-		"@types/node": "^22.15.17",
+		"@types/node": "^22.15.18",
 		"esbuild": "^0.25.3",
 		"typescript": "^5.8.3",
 		"wireit": "^0.14.12"
