@@ -1,5 +1,18 @@
 # @jackolope/ts-lit-plugin
 
+## 3.1.4
+
+### Patch Changes
+
+- [#333](https://github.com/JackRobards/lit-analyzer/pull/333) [`007fde0`](https://github.com/JackRobards/lit-analyzer/commit/007fde0fcf1f17967d846e3fc144570b7d68b7a6) Thanks [@JackRobards](https://github.com/JackRobards)! - fix: Upgrade patch npm audit dependencies to fix vulnerabilities
+
+- [#333](https://github.com/JackRobards/lit-analyzer/pull/333) [`51ec2b8`](https://github.com/JackRobards/lit-analyzer/commit/51ec2b831783000e4c637693dba2b5f4bc7f406e) Thanks [@JackRobards](https://github.com/JackRobards)! - Updated dependencies:
+  Updated devDependency `@types/node` to `^22.15.30`.
+  Updated devDependency `esbuild` to `^0.25.5`.
+- Updated dependencies [[`007fde0`](https://github.com/JackRobards/lit-analyzer/commit/007fde0fcf1f17967d846e3fc144570b7d68b7a6), [`51ec2b8`](https://github.com/JackRobards/lit-analyzer/commit/51ec2b831783000e4c637693dba2b5f4bc7f406e), [`51ec2b8`](https://github.com/JackRobards/lit-analyzer/commit/51ec2b831783000e4c637693dba2b5f4bc7f406e)]:
+  - @jackolope/lit-analyzer@3.2.0
+  - @jackolope/web-component-analyzer@4.0.3
+
 ## 3.1.3
 
 ### Patch Changes
