@@ -97,7 +97,7 @@
 		"parse5": "7.2.1",
 		"ts-simple-type": "~2.0.0-next.0",
 		"vscode-css-languageservice": "6.3.6",
-		"vscode-html-languageservice": "5.4.0",
+		"vscode-html-languageservice": "5.5.0",
 		"@jackolope/web-component-analyzer": "^4.0.2"
 	},
 	"devDependencies": {
