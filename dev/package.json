@@ -5,10 +5,10 @@
 	"type": "module",
 	"dependencies": {
 		"@jackolope/ts-lit-plugin": "file:../packages/ts-lit-plugin",
-		"lit": "^3.2.1"
+		"lit": "^3.3.0"
 	},
 	"devDependencies": {
-		"typescript": "~5.7.2"
+		"typescript": "~5.8.3"
 	},
 	"keywords": [],
 	"author": "",
