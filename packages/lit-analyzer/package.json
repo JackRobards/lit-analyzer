@@ -101,7 +101,7 @@
 		"@jackolope/web-component-analyzer": "^4.0.3"
 	},
 	"devDependencies": {
-		"@types/node": "^22.15.30",
+		"@types/node": "^24.0.4",
 		"ava": "^6.4.0",
 		"tslib": "^2.0.0",
 		"typescript": "^5.8.3",
