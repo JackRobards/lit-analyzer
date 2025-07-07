@@ -9,6 +9,13 @@ tsTest("Report missing imports of custom elements", t => {
 	hasDiagnostic(t, diagnostics, "no-missing-import");
 });
 
+tsTest("Report missing imports of custom elements with a type-only import", t => {
+	const { diagnostics } = getDiagnostics([makeElement({}), "import type {} from './my-element'; html`<my-element></my-element>`"], {
+		rules: { "no-missing-import": true }
+	});
+	hasDiagnostic(t, diagnostics, "no-missing-import");
+});
+
 tsTest("Don't report missing imports when the custom element has been imported 1", t => {
 	const { diagnostics } = getDiagnostics([makeElement({}), "import './my-element'; html`<my-element></my-element>`"], {
 		rules: { "no-missing-import": true }
@@ -28,6 +35,14 @@ tsTest("Don't report missing imports when the custom element has been imported 2
 		],
 		{ rules: { "no-missing-import": true } }
 	);
+	hasNoDiagnostics(t, diagnostics);
+});
+
+tsTest("Don't report missing imports when the custom element is included in the globalTags config", t => {
+	const { diagnostics } = getDiagnostics([makeElement({}), "html`<my-element></my-element>`"], {
+		rules: { "no-missing-import": true },
+		globalTags: ["my-element"]
+	});
 	hasNoDiagnostics(t, diagnostics);
 });
 

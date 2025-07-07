@@ -22,6 +22,10 @@ const rule: RuleModule = {
 		const isCustomElement = isCustomElementTagName(htmlNode.tagName);
 		if (!isCustomElement) return;
 
+		// Return if this is listed as one of the always present `globalTags` in the config
+		const isGlobalTag = context.config.globalTags.includes(htmlNode.tagName);
+		if (isGlobalTag) return;
+
 		// Don't continue if this tag name doesn't have a definition.
 		// If the html tag doesn't have a definition we won't know how to import it.
 		const definition = definitionStore.getDefinitionForTagName(htmlNode.tagName);
