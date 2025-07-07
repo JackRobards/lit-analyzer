@@ -1,5 +1,13 @@
 # Change Log
 
+## 4.0.4
+
+### Patch Changes
+
+- [#371](https://github.com/JackRobards/lit-analyzer/pull/371) [`0dffbd9`](https://github.com/JackRobards/lit-analyzer/commit/0dffbd9b15b8f122c87adc26a867f204a9f7717e) Thanks [@JackRobards](https://github.com/JackRobards)! - Updated dependencies:
+  Updated devDependency `@rollup/plugin-typescript` to `^12.1.4`.
+  Updated devDependency `rollup` to `^4.44.2`.
+
 ## 4.0.3
 
 ### Patch Changes
@@ -44,7 +52,6 @@
 ### Major Changes
 
 - [#125](https://github.com/JackRobards/lit-analyzer/pull/125) [`e85bdaf`](https://github.com/JackRobards/lit-analyzer/commit/e85bdafe871bcac2d4a89da64fc2c1d4b8b78bd9) Thanks [@JackRobards](https://github.com/JackRobards)! - Major (Breaking) changes:
-
   - Upgrade Supported Node versions to 18, 20, and 22: https://github.com/JackRobards/lit-analyzer/pull/27.
   - Upgrade to the latest version of vsce, for building and publishing the VSCode Extension: https://github.com/JackRobards/lit-analyzer/pull/45 and https://github.com/JackRobards/lit-analyzer/pull/47.
   - Upgrade TypeScript Versions tested against to 5.4, 5.5, 5.6, 5.7 (previously it was 4.8 - 5.2): https://github.com/JackRobards/lit-analyzer/pull/75.
@@ -54,13 +61,11 @@
 ### Minor Changes
 
 - [#125](https://github.com/JackRobards/lit-analyzer/pull/125) [`e85bdaf`](https://github.com/JackRobards/lit-analyzer/commit/e85bdafe871bcac2d4a89da64fc2c1d4b8b78bd9) Thanks [@JackRobards](https://github.com/JackRobards)! - Bulk Minor/Patch Changes
-
   - Upgrade the html and css language service packages, so that the plugin can detect the latest features.
   - Generally, all packages have been upgraded in (or uninstalled from) the repo. This includes a number of security fixes, and many of these PRs were handled by Dependabot.
   - fix: Exclude symbol when checking binding types: https://github.com/JackRobards/lit-analyzer/pull/107.
 
   Dev related (doesn't effect consumers):
-
   - Migrate to npm workspaces: https://github.com/JackRobards/lit-analyzer/pull/28.
   - The web-component-analyzer repo has also been forked, and is no included in this monorepo: https://github.com/JackRobards/lit-analyzer/pull/59.
   - Upgrade and fix the broken .github scripts to build on PRs: https://github.com/JackRobards/lit-analyzer/pull/4 and https://github.com/JackRobards/lit-analyzer/pull/5.
