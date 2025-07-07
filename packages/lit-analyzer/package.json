@@ -1,6 +1,6 @@
 {
 	"name": "@jackolope/lit-analyzer",
-	"version": "3.2.0",
+	"version": "3.2.1",
 	"description": "CLI that type checks bindings in lit-html templates",
 	"author": "runem",
 	"license": "MIT",
@@ -98,7 +98,7 @@
 		"ts-simple-type": "~2.0.0-next.0",
 		"vscode-css-languageservice": "6.3.7",
 		"vscode-html-languageservice": "5.5.1",
-		"@jackolope/web-component-analyzer": "^4.0.3"
+		"@jackolope/web-component-analyzer": "^4.0.4"
 	},
 	"devDependencies": {
 		"@types/node": "^22.15.30",

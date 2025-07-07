@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.4.1
+
+### Patch Changes
+
+- [#369](https://github.com/JackRobards/lit-analyzer/pull/369) [`1abcf43`](https://github.com/JackRobards/lit-analyzer/commit/1abcf43c0dfcb17e9a256d0468f047c62121ea6a) Thanks [@JackRobards](https://github.com/JackRobards)! - Fix: Update no-missing-import rule to avoid reporting on any listed globalTags
+
+- [#371](https://github.com/JackRobards/lit-analyzer/pull/371) [`0dffbd9`](https://github.com/JackRobards/lit-analyzer/commit/0dffbd9b15b8f122c87adc26a867f204a9f7717e) Thanks [@JackRobards](https://github.com/JackRobards)! - Updated dependencies:
+  Updated dependency `@vscode/vsce` to `^3.6.0`.
+  Updated dependency `vscode-css-languageservice` to `6.3.7`.
+  Updated dependency `vscode-html-languageservice` to `5.5.1`.
+
 ## 2.4.0
 
 ### Minor Changes
@@ -92,7 +103,6 @@
 ### Major Changes
 
 - [#125](https://github.com/JackRobards/lit-analyzer/pull/125) [`e85bdaf`](https://github.com/JackRobards/lit-analyzer/commit/e85bdafe871bcac2d4a89da64fc2c1d4b8b78bd9) Thanks [@JackRobards](https://github.com/JackRobards)! - Major (Breaking) changes:
-
   - Upgrade Supported Node versions to 18, 20, and 22: https://github.com/JackRobards/lit-analyzer/pull/27.
   - Upgrade to the latest version of vsce, for building and publishing the VSCode Extension: https://github.com/JackRobards/lit-analyzer/pull/45 and https://github.com/JackRobards/lit-analyzer/pull/47.
   - Upgrade TypeScript Versions tested against to 5.4, 5.5, 5.6, 5.7 (previously it was 4.8 - 5.2): https://github.com/JackRobards/lit-analyzer/pull/75.
@@ -102,13 +112,11 @@
 ### Minor Changes
 
 - [#125](https://github.com/JackRobards/lit-analyzer/pull/125) [`e85bdaf`](https://github.com/JackRobards/lit-analyzer/commit/e85bdafe871bcac2d4a89da64fc2c1d4b8b78bd9) Thanks [@JackRobards](https://github.com/JackRobards)! - Bulk Minor/Patch Changes
-
   - Upgrade the html and css language service packages, so that the plugin can detect the latest features.
   - Generally, all packages have been upgraded in (or uninstalled from) the repo. This includes a number of security fixes, and many of these PRs were handled by Dependabot.
   - fix: Exclude symbol when checking binding types: https://github.com/JackRobards/lit-analyzer/pull/107.
 
   Dev related (doesn't effect consumers):
-
   - Migrate to npm workspaces: https://github.com/JackRobards/lit-analyzer/pull/28.
   - The web-component-analyzer repo has also been forked, and is no included in this monorepo: https://github.com/JackRobards/lit-analyzer/pull/59.
   - Upgrade and fix the broken .github scripts to build on PRs: https://github.com/JackRobards/lit-analyzer/pull/4 and https://github.com/JackRobards/lit-analyzer/pull/5.

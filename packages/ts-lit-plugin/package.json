@@ -1,6 +1,6 @@
 {
 	"name": "@jackolope/ts-lit-plugin",
-	"version": "3.1.4",
+	"version": "3.1.5",
 	"description": "Typescript plugin that adds type checking and code completion to lit-html. Fork of the original ts-lit-plugin.",
 	"author": "JackRobards",
 	"license": "MIT",
@@ -55,8 +55,8 @@
 		"/html-documentation/"
 	],
 	"dependencies": {
-		"@jackolope/lit-analyzer": "^3.2.0",
-		"@jackolope/web-component-analyzer": "^4.0.3"
+		"@jackolope/lit-analyzer": "^3.2.1",
+		"@jackolope/web-component-analyzer": "^4.0.4"
 	},
 	"devDependencies": {
 		"@types/node": "^22.15.30",

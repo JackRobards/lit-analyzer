@@ -1,6 +1,6 @@
 {
 	"name": "@jackolope/web-component-analyzer",
-	"version": "4.0.3",
+	"version": "4.0.4",
 	"description": "Utilities for analyzer the types of web components",
 	"main": "lib/cjs/api.js",
 	"module": "lib/esm/api.js",
