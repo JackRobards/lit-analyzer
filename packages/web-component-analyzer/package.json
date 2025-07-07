@@ -126,6 +126,6 @@
 		"timeout": "2m"
 	},
 	"engines": {
-		"node": ">=18"
+		"node": ">=20"
 	}
 }
