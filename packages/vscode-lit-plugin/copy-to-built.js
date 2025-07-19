@@ -26,7 +26,9 @@ async function main() {
 	// dependencies.
 	tsPluginPackageJson.dependencies = {};
 	await writeFile("./built/node_modules/@jackolope/ts-lit-plugin/package.json", JSON.stringify(tsPluginPackageJson, null, 2));
-	await copy("../ts-lit-plugin/index.js", "./built/node_modules/@jackolope/ts-lit-plugin/index.js");
+
+	// We need to re-export the ts-lit plugin build output from a root index file
+	await writeFile("./built/node_modules/@jackolope/ts-lit-plugin/index.js", `module.exports = require("./lib/index").init;`);
 
 	const pluginPackageJson = require("./package.json");
 	// vsce is _very_ picky about the directories in node_modules matching the
