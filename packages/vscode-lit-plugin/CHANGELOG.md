@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.4.2
+
+### Patch Changes
+
+- [#389](https://github.com/JackRobards/lit-analyzer/pull/389) [`a70f235`](https://github.com/JackRobards/lit-analyzer/commit/a70f2350e412885abe3d7c0e3d309f9f2cdf3c7f) Thanks [@JackRobards](https://github.com/JackRobards)! - fix: Remove the cross-package dependency on the ts-lit-plugin/index.js file from the vscode-lit-plugin package. Required for a build fix in ts-lit-plugin but the vscode extension should continue to work the same as before this version.
+
 ## 2.4.1
 
 ### Patch Changes

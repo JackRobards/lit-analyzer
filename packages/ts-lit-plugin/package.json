@@ -1,6 +1,6 @@
 {
 	"name": "@jackolope/ts-lit-plugin",
-	"version": "3.1.5",
+	"version": "3.1.6",
 	"description": "Typescript plugin that adds type checking and code completion to lit-html. Fork of the original ts-lit-plugin.",
 	"author": "JackRobards",
 	"license": "MIT",

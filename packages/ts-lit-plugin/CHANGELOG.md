@@ -1,5 +1,11 @@
 # @jackolope/ts-lit-plugin
 
+## 3.1.6
+
+### Patch Changes
+
+- [#384](https://github.com/JackRobards/lit-analyzer/pull/384) [`3ff0b22`](https://github.com/JackRobards/lit-analyzer/commit/3ff0b22dcdb3b63aca8a52f51750122e842a684a) Thanks [@topaxi](https://github.com/topaxi)! - fix: ts-lit-plugin entry
+
 ## 3.1.5
 
 ### Patch Changes
