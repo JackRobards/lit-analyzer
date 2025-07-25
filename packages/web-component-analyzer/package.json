@@ -100,7 +100,7 @@
 		"@rollup/plugin-typescript": "^12.1.4",
 		"@types/node": "^22.15.30",
 		"ava": "^6.4.1",
-		"cross-env": "^7.0.2",
+		"cross-env": "^10.0.0",
 		"rollup": "^4.44.2",
 		"rollup-plugin-copy": "^3.5.0",
 		"ts-node": "^10.9.1",
