@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.0.0
+
+### Major Changes
+
+- [#336](https://github.com/JackRobards/lit-analyzer/pull/336) [`03e6f64`](https://github.com/JackRobards/lit-analyzer/commit/03e6f6438bae7739609442cda5a41bc7748d265b) Thanks [@JackRobards](https://github.com/JackRobards)! - chore: Minimum Node version is now node20 (drop node18 support now that it is EOL)
+
+### Minor Changes
+
+- [#336](https://github.com/JackRobards/lit-analyzer/pull/336) [`03e6f64`](https://github.com/JackRobards/lit-analyzer/commit/03e6f6438bae7739609442cda5a41bc7748d265b) Thanks [@JackRobards](https://github.com/JackRobards)! - chore: Add support for testing changes against node24
+
 ## 2.4.2
 
 ### Patch Changes
