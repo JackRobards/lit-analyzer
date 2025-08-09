@@ -126,7 +126,7 @@
 		"@vscode/test-electron": "^2.5.2",
 		"eslint": "^9.32.0",
 		"eslint-config-prettier": "^10.1.8",
-		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-import": "^2.32.0",
 		"fs-extra": "^11.2.0",
 		"husky": "^4.2.5",
 		"lint-staged": "^16.1.2",
