@@ -101,7 +101,7 @@
 		"@types/node": "^22.15.30",
 		"ava": "^6.4.1",
 		"cross-env": "^7.0.2",
-		"rollup": "^4.44.2",
+		"rollup": "^4.46.3",
 		"rollup-plugin-copy": "^3.5.0",
 		"ts-node": "^10.9.1",
 		"tslib": "^2.6.2",
