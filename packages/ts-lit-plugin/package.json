@@ -50,6 +50,13 @@
 		}
 	},
 	"main": "index.js",
+	"types": "lib/src/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./lib/src/index.d.ts",
+			"default": "./index.js"
+		}
+	},
 	"files": [
 		"/lib/",
 		"/html-documentation/"
@@ -83,5 +90,6 @@
 	],
 	"engines": {
 		"node": ">=20"
-	}
+	},
+	"type": "commonjs"
 }

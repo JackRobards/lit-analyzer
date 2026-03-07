@@ -81,7 +81,13 @@
 		}
 	},
 	"main": "index.js",
-	"typings": "index.d.ts",
+	"types": "index.d.ts",
+	"exports": {
+		".": {
+			"types": "./index.d.ts",
+			"default": "./index.js"
+		}
+	},
 	"files": [
 		"/lib/",
 		"index.js",
@@ -143,5 +149,6 @@
 	],
 	"engines": {
 		"node": ">=20"
-	}
+	},
+	"type": "commonjs"
 }

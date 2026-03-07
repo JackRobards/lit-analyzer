@@ -28,7 +28,6 @@
 		"declarationMap": true,
 
 		/* Other */
-		"downlevelIteration": true,
 		"incremental": true,
 		"experimentalDecorators": true,
 		"noFallthroughCasesInSwitch": true,

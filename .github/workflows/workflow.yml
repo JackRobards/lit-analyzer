@@ -4,7 +4,7 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   test:
@@ -27,6 +27,7 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node }}
+          cache: 'npm'
 
       - name: Install
         run: npm ci
@@ -43,7 +44,7 @@ jobs:
         run: npm run package && mv packages/vscode-lit-plugin/out/packaged.vsix vscode-lit-plugin.vsix
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v4
         if: matrix.os == 'ubuntu-latest' && matrix.node == 22
         with:
           name: vscode-lit-plugin.vsix

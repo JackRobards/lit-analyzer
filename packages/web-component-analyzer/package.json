@@ -4,7 +4,7 @@
 	"description": "Utilities for analyzer the types of web components",
 	"main": "lib/cjs/api.js",
 	"module": "lib/esm/api.js",
-	"typings": "lib/cjs/src/api.d.ts",
+	"types": "lib/cjs/src/api.d.ts",
 	"files": [
 		"/lib/",
 		"cli.js"
@@ -127,5 +127,6 @@
 	},
 	"engines": {
 		"node": ">=20"
-	}
+	},
+	"type": "commonjs"
 }
