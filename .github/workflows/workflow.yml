@@ -45,7 +45,7 @@ jobs:
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
-        if: matrix.os == 'ubuntu-latest' && matrix.node == 22
+        if: matrix.os == 'ubuntu-latest' && matrix.node == 24
         with:
           name: vscode-lit-plugin.vsix
           path: vscode-lit-plugin.vsix
