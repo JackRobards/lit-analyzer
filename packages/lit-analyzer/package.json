@@ -26,7 +26,6 @@
 	"scripts": {
 		"build": "wireit",
 		"prepublishOnly": "npm test",
-		"readme": "npx @appnest/readme generate -i readme.blueprint.md -c readme.config.json",
 		"eslint": "eslint src",
 		"test": "wireit",
 		"test:ava": "wireit",
@@ -144,7 +143,7 @@
 		{
 			"name": "You?",
 			"img": "https://joeschmoe.io/api/v1/random",
-			"url": "https://github.com/JackRobards/lit-analyzer/blob/master/CONTRIBUTING.md"
+			"url": "https://github.com/JackRobards/lit-analyzer/blob/main/CONTRIBUTING.md"
 		}
 	],
 	"engines": {
