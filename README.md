@@ -27,7 +27,7 @@ This mono-repository consists of the following tools:
 
 ## ➤ Rules
 
-You can find a list of all rules [here](https://github.com/JackRobards/lit-analyzer/blob/main/docs/readme/rules.md).
+You can find a list of all rules [here](https://github.com/JackRobards/lit-analyzer/blob/main/docs/rules.md).
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#status)
 
