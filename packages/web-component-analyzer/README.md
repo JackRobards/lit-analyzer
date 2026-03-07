@@ -36,9 +36,9 @@ $ npm install -g @jackolope/web-component-analyzer
 
 ## ➤ How to document your components using JSDoc
 
-In addition to analyzing the code of your components, this library also use JSDoc to construct the documentation. It's especially a good idea to use JSDoc for documenting `slots`, `events`, `css custom properties` and `css shadow parts` as these not analyzed statically by this tool as of now (except when constructing a CustomEvent within your component).
+In addition to analyzing the code of your components, this library also use JSDoc to construct the documentation. It's especially a good idea to use JSDoc for documenting `slots`, `events`, `css custom properties` and `css shadow parts` as these are not analyzed statically by this tool as of now (except when constructing a CustomEvent within your component).
 
-Here's an example including all supported JSDoc tags. All JSDoc tags are on the the form `@tag {type} name - comment` and `@tag {type} [name=default] - comment`.
+Here's an example including all supported JSDoc tags. All JSDoc tags are on the form `@tag {type} name - comment` and `@tag {type} [name=default] - comment`.
 
 <!-- prettier-ignore -->
 ```javascript

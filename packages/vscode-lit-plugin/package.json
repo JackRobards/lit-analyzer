@@ -26,7 +26,6 @@
 	"scripts": {
 		"watch": "tsc -watch -p ./",
 		"package": "wireit",
-		"readme": "npx @appnest/readme generate -i readme.blueprint.md -c readme.config.json",
 		"test": "wireit",
 		"build": "wireit",
 		"eslint": "eslint src",
@@ -201,8 +200,8 @@
 		},
 		{
 			"name": "You?",
-			"img": "https://joeschmoe.io/api/v1/random",
-			"url": "https://github.com/JackRobards/lit-analyzer/blob/master/CONTRIBUTING.md"
+			"img": "https://ui-avatars.com/api/?name=You&background=random&size=100",
+			"url": "https://github.com/JackRobards/lit-analyzer/blob/main/CONTRIBUTING.md"
 		}
 	],
 	"contributes": {

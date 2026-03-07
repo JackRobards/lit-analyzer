@@ -7,11 +7,9 @@ Hi there, I really appreciate you considering contributing to this repository! T
 3. Run tests: `npm test`
 4. When you are ready to create a PR with any changes, please run `npx @changesets/cli` in order to generate a [changesets file](https://github.com/changesets/changesets) describing what it is you changed. This is only needed if you are updating the source code, not for things like documentation or tests.
 
-## Contributing to readmes
+## Contributing to documentation
 
-Readme's are built because a lot of information is repeated in individual readmes. If you want to change something in a readme, please change files in [/docs/readme](/docs/readme), [/packages/lit-analyzer/readme](/packages/lit-analyzer/readme), [/packages/ts-lit-plugin/readme](/packages/ts-lit-plugin/readme), [/packages/vscode-lit-plugin/readme](/packages/vscode-lit-plugin/readme). Never change the README.md directly because it will be overwritten.
-
-Please run `npm run readme` when you want to rebuild all readme files.
+Documentation can be edited directly in the README.md files for each package. The shared rules documentation is in [/docs/rules.md](/docs/rules.md) - if you update any rules, please update this file as well.
 
 ## Contributing to lit-analyzer or ts-lit-plugin
 
