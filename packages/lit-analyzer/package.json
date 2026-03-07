@@ -25,11 +25,11 @@
 	},
 	"scripts": {
 		"build": "wireit",
-		"prepublishOnly": "npm test",
+		"prepublishOnly": "pnpm test",
 		"eslint": "eslint src",
 		"test": "wireit",
 		"test:ava": "wireit",
-		"test:all": "npm test",
+		"test:all": "pnpm test",
 		"test:watch": "ava --watch --color",
 		"check-version": "wireit"
 	},

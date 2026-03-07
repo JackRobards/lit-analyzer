@@ -15,7 +15,7 @@
 		"require": "./lib/cjs/api.js"
 	},
 	"scripts": {
-		"prepare": "npm run build",
+		"prepare": "pnpm run build",
 		"build": "wireit",
 		"watch": "rollup -c --watch",
 		"test": "wireit",

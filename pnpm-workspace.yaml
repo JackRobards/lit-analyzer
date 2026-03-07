@@ -1,0 +1,5 @@
+packages:
+  - 'packages/lit-analyzer'
+  - 'packages/ts-lit-plugin'
+  - 'packages/vscode-lit-plugin'
+  - 'packages/web-component-analyzer'
