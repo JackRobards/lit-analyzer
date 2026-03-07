@@ -104,7 +104,7 @@ Unclosed tags, and invalid self closing tags like custom elements tags, are chec
 The following examples are considered warnings:
 
 ```js
-html`<div></div>`;
+html`<div>`;
 html`<video />`;
 html`<custom-element />`;
 ```
