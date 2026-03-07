@@ -142,7 +142,7 @@
 		},
 		{
 			"name": "You?",
-			"img": "https://joeschmoe.io/api/v1/random",
+			"img": "https://ui-avatars.com/api/?name=You&background=random&size=100",
 			"url": "https://github.com/JackRobards/lit-analyzer/blob/main/CONTRIBUTING.md"
 		}
 	],
