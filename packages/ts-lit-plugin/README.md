@@ -1,4 +1,4 @@
-<!-- ⚠️ This README has been generated from the file(s) "readme.blueprint.md" ⚠️--><h1 align="center">@jackolope/ts-lit-plugin</h1>
+<h1 align="center">@jackolope/ts-lit-plugin</h1>
 <p align="center">
   <b>Typescript plugin that adds type checking and code completion to lit-html. Fork of the original ts-lit-plugin.</b></br>
   <sub><sub>
@@ -89,7 +89,7 @@ You can configure this plugin through your `tsconfig.json`.
 | `globalTags` |  List of html tag names that you expect to be present at all times. | `string[]` | |
 | `globalAttributes` | List of html attributes names that you expect to be present at all times. | `string[]` | |
 | `globalEvents` | List of event names that you expect to be present at all times | `string[]` | |
-| `customHtmlData` | This plugin supports the [custom vscode html data format](https://code.visualstudio.com/updates/v1_31#_html-and-css-custom-data-support) through this setting. | [Vscode Custom HTML Data Format](https://github.com/Microsoft/vscode-html-languageservice/blob/master/docs/customData.md). Supports arrays, objects and relative file paths | |
+| `customHtmlData` | This plugin supports the [custom vscode html data format](https://code.visualstudio.com/updates/v1_31#_html-and-css-custom-data-support) through this setting. | [Vscode Custom HTML Data Format](https://github.com/microsoft/vscode-html-languageservice/blob/main/docs/customData.md). Supports arrays, objects and relative file paths | |
 | `maxProjectImportDepth` | Determines how many modules deep dependencies are followed to determine whether a custom element is available in the current file. When `-1` is used, dependencies will be followed infinitely deep. | `number` | `-1` |
 | `maxNodeModuleImportDepth` | Determines how many modules deep dependencies in __npm packages__ are followed to determine whether a custom element is available in the current file. When `-1` is used, dependencies in __npm packages__ will be followed infinitely deep.| `number` | `1` |
 
@@ -681,7 +681,7 @@ class MyElement extends LitElement {
 
 ### Validating CSS
 
-`lit-analyzer` uses [vscode-css-languageservice](https://github.com/Microsoft/vscode-css-languageservice) to validate CSS.
+`lit-analyzer` uses [vscode-css-languageservice](https://github.com/microsoft/vscode-css-languageservice) to validate CSS.
 
 #### 💅 no-invalid-css
 
@@ -741,9 +741,9 @@ customElements.define("my-element", MyElement);
 
 ## ➤ Contributors
 
-| [<img alt="Rune Mehlsen" src="https://avatars2.githubusercontent.com/u/5372940?s=460&v=4" width="100">](https://twitter.com/runemehlsen) | [<img alt="Andreas Mehlsen" src="https://avatars1.githubusercontent.com/u/6267397?s=460&v=4" width="100">](https://twitter.com/andreasmehlsen) | [<img alt="You?" src="https://joeschmoe.io/api/v1/random" width="100">](https://github.com/JackRobards/lit-analyzer/blob/master/CONTRIBUTING.md) |
-| :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                             [Rune Mehlsen](https://twitter.com/runemehlsen)                                              |                                             [Andreas Mehlsen](https://twitter.com/andreasmehlsen)                                              |                                 [You?](https://github.com/JackRobards/lit-analyzer/blob/master/CONTRIBUTING.md)                                  |
+| [<img alt="Rune Mehlsen" src="https://avatars2.githubusercontent.com/u/5372940?s=460&v=4" width="100">](https://twitter.com/runemehlsen) | [<img alt="Andreas Mehlsen" src="https://avatars1.githubusercontent.com/u/6267397?s=460&v=4" width="100">](https://twitter.com/andreasmehlsen) | [<img alt="You?" src="https://joeschmoe.io/api/v1/random" width="100">](https://github.com/JackRobards/lit-analyzer/blob/main/CONTRIBUTING.md) |
+| :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                             [Rune Mehlsen](https://twitter.com/runemehlsen)                                              |                                             [Andreas Mehlsen](https://twitter.com/andreasmehlsen)                                              |                                 [You?](https://github.com/JackRobards/lit-analyzer/blob/main/CONTRIBUTING.md)                                  |
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#license)
 

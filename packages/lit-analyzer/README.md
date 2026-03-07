@@ -1,4 +1,4 @@
-<!-- ⚠️ This README has been generated from the file(s) "readme.blueprint.md" ⚠️--><h1 align="center">@jackolope/lit-analyzer</h1>
+<h1 align="center">@jackolope/lit-analyzer</h1>
 <p align="center">
   <b>CLI that type checks bindings in lit-html templates</b></br>
   <sub><sub>
@@ -655,7 +655,7 @@ class MyElement extends LitElement {
 
 ### Validating CSS
 
-`lit-analyzer` uses [vscode-css-languageservice](https://github.com/Microsoft/vscode-css-languageservice) to validate CSS.
+`lit-analyzer` uses [vscode-css-languageservice](https://github.com/microsoft/vscode-css-languageservice) to validate CSS.
 
 #### 💅 no-invalid-css
 
@@ -715,9 +715,9 @@ customElements.define("my-element", MyElement);
 
 ## ➤ Contributors
 
-| [<img alt="Rune Mehlsen" src="https://avatars2.githubusercontent.com/u/5372940?s=460&v=4" width="100">](https://twitter.com/runemehlsen) | [<img alt="Andreas Mehlsen" src="https://avatars1.githubusercontent.com/u/6267397?s=460&v=4" width="100">](https://twitter.com/andreasmehlsen) | [<img alt="You?" src="https://joeschmoe.io/api/v1/random" width="100">](https://github.com/JackRobards/lit-analyzer/blob/master/CONTRIBUTING.md) |
-| :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                             [Rune Mehlsen](https://twitter.com/runemehlsen)                                              |                                             [Andreas Mehlsen](https://twitter.com/andreasmehlsen)                                              |                                 [You?](https://github.com/JackRobards/lit-analyzer/blob/master/CONTRIBUTING.md)                                  |
+| [<img alt="Rune Mehlsen" src="https://avatars2.githubusercontent.com/u/5372940?s=460&v=4" width="100">](https://twitter.com/runemehlsen) | [<img alt="Andreas Mehlsen" src="https://avatars1.githubusercontent.com/u/6267397?s=460&v=4" width="100">](https://twitter.com/andreasmehlsen) | [<img alt="You?" src="https://joeschmoe.io/api/v1/random" width="100">](https://github.com/JackRobards/lit-analyzer/blob/main/CONTRIBUTING.md) |
+| :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                             [Rune Mehlsen](https://twitter.com/runemehlsen)                                              |                                             [Andreas Mehlsen](https://twitter.com/andreasmehlsen)                                              |                                 [You?](https://github.com/JackRobards/lit-analyzer/blob/main/CONTRIBUTING.md)                                  |
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#license)
 
