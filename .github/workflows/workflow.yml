@@ -47,7 +47,7 @@ jobs:
         run: pnpm run package && mv packages/vscode-lit-plugin/out/packaged.vsix vscode-lit-plugin.vsix
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: matrix.os == 'ubuntu-latest' && matrix.node == 24
         with:
           name: vscode-lit-plugin.vsix
