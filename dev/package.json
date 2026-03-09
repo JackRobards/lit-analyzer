@@ -2,9 +2,10 @@
 	"name": "dev",
 	"version": "1.0.0",
 	"description": "",
+	"private": true,
 	"type": "module",
 	"dependencies": {
-		"@jackolope/ts-lit-plugin": "file:../packages/ts-lit-plugin",
+		"@jackolope/ts-lit-plugin": "workspace:*",
 		"lit": "^3.3.0"
 	},
 	"devDependencies": {

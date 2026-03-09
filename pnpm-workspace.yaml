@@ -3,6 +3,7 @@ packages:
   - 'packages/ts-lit-plugin'
   - 'packages/vscode-lit-plugin'
   - 'packages/web-component-analyzer'
+  - 'dev'
 
 allowBuilds:
   "@vscode/vsce-sign": true
