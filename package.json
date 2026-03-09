@@ -118,7 +118,7 @@
 		"eslint": "^9.32.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-import": "^2.31.0",
-		"fs-extra": "^11.2.0",
+		"fs-extra": "^11.3.4",
 		"husky": "^4.2.5",
 		"lint-staged": "^16.2.6",
 		"prettier": "^3.6.2",
