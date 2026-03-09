@@ -32,6 +32,7 @@
 		"template"
 	],
 	"scripts": {
+		"prepare": "husky",
 		"prettier:write": "prettier --write \"packages/*/src/**/*.ts\"",
 		"dev": "cd dev && TSS_DEBUG=5999 code . --disable-extension jackolope.lit-analyzer-plugin",
 		"dev:logs": "touch dev/lit-plugin.log && tail -f dev/lit-plugin.log",
@@ -45,7 +46,7 @@
 		"test:packaged": "wireit",
 		"prettier:check": "wireit",
 		"package": "wireit",
-		"release": "npm run build && npx changeset publish"
+		"release": "pnpm run build && pnpm changeset publish"
 	},
 	"wireit": {
 		"build": {
@@ -119,17 +120,13 @@
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-import": "^2.31.0",
 		"fs-extra": "^11.3.4",
-		"husky": "^4.2.5",
+		"globals": "^17.4.0",
+		"husky": "^9.0.0",
 		"lint-staged": "^16.3.2",
 		"prettier": "^3.8.1",
-		"typescript": "^5.8.3",
+		"typescript": "~5.8.3",
 		"typescript-eslint": "^8.56.1",
 		"wireit": "^0.14.12"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
 	},
 	"lint-staged": {
 		"*.{ts,js}": "eslint --fix",
@@ -160,5 +157,5 @@
 	"engines": {
 		"node": ">=20"
 	},
-	"packageManager": "npm@11.9.0"
+	"packageManager": "pnpm@10.30.3"
 }

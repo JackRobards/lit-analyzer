@@ -15,7 +15,7 @@
 		"require": "./lib/cjs/api.js"
 	},
 	"scripts": {
-		"prepare": "npm run build",
+		"prepare": "pnpm run build",
 		"build": "wireit",
 		"watch": "rollup -c --watch",
 		"test": "wireit",
@@ -92,7 +92,7 @@
 	"homepage": "https://github.com/JackRobards/lit-analyzer#readme",
 	"dependencies": {
 		"ts-simple-type": "2.0.0-next.0",
-		"typescript": "^5.8.3"
+		"typescript": "~5.8.3"
 	},
 	"devDependencies": {
 		"@rollup/plugin-node-resolve": "^16.0.3",

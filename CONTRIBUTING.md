@@ -3,8 +3,8 @@
 Hi there, I really appreciate you considering contributing to this repository! This readme hopefully contains what you need to get started. If you have any questions please open an issue or PM me on twitter [@RuneMehlsen](https://twitter.com/RuneMehlsen).
 
 1. Clone the monorepo: `git clone https://github.com/JackRobards/lit-analyzer.git`
-2. Install dependencies: `npm ci`
-3. Run tests: `npm test`
+2. Install dependencies: `pnpm install`
+3. Run tests: `pnpm test`
 4. When you are ready to create a PR with any changes, please run `npx @changesets/cli` in order to generate a [changesets file](https://github.com/changesets/changesets) describing what it is you changed. This is only needed if you are updating the source code, not for things like documentation or tests.
 
 ## Contributing to documentation
@@ -21,12 +21,12 @@ You can always try out the CLI by running `./cli.mjs path-to-a-file.js` from `pa
 
 You can try out changes to lit-analyzer and/or ts-lit-plugin directly from the Typescript Language Service in VS Code:
 
-1. Run `npm run dev` from `/` to open a playground in VS Code (lit-plugin is disabled in that session to prevent interference).
-2. Run `npm run dev:logs` from `/` to watch logs in real time.
+1. Run `pnpm run dev` from `/` to open a playground in VS Code (lit-plugin is disabled in that session to prevent interference).
+2. Run `pnpm run dev:logs` from `/` to watch logs in real time.
 
-### `npm run watch` / `npm run build`
+### `pnpm run watch` / `pnpm run build`
 
-You can run either `npm run watch` or `npm run build` from the repository root or from any subpackage.
+You can run either `pnpm run watch` or `pnpm run build` from the repository root or from any subpackage.
 
 ## Contributing to vscode-lit-plugin
 
@@ -34,7 +34,7 @@ You can run either `npm run watch` or `npm run build` from the repository root o
 
 In order to debug `vscode-lit-plugin` you can open vscode from `packages/vscode-lit-plugin` and press the **start debugging** button in vscode.
 
-### `npm run package`
+### `pnpm run package`
 
 You can use this script if you want to generate an installable package of vscode-lit-plugin. Afterwards, run `code --install-extension ./packages/vscode-lit-plugin/out/packaged.vsix` to install it.
 

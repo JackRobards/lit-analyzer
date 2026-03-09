@@ -14,27 +14,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
       - name: Install Node.js
         uses: actions/setup-node@v6
         with:
           node-version: 24.x
-          cache: 'npm'
-      - run: npm ci
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
       # Test normally on Mac
-      - run: npm run test:packaged
+      - run: pnpm run test:packaged
         working-directory: packages/vscode-lit-plugin
         if: runner.os == 'macOS'
       # Run with xvfb on Linux so that the vscode window has an X to render
       # into.
-      - run: xvfb-run -a npm run test:packaged
+      - run: xvfb-run -a pnpm run test:packaged
         working-directory: packages/vscode-lit-plugin
         if: runner.os == 'Linux'
       # The test packaging doesn't work on Windows just because we'd need
       # to use different commands to expand the vsix file back out, so just
       # run the dev test and package up the vsix file.
-      - run: npm run package
+      - run: pnpm run package
         working-directory: packages/vscode-lit-plugin
         if: runner.os == 'Windows'
-      - run: npm run test:normal
+      - run: pnpm run test:normal
         working-directory: packages/vscode-lit-plugin
         if: runner.os == 'Windows'
