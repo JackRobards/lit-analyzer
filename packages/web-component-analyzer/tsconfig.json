@@ -1,6 +1,6 @@
 {
 	"extends": "../../tsconfig.json",
-	"include": ["./src/**/*", "./test/**/*", "./package.json", "rollup.config.mjs"],
+	"include": ["./src/**/*", "./test/**/*"],
 	"compilerOptions": {
 		"importHelpers": false,
 		"lib": ["es2023", "dom"],

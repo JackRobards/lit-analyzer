@@ -2,11 +2,9 @@ import ts from "@rollup/plugin-typescript";
 import resolve from "@rollup/plugin-node-resolve";
 import replace from "@rollup/plugin-replace";
 import copy from "rollup-plugin-copy";
-// create a require
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-const { dirname } = require("path");
-const pkg = require("./package.json");
+import { dirname } from "path";
+import pkg from "./package.json" with { type: "json" };
+
 const watch = { include: "src/**" };
 const external = ["typescript", "path", "fs", "ts-simple-type"];
 const replaceVersionConfig = {
@@ -25,7 +23,8 @@ export default [
 			{
 				dir: dirname(pkg.module),
 				format: "esm",
-				chunkFileNames: "chunk-[name]-[hash].js"
+				chunkFileNames: "chunk-[name]-[hash].js",
+				sourcemap: true
 			}
 		],
 		plugins: [
@@ -50,7 +49,8 @@ export default [
 			{
 				dir: dirname(pkg.main),
 				format: "cjs",
-				chunkFileNames: "chunk-[name]-[hash].js"
+				chunkFileNames: "chunk-[name]-[hash].js",
+				sourcemap: true
 			}
 		],
 		plugins: [
