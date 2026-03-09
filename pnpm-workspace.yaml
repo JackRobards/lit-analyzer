@@ -3,3 +3,9 @@ packages:
   - 'packages/ts-lit-plugin'
   - 'packages/vscode-lit-plugin'
   - 'packages/web-component-analyzer'
+
+allowBuilds:
+  "@vscode/vsce-sign": true
+  esbuild: true
+  husky: true
+  keytar: true
