@@ -7,27 +7,27 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Build
 
 ```bash
-npm run build          # Build all packages (wireit, incremental)
+pnpm run build          # Build all packages (wireit, incremental)
 ```
 
 ### Test
 
 ```bash
-npm run test:headless  # Run lit-analyzer + web-component-analyzer tests (no VS Code)
-npm run test           # Run all tests including vscode-lit-plugin (requires display)
+pnpm run test:headless  # Run lit-analyzer + web-component-analyzer tests (no VS Code)
+pnpm run test           # Run all tests including vscode-lit-plugin (requires display)
 
 # Run tests for a single package (must build first):
-cd packages/lit-analyzer && npm run test
-cd packages/web-component-analyzer && npm run test
+cd packages/lit-analyzer && pnpm run test
+cd packages/web-component-analyzer && pnpm run test
 
 # Run a single test file (ava runs compiled JS, not the TS source):
-cd packages/lit-analyzer && npx ava test/rules/no-unknown-tag-name.js
+cd packages/lit-analyzer && pnpm exec ava test/rules/no-unknown-tag-name.js
 
 # Limit to one TypeScript version (faster during development):
-cd packages/lit-analyzer && TS_MODULE=current npx ava test/rules/no-unknown-tag-name.js
+cd packages/lit-analyzer && TS_MODULE=current pnpm exec ava test/rules/no-unknown-tag-name.js
 
 # Watch mode (in a package directory):
-npm run test:watch     # ava --watch
+pnpm run test:watch     # ava --watch
 ```
 
 Tests are **authored** in `src/test/` (TypeScript) and **compiled** to `test/` (JavaScript). Always edit `src/test/` sources — never the compiled `test/` output. Use `tsTest.only` (instead of `test.only`) to focus a single test; each `tsTest` runs against TS 5.4, 5.5, 5.6, 5.7, and `current`.
@@ -35,29 +35,29 @@ Tests are **authored** in `src/test/` (TypeScript) and **compiled** to `test/` (
 ### Lint
 
 ```bash
-npm run lint           # eslint + prettier:check
-npm run eslint         # ESLint only
-npm run prettier:write # Auto-fix formatting
+pnpm run lint           # eslint + prettier:check
+pnpm run eslint         # ESLint only
+pnpm run prettier:write # Auto-fix formatting
 ```
 
 ### VS Code Extension
 
 ```bash
-npm run package        # Build and package the .vsix file
+pnpm run package        # Build and package the .vsix file
 # Output: packages/vscode-lit-plugin/out/packaged.vsix
 ```
 
 ### Releases
 
 ```bash
-npm run build && npx changeset publish   # Publish all packages
+pnpm run build && pnpm changeset publish   # Publish all packages
 ```
 
 Wireit caches build outputs — if builds seem stale, delete `.wireit/` cache directories.
 
 ## Architecture
 
-This is a 4-package npm workspace monorepo. The dependency graph flows one direction:
+This is a 4-package pnpm workspace monorepo. The dependency graph flows one direction:
 
 ```
 web-component-analyzer  (standalone)
