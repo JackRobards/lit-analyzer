@@ -111,6 +111,9 @@ importers:
       typescript-5.8:
         specifier: npm:typescript@~5.8.0
         version: typescript@5.8.3
+      vscode-languageserver-types:
+        specifier: ^3.17.5
+        version: 3.17.5
       wireit:
         specifier: ^0.14.12
         version: 0.14.12
