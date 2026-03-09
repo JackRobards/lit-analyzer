@@ -177,7 +177,7 @@
 		"@jackolope/lit-analyzer": "^3.2.1",
 		"mocha": "^11.7.1",
 		"vscode-css-languageservice": "6.3.7",
-		"vscode-html-languageservice": "5.5.1",
+		"vscode-html-languageservice": "5.6.2",
 		"wireit": "^0.14.12"
 	},
 	"activationEvents": [
