@@ -119,6 +119,7 @@
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-import": "^2.31.0",
 		"fs-extra": "^11.3.4",
+		"globals": "^17.4.0",
 		"husky": "^4.2.5",
 		"lint-staged": "^16.3.2",
 		"prettier": "^3.8.1",
@@ -162,6 +163,11 @@
 	},
 	"packageManager": "pnpm@10.30.3",
 	"pnpm": {
-		"onlyBuiltDependencies": ["@vscode/vsce-sign", "esbuild", "husky", "keytar"]
+		"onlyBuiltDependencies": [
+			"@vscode/vsce-sign",
+			"esbuild",
+			"husky",
+			"keytar"
+		]
 	}
 }
