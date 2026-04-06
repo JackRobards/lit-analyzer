@@ -1,5 +1,22 @@
 # @jackolope/lit-analyzer
 
+## 4.0.0
+
+### Major Changes
+
+- [#336](https://github.com/JackRobards/lit-analyzer/pull/336) [`03e6f64`](https://github.com/JackRobards/lit-analyzer/commit/03e6f6438bae7739609442cda5a41bc7748d265b) Thanks [@JackRobards](https://github.com/JackRobards)! - chore: Minimum Node version is now node20 (drop node18 support now that it is EOL)
+
+### Minor Changes
+
+- [#491](https://github.com/JackRobards/lit-analyzer/pull/491) [`01f810d`](https://github.com/JackRobards/lit-analyzer/commit/01f810def709363f497c93a62586ee557956f086) Thanks [@JackRobards](https://github.com/JackRobards)! - build: Migrate project from npm to pnpm. There should be no breaking changes, but there are some related dependency and build updates
+
+- [#336](https://github.com/JackRobards/lit-analyzer/pull/336) [`03e6f64`](https://github.com/JackRobards/lit-analyzer/commit/03e6f6438bae7739609442cda5a41bc7748d265b) Thanks [@JackRobards](https://github.com/JackRobards)! - chore: Add support for testing changes against node24
+
+### Patch Changes
+
+- Updated dependencies [[`2412bea`](https://github.com/JackRobards/lit-analyzer/commit/2412beacad5bba903b73e714185ae8a49f3c1e3e), [`01f810d`](https://github.com/JackRobards/lit-analyzer/commit/01f810def709363f497c93a62586ee557956f086), [`03e6f64`](https://github.com/JackRobards/lit-analyzer/commit/03e6f6438bae7739609442cda5a41bc7748d265b), [`03e6f64`](https://github.com/JackRobards/lit-analyzer/commit/03e6f6438bae7739609442cda5a41bc7748d265b)]:
+  - @jackolope/web-component-analyzer@5.0.0
+
 ## 3.2.1
 
 ### Patch Changes
