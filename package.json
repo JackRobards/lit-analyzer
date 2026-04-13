@@ -124,7 +124,7 @@
 		"husky": "^9.0.0",
 		"lint-staged": "^16.3.3",
 		"prettier": "^3.8.1",
-		"typescript": "~5.8.3",
+		"typescript": "~6.0.2",
 		"typescript-eslint": "^8.58.2",
 		"wireit": "^0.14.12"
 	},
