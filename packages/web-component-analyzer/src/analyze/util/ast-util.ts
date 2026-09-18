@@ -14,6 +14,7 @@ import type { ModifierKind } from "../types/modifier-kind";
 import type { VisibilityKind } from "../types/visibility-kind";
 import { resolveNodeValue } from "./resolve-node-value";
 import { isNamePrivate } from "./text-util";
+import { withTypescriptModule } from "./with-typescript-module";
 
 export interface AstContext {
 	ts: typeof tsModule;
@@ -153,7 +154,7 @@ export function isPropertyRequired(property: PropertySignature | PropertyDeclara
 	}
 
 	// "any" or "unknown" should never be required
-	if (isAssignableToSimpleTypeKind(type, ["ANY", "UNKNOWN"], checker)) {
+	if (withTypescriptModule(ts, () => isAssignableToSimpleTypeKind(type, ["ANY", "UNKNOWN"], checker))) {
 		return false;
 	}
 
@@ -163,7 +164,7 @@ export function isPropertyRequired(property: PropertySignature | PropertyDeclara
 		return false;
 	}
 
-	return !isAssignableToSimpleTypeKind(type, ["UNDEFINED", "NULL"], checker);
+	return !withTypescriptModule(ts, () => isAssignableToSimpleTypeKind(type, ["UNDEFINED", "NULL"], checker));
 }
 
 /**

@@ -1,3 +1,4 @@
+import { withTypescriptModule } from "../../src/analyze/util/with-typescript-module";
 import type { ImplementationFn } from "ava";
 import test from "ava";
 import { dirname } from "path";
@@ -5,11 +6,9 @@ import type * as tsModule from "typescript";
 
 type TestFunction = (title: string, implementation: ImplementationFn<unknown[]>) => void;
 
-const TS_MODULES_ALL = ["current", "5.4", "5.5", "5.6", "5.7"] as const;
+const TS_MODULES_ALL = ["current", "5.4", "5.5", "5.6", "5.7", "5.8", "5.9"] as const;
 
-type TsModuleKind = typeof TS_MODULES_ALL[number];
-
-const TS_MODULES_DEFAULT: TsModuleKind[] = ["current", "5.4", "5.5", "5.6", "5.7"];
+type TsModuleKind = (typeof TS_MODULES_ALL)[number];
 
 /**
  * Returns the name of the module to require for a specific ts module kind
@@ -22,6 +21,8 @@ function getTsModuleNameWithKind(kind: TsModuleKind | undefined): string {
 		case "5.5":
 		case "5.6":
 		case "5.7":
+		case "5.8":
+		case "5.9":
 			return `typescript-${kind}`;
 		case "current":
 		case undefined:
@@ -99,7 +100,7 @@ function setupTest(testFunction: TestFunction, tsModuleKind: TsModuleKind | unde
 
 		const [t, ...restArgs] = args;
 
-		const res = cb(t, ...restArgs);
+		const res = withTypescriptModule(getCurrentTsModule(), () => cb(t, ...restArgs));
 
 		// Reset the selected TS_MODULE
 		setCurrentTsModuleKind(undefined);
@@ -114,13 +115,17 @@ function setupTest(testFunction: TestFunction, tsModuleKind: TsModuleKind | unde
  * @param title
  * @param cb
  */
-function setupTests(testFunction: (title: string, implementation: ImplementationFn<unknown[]>) => void, title: string, cb: ImplementationFn<unknown[]>) {
+function setupTests(
+	testFunction: (title: string, implementation: ImplementationFn<unknown[]>) => void,
+	title: string,
+	cb: ImplementationFn<unknown[]>
+) {
 	// Find the user specified TS_MODULE at setup time
 	const moduleKinds: readonly TsModuleKind[] = (() => {
 		const currentTsModuleKind = getCurrentTsModuleKind();
 
 		// Default to running all ts modules if TS_MODULE is not set
-		return currentTsModuleKind != null ? [currentTsModuleKind] : TS_MODULES_DEFAULT;
+		return currentTsModuleKind != null ? [currentTsModuleKind] : TS_MODULES_ALL;
 	})();
 
 	// Set up tests for each ts module

@@ -54,3 +54,7 @@ If you are interested in contributing to this repository please read [`contribut
 ## ➤ License
 
 Licensed under [MIT](https://opensource.org/licenses/MIT).
+
+## TypeScript compatibility
+
+TypeScript 6.0.3 is the default build compiler and bundled runtime. TypeScript 5.4–5.9 remain supported for analyzer and editor use. The headless tests run against each supported minor version.

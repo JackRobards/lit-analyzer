@@ -2,6 +2,7 @@ import type { SimpleType, SimpleTypeEnumMember } from "ts-simple-type";
 import { toSimpleType } from "ts-simple-type";
 import type * as tsModule from "typescript";
 import type { Node, Program } from "typescript";
+import { withTypescriptModule } from "./with-typescript-module";
 
 /**
  * Relax the type so that for example "string literal" become "string" and "function" become "any"
@@ -120,7 +121,7 @@ export function getLibTypeWithName(name: string, { ts, program }: { program: Pro
 	}
 
 	const checker = program.getTypeChecker();
-	let type = node == null ? undefined : toSimpleType(node, checker);
+	let type = node == null ? undefined : withTypescriptModule(ts, () => toSimpleType(node, checker));
 
 	if (type != null) {
 		// Apparently Typescript wraps the type in "generic arguments" when take the type from the interface declaration

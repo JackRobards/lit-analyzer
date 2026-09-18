@@ -1,6 +1,6 @@
 import type * as tsModule from "typescript";
 import type tsServerModule from "typescript/lib/tsserverlibrary.js";
-import type { Node, Program, SourceFile } from "typescript";
+import type { Node, Program, SourceFile, StringLiteralLike } from "typescript";
 
 interface IVisitDependenciesContext {
 	program: Program;
@@ -131,7 +131,7 @@ function visitDirectImports(node: Node, context: IVisitDependenciesContext): voi
 				return;
 			}
 
-			emitDirectModuleImportWithName(node.moduleSpecifier.text, node, context);
+			emitDirectModuleImportWithName(node.moduleSpecifier, context);
 		}
 	}
 
@@ -139,7 +139,7 @@ function visitDirectImports(node: Node, context: IVisitDependenciesContext): voi
 	else if (context.ts.isCallExpression(node) && node.expression.kind === context.ts.SyntaxKind.ImportKeyword) {
 		const moduleSpecifier = node.arguments[0];
 		if (moduleSpecifier != null && context.ts.isStringLiteralLike(moduleSpecifier)) {
-			emitDirectModuleImportWithName(moduleSpecifier.text, node, context);
+			emitDirectModuleImportWithName(moduleSpecifier, context);
 		}
 	}
 
@@ -152,12 +152,12 @@ interface MaybeModernProgram extends tsModule.Program {
 
 /**
  * Resolves and emits a direct imported module
- * @param moduleSpecifier
- * @param node
+ * @param specifier
  * @param context
  */
-function emitDirectModuleImportWithName(moduleSpecifier: string, node: Node, context: IVisitDependenciesContext) {
-	const fromSourceFile = node.getSourceFile();
+function emitDirectModuleImportWithName(specifier: StringLiteralLike, context: IVisitDependenciesContext) {
+	const fromSourceFile = specifier.getSourceFile();
+	const moduleSpecifier = specifier.text;
 
 	// Resolve the imported string
 	let result: tsModule.ResolvedModuleWithFailedLookupLocations | undefined;
@@ -170,24 +170,22 @@ function emitDirectModuleImportWithName(moduleSpecifier: string, node: Node, con
 		result = (context.program as any)["getResolvedModuleWithFailedLookupLocationsFromCache"](moduleSpecifier, fromSourceFile.fileName);
 	} else {
 		const cache = (context.program as MaybeModernProgram).getModuleResolutionCache?.();
-		let mode: tsModule.ModuleKind.CommonJS | tsModule.ModuleKind.ESNext | undefined = undefined;
-		if (context.ts.isImportDeclaration(node) || context.ts.isExportDeclaration(node)) {
-			if (node.moduleSpecifier != null && context.ts.isStringLiteral(node.moduleSpecifier) && context.ts.isSourceFile(node.parent)) {
-				mode = context.program.getModeForUsageLocation(fromSourceFile, node.moduleSpecifier);
-			}
-		}
+		const mode = context.program.getModeForUsageLocation(fromSourceFile, specifier);
 
 		if (cache != null) {
-			result = context.ts.resolveModuleNameFromCache(moduleSpecifier, node.getSourceFile().fileName, cache, mode);
+			result = context.ts.resolveModuleNameFromCache(moduleSpecifier, fromSourceFile.fileName, cache, mode);
 		}
 		if (result == null) {
 			// Result could not be found from the cache, try and resolve module without using the
 			// cache.
 			result = context.ts.resolveModuleName(
 				moduleSpecifier,
-				node.getSourceFile().fileName,
+				fromSourceFile.fileName,
 				context.program.getCompilerOptions(),
-				context.ts.createCompilerHost(context.program.getCompilerOptions())
+				context.ts.createCompilerHost(context.program.getCompilerOptions()),
+				cache,
+				undefined,
+				mode
 			);
 		}
 	}

@@ -8,6 +8,7 @@ import { resolveNodeValue } from "../../util/resolve-node-value";
 import { isNamePrivate } from "../../util/text-util";
 import { relaxType } from "../../util/type-util";
 import type { AnalyzerDeclarationVisitContext } from "../analyzer-flavor";
+import { withTypescriptModule } from "../../util/with-typescript-module";
 
 /**
  * Discovers members based on standard vanilla custom element rules
@@ -136,7 +137,7 @@ export function discoverMembers(node: Node, context: AnalyzerDeclarationVisitCon
 							kind: "property",
 							propName,
 							default: def,
-							type: () => relaxType(toSimpleType(checker.getTypeAtLocation(right), checker)),
+							type: () => withTypescriptModule(ts, () => relaxType(toSimpleType(checker.getTypeAtLocation(right), checker))),
 							jsDoc: getJsDoc(assignment.parent, ts),
 							visibility: isNamePrivate(propName) ? "private" : undefined
 						});

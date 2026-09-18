@@ -61,13 +61,13 @@
 		"/html-documentation/"
 	],
 	"dependencies": {
-		"@jackolope/lit-analyzer": "^3.2.1",
-		"@jackolope/web-component-analyzer": "^4.0.4"
+		"@jackolope/lit-analyzer": "workspace:^",
+		"@jackolope/web-component-analyzer": "workspace:^"
 	},
 	"devDependencies": {
 		"@types/node": "^24.12.0",
 		"esbuild": "^0.27.3",
-		"typescript": "~5.8.3",
+		"typescript": "~6.0.3",
 		"wireit": "^0.14.12"
 	},
 	"contributors": [

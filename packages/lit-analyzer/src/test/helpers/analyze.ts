@@ -1,4 +1,4 @@
-import type { Program, SourceFile } from "typescript";
+import type { CompilerOptions, Program, SourceFile } from "typescript";
 import { DefaultLitAnalyzerContext } from "../../lib/analyze/default-lit-analyzer-context.js";
 import { LitAnalyzer } from "../../lib/analyze/lit-analyzer.js";
 import type { LitAnalyzerConfig } from "../../lib/analyze/lit-analyzer-config.js";
@@ -19,9 +19,10 @@ import type { LitIndexEntry } from "../../lib/analyze/document-analyzer/html/lit
  */
 export function prepareAnalyzer(
 	inputFiles: TestFile[] | TestFile,
-	config: Partial<LitAnalyzerConfig> = {}
+	config: Partial<LitAnalyzerConfig> = {},
+	compilerOptions: CompilerOptions = {}
 ): { analyzer: LitAnalyzer; program: Program; sourceFile: SourceFile; context: LitAnalyzerContext } {
-	const { program, sourceFile } = compileFiles(inputFiles);
+	const { program, sourceFile } = compileFiles(inputFiles, compilerOptions);
 
 	const context = new DefaultLitAnalyzerContext({
 		ts: getCurrentTsModule(),

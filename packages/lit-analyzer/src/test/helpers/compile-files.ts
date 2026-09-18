@@ -18,7 +18,7 @@ export type TestFile = ITestFile | string;
 /**
  * Compiles 'virtual' files with Typescript
  */
-export function compileFiles(inputFiles: TestFile[] | TestFile = []): { program: Program; sourceFile: SourceFile } {
+export function compileFiles(inputFiles: TestFile[] | TestFile = [], options: CompilerOptions = {}): { program: Program; sourceFile: SourceFile } {
 	const ts = getCurrentTsModule();
 
 	const files: ITestFile[] = (Array.isArray(inputFiles) ? inputFiles : [inputFiles])
@@ -65,7 +65,8 @@ export function compileFiles(inputFiles: TestFile[] | TestFile = []): { program:
 		target: ScriptTarget.ESNext,
 		allowJs: true,
 		sourceMap: false,
-		strict: true // if strict = false, "undefined" and "null" will be removed from unions types.
+		strict: true, // if strict = false, "undefined" and "null" will be removed from unions types.
+		...options
 	};
 
 	const compilerHost: CompilerHost = {
