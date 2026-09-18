@@ -24,6 +24,7 @@ export function isLit1Directive(type: SimpleType): boolean {
 		case "ALIAS":
 			return type.name === "DirectiveFn" || isLit1Directive(type.target);
 		case "OBJECT":
+		case "INTERFACE":
 			return type.call != null && isLit1Directive(type.call);
 		case "FUNCTION": {
 			// We expect a directive to be a function with at least one argument that

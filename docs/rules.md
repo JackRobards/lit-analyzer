@@ -276,6 +276,12 @@ html`<input .value="${text}" />`;
 
 #### no-noncallable-event-binding
 
+Callable aliases and intersections are accepted, including functions with control methods. A union may include `null` or `undefined` if it also contains a listener and every concrete alternative is a listener. For example, `(() => void) | undefined` is accepted, while `(() => void) | string` and standalone nullish values are rejected.
+
+Listener objects must have a required callable `handleEvent` member. Optional or nullable `handleEvent` members are rejected. Existing `any` and `unknown` bindings remain accepted.
+
+Generic handlers are accepted when their constraints establish callability. Instantiated generic listener members retain their argument types, including when returned by `guard` or exposed through a generic `DirectiveFn` alias or callable interface.
+
 It's a common mistake to incorrectly call the function when setting up an event handler binding instead of passing a reference to the function. This makes the function call whenever the code evaluates.
 
 The following examples are considered warnings:
