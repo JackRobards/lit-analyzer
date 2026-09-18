@@ -53,7 +53,13 @@ export function convertComponentDeclarationToHtmlTag(
 
 	if (addDeclarationPropertiesAsAttributes && !builtIn) {
 		for (const htmlProp of htmlTag.properties) {
-			if (htmlProp.declaration != null && htmlProp.declaration.attrName == null && htmlProp.declaration.node.getSourceFile().isDeclarationFile) {
+			// The node is missing for members parsed from plain block comments.
+			if (
+				htmlProp.declaration != null &&
+				htmlProp.declaration.attrName == null &&
+				htmlProp.declaration.node != null &&
+				htmlProp.declaration.node.getSourceFile().isDeclarationFile
+			) {
 				htmlTag.attributes.push({
 					...htmlProp,
 					kind: "attribute"

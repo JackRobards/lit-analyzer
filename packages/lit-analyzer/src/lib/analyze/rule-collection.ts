@@ -83,7 +83,8 @@ export class RuleCollection {
 		this.invokeRules("visitComponentDeclaration", declaration, d => diagnostics.push(d), baseContext);
 
 		for (const member of declaration.members) {
-			if (member.node.getSourceFile() === file) {
+			// Members parsed from plain block comments may not have a backing AST node.
+			if (member.node != null && member.node.getSourceFile() === file) {
 				this.invokeRules("visitComponentMember", member, d => diagnostics.push(d), baseContext);
 			}
 		}
